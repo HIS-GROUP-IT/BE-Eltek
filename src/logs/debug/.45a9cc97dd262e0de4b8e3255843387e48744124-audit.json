@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\Administrator\\Desktop\\Projects\\BE-Time-Pay-Tracker\\src\\logs\\debug\\.45a9cc97dd262e0de4b8e3255843387e48744124-audit.json",
+    "files": [
+        {
+            "date": 1742886789518,
+            "name": "C:\\Users\\Administrator\\Desktop\\Projects\\BE-Time-Pay-Tracker\\src\\logs\\debug\\2025-03-25.log",
+            "hash": "013a14165be336c61c1d2540c600a09c1cff1c4ad698239b0a400d16d3e461c1"
+        }
+    ],
+    "hashType": "sha256"
+}

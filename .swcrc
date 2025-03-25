@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json.schemastore.org/swcrc",
+    "jsc": {
+        "parser": {
+            "syntax": "typescript",
+            "decorators": true
+        },
+        "transform": {
+            "legacyDecorator": true
+        },
+        "target": "es2022"
+    },
+    "module": {
+        "type": "es6",
+        "strict": true,
+        "strictMode": true,
+        "importAssertions": true
+    },
+    "exclude": ["src/scripts/**"]
+}
