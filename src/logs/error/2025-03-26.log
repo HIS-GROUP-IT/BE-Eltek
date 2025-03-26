@@ -1,0 +1,552 @@
+2025-03-26 00:36:26 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:37:43 error: uncaughtException: Cannot find module './config/config'
+Require stack:
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts
+Error: Cannot find module './config/config'
+Require stack:
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1249:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1075:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+2025-03-26 00:37:48 error: uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:14:18)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-03-26 00:37:54 error: uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:14:18)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-03-26 00:38:01 error: uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:14:18)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-03-26 00:38:08 error: uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:14:18)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-03-26 00:38:13 error: uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:14:18)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-03-26 00:38:16 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:39:06 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:39:20 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:39:24 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:39:27 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:39:29 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:39:32 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:39:48 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:40:39 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:42:27 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:42:31 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:42:35 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:42:43 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:42:45 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:42:48 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:42:51 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:43:03 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:56:16 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:56:18 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:56:30 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:56:40 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:57:14 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:57:17 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:57:21 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:57:23 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:57:49 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:58:02 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:58:14 error: uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\user.model.ts:12:6)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+2025-03-26 00:59:41 error: uncaughtException: Cannot find module '@/config/config'
+Require stack:
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\refreshToken.model.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\repositories\auth\auth.repository.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\services\auth\auth.service.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts
+Error: Cannot find module '@/config/config'
+Require stack:
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\models\user\refreshToken.model.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\repositories\auth\auth.repository.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\services\auth\auth.service.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1249:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1075:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+2025-03-26 01:01:39 error: uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:19:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-03-26 01:02:33 error: uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:18:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-03-26 01:02:48 error: uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:18:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-03-26 01:02:52 error: uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\rds-combined-ca-bundle.pem'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\database\index.ts:22:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-03-26 01:03:48 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:12:32 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:12:58 error: Unable to connect to the database: getaddrinfo ENOTFOUND czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:13:10 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:14:26 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:15:01 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:16:11 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:17:12 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:19:43 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:21:00 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:21:34 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:21:59 error: Unable to connect to the database: connect ETIMEDOUT 51.21.229.188:3306
+2025-03-26 01:25:21 error: Unable to connect to the database: Unknown database 'database-1-timepay'
+2025-03-26 01:26:21 error: Unable to connect to the database: Unknown database 'database-1-timepay'
+2025-03-26 01:26:41 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:26:48 error: Unable to connect to the database: Unknown database 'database-1-timepay'
+2025-03-26 01:48:30 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:62:18)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-03-26 08:21:26 error: uncaughtException: Cannot find module 'sequelize-typescript'
+Require stack:
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\repositories\project\timesheet.repository.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\services\project\timesheet.service.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts
+Error: Cannot find module 'sequelize-typescript'
+Require stack:
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\repositories\project\timesheet.repository.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\services\project\timesheet.service.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts
+- C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1249:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1075:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\repositories\project\timesheet.repository.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)

@@ -1,4 +1,4 @@
-import { hash, compare } from "bcrypt";
+import { hash, compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { Service } from "typedi";
 import { SECRET_KEY } from "../../config";
@@ -6,14 +6,16 @@ import { HttpException } from "../../exceptions/HttpException";
 import crypto from "crypto";
 import { AuthRepository } from "@/repositories/auth/auth.repository";
 import { AUTH_SERVICE_TOKEN, IAuthService } from "@/interfaces/auth/IAuthService.interface";
-import { DataStoreInToken, IUser, TokenData } from "@/types/auth.types";
+import { DataStoreInToken, IUser, IUserLogin, TokenData } from "@/types/auth.types";
 import nodemailer from "nodemailer";
+import { Model } from "sequelize";
 
 
 const createToken = async (userData: IUser): Promise<TokenData> => {
     const dataStoredIntoken: DataStoreInToken = {
         id: userData.id,
-        email: userData.email
+        email: userData.email,
+        role : userData.role
     };
     const expiresAt = new Date();
     expiresAt.setHours(expiresAt.getHours() + 1);
@@ -43,21 +45,38 @@ export class AuthService implements IAuthService {
         return tokenData;
     }
 
-    public async login(userData: IUser): Promise<TokenData> {
-        const findUser = await this.authRepository.findUserByEmail(userData.email);
-        if (!findUser) {
-            throw new HttpException(404, `Email ${userData.email} not found`);
-        }
-
-        const comparePassword = await compare(userData.password, findUser.password);
-        if (!comparePassword) {
-            throw new HttpException(400, "Invalid password");
-        }
-
-        const tokenData = await createToken(findUser);
-        await this.authRepository.saveRefreshToken(findUser.id, tokenData.refreshToken, tokenData.expiresAt);
-        return tokenData;
-    }
+    public async login(userData: IUserLogin): Promise<TokenData> {
+      // Check if userData.password is provided
+      if (!userData.password) {
+          throw new HttpException(400, "Password is required");
+      }
+  
+      const findUser = await this.authRepository.findUserByEmail(userData.email);
+      console.log('User Data:', findUser); // Check if user data is correct and not undefined
+      if (!findUser) {
+          throw new HttpException(404, `Email ${userData.email} not found`);
+      }
+  
+      console.log('Raw user data:', JSON.stringify(findUser));
+      console.log('Is Sequelize instance:', findUser instanceof Model);
+  
+      // Ensure that the password is a valid string
+      if (!findUser.password) {
+          throw new HttpException(404, "User password not found in database");
+      }
+  
+      const comparePassword = await compare(userData.password, findUser.password);
+      if (!comparePassword) {
+          throw new HttpException(400, "Invalid password");
+      }
+  
+      const tokenData = await createToken(findUser);
+      console.log('Token Data:', tokenData); // Check if tokenData is correct and not undefined
+  
+      // Save refresh token
+      await this.authRepository.saveRefreshToken(findUser.id, tokenData.refreshToken, tokenData.expiresAt);
+      return tokenData;
+  }
 
     public async refreshToken(token: string): Promise<TokenData> {
         if (!token) {

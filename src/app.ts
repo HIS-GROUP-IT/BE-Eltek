@@ -10,10 +10,10 @@ import { NODE_ENV, PORT, LOG_FORMAT, CREDENTIALS } from '@config';
 import dbConnection from './database';  // Sequelize DB connection
 import { ErrorMiddleware } from './middlewares/ErrorMiddleware';
 import { logger, stream } from './utils/logger';
-import { RateLimiterRedis } from "rate-limiter-flexible";
-import Redis from "ioredis";
-import { rateLimit } from "express-rate-limit";
-import RedisStore, { RedisReply } from 'rate-limit-redis';
+// import { RateLimiterRedis } from "rate-limiter-flexible";
+// import Redis from "ioredis";
+// import { rateLimit } from "express-rate-limit";
+// import RedisStore, { RedisReply } from 'rate-limit-redis';
 import Container from 'typedi';
 import { AUTH_SERVICE_TOKEN } from './interfaces/auth/IAuthService.interface';
 import { AuthService } from './services/auth/auth.service';
@@ -36,20 +36,24 @@ export class App {
     public env: string;
     public port: string | number;
     
-    private redisClient = new Redis(process.env.REDIS_URL);
+    // private redisClient: Redis;
 
     constructor(routes: Routes[]) {
         this.app = express();
-        this.initializeInterfaces();
         this.env = NODE_ENV || "development";
         this.port = PORT || 3001;
-
+        // this.redisClient = new Redis({
+        //     port: 6379, // Default port for Redis
+        //     host: 'timepay-tracker-ga8wlc.serverless.eun1.cache.amazonaws.com', // Your ElastiCache Redis endpoint
+        //     tls: {}  // Enabling TLS for the connection
+        // });
+        this.initializeInterfaces();
         // Initialize the database connection
         this.connectToDatabase();
 
         this.initializeMiddlewares();
-        this.initializeRedis();
-        this.initializeRateLimiter();
+        // this.initializeRedis();
+        // this.initializeRateLimiter();
         this.initializeRoutes(routes);
         this.initializeErrorHandling();
     }
@@ -72,10 +76,12 @@ export class App {
             // Attempt to authenticate the connection to the database
             await dbConnection.authenticate();
             logger.info('Database connection established successfully.');
+            console.log('Database connection established successfully.');
     
             // Sync models with the database
             await dbConnection.sync({ force: false }); // Set `force: true` to drop and recreate tables
             logger.info('Database tables synced successfully.');
+            
     
         } catch (error) {
             logger.error('Unable to connect to the database:', error);
@@ -95,49 +101,49 @@ export class App {
         this.app.use(cookieParser());
     }
 
-    private rateLimiter = new RateLimiterRedis({
-        storeClient: this.redisClient,
-        keyPrefix: "middleware",
-        points: 10, // Max 10 requests
-        duration: 1, // Per second
-    });
+    // private rateLimiter = new RateLimiterRedis({
+    //     storeClient: this.redisClient,
+    //     keyPrefix: "middleware",
+    //     points: 10, // Max 10 requests
+    //     duration: 1, // Per second
+    // });
 
-    private initializeRateLimiter() {
-        this.app.use((req, res, next) => {
-            this.rateLimiter.consume(req.ip)
-                .then(() => next())
-                .catch(() => {
-                    logger.warn(`Rate limit exceeded for IP: ${req.ip}`);
-                    res.status(429).json({
-                        success: false,
-                        message: "Too many requests",
-                    });
-                });
-        });
+    // private initializeRateLimiter() {
+    //     this.app.use((req, res, next) => {
+    //         this.rateLimiter.consume(req.ip)
+    //             .then(() => next())
+    //             .catch(() => {
+    //                 logger.warn(`Rate limit exceeded for IP: ${req.ip}`);
+    //                 res.status(429).json({
+    //                     success: false,
+    //                     message: "Too many requests",
+    //                 });
+    //             });
+    //     });
 
-        const sensitiveEndpointLimiter = rateLimit({
-            windowMs: 15 * 60 * 1000,
-            max: 50,
-            standardHeaders: true,
-            legacyHeaders: false,
-            handler: (req, res) => {
-                logger.warn(`Sensitive endpoint rate limit exceeded for IP: ${req.ip}`);
-                res.status(429).json({
-                    success: false,
-                    message: "Too many requests"
-                });
-            },
+    //     const sensitiveEndpointLimiter = rateLimit({
+    //         windowMs: 15 * 60 * 1000,
+    //         max: 50,
+    //         standardHeaders: true,
+    //         legacyHeaders: false,
+    //         handler: (req, res) => {
+    //             logger.warn(`Sensitive endpoint rate limit exceeded for IP: ${req.ip}`);
+    //             res.status(429).json({
+    //                 success: false,
+    //                 message: "Too many requests"
+    //             });
+    //         },
         
-            store: new RedisStore({
-                sendCommand: async (...args: [string, ...unknown[] | any]): Promise<RedisReply> => {
-                    return await this.redisClient.call(...args) as RedisReply;
-                },
-            }),
-        });
+    //         store: new RedisStore({
+    //             sendCommand: async (...args: [string, ...unknown[] | any]): Promise<RedisReply> => {
+    //                 return await this.redisClient.call(...args) as RedisReply;
+    //             },
+    //         }),
+    //     });
         
 
-        this.app.use("/api/auth", sensitiveEndpointLimiter); 
-    }
+    //     this.app.use("/api/auth", sensitiveEndpointLimiter); 
+    // }
 
     private initializeInterfaces() {
          Container.set(AUTH_SERVICE_TOKEN, new AuthService(Container.get(AuthRepository)));
@@ -153,12 +159,13 @@ export class App {
         });
     }
 
-    private initializeRedis() {
-        this.app.use("/api/profile", (req: RequestWithUserAndRedis, res: Response, next: NextFunction) => {
-            req.redisClient = this.redisClient;
-            next();
-        });
-    }
+    // private initializeRedis() {
+    //     this.app.use("/api/profile", (req: RequestWithUserAndRedis, res: Response, next: NextFunction) => {
+    //         req.redisClient = this.redisClient;
+    //         next();
+    //     });
+    // }
+    
 
     private initializeErrorHandling() {
         this.app.use(ErrorMiddleware);

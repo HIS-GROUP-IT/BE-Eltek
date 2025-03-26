@@ -7,42 +7,43 @@ import { IProfileRepository } from "@/interfaces/profile/IProfileRepository.inte
 export class ProfileRepository implements IProfileRepository {
   
   public async createProfile(profileData: Partial<IProfile>): Promise<IProfile> {
-    return await Profile.create(profileData);
+    return await Profile.create(profileData, { raw: true });
   }
 
   public async updateProfile(profileData: Partial<IProfile>): Promise<IProfile> {
-    const profile = await Profile.findByPk(profileData.id);
+    const profile = await Profile.findByPk(profileData.id, { raw: false }); // Need instance for update
     if (!profile) throw new Error("Profile not found");
-    return await profile.update(profileData);
+    await profile.update(profileData);
+    return profile.get({ plain: true }); // Return as plain object
   }
 
   public async assignEmployee(projectId: number, employeeId: number): Promise<IProfile> {
-    const profile = await Profile.findByPk(employeeId);
+    const profile = await Profile.findByPk(employeeId, { raw: false });
     if (!profile) throw new Error("Profile not found");
 
-    profile.projectId = projectId;
-    return await profile.save();
+    await profile.update({ projectId });
+    return profile.get({ plain: true });
   }
 
   public async removeEmployee(projectId: number, employeeId: number): Promise<IProfile> {
-    const profile = await Profile.findByPk(employeeId);
+    const profile = await Profile.findByPk(employeeId, { raw: false });
     if (!profile) throw new Error("Profile not found");
 
     if (profile.projectId === projectId) {
-      profile.projectId = null;
-      return await profile.save();
-    } else {
-      throw new Error("Employee is not assigned to this project");
+      await profile.update({ projectId: null });
+      return profile.get({ plain: true });
     }
+    throw new Error("Employee is not assigned to this project");
   }
 
-  // Get all profiles
   public async getAllProfiles(): Promise<IProfile[]> {
-    return await Profile.findAll();
+    return await Profile.findAll({ raw: true });
   }
 
-  // Get profile by user ID
   public async getProfileByUserId(userId: number): Promise<IProfile | null> {
-    return await Profile.findOne({ where: { userId } });
+    return await Profile.findOne({ 
+      where: { userId },
+      raw: true 
+    });
   }
 }

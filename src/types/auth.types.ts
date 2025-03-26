@@ -26,4 +26,11 @@ export type IUser = {
   export type DataStoreInToken = {
     id: number;
     email: string;
+    role:string;
+  }
+
+
+  export type IUserLogin = {
+    email: string;
+    password: string
   }

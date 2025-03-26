@@ -1,0 +1,149 @@
+2025-03-26 00:00:20 info: =================================
+2025-03-26 00:00:20 info: ======= ENV: development =======
+2025-03-26 00:00:20 info: 🚀 Identity Service listening on port 5000
+2025-03-26 00:00:20 info: =================================
+2025-03-26 00:00:22 info: =================================
+2025-03-26 00:00:22 info: ======= ENV: development =======
+2025-03-26 00:00:23 info: 🚀 Identity Service listening on port 5000
+2025-03-26 00:00:23 info: =================================
+2025-03-26 00:00:25 info: Database connection established successfully.
+2025-03-26 00:00:30 info: =================================
+2025-03-26 00:00:30 info: ======= ENV: development =======
+2025-03-26 00:00:30 info: 🚀 Identity Service listening on port 5000
+2025-03-26 00:00:30 info: =================================
+2025-03-26 00:00:33 info: =================================
+2025-03-26 00:00:33 info: ======= ENV: development =======
+2025-03-26 00:00:33 info: 🚀 Identity Service listening on port 5000
+2025-03-26 00:00:33 info: =================================
+2025-03-26 00:00:36 info: =================================
+2025-03-26 00:00:36 info: ======= ENV: development =======
+2025-03-26 00:00:36 info: 🚀 Identity Service listening on port 5000
+2025-03-26 00:00:36 info: =================================
+2025-03-26 00:00:39 info: Database connection established successfully.
+2025-03-26 00:00:41 info: Database tables synced successfully.
+2025-03-26 00:43:18 info: Database connection established successfully.
+2025-03-26 00:43:20 info: Database tables synced successfully.
+2025-03-26 01:02:47 info: Database connection established successfully.
+2025-03-26 01:03:10 info: Database connection established successfully.
+2025-03-26 01:03:12 info: Database tables synced successfully.
+2025-03-26 01:03:48 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:12:32 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:12:58 error: Unable to connect to the database: getaddrinfo ENOTFOUND czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:13:10 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:14:26 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:15:01 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:16:11 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:17:12 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:19:43 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:21:00 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:21:34 error: Unable to connect to the database: getaddrinfo ENOTFOUND database-1.czo6cagmcvou.eu-north-1.rds.amazonaws.com
+2025-03-26 01:21:59 error: Unable to connect to the database: connect ETIMEDOUT 51.21.229.188:3306
+2025-03-26 01:25:21 error: Unable to connect to the database: Unknown database 'database-1-timepay'
+2025-03-26 01:26:21 error: Unable to connect to the database: Unknown database 'database-1-timepay'
+2025-03-26 01:26:41 error: Unable to connect to the database: connect ETIMEDOUT
+2025-03-26 01:26:48 error: Unable to connect to the database: Unknown database 'database-1-timepay'
+2025-03-26 01:39:36 info: Database connection established successfully.
+2025-03-26 01:39:38 info: Database tables synced successfully.
+2025-03-26 01:48:30 info: =================================
+2025-03-26 01:48:30 info: ======= ENV: development =======
+2025-03-26 01:48:30 info: 🚀 Identity Service listening on port 5000
+2025-03-26 01:48:30 info: =================================
+2025-03-26 01:48:34 info: Database connection established successfully.
+2025-03-26 01:48:37 info: Database tables synced successfully.
+2025-03-26 01:48:55 info: [0mPOST /api/auth/login [32m201[0m 1914.966 ms - 403[0m
+2025-03-26 01:51:12 info: Database connection established successfully.
+2025-03-26 01:51:15 info: Database tables synced successfully.
+2025-03-26 01:51:37 info: Database connection established successfully.
+2025-03-26 01:51:39 info: Database tables synced successfully.
+2025-03-26 01:52:16 info: Database connection established successfully.
+2025-03-26 01:52:29 info: Database connection established successfully.
+2025-03-26 01:52:31 info: Database tables synced successfully.
+2025-03-26 01:52:40 info: Database connection established successfully.
+2025-03-26 01:52:43 info: Database tables synced successfully.
+2025-03-26 01:53:01 info: Database connection established successfully.
+2025-03-26 01:53:03 info: Database tables synced successfully.
+2025-03-26 02:09:55 info: =================================
+2025-03-26 02:09:55 info: ======= ENV: development =======
+2025-03-26 02:09:55 info: 🚀 Identity Service listening on port 5000
+2025-03-26 02:09:55 info: =================================
+2025-03-26 02:09:59 info: Database connection established successfully.
+2025-03-26 02:10:01 info: Database tables synced successfully.
+2025-03-26 02:10:22 info: [0mPOST /api/auth/login [32m201[0m 1948.551 ms - 403[0m
+2025-03-26 02:10:43 info: Database connection established successfully.
+2025-03-26 02:10:46 info: Database tables synced successfully.
+2025-03-26 02:19:13 info: =================================
+2025-03-26 02:19:13 info: ======= ENV: development =======
+2025-03-26 02:19:13 info: 🚀 Identity Service listening on port 5000
+2025-03-26 02:19:13 info: =================================
+2025-03-26 02:19:16 info: Database connection established successfully.
+2025-03-26 02:19:18 info: Database tables synced successfully.
+2025-03-26 02:19:21 info: [0mPOST /api/auth/login [32m201[0m 775.935 ms - 403[0m
+2025-03-26 02:23:10 info: Database connection established successfully.
+2025-03-26 02:23:12 info: Database tables synced successfully.
+2025-03-26 02:23:20 info: Database connection established successfully.
+2025-03-26 02:23:23 info: Database tables synced successfully.
+2025-03-26 08:14:37 info: =================================
+2025-03-26 08:14:37 info: ======= ENV: development =======
+2025-03-26 08:14:37 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:14:37 info: =================================
+2025-03-26 08:14:41 info: Database connection established successfully.
+2025-03-26 08:14:43 info: Database tables synced successfully.
+2025-03-26 08:15:01 info: [0mPOST /api/auth/refreshtoken [32m201[0m 2819.378 ms - 423[0m
+2025-03-26 08:15:48 info: =================================
+2025-03-26 08:15:48 info: ======= ENV: development =======
+2025-03-26 08:15:48 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:15:48 info: =================================
+2025-03-26 08:15:51 info: Database connection established successfully.
+2025-03-26 08:15:53 info: Database tables synced successfully.
+2025-03-26 08:16:41 info: =================================
+2025-03-26 08:16:41 info: ======= ENV: development =======
+2025-03-26 08:16:41 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:16:41 info: =================================
+2025-03-26 08:16:44 info: Database connection established successfully.
+2025-03-26 08:16:46 info: Database tables synced successfully.
+2025-03-26 08:19:20 info: =================================
+2025-03-26 08:19:20 info: ======= ENV: development =======
+2025-03-26 08:19:20 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:19:20 info: =================================
+2025-03-26 08:19:23 info: Database connection established successfully.
+2025-03-26 08:19:27 info: =================================
+2025-03-26 08:19:27 info: ======= ENV: development =======
+2025-03-26 08:19:27 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:19:27 info: =================================
+2025-03-26 08:19:30 info: Database connection established successfully.
+2025-03-26 08:19:32 info: Database tables synced successfully.
+2025-03-26 08:19:35 info: =================================
+2025-03-26 08:19:35 info: ======= ENV: development =======
+2025-03-26 08:19:35 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:19:35 info: =================================
+2025-03-26 08:19:38 info: Database connection established successfully.
+2025-03-26 08:19:41 info: Database tables synced successfully.
+2025-03-26 08:19:46 info: =================================
+2025-03-26 08:19:46 info: ======= ENV: development =======
+2025-03-26 08:19:46 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:19:46 info: =================================
+2025-03-26 08:19:51 info: =================================
+2025-03-26 08:19:51 info: ======= ENV: development =======
+2025-03-26 08:19:51 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:19:51 info: =================================
+2025-03-26 08:19:54 info: Database connection established successfully.
+2025-03-26 08:19:56 info: Database tables synced successfully.
+2025-03-26 08:21:19 info: =================================
+2025-03-26 08:21:19 info: ======= ENV: development =======
+2025-03-26 08:21:19 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:21:19 info: =================================
+2025-03-26 08:21:23 info: Database connection established successfully.
+2025-03-26 08:22:04 info: =================================
+2025-03-26 08:22:04 info: ======= ENV: development =======
+2025-03-26 08:22:04 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:22:04 info: =================================
+2025-03-26 08:22:09 info: =================================
+2025-03-26 08:22:09 info: ======= ENV: development =======
+2025-03-26 08:22:09 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:22:09 info: =================================
+2025-03-26 08:22:13 info: Database connection established successfully.
+2025-03-26 08:22:15 info: Database tables synced successfully.
+2025-03-26 08:22:41 info: =================================
+2025-03-26 08:22:41 info: ======= ENV: development =======
+2025-03-26 08:22:41 info: 🚀 Identity Service listening on port 5000
+2025-03-26 08:22:41 info: =================================

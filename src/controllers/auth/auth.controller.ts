@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { Container } from "typedi";
 import { AUTH_SERVICE_TOKEN } from "@/interfaces/auth/IAuthService.interface";
-import { IUser, TokenData } from "@/types/auth.types";
+import { IUser, IUserLogin, TokenData } from "@/types/auth.types";
 import { CustomResponse } from "@/types/response.interface";
 
 
@@ -30,7 +30,7 @@ export class AuthController {
 
     public login = async (req:Request, res:Response, next:NextFunction) => {
         try {
-            const userData : IUser = req.body;
+            const userData : IUserLogin = req.body;
             const loggedInUser = await this.auth.login(userData);
             const response : CustomResponse<TokenData> = {
                 data : loggedInUser,
