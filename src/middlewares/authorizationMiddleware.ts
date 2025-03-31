@@ -10,7 +10,7 @@ export const authorizationMiddleware = (req:RequestWithUser,res:Response,next:Ne
     if(!token){
        throw new HttpException(401,"Authentication required");        
     }
-    verify(token,SECRET_KEY,(error:VerifyErrors, user:DataStoreInToken) =>{
+    verify(token,"X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H",(error:VerifyErrors, user:DataStoreInToken) =>{
         if(error){
            throw new HttpException(401,error.message)
         }
@@ -26,7 +26,7 @@ export const SuperAdminAuthorizationMiddleware = (req:RequestWithUser,res:Respon
     if(!token){
        throw new HttpException(401,"Authentication required");        
     }
-    verify(token,SECRET_KEY,(error:VerifyErrors, user:DataStoreInToken) =>{
+    verify(token,"X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H",(error:VerifyErrors, user:DataStoreInToken) =>{
         if(error){
            throw new HttpException(401,error.message)
         }        

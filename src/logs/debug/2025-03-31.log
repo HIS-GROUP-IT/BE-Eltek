@@ -2830,3 +2830,14 @@
 2025-03-31 18:09:30 info: =================================
 2025-03-31 18:09:33 info: Database connection established successfully.
 2025-03-31 18:09:36 info: Database tables synced successfully.
+2025-03-31 18:27:44 info: =================================
+2025-03-31 18:27:44 info: ======= ENV: development =======
+2025-03-31 18:27:44 info: 🚀 Identity Service listening on port 5000
+2025-03-31 18:27:44 info: =================================
+2025-03-31 18:27:47 info: Database connection established successfully.
+2025-03-31 18:27:49 info: Database tables synced successfully.
+2025-03-31 18:27:52 info: =================================
+2025-03-31 18:27:52 info: ======= ENV: development =======
+2025-03-31 18:27:52 info: 🚀 Identity Service listening on port 5000
+2025-03-31 18:27:52 info: =================================
+2025-03-31 18:27:56 info: Database connection established successfully.

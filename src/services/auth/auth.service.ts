@@ -22,7 +22,7 @@ const createToken = async (userData: IUser): Promise<TokenData> => {
     };
     const expiresAt = new Date();
     expiresAt.setHours(expiresAt.getHours() + 1);
-    const accessToken = sign(dataStoredIntoken, SECRET_KEY, { expiresIn: "3d" });
+    const accessToken = sign(dataStoredIntoken,"X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H", { expiresIn: "3d" });
     const refreshToken = crypto.randomBytes(40).toString("hex");
     return { expiresAt, accessToken, refreshToken };
 }
