@@ -2,7 +2,11 @@ import { Service } from "typedi";
 import { IProjectRepository } from "@/interfaces/project/IProjectRepository.interface";
 import { IProject } from "@/types/project.types";
 import Project from "@/models/project/project.model";
+import Employee from "@/models/employee/employee.model"; 
+import EmployeeProject from "@/models/employee/projectEmployees.model";
+import { HttpException } from "@/exceptions/HttpException";
 import { Op } from "sequelize";
+
 
 @Service()
 export class ProjectRepository implements IProjectRepository {
@@ -18,12 +22,6 @@ export class ProjectRepository implements IProjectRepository {
         return project.get({ plain: true });
     }
 
-    public async deleteProject(projectId: number): Promise<void> {
-        const project = await Project.findByPk(projectId);
-        if (!project) throw new Error("Project not found");
-        await project.destroy();
-    }
-
     public async getAllProjects(): Promise<IProject[]> {
         const projects = await Project.findAll({
             order: [['createdAt', 'DESC']],
@@ -33,62 +31,89 @@ export class ProjectRepository implements IProjectRepository {
     }
 
     public async getProjectById(projectId: number): Promise<IProject | null> {
-        const project = await Project.findByPk(projectId, { raw: true });
+        const project = await Project.findByPk(projectId, {           
+            raw: true,
+            nest: true
+        });
         return project;
     }
 
-    // public async getProjectsByStatus(status: string): Promise<IProject[]> {
-    //     const projects = await Project.findAll({
-    //         where: { status },
-    //         order: [['createdAt', 'DESC']],
-    //         raw: true
-    //     });
-    //     return projects;
-    // }
+    public async getProjectsByEmployee(employeeId: number): Promise<IProject[]> {
+        const employeeProjects = await EmployeeProject.findAll({
+          where: { employeeId },
+          include: [{
+            model: Project,
+            as: 'project',
+            attributes: ['id', 'name', 'description', 'duration', 'budget', 'startDate', 'endDate', 'status']
+          }]
+        });
+      
+        if (!employeeProjects || employeeProjects.length === 0) {
+          throw new Error("No projects assigned to this employee");
+        }
+      
+        // Extract the project from each EmployeeProject record
+        const projects = employeeProjects.map(ep => (ep as any).project);
+        return projects;
+      }
+      
 
-    // public async searchProjects(searchTerm: string): Promise<IProject[]> {
-    //     const projects = await Project.findAll({
-    //         where: {
-    //             [Op.or]: [
-    //                 { name: { [Op.iLike]: `%${searchTerm}%` } },
-    //                 { description: { [Op.iLike]: `%${searchTerm}%` } }
-    //             ]
-    //         },
-    //         raw: true
-    //     });
-    //     return projects;
-    // }
-
-    // public async getProjectsWithTeamMembers(projectId: number): Promise<IProject | null> {
-    //     const project = await Project.findByPk(projectId, {
-    //         include: [{
-    //             model: User,
-    //             as: 'teamMembers',
-    //             through: { attributes: [] },
-    //             attributes: ['id', 'name', 'email']
-    //         }],
-    //         raw: true,
-    //         nest: true
-    //     });
-    //     return project;
-    // }
-
-    // public async countProjects(): Promise<number> {
-    //     const count = await Project.count();
-    //     return count;
-    // }
-
-    // public async getPaginatedProjects(page: number, limit: number): Promise<{ projects: IProject[]; total: number }> {
-    //     const offset = (page - 1) * limit;
-    //     const result = await Project.findAndCountAll({
-    //         limit,
-    //         offset,
-    //         order: [['createdAt', 'DESC']],
-    //         raw: true
-    //     });
-    //     return {
-    //         projects: result.rows,
-    //         total: result.count
-    //     };
-    // }
+    public async deleteProject(projectId: number): Promise<void> {
+        const transaction = await Project.sequelize!.transaction();
+        
+        try {
+            const project = await Project.findByPk(projectId, { transaction });
+            if (!project) {
+                throw new HttpException(404, "Project not found");
+            }    
+            await EmployeeProject.destroy({
+                where: { projectId },
+                transaction
+            });    
+            const assignedEmployees = await EmployeeProject.findAll({
+                attributes: ['employeeId'],
+                where: { projectId },
+                transaction
+            });
+    
+            const employeeIds = assignedEmployees.map(e => e.employeeId);
+            
+            if (employeeIds.length > 0) {
+                const employeesWithNoOtherProjects = await Employee.findAll({
+                    where: {
+                        id: employeeIds,
+                        [Op.not]: {
+                            id: {
+                                [Op.in]: await EmployeeProject.findAll({
+                                    attributes: ['employeeId'],
+                                    where: {
+                                        employeeId: employeeIds,
+                                        projectId: { [Op.ne]: projectId }
+                                    },
+                                    transaction
+                                }).then(res => res.map(r => r.employeeId))
+                            }
+                        }
+                    },
+                    transaction
+                });
+                    if (employeesWithNoOtherProjects.length > 0) {
+                    await Employee.update(
+                        { assigned: false },
+                        {
+                            where: { id: employeesWithNoOtherProjects.map(e => e.id) },
+                            transaction
+                        }
+                    );
+                }
+            }
+    
+            await project.update({ status: "cancelled" }, { transaction });
+    
+            await transaction.commit();
+        } catch (error) {
+            await transaction.rollback();
+            throw error instanceof HttpException ? error : new HttpException(500, "Error deleting project");
+        }
+    }
 }

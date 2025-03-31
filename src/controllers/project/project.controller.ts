@@ -3,6 +3,7 @@ import { Container } from "typedi";
 import { IProject } from "@/types/project.types";
 import { CustomResponse } from "@/types/response.interface";
 import { PROJECT_SERVICE_TOKEN } from "@/interfaces/project/IProjectService";
+import { RequestWithUser } from "@/types/auth.types";
 
 export class ProjectController {
     private projectService;
@@ -11,7 +12,7 @@ export class ProjectController {
         this.projectService = Container.get(PROJECT_SERVICE_TOKEN);
     }
 
-    public createProject = async (req: Request, res: Response, next: NextFunction) => {
+    public createProject = async (req: RequestWithUser, res: Response, next: NextFunction) => {
         try {
             const projectData: Partial<IProject> = req.body;
             const createdProject = await this.projectService.createProject(projectData);
@@ -84,4 +85,19 @@ export class ProjectController {
             next(error);
         }
     };
+
+    public getProjectsByEmployee = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const employeeId = req.params.employeeId;
+            const fetchedProjects = await this.projectService.getProjectsByEmployee((Number(employeeId)));
+            const response: CustomResponse<IProject[]> = {
+                data: fetchedProjects,
+                message: "Projects retrieved successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
 }

@@ -17,6 +17,9 @@ export type IUser = {
     email: string;
     password: string;
     role: string;
+    fullName : string;
+    phoneNumber?: string;
+    employeeId?:string;
     createdAt?: Date;
     updatedAt?: Date;
     otp?:string
@@ -26,7 +29,10 @@ export type IUser = {
   export type DataStoreInToken = {
     id: number;
     email: string;
+    fullName: string
     role:string;
+    phoneNumber:string;
+    employeeId : string;
   }
 
 

@@ -7,29 +7,26 @@ import { IAuthRepository } from "@/interfaces/auth/IAuthRepository .interface";
 
 @Service()
 export class AuthRepository implements IAuthRepository {
-    // Consistent use of raw: true for data retrieval
     public async findUserByEmail(email: string): Promise<IUser | null> {
-        return User.findOne({ 
-            where: { email }, 
-            attributes: ['id', 'email', 'password', 'role', 'otp'],
+        return User.findOne({
+            where: { email },
+            attributes: ['id', 'email', 'password', 'role', 'otp', 'phoneNumber', 'fullName', 'employeeId'],
             raw: true
         });
     }
-
-    // Update to handle both raw and instance operations
     public async saveOtp(email: string, otp: string): Promise<void> {
-        const user = await User.findOne({ 
+        const user = await User.findOne({
             where: { email },
-            raw: false // Explicitly get Model instance for saving
+            raw: false
         });
-        
+
         if (user) {
             await user.update({ otp });
         }
     }
 
     public async validateOtp(email: string, otp: string): Promise<IUser> {
-        return User.findOne({ 
+        return User.findOne({
             where: { email, otp },
             raw: true
         });
@@ -38,16 +35,16 @@ export class AuthRepository implements IAuthRepository {
     public async forgotPassword(email: string, otp: string, newPassword: string): Promise<IUser> {
         const user = await User.findOne({
             where: { email },
-            raw: false // Need instance for saving
+            raw: false
         });
-        
+
         if (user) {
             const hashedPassword = await hash(newPassword, 10);
-            await user.update({ 
+            await user.update({
                 password: hashedPassword,
                 otp: ''
             });
-            return user.get({ plain: true }); // Return plain object
+            return user.get({ plain: true });
         }
         throw new Error("User not found");
     }
@@ -57,10 +54,10 @@ export class AuthRepository implements IAuthRepository {
     }
 
     public async createUser(userData: IUser): Promise<IUser> {
+        console.log("Employee data", userData)
         return User.create(userData, { raw: true });
     }
 
-    // Refresh token methods (keep as-is since they use separate model)
     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
         await RefreshToken.create({ token, userId, expiresAt });
     }

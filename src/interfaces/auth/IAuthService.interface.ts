@@ -8,6 +8,7 @@ export interface IAuthService {
   logout(token: string): Promise<void>;
   sendOtp(email: string): Promise<string>;
   verifyOtp(email: string, otp: string): Promise<string>;
+
   updatePassword(
     email: string,
     otp: string,

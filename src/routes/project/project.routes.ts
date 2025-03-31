@@ -18,7 +18,9 @@ export class ProjectRoute implements Routes {
         this.router.post(`${this.path}/createProject`,authorizationMiddleware, ValidationMiddleware(CreateProjectDto), this.projectController.createProject);
         this.router.put(`${this.path}/updateProject`,authorizationMiddleware, ValidationMiddleware(UpdateProjectDto), this.projectController.updateProject);
         this.router.delete(`${this.path}/:projectId`, authorizationMiddleware,this.projectController.deleteProject);
-        this.router.get(`${this.path}`,authorizationMiddleware, this.projectController.getAllProjects); 
-        this.router.get(`${this.path}/:projectId`,authorizationMiddleware, this.projectController.getProjectById); 
+        this.router.get(`${this.path}/getAllProjects`,authorizationMiddleware, this.projectController.getAllProjects); 
+        this.router.get(`${this.path}/getProject/:projectId`,authorizationMiddleware, this.projectController.getProjectById); 
+        this.router.delete(`${this.path}/deleteProject/:projectId`,authorizationMiddleware, this.projectController.deleteProject); 
+        this.router.get(`${this.path}/getEmployeeProjects/:employeeId`,authorizationMiddleware, this.projectController.getProjectsByEmployee); 
     }
 }

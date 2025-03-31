@@ -28,6 +28,26 @@ export class AuthController {
         }
     }
 
+    
+    public signupAdmin = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const userData: IUser = req.body;
+            const adminData : IUser = {
+                ...userData,
+                role:"admin"
+            }
+            const signUpUserData = await this.auth.signup(adminData);
+            const response: CustomResponse<TokenData> = {
+                data: signUpUserData,  
+                message: "User registered successfully",
+                error: false
+            };
+            res.status(201).json(response)
+        } catch (error) {
+            next(error);
+        }
+    }
+
     public login = async (req:Request, res:Response, next:NextFunction) => {
         try {
             const userData : IUserLogin = req.body;

@@ -10,5 +10,7 @@ export interface IAuthRepository {
     deleteRefreshToken(tokenId: string): Promise<void>;
     saveOtp(email: string, otp: string): Promise<void>
     validateOtp(email: string, otp: string): Promise<IUser>
-    forgotPassword(email: string, otp: string, newPassword: string) : Promise<IUser>
+    forgotPassword(email: string, otp: string, newPassword: string) : Promise<IUser>;
+  
+   
 }

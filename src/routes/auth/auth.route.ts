@@ -3,6 +3,7 @@ import { AuthController } from "../../controllers/auth/auth.controller";
 import { ValidationMiddleware } from "@/middlewares/ValidationMiddleware";
 import { Routes } from "@/types/routes.interface";
 import { CreateUserDto } from "@/dots/auth/user.dot";
+import { SuperAdminAuthorizationMiddleware } from "@/middlewares/authorizationMiddleware";
 
 export class AuthRoute implements Routes {
     public path = "/auth";
@@ -21,5 +22,6 @@ export class AuthRoute implements Routes {
         this.router.post(`${this.path}/send-otp`, this.auth.sendOtp); 
         this.router.post(`${this.path}/verify-otp`, this.auth.verifyOtp); 
         this.router.post(`${this.path}/update-password`, this.auth.updatePassword); 
+        this.router.post(`${this.path}/signUpAdmin`,SuperAdminAuthorizationMiddleware, ValidationMiddleware(CreateUserDto), this.auth.signupAdmin); 
     }
 }

@@ -1,9 +1,10 @@
-import { Sequelize } from "sequelize";
-import User from "@/models/user/user.model";
-import Project from "@/models/project/project.model";
-import Profile from "@/models/profile/profile.model";
-import { Timesheet } from "@/models/project/timesheet.model";
-
+import { Sequelize } from 'sequelize';
+import User from '@/models/user/user.model';
+import RefreshToken from '@/models/user/refreshToken.model';
+import Employee from '@/models/employee/employee.model';
+import Task from '@/models/project/task.model';
+import Project from '@/models/project/project.model';
+import EmployeeProject from '@/models/employee/projectEmployees.model';
 
 const DB_NAME = "db_aa010d_eltek";
 const DB_HOST = "MYSQL6013.site4now.net";
@@ -20,16 +21,50 @@ const dbConnection = new Sequelize({
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: false, // Change to true if using a valid CA certificate
-    },
+      rejectUnauthorized: false
+    }
   },
   pool: {
-    max: 5, // Limit connections
+    max: 5,
     min: 0,
-    acquire: 30000, // Increase timeout
-    idle: 10000,
-  },
+    acquire: 30000,
+    idle: 10000
+  }
 });
 
+// Initialize all models
+User.initialize(dbConnection);
+RefreshToken.initialize(dbConnection);
+Employee.initialize(dbConnection);
+Task.initialize(dbConnection);
+Project.initialize(dbConnection);
+EmployeeProject.initialize(dbConnection);
+
+// Set up associations
+User.hasMany(RefreshToken, { foreignKey: 'userId' });
+RefreshToken.belongsTo(User, { foreignKey: 'userId' });
+
+Employee.hasMany(Task, { foreignKey: 'employeeId' });
+Task.belongsTo(Employee, { foreignKey: 'employeeId' });
+
+// Many-to-Many Association between Employee and Project
+Employee.belongsToMany(Project, {
+  through: EmployeeProject,
+  foreignKey: 'employeeId',
+  otherKey: 'projectId'
+});
+
+Project.belongsToMany(Employee, {
+  through: EmployeeProject,
+  foreignKey: 'projectId',
+  otherKey: 'employeeId'
+});
+
+EmployeeProject.belongsTo(Project, { foreignKey: 'projectId', as: 'project' });
+
+
+dbConnection.sync({ alter: true })
+  .then(() => console.log('Database synced successfully'))
+  .catch(error => console.error('Error syncing database:', error));
 
 export default dbConnection;

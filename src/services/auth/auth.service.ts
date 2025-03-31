@@ -15,12 +15,14 @@ const createToken = async (userData: IUser): Promise<TokenData> => {
     const dataStoredIntoken: DataStoreInToken = {
         id: userData.id,
         email: userData.email,
-        role : userData.role
+        role : userData.role,
+        fullName : userData.fullName,
+        phoneNumber : userData.phoneNumber,
+        employeeId:userData.employeeId
     };
     const expiresAt = new Date();
     expiresAt.setHours(expiresAt.getHours() + 1);
-
-    const accessToken = sign(dataStoredIntoken, SECRET_KEY, { expiresIn: "1h" });
+    const accessToken = sign(dataStoredIntoken, SECRET_KEY, { expiresIn: "3d" });
     const refreshToken = crypto.randomBytes(40).toString("hex");
     return { expiresAt, accessToken, refreshToken };
 }
@@ -38,7 +40,10 @@ export class AuthService implements IAuthService {
         const createdUser = await this.authRepository.createUser({
             email: userData.email,
             password: hashedPassword,
-            role: userData.role
+            role: userData.role,
+            fullName: userData.fullName,
+            employeeId:userData.employeeId,
+            phoneNumber:userData.phoneNumber
         });
         const tokenData = await createToken(createdUser);
         await this.authRepository.saveRefreshToken(createdUser.id, tokenData.refreshToken, tokenData.expiresAt);
@@ -46,21 +51,16 @@ export class AuthService implements IAuthService {
     }
 
     public async login(userData: IUserLogin): Promise<TokenData> {
-      // Check if userData.password is provided
       if (!userData.password) {
           throw new HttpException(400, "Password is required");
       }
   
       const findUser = await this.authRepository.findUserByEmail(userData.email);
-      console.log('User Data:', findUser); // Check if user data is correct and not undefined
+      console.log('User Data:', findUser);
       if (!findUser) {
           throw new HttpException(404, `Email ${userData.email} not found`);
       }
   
-      console.log('Raw user data:', JSON.stringify(findUser));
-      console.log('Is Sequelize instance:', findUser instanceof Model);
-  
-      // Ensure that the password is a valid string
       if (!findUser.password) {
           throw new HttpException(404, "User password not found in database");
       }
@@ -71,9 +71,7 @@ export class AuthService implements IAuthService {
       }
   
       const tokenData = await createToken(findUser);
-      console.log('Token Data:', tokenData); // Check if tokenData is correct and not undefined
   
-      // Save refresh token
       await this.authRepository.saveRefreshToken(findUser.id, tokenData.refreshToken, tokenData.expiresAt);
       return tokenData;
   }

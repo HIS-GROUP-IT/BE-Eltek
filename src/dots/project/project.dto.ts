@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, IsOptional, IsArray, IsInt } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional, IsEnum, IsInt, IsDate, IsDateString, IsNumber } from 'class-validator';
 
 export class CreateProjectDto {
   @IsString()
@@ -6,39 +6,54 @@ export class CreateProjectDto {
   name: string;
 
   @IsString()
-  @IsNotEmpty()
-  description: string;
-
-  @IsArray()
   @IsOptional()
-  @IsString({ each: true })
-  employees?: string[]; // Array of employee IDs
+  description?: string;
 
-  @IsInt()
+  @IsEnum(['planned', 'on going', 'cancelled', 'completed', 'on hold'])
+  status: 'planned' | 'on going' | 'cancelled' | 'completed' | 'on hold';
+
+  @IsDateString()
+  startDate: Date;
+
+  @IsDateString()
   @IsOptional()
-  budget?: number; // Optional field for budget
+  endDate?: Date;
+
+
+  @IsOptional()
+  duration : number
+
+
+  @IsOptional()
+  budget : number
 }
-
-
 
 
 export class UpdateProjectDto {
   @IsString()
   @IsNotEmpty()
-  @IsOptional()
-  name?: string; // Optional field for project name
+  name: string;
 
   @IsString()
-  @IsNotEmpty()
   @IsOptional()
-  description?: string; // Optional field for project description
+  description?: string;
 
-  @IsArray()
-  @IsOptional()
-  @IsString({ each: true })
-  employees?: string[]; // Array of employee IDs to assign to the project
+  @IsString()
+  status: string
 
-  @IsInt()
+  @IsDateString()
+  startDate: Date;
+
+  @IsDateString()
   @IsOptional()
-  budget?: number; // Optional field for project budget
+  endDate?: Date;
+
+
+  @IsOptional()
+  duration : number
+
+
+
+  @IsOptional()
+  budget : number
 }

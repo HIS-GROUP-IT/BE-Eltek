@@ -49,4 +49,14 @@ export class ProjectService implements IProjectService {
             throw new HttpException(500, `Error retrieving project: ${error.message}`);
         }
     }
+
+    public async getProjectsByEmployee(employeeId: number): Promise<IProject[]> {
+        try {
+            const fetchedProjects = await this.projectRepository.getProjectsByEmployee(employeeId);
+            return fetchedProjects;
+        } catch (error) {
+            throw new HttpException(400, error);
+        }
+    }
+
 }

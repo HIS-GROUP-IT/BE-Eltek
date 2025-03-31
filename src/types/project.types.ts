@@ -1,14 +1,13 @@
 export type IProject = {
     id?: number;
     name: string;
-    key: string;
     description?: string;
-    status: 'active' | 'inactive' | 'archived';
+    status: 'planned' | 'on going' | 'cancelled' | 'completed' | 'on hold';
     startDate: Date;
+    budget:number;
+    duration:number;
     endDate?: Date;
     createdBy: number;
-    category?: string;
-    slug: string;
     createdAt?: Date;
     updatedAt?: Date;
 };

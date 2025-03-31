@@ -19,3 +19,24 @@ export const authorizationMiddleware = (req:RequestWithUser,res:Response,next:Ne
     });
 }
 
+
+export const SuperAdminAuthorizationMiddleware = (req:RequestWithUser,res:Response,next:NextFunction) => {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+    if(!token){
+       throw new HttpException(401,"Authentication required");        
+    }
+    verify(token,SECRET_KEY,(error:VerifyErrors, user:DataStoreInToken) =>{
+        if(error){
+           throw new HttpException(401,error.message)
+        }        
+        if(user.role !== "SuperAdmin"){
+            throw new HttpException(401,"Super admin rights required!");
+        }
+     
+        req.user = user ;
+        next();
+    });
+}
+
+
