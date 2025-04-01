@@ -46,7 +46,7 @@ export class AuthController {
     }
     
     private clearAuthCookies(res: Response) {
-        const isProduction = process.env.NODE_ENV === 'production';
+        const isProduction =true;
         const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
 
         res.clearCookie('access_token', {
