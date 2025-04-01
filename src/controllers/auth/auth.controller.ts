@@ -14,18 +14,19 @@ export class AuthController {
     }
 
     private setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
-        const isProduction =true;
+        const isProduction = true;
         const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
-
+    
         res.cookie('access_token', tokenData.accessToken, {
             httpOnly: true,
             secure: isProduction,
             sameSite: isProduction ? 'none' : 'lax',
             domain,
             maxAge: 259200000,
-            path: '/'
+            path: '/',
+            signed: true  // <-- Ensure the cookie is signed
         });
-
+    
         res.cookie('user_data', JSON.stringify({
             id: userData.id,
             email: userData.email,
@@ -39,10 +40,11 @@ export class AuthController {
             sameSite: isProduction ? 'none' : 'lax',
             domain,
             maxAge: 259200000,
-            path: '/'
+            path: '/',
+            signed: true  // <-- Sign this cookie as well if needed
         });
     }
-
+    
     private clearAuthCookies(res: Response) {
         const isProduction = process.env.NODE_ENV === 'production';
         const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
