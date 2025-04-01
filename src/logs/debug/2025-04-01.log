@@ -281,3 +281,29 @@
 2025-04-01 21:22:58 info: [0mGET /api/projects/getAllProjects [33m401[0m 0.909 ms - 37[0m
 2025-04-01 21:22:58 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
 2025-04-01 21:22:58 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.087 ms - 37[0m
+2025-04-01 21:25:37 info: =================================
+2025-04-01 21:25:37 info: ======= ENV: development =======
+2025-04-01 21:25:37 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:25:37 info: =================================
+2025-04-01 21:25:40 info: Database connection established successfully.
+2025-04-01 21:25:43 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-04-01 21:25:50 info: =================================
+2025-04-01 21:25:50 info: ======= ENV: development =======
+2025-04-01 21:25:50 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:25:50 info: =================================
+2025-04-01 21:25:53 info: Database connection established successfully.
+2025-04-01 21:25:56 info: Database tables synced successfully.
+2025-04-01 21:26:34 info: [0mOPTIONS /api/auth/login [32m200[0m 2.927 ms - 0[0m
+2025-04-01 21:26:36 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email superadmin@gmail.com not found
+2025-04-01 21:26:36 info: [0mPOST /api/auth/login [33m404[0m 1333.575 ms - 50[0m
+2025-04-01 21:29:20 info: [0mOPTIONS /api/auth/login [32m200[0m 7.360 ms - 0[0m
+2025-04-01 21:29:22 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email superadmin@gmail.com not found
+2025-04-01 21:29:22 info: [0mPOST /api/auth/login [33m404[0m 1728.575 ms - 50[0m
+2025-04-01 21:29:25 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email superadmin@gmail.com not found
+2025-04-01 21:29:25 info: [0mPOST /api/auth/login [33m404[0m 278.047 ms - 50[0m
+2025-04-01 21:30:20 info: =================================
+2025-04-01 21:30:20 info: ======= ENV: development =======
+2025-04-01 21:30:20 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:30:20 info: =================================
+2025-04-01 21:30:23 info: Database connection established successfully.
+2025-04-01 21:30:25 info: Database tables synced successfully.

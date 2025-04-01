@@ -122,3 +122,7 @@ TSError: ⨯ Unable to compile TypeScript:
 2025-04-01 21:22:58 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
 2025-04-01 21:22:58 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
 2025-04-01 21:22:58 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:25:43 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-04-01 21:26:36 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email superadmin@gmail.com not found
+2025-04-01 21:29:22 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email superadmin@gmail.com not found
+2025-04-01 21:29:25 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email superadmin@gmail.com not found
