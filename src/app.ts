@@ -72,23 +72,31 @@ export class App {
   }
 
   private corsOptions = {
-    origin: "*", 
+    origin: [
+      'https://eltek-frontend.vercel.app',
+      'http://localhost:3000' // Match your frontend's development port
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["X-Requested-With", "Content-Type", "Authorization"],
-    credentials: true, 
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Accept",
+      "X-Requested-With"
+    ],
+    credentials: true,
+    optionsSuccessStatus: 200 // For legacy browser support
   };
-
+  
   private initializeMiddlewares() {
     this.app.use(morgan(LOG_FORMAT, { stream }));
     this.app.use(hpp());
     this.app.use(helmet());
-    this.app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
     this.app.use(cors(this.corsOptions));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser("X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H"));
+    this.app.set("trust proxy", 1); // Crucial for Vercel deployments
   }
-
 
   private initializeInterfaces() {
     Container.set(
