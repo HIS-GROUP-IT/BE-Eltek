@@ -1,2 +1,0 @@
-2025-03-27 16:56:00 error: [POST] /api/auth/signup >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'role')
-2025-03-27 16:57:00 error: [POST] /api/auth/signup >> StatusCode:: 401, Message:: Super admin rights required!
