@@ -3,6 +3,8 @@ import { Container } from "typedi";
 import { AUTH_SERVICE_TOKEN } from "@/interfaces/auth/IAuthService.interface";
 import { DataStoreInToken, IUser, IUserLogin, TokenData } from "@/types/auth.types";
 import { CustomResponse } from "@/types/response.interface";
+import jwt from 'jsonwebtoken';
+import crypto from "crypto";
 
 export class AuthController {
     private auth;
@@ -12,14 +14,15 @@ export class AuthController {
     }
 
     private setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
-        const frontendDomain = 'eltek-frontend.vercel.app';
+        const isProduction = true;
+        const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
 
         res.cookie('access_token', tokenData.accessToken, {
             httpOnly: true,
-            secure: true,
-            sameSite: 'none',
-            domain: frontendDomain,
-            maxAge: 72 * 60 * 60 * 1000,
+            secure: isProduction,
+            sameSite: isProduction ? 'none' : 'lax',
+            domain,
+            maxAge: 259200000,
             path: '/'
         });
 
@@ -32,42 +35,56 @@ export class AuthController {
             employeeId: userData.employeeId
         }), {
             httpOnly: false,
-            secure: true,
-            sameSite: 'none',
-            domain: frontendDomain,
-            maxAge: 72 * 60 * 60 * 1000,
+            secure: isProduction,
+            sameSite: isProduction ? 'none' : 'lax',
+            domain,
+            maxAge: 259200000,
             path: '/'
         });
     }
 
     private clearAuthCookies(res: Response) {
-        const frontendDomain = 'eltek-frontend.vercel.app';
+        const isProduction = process.env.NODE_ENV === 'production';
+        const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
 
-        ['access_token', 'user_data'].forEach(cookieName => {
-            res.clearCookie(cookieName, {
-                domain: frontendDomain,
-                path: '/',
-                secure: true,
-                sameSite: 'none'
-            });
+        res.clearCookie('access_token', {
+            domain,
+            path: '/',
+            secure: isProduction,
+            sameSite: isProduction ? 'none' : 'lax'
         });
+
+        res.clearCookie('user_data', {
+            domain,
+            path: '/',
+            secure: isProduction,
+            sameSite: isProduction ? 'none' : 'lax'
+        });
+    }
+
+    private createToken(userData: IUser): TokenData {
+        const dataStoredInToken: DataStoreInToken = {
+            id: userData.id,
+            email: userData.email,
+            role: userData.role,
+            fullName: userData.fullName,
+            phoneNumber: userData.phoneNumber,
+            employeeId: userData.employeeId
+        };
+
+        return {
+            expiresAt: new Date(Date.now() + 259200000),
+            accessToken: jwt.sign(dataStoredInToken, "X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H", { expiresIn: "3d" }),
+            refreshToken: crypto.randomBytes(40).toString("hex")
+        };
     }
 
     public signup = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const userData = req.body;
             const signUpUserData = await this.auth.signup(userData);
-            
-            this.setAuthCookies(res, signUpUserData, {
-                ...userData,
-                id: signUpUserData.id
-            });
-
-            const response: CustomResponse<TokenData> = {
-                data: signUpUserData,
-                message: "User registered successfully",
-                error: false
-            };
+            this.setAuthCookies(res, signUpUserData, userData);
+            const response: CustomResponse<TokenData> = { data: signUpUserData, message: "User registered successfully", error: false };
             res.status(201).json(response);
         } catch (error) {
             next(error);
@@ -77,19 +94,10 @@ export class AuthController {
     public signupAdmin = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const userData: IUser = req.body;
-            const adminData: IUser = {
-                ...userData,
-                role: "admin"
-            };
+            const adminData = { ...userData, role: "admin" };
             const signUpUserData = await this.auth.signup(adminData);
-            
             this.setAuthCookies(res, signUpUserData, adminData);
-
-            const response: CustomResponse<TokenData> = {
-                data: signUpUserData,
-                message: "Admin registered successfully",
-                error: false
-            };
+            const response: CustomResponse<TokenData> = { data: signUpUserData, message: "Admin registered successfully", error: false };
             res.status(201).json(response);
         } catch (error) {
             next(error);
@@ -100,16 +108,10 @@ export class AuthController {
         try {
             const userData: IUserLogin = req.body;
             const loggedInUser = await this.auth.login(userData);
-            const userDetails = await this.auth.getUserById(loggedInUser.id);
-            
-            this.setAuthCookies(res, loggedInUser, userDetails);
-
-            const response: CustomResponse<TokenData> = {
-                data: loggedInUser,
-                message: "User logged in successfully",
-                error: false
-            };
-            return res.status(200).json(response);
+            const tokenData = this.createToken(loggedInUser);
+            this.setAuthCookies(res, tokenData, loggedInUser);
+            const response: CustomResponse<TokenData> = { data: tokenData, message: "User logged in successfully", error: false };
+            res.status(200).json(response);
         } catch (error) {
             next(error);
         }
@@ -119,16 +121,9 @@ export class AuthController {
         try {
             const token: string = req.body.token;
             const newToken = await this.auth.refreshToken(token);
-            const user = await this.auth.getUserById(newToken.id);
-            
-            this.setAuthCookies(res, newToken, user);
-
-            const response: CustomResponse<TokenData> = {
-                data: newToken,
-                message: "Token refreshed successfully",
-                error: false
-            };
-            return res.status(200).json(response);
+            this.setAuthCookies(res, newToken, newToken);
+            const response: CustomResponse<TokenData> = { data: newToken, message: "Token refreshed successfully", error: false };
+            res.status(200).json(response);
         } catch (error) {
             next(error);
         }
@@ -139,13 +134,8 @@ export class AuthController {
             const token = req.params.token;
             await this.auth.logout(token.toString());
             this.clearAuthCookies(res);
-            
-            const response: CustomResponse<null> = {
-                data: null,
-                message: "User logged out successfully",
-                error: false
-            };
-            return res.status(200).json(response);
+            const response: CustomResponse<null> = { data: null, message: "User logged out successfully", error: false };
+            res.status(200).json(response);
         } catch (error) {
             next(error);
         }
@@ -155,13 +145,8 @@ export class AuthController {
         try {
             const { email } = req.body;
             const message = await this.auth.sendOtp(email);
-            
-            const response: CustomResponse<null> = {
-                data: null,
-                message: message,
-                error: false
-            };
-            return res.status(200).json(response);
+            const response: CustomResponse<null> = { data: null, message, error: false };
+            res.status(200).json(response);
         } catch (error) {
             next(error);
         }
@@ -171,13 +156,8 @@ export class AuthController {
         try {
             const { email, otp } = req.body;
             const message = await this.auth.verifyOtp(email, otp);
-            
-            const response: CustomResponse<null> = {
-                data: null,
-                message: message,
-                error: false
-            };
-            return res.status(200).json(response);
+            const response: CustomResponse<null> = { data: null, message, error: false };
+            res.status(200).json(response);
         } catch (error) {
             next(error);
         }
@@ -187,13 +167,8 @@ export class AuthController {
         try {
             const { email, otp, newPassword } = req.body;
             const updatedUser = await this.auth.updatePassword(email, otp, newPassword);
-            
-            const response: CustomResponse<IUser> = {
-                data: updatedUser,
-                message: "Password updated successfully",
-                error: false
-            };
-            return res.status(200).json(response);
+            const response: CustomResponse<IUser> = { data: updatedUser, message: "Password updated successfully", error: false };
+            res.status(200).json(response);
         } catch (error) {
             next(error);
         }
