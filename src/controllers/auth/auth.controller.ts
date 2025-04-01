@@ -14,7 +14,7 @@ export class AuthController {
     }
 
     private setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
-        const isProduction = true;
+        const isProduction = process.env.NODE_ENV === 'production';
         const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
 
         res.cookie('access_token', tokenData.accessToken, {
@@ -62,8 +62,8 @@ export class AuthController {
         });
     }
 
-    private createToken(userData: IUser): TokenData {
-        const dataStoredInToken: DataStoreInToken = {
+    private createToken(userData: DataStoreInToken): TokenData {
+        const payload: DataStoreInToken = {
             id: userData.id,
             email: userData.email,
             role: userData.role,
@@ -74,7 +74,7 @@ export class AuthController {
 
         return {
             expiresAt: new Date(Date.now() + 259200000),
-            accessToken: jwt.sign(dataStoredInToken, "X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H", { expiresIn: "3d" }),
+            accessToken: jwt.sign(payload, "X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H", { expiresIn: "3d" }),
             refreshToken: crypto.randomBytes(40).toString("hex")
         };
     }
@@ -108,9 +108,23 @@ export class AuthController {
         try {
             const userData: IUserLogin = req.body;
             const loggedInUser = await this.auth.login(userData);
-            const tokenData = this.createToken(loggedInUser);
+            
+            const tokenData = this.createToken({
+                id: loggedInUser.id,
+                email: loggedInUser.email,
+                role: loggedInUser.role,
+                fullName: loggedInUser.fullName,
+                phoneNumber: loggedInUser.phoneNumber,
+                employeeId: loggedInUser.employeeId
+            });
+            
             this.setAuthCookies(res, tokenData, loggedInUser);
-            const response: CustomResponse<TokenData> = { data: tokenData, message: "User logged in successfully", error: false };
+            
+            const response: CustomResponse<TokenData> = { 
+                data: tokenData, 
+                message: "User logged in successfully", 
+                error: false 
+            };
             res.status(200).json(response);
         } catch (error) {
             next(error);
