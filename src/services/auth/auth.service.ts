@@ -67,7 +67,7 @@ export class AuthService implements IAuthService {
         return await this.createToken(createdUser);
     }
 
-    public async login(userData: IUserLogin): Promise<TokenData> {
+    public async login(userData: IUserLogin): Promise<IUser> {
         if (!userData.password) {
             throw new HttpException(400, "Password is required");
         }
@@ -86,7 +86,7 @@ export class AuthService implements IAuthService {
             throw new HttpException(400, "Invalid password");
         }
     
-        return await this.createToken(findUser);
+        return await findUser
     }
 
     public async refreshToken(token: string): Promise<TokenData> {
@@ -168,9 +168,9 @@ export class AuthService implements IAuthService {
     // }
 
     // Additional method for cookie-based authentication
-    public async loginWithCookies(userData: IUserLogin, res: Response): Promise<TokenData> {
-        const tokenData = await this.login(userData);
-        await this.createToken(tokenData as unknown as IUser, res);
-        return tokenData;
-    }
+    // public async loginWithCookies(userData: IUserLogin, res: Response): Promise<TokenData> {
+    //     const tokenData = await this.login(userData);
+    //     await this.createToken(tokenData as unknown as IUser, res);
+    //     return tokenData;
+    // }
 }

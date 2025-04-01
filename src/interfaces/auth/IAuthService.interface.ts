@@ -3,7 +3,7 @@ import { Token } from "typedi";
 
 export interface IAuthService {
   signup(userData: IUser): Promise<TokenData>;
-  login(userData: IUser): Promise<TokenData>;
+  login(userData: IUser): Promise<IUser>;
   refreshToken(token: string): Promise<TokenData>;
   logout(token: string): Promise<void>;
   sendOtp(email: string): Promise<string>;
