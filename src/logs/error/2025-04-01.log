@@ -22,3 +22,87 @@ Error: Route.delete() requires a callback function but got a [object Undefined]
     at node:internal/modules/cjs/loader:1689:10
     at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-01 21:04:27 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/employees/getProjectEmployees/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 error: [GET] /api/employees/getProjectEmployees/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:13:38 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth/auth.controller.ts[0m:[93m16[0m:[93m5[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'private'?
+
+[7m16[0m     pprivate setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
+[7m  [0m [91m    ~~~~~~~~[0m
+[96msrc/controllers/auth/auth.controller.ts[0m:[93m47[0m:[93m5[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'private'?
+
+[7m47[0m     rivate setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
+[7m  [0m [91m    ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth/auth.controller.ts[0m:[93m16[0m:[93m5[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'private'?
+
+[7m16[0m     pprivate setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
+[7m  [0m [91m    ~~~~~~~~[0m
+[96msrc/controllers/auth/auth.controller.ts[0m:[93m47[0m:[93m5[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'private'?
+
+[7m47[0m     rivate setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
+[7m  [0m [91m    ~~~~~~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-01 21:14:34 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:49 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:49 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required

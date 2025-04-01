@@ -22,3 +22,188 @@
 2025-04-01 20:32:49 info: =================================
 2025-04-01 20:32:51 info: Database connection established successfully.
 2025-04-01 20:32:54 info: Database tables synced successfully.
+2025-04-01 20:58:25 info: =================================
+2025-04-01 20:58:25 info: ======= ENV: development =======
+2025-04-01 20:58:25 info: 🚀 Identity Service listening on port 5000
+2025-04-01 20:58:25 info: =================================
+2025-04-01 20:58:28 info: Database connection established successfully.
+2025-04-01 20:58:30 info: Database tables synced successfully.
+2025-04-01 21:01:49 info: [0mOPTIONS /api/auth/login [32m204[0m 15.173 ms - 0[0m
+2025-04-01 21:03:39 info: =================================
+2025-04-01 21:03:39 info: ======= ENV: development =======
+2025-04-01 21:03:39 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:03:39 info: =================================
+2025-04-01 21:03:42 info: Database connection established successfully.
+2025-04-01 21:03:44 info: Database tables synced successfully.
+2025-04-01 21:03:51 info: [0mOPTIONS /api/auth/login [32m200[0m 2.556 ms - 0[0m
+2025-04-01 21:03:52 info: [0mOPTIONS /api/auth/login [32m200[0m 0.398 ms - 0[0m
+2025-04-01 21:03:56 info: [0mOPTIONS /api/auth/login [32m200[0m 0.278 ms - 0[0m
+2025-04-01 21:04:19 info: [0mOPTIONS /api/auth/login [32m200[0m 0.214 ms - 0[0m
+2025-04-01 21:04:21 info: [0mPOST /api/auth/login [32m200[0m 1537.413 ms - 519[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 6.738 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getAllEmployees [33m401[0m 2.241 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.497 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 2.391 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 2.893 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getAllEmployees [33m401[0m 2.054 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/projects/getAllProjects [33m401[0m 2.301 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 3.136 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getProjectEmployees/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getProjectEmployees/0 [33m401[0m 1.839 ms - 37[0m
+2025-04-01 21:04:27 error: [GET] /api/employees/getProjectEmployees/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:04:27 info: [0mGET /api/employees/getProjectEmployees/0 [33m401[0m 1.837 ms - 37[0m
+2025-04-01 21:07:29 info: [0mOPTIONS /api/auth/login [32m200[0m 4.845 ms - 0[0m
+2025-04-01 21:07:31 info: [0mPOST /api/auth/login [32m200[0m 1752.077 ms - 519[0m
+2025-04-01 21:07:32 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.472 ms - 37[0m
+2025-04-01 21:07:32 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.433 ms - 37[0m
+2025-04-01 21:07:32 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.600 ms - 37[0m
+2025-04-01 21:07:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.511 ms - 37[0m
+2025-04-01 21:07:32 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.244 ms - 37[0m
+2025-04-01 21:07:32 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.556 ms - 37[0m
+2025-04-01 21:07:32 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.133 ms - 37[0m
+2025-04-01 21:07:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:32 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 2.635 ms - 37[0m
+2025-04-01 21:07:41 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.077 ms - 37[0m
+2025-04-01 21:07:41 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 info: [0mGET /api/employees/getAllEmployees [33m401[0m 2.042 ms - 37[0m
+2025-04-01 21:07:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.258 ms - 37[0m
+2025-04-01 21:07:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:07:41 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 2.796 ms - 37[0m
+2025-04-01 21:08:18 info: [0mOPTIONS /api/auth/login [32m200[0m 0.314 ms - 0[0m
+2025-04-01 21:08:20 info: [0mPOST /api/auth/login [32m200[0m 1610.252 ms - 519[0m
+2025-04-01 21:08:21 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 2.663 ms - 37[0m
+2025-04-01 21:08:21 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.175 ms - 37[0m
+2025-04-01 21:08:21 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.999 ms - 37[0m
+2025-04-01 21:08:21 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 3.100 ms - 37[0m
+2025-04-01 21:08:21 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.889 ms - 37[0m
+2025-04-01 21:08:21 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.874 ms - 37[0m
+2025-04-01 21:08:21 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.371 ms - 37[0m
+2025-04-01 21:08:21 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:08:21 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.804 ms - 37[0m
+2025-04-01 21:09:05 info: =================================
+2025-04-01 21:09:05 info: ======= ENV: development =======
+2025-04-01 21:09:05 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:09:05 info: =================================
+2025-04-01 21:09:08 info: Database connection established successfully.
+2025-04-01 21:09:11 info: Database tables synced successfully.
+2025-04-01 21:13:43 info: =================================
+2025-04-01 21:13:43 info: ======= ENV: development =======
+2025-04-01 21:13:43 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:13:43 info: =================================
+2025-04-01 21:13:46 info: Database connection established successfully.
+2025-04-01 21:13:48 info: Database tables synced successfully.
+2025-04-01 21:13:53 info: =================================
+2025-04-01 21:13:53 info: ======= ENV: development =======
+2025-04-01 21:13:53 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:13:53 info: =================================
+2025-04-01 21:13:56 info: Database connection established successfully.
+2025-04-01 21:13:58 info: Database tables synced successfully.
+2025-04-01 21:14:00 info: [0mOPTIONS /api/auth/login [32m204[0m 9.851 ms - 0[0m
+2025-04-01 21:14:02 info: [0mOPTIONS /api/auth/login [32m204[0m 0.292 ms - 0[0m
+2025-04-01 21:14:03 info: [0mOPTIONS /api/auth/login [32m204[0m 0.330 ms - 0[0m
+2025-04-01 21:14:30 info: =================================
+2025-04-01 21:14:30 info: ======= ENV: development =======
+2025-04-01 21:14:30 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:14:30 info: =================================
+2025-04-01 21:14:33 info: [0mOPTIONS /api/auth/login [32m200[0m 2.079 ms - 0[0m
+2025-04-01 21:14:33 info: Database connection established successfully.
+2025-04-01 21:14:33 info: [0mPOST /api/auth/login [32m200[0m 544.531 ms - 519[0m
+2025-04-01 21:14:34 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 2.483 ms - 37[0m
+2025-04-01 21:14:34 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.925 ms - 37[0m
+2025-04-01 21:14:34 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.354 ms - 37[0m
+2025-04-01 21:14:34 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.560 ms - 37[0m
+2025-04-01 21:14:34 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.492 ms - 37[0m
+2025-04-01 21:14:34 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.426 ms - 37[0m
+2025-04-01 21:14:34 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.490 ms - 37[0m
+2025-04-01 21:14:34 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:34 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.750 ms - 37[0m
+2025-04-01 21:14:35 info: Database tables synced successfully.
+2025-04-01 21:14:40 info: [0mOPTIONS /api/auth/login [32m200[0m 0.245 ms - 0[0m
+2025-04-01 21:14:40 info: [0mPOST /api/auth/login [32m200[0m 295.712 ms - 519[0m
+2025-04-01 21:14:41 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.437 ms - 37[0m
+2025-04-01 21:14:41 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.910 ms - 37[0m
+2025-04-01 21:14:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.628 ms - 37[0m
+2025-04-01 21:14:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.363 ms - 37[0m
+2025-04-01 21:14:41 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.516 ms - 37[0m
+2025-04-01 21:14:41 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.403 ms - 37[0m
+2025-04-01 21:14:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.620 ms - 37[0m
+2025-04-01 21:14:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:41 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.736 ms - 37[0m
+2025-04-01 21:14:47 info: [0mOPTIONS /api/auth/login [32m200[0m 0.264 ms - 0[0m
+2025-04-01 21:14:47 info: [0mPOST /api/auth/login [32m200[0m 283.272 ms - 519[0m
+2025-04-01 21:14:48 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.150 ms - 37[0m
+2025-04-01 21:14:48 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.111 ms - 37[0m
+2025-04-01 21:14:48 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.402 ms - 37[0m
+2025-04-01 21:14:48 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.452 ms - 37[0m
+2025-04-01 21:14:48 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 info: [0mGET /api/employees/getEmployee/0 [33m401[0m 1.483 ms - 37[0m
+2025-04-01 21:14:48 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:48 info: [0mGET /api/employees/getAllEmployees [33m401[0m 1.527 ms - 37[0m
+2025-04-01 21:14:49 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:49 info: [0mGET /api/projects/getAllProjects [33m401[0m 1.241 ms - 37[0m
+2025-04-01 21:14:49 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 21:14:49 info: [0mGET /api/employees/getNumberOfAssignedEmployees [33m401[0m 1.397 ms - 37[0m
+2025-04-01 21:16:37 info: =================================
+2025-04-01 21:16:37 info: ======= ENV: development =======
+2025-04-01 21:16:37 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:16:37 info: =================================
+2025-04-01 21:16:39 info: Database connection established successfully.
+2025-04-01 21:16:42 info: Database tables synced successfully.
+2025-04-01 21:16:47 info: [0mOPTIONS /api/auth/login [32m200[0m 1.654 ms - 0[0m
+2025-04-01 21:16:47 info: [0mPOST /api/auth/login [32m200[0m 299.594 ms - 519[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getEmployee/0 [33m404[0m 183.625 ms - 57[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getAllEmployees [32m200[0m 192.578 ms - 3783[0m
+2025-04-01 21:16:49 info: [0mGET /api/projects/getAllProjects [32m200[0m 193.730 ms - 1924[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getNumberOfAssignedEmployees [32m200[0m 193.431 ms - 88[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getEmployee/0 [33m404[0m 182.861 ms - 57[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getAllEmployees [36m304[0m 186.094 ms - -[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 182.942 ms - 70[0m
+2025-04-01 21:16:49 info: [0mGET /api/projects/getAllProjects [36m304[0m 192.679 ms - -[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 307.352 ms - -[0m
+2025-04-01 21:16:49 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 179.772 ms - 70[0m
+2025-04-01 21:17:13 info: =================================
+2025-04-01 21:17:13 info: ======= ENV: development =======
+2025-04-01 21:17:13 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:17:13 info: =================================
