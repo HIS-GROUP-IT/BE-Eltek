@@ -82,14 +82,6 @@ export class EmployeeService implements IEmployeeService {
       }
     }
 
-    public async getEmployeeProjects(employeeId: number): Promise<IProject[]> {
-      try {
-        const fetchedProjects = await this.employeeRepository.getEmployeeProjects(employeeId);
-        return fetchedProjects;
-      } catch (error) {
-        throw new HttpException(404, `No Projects for employee ID: ${employeeId}`);
-      }
-    }
   
     public async removeEmployeeFromProject(employeeId: number, projectId: number): Promise<void> {
       try {

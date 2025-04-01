@@ -5,6 +5,7 @@ import { ITaskRepository } from "@/interfaces/task/ITaskRepository.interface";
 import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";
 import Employee from "@/models/employee/employee.model";
 import { HttpException } from "@/exceptions/HttpException";
+import EmployeeProject from "@/models/employee/projectEmployees.model";
 
 @Service()
 export class TaskRepository implements ITaskRepository {
@@ -146,7 +147,7 @@ export class TaskRepository implements ITaskRepository {
             },
             include: [{ 
                 model: Employee,
-                attributes: ['email'] // Include only the email field from Employee
+                attributes: ['email'] 
             }]
         });
     
@@ -159,7 +160,7 @@ export class TaskRepository implements ITaskRepository {
                     projectId: task.projectId,
                     employeeId: employeeId,
                     employeeName: task.employeeName,
-                    email: task.employee?.email || '', // Fallback to empty string if email not found
+                    email: task.employee?.email || '',
                     position: task.position,
                     days: Object.fromEntries(weekDays.map(date => [date, 0])) as Record<string, number>
                 });
@@ -211,17 +212,26 @@ export class TaskRepository implements ITaskRepository {
         month: number
       ): Promise<MonthlyTasks> {
         try {
-          // Validate inputs
           if (!projectId || !employeeId || !year || !month) {
             throw new HttpException(400, 'Missing required parameters');
           }
       
-          // Create date range (month is 0-indexed in JavaScript)
+          const employeeProject = await EmployeeProject.findOne({
+            where: {
+              employeeId,
+              projectId
+            },
+            raw: true
+          });
+      
+          if (!employeeProject) {
+            throw new HttpException(404, 'Employee is not assigned to this project');
+          }
+      
           const startDate = new Date(Date.UTC(year, month - 1, 1));
           const endDate = new Date(Date.UTC(year, month, 0));
           endDate.setUTCHours(23, 59, 59, 999);
       
-          // Fetch tasks
           const tasks = await Task.findAll({
             where: {
               projectId,
@@ -235,12 +245,14 @@ export class TaskRepository implements ITaskRepository {
             raw: true
           });
       
-          // Calculate total hours
           const totalHours = tasks.reduce((sum, task) => sum + task.hours, 0);
+          const rate =Number(employeeProject.rate);
+          const totalCost = totalHours * rate;
       
-          // Format response
           return {
             totalHours,
+            rate,
+            totalCost,
             tasks: tasks.map(task => ({
               id: task.id,
               taskTitle: task.taskTitle,
@@ -248,8 +260,9 @@ export class TaskRepository implements ITaskRepository {
               hours: task.hours,
               status: task.status,
               employeeName: task.employeeName,
-              position : task.position,
-              date: task.createdAt.toISOString().split('T')[0]
+              position: task.position,
+              date: task.createdAt.toISOString().split('T')[0],
+              rate: rate 
             }))
           };
       

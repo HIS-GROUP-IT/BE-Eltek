@@ -25,6 +25,7 @@ export interface ILeave {
   documents?: string[]; 
   status: LeaveStatus;
   employeeId: number;
+  position : string;
   createdAt?: Date;
   updatedAt?: Date;
 }

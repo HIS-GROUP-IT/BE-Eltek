@@ -467,3 +467,17 @@ Error: listen EADDRINUSE: address already in use :::5000
     at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
     at node:internal/modules/cjs/loader:1689:10
     at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-03-31 18:53:34 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-03-31 18:53:40 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-03-31 18:55:32 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:47:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:19:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)

@@ -1,0 +1,80 @@
+2025-04-01 11:43:34 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:47:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:19:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-01 11:44:17 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:47:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:19:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-01 11:45:17 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:47:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:19:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-01 11:45:38 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:47:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:19:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-01 11:45:43 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:47:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:19:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-01 11:45:53 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-01 18:38:59 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 18:39:00 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 18:44:24 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 18:44:25 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 18:44:49 error: [GET] /api/projects/getAllProjects >> StatusCode:: 401, Message:: Authentication required
+2025-04-01 18:48:14 error: uncaughtException: Route.post() requires a callback function but got a [object Undefined]
+Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as post] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at AuthRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\auth\auth.route.ts:25:21)
+    at new AuthRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\auth\auth.route.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:13:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-01 18:54:41 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email venica@gmail.com not found
+2025-04-01 18:55:43 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 403, Message:: Super admin rights required!

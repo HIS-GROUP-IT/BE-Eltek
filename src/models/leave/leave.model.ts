@@ -16,6 +16,7 @@ class Leave extends Model<ILeave, LeaveCreationAttributes> implements ILeave {
   public documents!: string[];
   public status!: LeaveStatus;
   public employeeId!: number;
+  public position : string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -55,6 +56,10 @@ Leave.init(
     status: {
       type: DataTypes.ENUM(...Object.values(LeaveStatus)),
       defaultValue: LeaveStatus.PENDING,
+      allowNull: false
+    },
+    position: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     employeeId: {

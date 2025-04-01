@@ -9,11 +9,11 @@ export interface IAuthService {
   sendOtp(email: string): Promise<string>;
   verifyOtp(email: string, otp: string): Promise<string>;
 
-  updatePassword(
-    email: string,
-    otp: string,
-    newPassword: string
-  ): Promise<IUser>;
+  // updatePassword(
+  //   email: string,
+  //   otp: string,
+  //   newPassword: string
+  // ): Promise<IUser>;
 }
 
 export const AUTH_SERVICE_TOKEN = new Token<IAuthService>("IAuthService");

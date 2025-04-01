@@ -187,51 +187,77 @@ public async createEmployee(employeeData: Partial<IEmployee>): Promise<IEmployee
         throw error instanceof HttpException ? error : new HttpException(500, "Error removing employee from project");
     }
 }
+
 public async getEmployeeMonthlyTasks(
-    projectId: number,
-    employeeId: number,
-    year: number,
-    month: number
-  ): Promise<MonthlyTasks> {
-    try {
-      if (!projectId || !employeeId || !year || !month) {
-        throw new HttpException(400, 'Missing required parameters');
-      }
-  
-      const startDate = new Date(Date.UTC(year, month - 1, 1));
-      const endDate = new Date(Date.UTC(year, month, 0));
-      endDate.setUTCHours(23, 59, 59, 999);
-  
-      // Fetch tasks
-      const tasks = await Task.findAll({
-        where: {
-          projectId,
-          employeeId,
-          createdAt: {
-            [Op.between]: [startDate, endDate]
-          }
-        },
-        order: [['createdAt', 'ASC']],
-        raw: true
-      });
-        const totalHours = tasks.reduce((sum, task) => sum + task.hours, 0);
-      return {
-        totalHours,
-        tasks: tasks.map(task => ({
-          id: task.id,
-          taskTitle: task.taskTitle,
-          taskDescription: task.taskDescription,
-          hours: task.hours,
-          status: task.status,
-          position:task.position,
-          employeeName:task.employeeName,
-          date: task.createdAt.toISOString().split('T')[0]
-        }))
-      };
-  
-    } catch (error) {
-      if (error instanceof HttpException) throw error;
-      throw new HttpException(500, 'Failed to fetch monthly tasks');
+  projectId: number,
+  employeeId: number,
+  year: number,
+  month: number
+): Promise<MonthlyTasks> {
+  try {
+    // Validate inputs
+    if (!projectId || !employeeId || !year || !month) {
+      throw new HttpException(400, 'Missing required parameters');
     }
+
+    // Get employee-project association including rate
+    const employeeProject = await EmployeeProject.findOne({
+      where: {
+        employeeId,
+        projectId
+      },
+      raw: true
+    });
+
+    if (!employeeProject) {
+      throw new HttpException(404, 'Employee is not assigned to this project');
+    }
+
+    // Create date range (month is 0-indexed in JavaScript)
+    const startDate = new Date(Date.UTC(year, month - 1, 1));
+    const endDate = new Date(Date.UTC(year, month, 0));
+    endDate.setUTCHours(23, 59, 59, 999);
+
+    // Fetch tasks
+    const tasks = await Task.findAll({
+      where: {
+        projectId,
+        employeeId,
+        status: 'completed',
+        createdAt: {
+          [Op.between]: [startDate, endDate]
+        }
+      },
+      order: [['createdAt', 'ASC']],
+      raw: true
+    });
+
+    // Calculate totals
+    const totalHours = tasks.reduce((sum, task) => sum + task.hours, 0);
+    const rate = Number(employeeProject.rate)
+    const totalCost = totalHours * rate;
+
+    // Format response
+    return {
+      totalHours,
+      rate,
+      totalCost,
+      tasks: tasks.map(task => ({
+        id: task.id,
+        taskTitle: task.taskTitle,
+        taskDescription: task.taskDescription,
+        hours: task.hours,
+        status: task.status,
+        employeeName: task.employeeName,
+        position: task.position,
+        date: task.createdAt.toISOString().split('T')[0],
+        rate: rate // Include rate in each task if needed
+      }))
+    };
+
+  } catch (error) {
+    if (error instanceof HttpException) throw error;
+    throw new HttpException(500, 'Failed to fetch monthly tasks');
   }
+}
 }

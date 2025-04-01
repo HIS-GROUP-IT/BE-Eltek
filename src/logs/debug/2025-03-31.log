@@ -2847,3 +2847,37 @@
 2025-03-31 18:28:01 info: =================================
 2025-03-31 18:28:04 info: Database connection established successfully.
 2025-03-31 18:28:06 info: Database tables synced successfully.
+2025-03-31 18:53:28 info: =================================
+2025-03-31 18:53:28 info: ======= ENV: development =======
+2025-03-31 18:53:28 info: 🚀 Identity Service listening on port 5000
+2025-03-31 18:53:28 info: =================================
+2025-03-31 18:53:31 info: Database connection established successfully.
+2025-03-31 18:53:34 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-03-31 18:53:36 info: =================================
+2025-03-31 18:53:36 info: ======= ENV: development =======
+2025-03-31 18:53:36 info: 🚀 Identity Service listening on port 5000
+2025-03-31 18:53:36 info: =================================
+2025-03-31 18:53:39 info: Database connection established successfully.
+2025-03-31 18:53:40 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-03-31 18:55:32 info: =================================
+2025-03-31 18:55:32 info: ======= ENV: development =======
+2025-03-31 18:55:32 info: 🚀 Identity Service listening on port 5000
+2025-03-31 18:55:32 info: =================================
+2025-03-31 18:55:35 info: Database connection established successfully.
+2025-03-31 18:55:39 info: Database tables synced successfully.
+2025-03-31 20:53:06 info: =================================
+2025-03-31 20:53:06 info: ======= ENV: development =======
+2025-03-31 20:53:06 info: 🚀 Identity Service listening on port 5000
+2025-03-31 20:53:06 info: =================================
+2025-03-31 20:53:10 info: =================================
+2025-03-31 20:53:10 info: ======= ENV: development =======
+2025-03-31 20:53:10 info: 🚀 Identity Service listening on port 5000
+2025-03-31 20:53:10 info: =================================
+2025-03-31 20:53:13 info: Database connection established successfully.
+2025-03-31 20:53:16 info: Database tables synced successfully.
+2025-03-31 20:54:18 info: =================================
+2025-03-31 20:54:18 info: ======= ENV: development =======
+2025-03-31 20:54:18 info: 🚀 Identity Service listening on port 5000
+2025-03-31 20:54:18 info: =================================
+2025-03-31 20:54:21 info: Database connection established successfully.
+2025-03-31 20:54:23 info: Database tables synced successfully.

@@ -14,7 +14,6 @@ export interface IEmployeeService {
   ): Promise<void>;
   getEmployeesByProjectId(projectId: number): Promise<IAssignedEmployees[]>;
   removeEmployeeFromProject(employeeId: number, projectId: number): Promise<void>
-  getEmployeeProjects(employeeId: number): Promise<IProject[]>;
 }
 
 export const EMPLOYEE_SERVICE_TOKEN = new Token<IEmployeeService>(

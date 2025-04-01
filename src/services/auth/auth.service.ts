@@ -8,28 +8,51 @@ import { AuthRepository } from "@/repositories/auth/auth.repository";
 import { AUTH_SERVICE_TOKEN, IAuthService } from "@/interfaces/auth/IAuthService.interface";
 import { DataStoreInToken, IUser, IUserLogin, TokenData } from "@/types/auth.types";
 import nodemailer from "nodemailer";
-import { Model } from "sequelize";
+import { Response } from 'express';
 
-
-const createToken = async (userData: IUser): Promise<TokenData> => {
-    const dataStoredIntoken: DataStoreInToken = {
-        id: userData.id,
-        email: userData.email,
-        role : userData.role,
-        fullName : userData.fullName,
-        phoneNumber : userData.phoneNumber,
-        employeeId:userData.employeeId
-    };
-    const expiresAt = new Date();
-    expiresAt.setHours(expiresAt.getHours() + 1);
-    const accessToken = sign(dataStoredIntoken,"X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H", { expiresIn: "3d" });
-    const refreshToken = crypto.randomBytes(40).toString("hex");
-    return { expiresAt, accessToken, refreshToken };
-}
-
-@Service({ id: AUTH_SERVICE_TOKEN, type: AuthService })
+@Service({ id: AUTH_SERVICE_TOKEN })
 export class AuthService implements IAuthService {
-    constructor(public authRepository: AuthRepository) {}
+    constructor(private readonly authRepository: AuthRepository) {}
+
+    private async createToken(userData: IUser, res?: Response): Promise<TokenData> {
+        const dataStoredInToken: DataStoreInToken = {
+            id: userData.id,
+            email: userData.email,
+            role: userData.role,
+            fullName: userData.fullName,
+            phoneNumber: userData.phoneNumber,
+            employeeId: userData.employeeId
+        };
+
+        const expiresAt = new Date();
+        expiresAt.setHours(expiresAt.getHours() + 72);
+        const accessToken = sign(
+            dataStoredInToken,
+            "X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H",
+            { expiresIn: "3d" }
+        );
+        
+        const refreshToken = crypto.randomBytes(40).toString("hex");
+
+        if (res) {
+            res.cookie('user_data', JSON.stringify({
+                email: userData.email,
+                role: userData.role,
+                fullName: userData.fullName,
+                phoneNumber: userData.phoneNumber,
+                employeeId: userData.employeeId
+            }), {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'strict',
+                maxAge: 72 * 60 * 60 * 1000,
+                path: '/',
+                signed: true 
+            });
+        }
+
+        return { expiresAt, accessToken, refreshToken };
+    }
 
     public async signup(userData: IUser): Promise<TokenData> {
         const findUser = await this.authRepository.findUserByEmail(userData.email);
@@ -38,43 +61,33 @@ export class AuthService implements IAuthService {
         }
         const hashedPassword = await hash(userData.password, 10);
         const createdUser = await this.authRepository.createUser({
-            email: userData.email,
-            password: hashedPassword,
-            role: userData.role,
-            fullName: userData.fullName,
-            employeeId:userData.employeeId,
-            phoneNumber:userData.phoneNumber
+            ...userData,
+            password: hashedPassword
         });
-        const tokenData = await createToken(createdUser);
-        await this.authRepository.saveRefreshToken(createdUser.id, tokenData.refreshToken, tokenData.expiresAt);
-        return tokenData;
+        return await this.createToken(createdUser);
     }
 
     public async login(userData: IUserLogin): Promise<TokenData> {
-      if (!userData.password) {
-          throw new HttpException(400, "Password is required");
-      }
-  
-      const findUser = await this.authRepository.findUserByEmail(userData.email);
-      console.log('User Data:', findUser);
-      if (!findUser) {
-          throw new HttpException(404, `Email ${userData.email} not found`);
-      }
-  
-      if (!findUser.password) {
-          throw new HttpException(404, "User password not found in database");
-      }
-  
-      const comparePassword = await compare(userData.password, findUser.password);
-      if (!comparePassword) {
-          throw new HttpException(400, "Invalid password");
-      }
-  
-      const tokenData = await createToken(findUser);
-  
-      await this.authRepository.saveRefreshToken(findUser.id, tokenData.refreshToken, tokenData.expiresAt);
-      return tokenData;
-  }
+        if (!userData.password) {
+            throw new HttpException(400, "Password is required");
+        }
+    
+        const findUser = await this.authRepository.findUserByEmail(userData.email);
+        if (!findUser) {
+            throw new HttpException(404, `Email ${userData.email} not found`);
+        }
+    
+        if (!findUser.password) {
+            throw new HttpException(404, "User password not found in database");
+        }
+    
+        const comparePassword = await compare(userData.password, findUser.password);
+        if (!comparePassword) {
+            throw new HttpException(400, "Invalid password");
+        }
+    
+        return await this.createToken(findUser);
+    }
 
     public async refreshToken(token: string): Promise<TokenData> {
         if (!token) {
@@ -82,7 +95,7 @@ export class AuthService implements IAuthService {
         }
 
         const storedToken = await this.authRepository.findRefreshToken(token);
-        if (!storedToken || storedToken.expiresAt < new Date()) {
+        if (!storedToken || new Date(storedToken.expiresAt) < new Date()) {
             throw new HttpException(401, "Invalid or expired token");
         }
 
@@ -91,8 +104,8 @@ export class AuthService implements IAuthService {
             throw new HttpException(404, `User associated with this token not found`);
         }
 
-        const newToken = await createToken(user);
-        await this.authRepository.deleteRefreshToken(storedToken.token);
+        const newToken = await this.createToken(user);
+        await this.authRepository.deleteRefreshToken(token);
         await this.authRepository.saveRefreshToken(user.id, newToken.refreshToken, newToken.expiresAt);
         return newToken;
     }
@@ -104,49 +117,60 @@ export class AuthService implements IAuthService {
     public async sendOtp(email: string): Promise<string> {
         const user = await this.authRepository.findUserByEmail(email);
         if (!user) {
-          throw new HttpException(404, "User Not Found");
+            throw new HttpException(404, "User Not Found");
         }
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         await this.authRepository.saveOtp(email, otp);
+        
         const transporter = nodemailer.createTransport({
-          host: process.env.EMAIL_HOST,
-          port: process.env.EMAIL_PORT,
-          secure: false,
-          auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
-          },
+            host: process.env.EMAIL_HOST,
+            port: parseInt(process.env.EMAIL_PORT || '587'),
+            secure: process.env.EMAIL_SECURE === 'true',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
         });    
+        
         const mailOptions = {
-          from: process.env.EMAIL_USER,
-          to: email,
-          subject: "Password Reset OTP",
-          html: `<p>Your OTP to reset your password is <strong>${otp}</strong></p>`,
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: "Password Reset OTP",
+            html: `<p>Your OTP to reset your password is <strong>${otp}</strong></p>`,
         };    
+        
         await transporter.sendMail(mailOptions);    
         return "OTP sent to your email";
-      }
-
-  public async verifyOtp(email: string, otp: string): Promise<string> {
-    const isValid = await this.authRepository.validateOtp(email, otp);
-
-    if (!isValid) {
-      throw new HttpException(400, "Invalid or expired OTP");
     }
 
-    return "OTP verified successfully";
-  }
+    public async verifyOtp(email: string, otp: string): Promise<string> {
+        const isValid = await this.authRepository.validateOtp(email, otp);
+        if (!isValid) {
+            throw new HttpException(400, "Invalid or expired OTP");
+        }
+        return "OTP verified successfully";
+    }
 
-  public async updatePassword(email: string, otp: string, newPassword: string): Promise<IUser> {
-    const user = await this.authRepository.findUserByEmail(email);
-    if (!user) {
-      throw new HttpException(404, "User Not Found");
+    // public async updatePassword(email: string, otp: string, newPassword: string): Promise<IUser> {
+    //     // const user = await this.authRepository.findUserByEmail(email);
+    //     // if (!user) {
+    //     //     throw new HttpException(404, "User Not Found");
+    //     // }
+        
+    //     // const isValid = await this.authRepository.validateOtp(email, otp);
+    //     // if (!isValid) {
+    //     //     throw new HttpException(400, "Invalid OTP");
+    //     // }
+        
+    //     // const hashedPassword = await hash(newPassword, 10);
+    //     // const updatedUser = await this.authRepository.updateUserPassword(email, hashedPassword);
+    //     // return updatedUser;
+    // }
+
+    // Additional method for cookie-based authentication
+    public async loginWithCookies(userData: IUserLogin, res: Response): Promise<TokenData> {
+        const tokenData = await this.login(userData);
+        await this.createToken(tokenData as unknown as IUser, res);
+        return tokenData;
     }
-    if (user.otp !== otp) {
-      throw new HttpException(400, "Invalid OTP");
-    }
-    const updatedUser = await this.authRepository.forgotPassword(email, otp, newPassword);
-    return updatedUser;
-  }
-    
 }

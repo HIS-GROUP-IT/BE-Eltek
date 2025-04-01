@@ -86,7 +86,7 @@ export class App {
     this.app.use(cors(this.corsOptions));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
-    this.app.use(cookieParser());
+    this.app.use(cookieParser("X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H"));
   }
 
 
