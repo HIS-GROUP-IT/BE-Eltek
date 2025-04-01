@@ -21,7 +21,6 @@ export class AuthController {
             httpOnly: true,
             secure: isProduction,
             sameSite: isProduction ? 'none' : 'lax',
-            domain,
             maxAge: 259200000,
             path: '/',
             signed: true  
@@ -38,7 +37,6 @@ export class AuthController {
             httpOnly: false,
             secure: isProduction,
             sameSite: isProduction ? 'none' : 'lax',
-            domain,
             maxAge: 259200000,
             path: '/',
             signed: true  
@@ -50,14 +48,14 @@ export class AuthController {
         const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
 
         res.clearCookie('access_token', {
-            domain,
+
             path: '/',
             secure: isProduction,
             sameSite: isProduction ? 'none' : 'lax'
         });
 
         res.clearCookie('user_data', {
-            domain,
+ 
             path: '/',
             secure: isProduction,
             sameSite: isProduction ? 'none' : 'lax'
