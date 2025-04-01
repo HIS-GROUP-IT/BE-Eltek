@@ -307,3 +307,64 @@
 2025-04-01 21:30:20 info: =================================
 2025-04-01 21:30:23 info: Database connection established successfully.
 2025-04-01 21:30:25 info: Database tables synced successfully.
+2025-04-01 21:35:53 info: =================================
+2025-04-01 21:35:53 info: ======= ENV: development =======
+2025-04-01 21:35:53 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:35:53 info: =================================
+2025-04-01 21:35:56 info: Database connection established successfully.
+2025-04-01 21:35:59 info: Database tables synced successfully.
+2025-04-01 21:36:41 info: =================================
+2025-04-01 21:36:41 info: ======= ENV: development =======
+2025-04-01 21:36:41 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:36:41 info: =================================
+2025-04-01 21:36:43 info: Database connection established successfully.
+2025-04-01 21:36:46 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-04-01 21:36:51 info: =================================
+2025-04-01 21:36:51 info: ======= ENV: development =======
+2025-04-01 21:36:51 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:36:51 info: =================================
+2025-04-01 21:36:54 info: Database connection established successfully.
+2025-04-01 21:36:57 info: Database tables synced successfully.
+2025-04-01 21:38:17 info: [0mOPTIONS /api/auth/login [32m200[0m 2.752 ms - 0[0m
+2025-04-01 21:38:18 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email superadmin@gmail.com not found
+2025-04-01 21:38:18 info: [0mPOST /api/auth/login [33m404[0m 1348.947 ms - 50[0m
+2025-04-01 21:43:33 info: =================================
+2025-04-01 21:43:33 info: ======= ENV: development =======
+2025-04-01 21:43:33 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:43:33 info: =================================
+2025-04-01 21:43:36 info: =================================
+2025-04-01 21:43:36 info: ======= ENV: development =======
+2025-04-01 21:43:36 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:43:36 info: =================================
+2025-04-01 21:43:38 info: Database connection established successfully.
+2025-04-01 21:43:41 info: Database tables synced successfully.
+2025-04-01 21:45:09 info: =================================
+2025-04-01 21:45:09 info: ======= ENV: development =======
+2025-04-01 21:45:09 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:45:09 info: =================================
+2025-04-01 21:45:12 info: Database connection established successfully.
+2025-04-01 21:45:14 info: Database tables synced successfully.
+2025-04-01 21:48:12 info: =================================
+2025-04-01 21:48:12 info: ======= ENV: development =======
+2025-04-01 21:48:12 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:48:12 info: =================================
+2025-04-01 21:48:15 info: Database connection established successfully.
+2025-04-01 21:48:17 info: Database tables synced successfully.
+2025-04-01 21:48:58 info: =================================
+2025-04-01 21:48:58 info: ======= ENV: development =======
+2025-04-01 21:48:58 info: 🚀 Identity Service listening on port 5000
+2025-04-01 21:48:58 info: =================================
+2025-04-01 21:49:00 info: Database connection established successfully.
+2025-04-01 21:49:03 info: Database tables synced successfully.
+2025-04-01 21:49:31 info: [0mOPTIONS /api/auth/login [32m200[0m 2.337 ms - 0[0m
+2025-04-01 21:49:32 info: [0mPOST /api/auth/login [32m200[0m 1497.737 ms - 519[0m
+2025-04-01 21:49:39 info: [0mGET /api/employees/getEmployee/0 [33m404[0m 189.152 ms - 57[0m
+2025-04-01 21:49:39 info: [0mGET /api/employees/getAllEmployees [32m200[0m 362.125 ms - 70[0m
+2025-04-01 21:49:39 info: [0mGET /api/projects/getAllProjects [32m200[0m 517.041 ms - 69[0m
+2025-04-01 21:49:39 info: [0mGET /api/employees/getNumberOfAssignedEmployees [32m200[0m 686.417 ms - 88[0m
+2025-04-01 21:49:39 info: [0mGET /api/employees/getEmployee/0 [33m404[0m 721.620 ms - 57[0m
+2025-04-01 21:49:40 info: [0mGET /api/employees/getAllEmployees [36m304[0m 724.823 ms - -[0m
+2025-04-01 21:49:40 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 896.496 ms - 70[0m
+2025-04-01 21:49:40 info: [0mGET /api/projects/getAllProjects [36m304[0m 751.206 ms - -[0m
+2025-04-01 21:49:40 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 576.497 ms - -[0m
+2025-04-01 21:49:40 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 183.615 ms - 70[0m

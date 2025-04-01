@@ -24,7 +24,7 @@ export class AuthController {
             domain,
             maxAge: 259200000,
             path: '/',
-            signed: true  // <-- Ensure the cookie is signed
+            signed: true  
         });
     
         res.cookie('user_data', JSON.stringify({
@@ -41,7 +41,7 @@ export class AuthController {
             domain,
             maxAge: 259200000,
             path: '/',
-            signed: true  // <-- Sign this cookie as well if needed
+            signed: true  
         });
     }
     

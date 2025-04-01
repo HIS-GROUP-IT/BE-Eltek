@@ -74,7 +74,7 @@ export class App {
   private corsOptions = {
     origin: [
       'https://eltek-frontend.vercel.app',
-      'http://localhost:3000' // Match your frontend's development port
+      'http://localhost:3000' 
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: [
