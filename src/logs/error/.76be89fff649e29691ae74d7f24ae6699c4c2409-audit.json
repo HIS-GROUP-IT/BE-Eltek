@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\Administrator\\Desktop\\Projects\\eltek-timer-pay-backend\\src\\logs\\error\\.76be89fff649e29691ae74d7f24ae6699c4c2409-audit.json",
+    "files": [
+        {
+            "date": 1743530232641,
+            "name": "C:\\Users\\Administrator\\Desktop\\Projects\\eltek-timer-pay-backend\\src\\logs\\error\\2025-04-01.log",
+            "hash": "5592dc9cf131938f5c41292fd3cd7a41b0d77301ee27538c06b4ca9f490edc9d"
+        }
+    ],
+    "hashType": "sha256"
+}

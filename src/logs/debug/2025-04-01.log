@@ -1,0 +1,6 @@
+2025-04-01 20:02:38 info: =================================
+2025-04-01 20:02:38 info: ======= ENV: development =======
+2025-04-01 20:02:38 info: 🚀 Identity Service listening on port 5000
+2025-04-01 20:02:38 info: =================================
+2025-04-01 20:02:41 info: Database connection established successfully.
+2025-04-01 20:02:43 info: Database tables synced successfully.
