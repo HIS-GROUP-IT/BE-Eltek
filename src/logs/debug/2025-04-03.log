@@ -1713,3 +1713,28 @@
 2025-04-03 16:04:58 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1474.708 ms - -[0m
 2025-04-03 16:04:58 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1473.873 ms - -[0m
 2025-04-03 16:04:58 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 229.722 ms - 70[0m
+2025-04-03 16:35:20 info: =================================
+2025-04-03 16:35:20 info: ======= ENV: development =======
+2025-04-03 16:35:20 info: 🚀 Identity Service listening on port 5000
+2025-04-03 16:35:20 info: =================================
+2025-04-03 16:35:23 info: Database connection established successfully.
+2025-04-03 16:35:23 info: Database connection established successfully.
+2025-04-03 16:35:23 info: Database connection established successfully.
+2025-04-03 16:35:26 info: Database tables synced successfully.
+2025-04-03 16:35:27 info: Database connection established successfully.
+2025-04-03 16:36:06 info: =================================
+2025-04-03 16:36:06 info: ======= ENV: development =======
+2025-04-03 16:36:06 info: 🚀 Identity Service listening on port 5000
+2025-04-03 16:36:06 info: =================================
+2025-04-03 16:36:08 info: Database connection established successfully.
+2025-04-03 16:36:08 info: Database connection established successfully.
+2025-04-03 16:36:09 info: Database connection established successfully.
+2025-04-03 16:36:09 info: Database connection established successfully.
+2025-04-03 16:36:15 info: =================================
+2025-04-03 16:36:15 info: ======= ENV: development =======
+2025-04-03 16:36:15 info: 🚀 Identity Service listening on port 5000
+2025-04-03 16:36:15 info: =================================
+2025-04-03 16:36:18 info: Database connection established successfully.
+2025-04-03 16:36:18 info: Database connection established successfully.
+2025-04-03 16:36:18 info: Database connection established successfully.
+2025-04-03 16:36:18 info: Database connection established successfully.

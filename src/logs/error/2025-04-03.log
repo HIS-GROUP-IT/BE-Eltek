@@ -7238,3 +7238,885 @@ Error: listen EADDRINUSE: address already in use :::5000
     at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
     at node:internal/modules/cjs/loader:1689:10
     at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:34:19 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m274[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m274[0m       import { Op } from 'sequelize';
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m654[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m654[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m274[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m274[0m       import { Op } from 'sequelize';
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m654[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m654[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:19 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m274[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m274[0m       import { Op } from 'sequelize';
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m654[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m654[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m274[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m274[0m       import { Op } from 'sequelize';
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m654[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m654[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:19 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m274[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m274[0m       import { Op } from 'sequelize';
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m654[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m654[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m274[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m274[0m       import { Op } from 'sequelize';
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m654[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m654[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m283[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m283[0m       export default class TaskRepository {
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m283[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m283[0m       export default class TaskRepository {
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m283[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m283[0m       export default class TaskRepository {
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m283[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m283[0m       export default class TaskRepository {
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m283[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m283[0m       export default class TaskRepository {
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m283[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m283[0m       export default class TaskRepository {
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m653[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:41 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:41 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:41 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:48 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:48 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:48 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:55 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:55 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:34:55 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:02 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:02 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:15 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:15 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:15 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/task.repository.ts[0m:[93m652[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m652[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-03 16:35:20 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:35:20 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:35:25 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:36:06 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:36:06 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:36:06 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:36:15 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:36:16 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-03 16:36:16 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
