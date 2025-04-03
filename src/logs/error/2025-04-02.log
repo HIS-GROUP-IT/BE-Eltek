@@ -1,0 +1,415 @@
+2025-04-02 00:20:21 error: [POST] /api/projects/createProject >> StatusCode:: 500, Message:: Error creating project: Validation error
+2025-04-02 00:20:28 error: [POST] /api/employees/assignEmployees >> StatusCode:: 500, Message:: Error assigning employees to project
+2025-04-02 11:51:00 error: uncaughtException: Leave is not defined
+ReferenceError: Leave is not defined
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+2025-04-02 11:51:04 error: uncaughtException: Service with "Token<ILeaveService>" identifier was not found in the container. Register it before usage via explicitly calling the "Container.set" function or using the "@Service()" decorator.
+ServiceNotFoundError: Service with "Token<ILeaveService>" identifier was not found in the container. Register it before usage via explicitly calling the "Container.set" function or using the "@Service()" decorator.
+    at ContainerInstance.get (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\src\container-instance.class.ts:75:11)
+    at Function.get (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\src\container.class.ts:61:32)
+    at new LeaveController (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\controllers\leave\leave.controller.ts:12:39)
+    at new LeaveRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\leave\leave.route.ts:11:30)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:18:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-02 11:51:42 error: uncaughtException: Service with "Token<ILeaveService>" identifier was not found in the container. Register it before usage via explicitly calling the "Container.set" function or using the "@Service()" decorator.
+ServiceNotFoundError: Service with "Token<ILeaveService>" identifier was not found in the container. Register it before usage via explicitly calling the "Container.set" function or using the "@Service()" decorator.
+    at ContainerInstance.get (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\src\container-instance.class.ts:75:11)
+    at Function.get (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\src\container.class.ts:61:32)
+    at new LeaveController (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\controllers\leave\leave.controller.ts:12:39)
+    at new LeaveRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\leave\leave.route.ts:11:30)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:18:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-02 11:52:18 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: Error: Error uploading file to S3
+2025-04-02 11:53:20 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: Error: Error uploading file to S3
+2025-04-02 11:53:22 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: Error: Error uploading file to S3
+2025-04-02 11:54:52 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: Error: InvalidAccessKeyId: The AWS Access Key Id you provided does not exist in our records.
+2025-04-02 11:54:54 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: Error: InvalidAccessKeyId: The AWS Access Key Id you provided does not exist in our records.
+2025-04-02 12:08:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/leave/leave.controller.ts[0m:[93m96[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m96[0m             await this.leaveService.deleteDocument(leaveId,documentId);
+[7m  [0m [91m                  ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/leave/leave.controller.ts[0m:[93m96[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m96[0m             await this.leaveService.deleteDocument(leaveId,documentId);
+[7m  [0m [91m                  ~~~~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:08:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/leave/leave.controller.ts[0m:[93m95[0m:[93m43[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m95[0m             const documentId = req.params.
+[7m  [0m [91m                                          [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/leave/leave.controller.ts[0m:[93m95[0m:[93m43[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m95[0m             const documentId = req.params.
+[7m  [0m [91m                                          [0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:13:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/leave/leave.controller.ts[0m:[93m98[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m98[0m             }
+[7m  [0m [91m            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/leave/leave.controller.ts[0m:[93m98[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m98[0m             }
+[7m  [0m [91m            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:13:18 error: uncaughtException: Invalid shorthand property initializer
+C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\controllers\leave\leave.controller.ts:83
+                    leaveId = leaveId
+                    ^^^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid shorthand property initializer
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-04-02 12:14:07 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:19:55 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:20:09 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:21:32 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:22:14 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:22:50 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:23:31 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:23:33 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:23:55 error: [DELETE] /api/leaves/deleteDocument >> StatusCode:: 500, Message:: Error deleting leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 12:31:36 error: [GET] /api/leaves/getEmployeeLeave/2 >> StatusCode:: 500, Message:: Error getting leave: Leave not found
+2025-04-02 12:35:19 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/leave/leaveRepository.ts[0m:[93m105[0m:[93m14[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m105[0m              {
+[7m   [0m [91m             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/leave/leaveRepository.ts[0m:[93m105[0m:[93m14[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m105[0m              {
+[7m   [0m [91m             ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:35:26 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/leave/leaveRepository.ts[0m:[93m105[0m:[93m14[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m105[0m              {
+[7m   [0m [91m             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/leave/leaveRepository.ts[0m:[93m105[0m:[93m14[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m105[0m              {
+[7m   [0m [91m             ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:35:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/leave/leaveRepository.ts[0m:[93m105[0m:[93m14[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m105[0m              {
+[7m   [0m [91m             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/leave/leaveRepository.ts[0m:[93m105[0m:[93m14[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m105[0m              {
+[7m   [0m [91m             ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:35:46 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\repositories\leave\leaveRepository.ts:72
+        const mediaToDelete = await leave_model_1.default.findByPk(leaveId);
+                              ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-04-02 12:37:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/leave/leave.service.ts[0m:[93m135[0m:[93m9[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m135[0m         } catch (error) {
+[7m   [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/leave/leave.service.ts[0m:[93m135[0m:[93m9[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m135[0m         } catch (error) {
+[7m   [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:39:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/leave/leave.route.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m80[0m         );
+[7m  [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/leave/leave.route.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m80[0m         );
+[7m  [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-02 12:39:17 error: [GET] /api/leaves/getEmployeeLeave/2 >> StatusCode:: 500, Message:: Error getting leave: Leave not found
+2025-04-02 12:39:19 error: [GET] /api/leaves/getEmployeeLeave/2 >> StatusCode:: 500, Message:: Error getting leave: Leave not found
+2025-04-02 12:40:23 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at LeaveRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\leave\leave.route.ts:76:21)
+    at new LeaveRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\leave\leave.route.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:18:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-02 13:19:03 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: No files uploaded
+2025-04-02 13:23:42 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: No files uploaded
+2025-04-02 13:29:39 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: Error uploading files.
+2025-04-02 13:30:11 error: [POST] /api/leaves/uploadDocuments >> StatusCode:: 400, Message:: Error uploading files.
+2025-04-02 14:02:22 error: [POST] /api/leaves/createLeave >> StatusCode:: 500, Message:: Error creating leave: Error creating leave: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`leaves`, CONSTRAINT `leaves_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+2025-04-02 14:15:43 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:15:53 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:15:55 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:16:03 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:16:23 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:16:32 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:16:33 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:17:27 error: [GET] /api/leaves/getEmployeeLeave/1 >> StatusCode:: 400, Message:: Error: Error fetching leaves: connect ETIMEDOUT
+2025-04-02 14:18:05 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:18:38 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:30:17 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:35:00 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:36:17 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:36:38 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:39:06 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:41:52 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:50:42 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:54:39 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:55:10 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:55:47 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 14:56:04 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 15:00:23 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 15:03:32 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 15:10:26 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 15:10:53 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 15:17:35 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-02 16:26:14 error: [PUT] /api/leaves/updateLeave >> StatusCode:: 500, Message:: Error updating leave: Error fetching leave: Unknown column 'NaN' in 'where clause'
+2025-04-02 16:44:25 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:25 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:25 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:43 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:43 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:43 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:49 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:49 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+2025-04-02 16:44:49 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\app.ts:49:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)

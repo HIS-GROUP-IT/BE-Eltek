@@ -5,6 +5,7 @@ import Employee from '@/models/employee/employee.model';
 import Task from '@/models/project/task.model';
 import Project from '@/models/project/project.model';
 import EmployeeProject from '@/models/employee/projectEmployees.model';
+import Leave from '@/models/leave/leave.model';
 
 const DB_NAME = "db_aa010d_eltek";
 const DB_HOST = "MYSQL6013.site4now.net";
@@ -39,6 +40,7 @@ Employee.initialize(dbConnection);
 Task.initialize(dbConnection);
 Project.initialize(dbConnection);
 EmployeeProject.initialize(dbConnection);
+Leave.initialize(dbConnection)
 
 // Set up associations
 User.hasMany(RefreshToken, { foreignKey: 'userId' });
@@ -53,6 +55,18 @@ Employee.belongsToMany(Project, {
   foreignKey: 'employeeId',
   otherKey: 'projectId'
 });
+
+// Define Associations
+Leave.belongsTo(Employee, {
+  foreignKey: 'employeeId',
+  as: 'employee'
+});
+
+Employee.hasMany(Leave, {
+  foreignKey: 'employeeId',
+  as: 'leaves'
+});
+
 
 Project.belongsToMany(Employee, {
   through: EmployeeProject,

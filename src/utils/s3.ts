@@ -29,9 +29,9 @@ export const uploadFileToS3 = async (filePath: string, fileName: string, mimeTyp
         await s3.send(uploadCommand);
         fs.unlinkSync(filePath);
         
-        return `https://${AWS_S3_BUCKET_NAME}.s3.${AWS_REGION}.amazonaws.com/uploads/${fileName}`;
+        return `https://${AWS_S3_BUCKET_NAME}.s3.${AWS_REGION}.amazonaws.com/leaves/${fileName}`;
     } catch (error) {
-        throw new HttpException(500, "Error uploading file to S3");
+        throw new HttpException(500, error);
     }
 };
 

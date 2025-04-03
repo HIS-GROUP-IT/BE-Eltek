@@ -10,5 +10,7 @@ export interface ILeaveRepository {
     getLeave(leaveId : number) : Promise<ILeave>;
     getLeaveByEmployeeId(userId :number, leaveId:number) : Promise<ILeave>;
     deleteLeave(leaveId : number) : Promise<void>;
+  deleteDocument(leaveId: number, documentId: string): Promise<void>
+  getAllLeavesByEmployeeId(employeeId: number): Promise<ILeave[]> 
 
 }

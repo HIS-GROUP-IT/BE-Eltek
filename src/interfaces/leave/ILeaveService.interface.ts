@@ -11,7 +11,8 @@ export interface ILeaveService {
     getLeave(leaveId : number) : Promise<ILeave>;
     getLeaveByEmployeeId(userId :number, leaveId:number) : Promise<ILeave>;
     deleteLeave(leaveId : number) : Promise<void>;
-    
+    deleteDocument(leaveId: number, documentId: string): Promise<void>
+    getAllLeavesByEmployeeId(employeeId: number): Promise<ILeave[]> 
 }
 
 export const LEAVE_SERVICE_TOKEN = new Token<ILeaveService>("ILeaveService")

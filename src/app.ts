@@ -24,6 +24,8 @@ import { EmployeeRepository } from "./repositories/employee/employee.repository"
 import { LEAVE_SERVICE_TOKEN } from "./interfaces/leave/ILeaveService.interface";
 import { TaskService } from "./services/project/task.service";
 import { TaskRepository } from "./repositories/project/task.repository";
+import { LeaveService } from "./services/leave/leave.service";
+import { LeaveRepository } from "./repositories/leave/leaveRepository";
 
 export class App {
   public app: express.Application;
@@ -118,7 +120,7 @@ export class App {
     );
     Container.set(
       LEAVE_SERVICE_TOKEN,
-      new EmployeeService(Container.get(EmployeeRepository))
+      new LeaveService(Container.get(LeaveRepository))
     );
   }
 

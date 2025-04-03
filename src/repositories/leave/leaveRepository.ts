@@ -1,9 +1,10 @@
 import { Service } from "typedi";
 import { HttpException } from "@/exceptions/HttpException";
 import { ILeaveRepository } from "@/interfaces/leave/ILeaveRepository.interface";
-import { ILeave, LeaveStatus } from "@/types/leave.types";
+import { IDocument, ILeave, LeaveStatus } from "@/types/leave.types";
 import Leave from "@/models/leave/leave.model";
 import Employee from "@/models/employee/employee.model";
+import { deleteFileFromS3 } from "@/utils/s3";
 
 @Service()
 export class LeaveRepository implements ILeaveRepository {
@@ -64,6 +65,18 @@ export class LeaveRepository implements ILeaveRepository {
             throw new HttpException(500, `Error rejecting leave: ${error.message}`);
         }
     }
+    public async deleteDocument(leaveId: number, documentId: string): Promise<void> {
+        const leaveRecord = await Leave.findByPk(leaveId);
+        if (!leaveRecord) throw new Error('Leave record not found');
+    
+        const updatedDocuments = leaveRecord.documents.filter(doc => doc.publicId !== documentId);
+        const deletedDoc = leaveRecord.documents.find(doc => doc.publicId === documentId);
+    
+        if (deletedDoc) await deleteFileFromS3(deletedDoc.publicId);
+    
+        leaveRecord.documents = updatedDocuments;
+        await leaveRecord.save();
+      }
     
 
     public async getAllLeaves(): Promise<ILeave[]> {
@@ -72,7 +85,7 @@ export class LeaveRepository implements ILeaveRepository {
                 include: [{
                     model: Employee,
                     as: 'employee',
-                    attributes: ['id', 'fullName', 'email']
+                    attributes: ['id', 'fullName', 'email', 'department']
                 }],
                 order: [['createdAt', 'DESC']],
                 raw: true,
@@ -135,4 +148,28 @@ export class LeaveRepository implements ILeaveRepository {
             throw new HttpException(500, `Error deleting leave: ${error.message}`);
         }
     }
+
+    public async getAllLeavesByEmployeeId(employeeId: number): Promise<ILeave[]> {
+        try {
+            const leaves = await Leave.findAll({
+                where: { employeeId: employeeId }, 
+                include: [{
+                    model: Employee,
+                    as: 'employee',
+                    attributes: ['id', 'fullName', 'email']
+                }],
+                order: [['createdAt', 'DESC']], 
+                raw: true,
+                nest: true
+            });
+    
+            if (leaves.length === 0) throw new HttpException(404, "No leaves found for this employee");
+    
+            return leaves;
+        } catch (error) {
+            if (error instanceof HttpException) throw error;
+            throw new HttpException(500, `Error fetching leaves: ${error.message}`);
+        }
+    }
+    
 }

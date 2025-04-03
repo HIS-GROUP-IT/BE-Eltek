@@ -9,6 +9,7 @@ class User extends Model {
   public fullName!: string;
   public employeeId!: string;
   public phoneNumber!: string;
+  public position! : string;
   public otp?: string;
 
   static initialize(sequelize: Sequelize) {
@@ -19,6 +20,7 @@ class User extends Model {
         fullName: { type: DataTypes.STRING, allowNull: false },
         password: { type: DataTypes.STRING, allowNull: false },
         employeeId: { type: DataTypes.INTEGER, allowNull: true },
+        position: { type: DataTypes.STRING, allowNull: true },
         phoneNumber: { type: DataTypes.STRING, allowNull: true },
         role: { type: DataTypes.STRING, allowNull: false },
         otp: { type: DataTypes.STRING }

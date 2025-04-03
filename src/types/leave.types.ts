@@ -1,3 +1,5 @@
+import { Request } from "express";
+
 export enum LeaveType {
   VACATION = 'annual',
   SICK = 'sick',
@@ -22,10 +24,18 @@ export interface ILeave {
   startDate: Date;
   endDate: Date;
   reason: string;
-  documents?: string[]; 
+  documents?: IDocument[]; 
   status: LeaveStatus;
   employeeId: number;
   position : string;
   createdAt?: Date;
   updatedAt?: Date;
+}
+export interface IDocument {
+  publicId: string;
+  url: string;
+}
+
+export interface RequestWithFile extends Request {
+  file: Express.Multer.File;
 }

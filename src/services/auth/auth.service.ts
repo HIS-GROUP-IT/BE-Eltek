@@ -21,7 +21,8 @@ export class AuthService implements IAuthService {
             role: userData.role,
             fullName: userData.fullName,
             phoneNumber: userData.phoneNumber,
-            employeeId: userData.employeeId
+            employeeId: userData.employeeId,
+            position:userData.position
         };
 
         const expiresAt = new Date();
@@ -40,7 +41,8 @@ export class AuthService implements IAuthService {
                 role: userData.role,
                 fullName: userData.fullName,
                 phoneNumber: userData.phoneNumber,
-                employeeId: userData.employeeId
+                employeeId: userData.employeeId,
+                position : userData.position
             }), {
                 httpOnly: true,
                 secure: true,
@@ -86,7 +88,7 @@ export class AuthService implements IAuthService {
             throw new HttpException(400, "Invalid password");
         }
     
-        return await findUser
+        return findUser
     }
 
     public async refreshToken(token: string): Promise<TokenData> {

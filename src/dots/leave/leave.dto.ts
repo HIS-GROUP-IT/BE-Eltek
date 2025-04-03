@@ -11,8 +11,7 @@ export class LeaveDTO {
     @IsNotEmpty()
     leaveType: LeaveType;
 
-    @IsDecimal()
-    @IsNotEmpty()
+    @IsOptional()
     duration: number;
 
     @IsDateString()
@@ -47,4 +46,6 @@ export class LeaveDTO {
     @IsOptional()
     @IsDateString()
     updatedAt?: string;
+
+    
 }

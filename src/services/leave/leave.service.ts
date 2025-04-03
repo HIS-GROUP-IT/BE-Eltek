@@ -3,6 +3,7 @@ import { ILeaveService, LEAVE_SERVICE_TOKEN } from "@/interfaces/leave/ILeaveSer
 import { ILeave, LeaveStatus } from "@/types/leave.types";
 import { HttpException } from "@/exceptions/HttpException"; 
 import { LeaveRepository } from "@/repositories/leave/leaveRepository";
+import { uploadFileToS3 } from "@/utils/s3";
 
 
 @Service({ id: LEAVE_SERVICE_TOKEN, type: LeaveService })
@@ -17,6 +18,24 @@ export class LeaveService implements ILeaveService {
         }
     }
 
+    public async uploadFileToS3(filePath: string, fileName: string, mimeType: string): Promise<any> {
+     try {
+        const uploadedFile = await uploadFileToS3(filePath,fileName,mimeType);
+        return uploadedFile
+     } catch (error) {
+        throw new HttpException(400,error)
+     }
+  }
+
+
+  public async deleteDocument(leaveId: number, documentId: string): Promise<void> {
+      console.log(`Leave ID: ${leaveId}, Document ID: ${documentId}`);
+        try {
+            const deletedDocuments = await this.leaveRepository.deleteDocument(leaveId,documentId);
+        } catch (error) {
+            throw new HttpException(400,error)
+        }
+    }
     public async updateLeave(leaveData: Partial<ILeave>): Promise<ILeave> {
         try {
             const leave = await this.leaveRepository.getLeave(leaveData.id);
@@ -107,6 +126,15 @@ export class LeaveService implements ILeaveService {
             return leave
         } catch (error) {
             throw new HttpException(500, `Error getting leave: ${error.message}`);
+        }
+    }
+
+    public async getAllLeavesByEmployeeId(employeeId: number): Promise<ILeave[]> {
+        try {
+            const employeeLeaves = await this.leaveRepository.getAllLeavesByEmployeeId(employeeId);
+            return employeeLeaves;
+        } catch (error) {
+            throw new HttpException(400,error)
         }
     }
 }

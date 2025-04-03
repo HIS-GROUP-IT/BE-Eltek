@@ -6,6 +6,7 @@ import { ValidateEnv } from "./utils/validateEnv";
 import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from "aws-lambda";
 import { EmployeeRoute } from "./routes/employee/employee.routes";
 import { TaskRoute } from "./routes/project/task.routes";
+import { LeaveRoute } from "./routes/leave/leave.route";
 
 ValidateEnv();
 
@@ -13,7 +14,8 @@ const app = new App([
   new AuthRoute(),
   new ProjectRoute(),
   new EmployeeRoute(),
-  new TaskRoute()
+  new TaskRoute(),
+  new LeaveRoute()
 ]);
 
 app.listen();

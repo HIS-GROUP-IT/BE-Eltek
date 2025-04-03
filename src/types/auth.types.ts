@@ -20,6 +20,7 @@ export type IUser = {
     fullName : string;
     phoneNumber?: string;
     employeeId?:string;
+    position?:string;
     createdAt?: Date;
     updatedAt?: Date;
     otp?:string
@@ -33,6 +34,7 @@ export type IUser = {
     role:string;
     phoneNumber:string;
     employeeId : string;
+    position:string;
   }
 
 

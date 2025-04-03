@@ -32,7 +32,8 @@ export class AuthController {
             role: userData.role,
             fullName: userData.fullName,
             phoneNumber: userData.phoneNumber,
-            employeeId: userData.employeeId
+            employeeId: userData.employeeId,
+            position : userData.position
         }), {
             httpOnly: false,
             secure: isProduction,
@@ -69,7 +70,8 @@ export class AuthController {
             role: userData.role,
             fullName: userData.fullName,
             phoneNumber: userData.phoneNumber,
-            employeeId: userData.employeeId
+            employeeId: userData.employeeId,
+            position:userData.position
         };
 
         return {
@@ -107,15 +109,15 @@ export class AuthController {
     public login = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const userData: IUserLogin = req.body;
-            const loggedInUser = await this.auth.login(userData);
-            
+            const loggedInUser = await this.auth.login(userData);            
             const tokenData = this.createToken({
                 id: loggedInUser.id,
                 email: loggedInUser.email,
                 role: loggedInUser.role,
                 fullName: loggedInUser.fullName,
                 phoneNumber: loggedInUser.phoneNumber,
-                employeeId: loggedInUser.employeeId
+                employeeId: loggedInUser.employeeId,
+                position:loggedInUser.position
             });
             
             this.setAuthCookies(res, tokenData, loggedInUser);

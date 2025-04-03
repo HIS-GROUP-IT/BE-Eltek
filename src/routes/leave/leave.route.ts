@@ -3,6 +3,7 @@ import { Routes } from "@/types/routes.interface";
 import { ValidationMiddleware } from "@/middlewares/ValidationMiddleware";
 import { LeaveController } from "@/controllers/leave/leave.controller";
 import { authorizationMiddleware } from "@/middlewares/authorizationMiddleware";
+import multerMiddleware from "@/middlewares/MulterMiddleware";
 
 export class LeaveRoute implements Routes {
     public path = "/leaves";
@@ -28,11 +29,19 @@ export class LeaveRoute implements Routes {
             this.leaveController.updateLeave
         );
 
+        this.router.post(`${this.path}/uploadDocuments`,authorizationMiddleware,multerMiddleware,this.leaveController.uploadMediaToS3);
+
+
         // Delete leave
         this.router.delete(
             `${this.path}/:leaveId`,
             authorizationMiddleware,
             this.leaveController.deleteLeave
+        );
+        this.router.delete(
+            `${this.path}/deleteDocument/:leaveId`,
+            authorizationMiddleware,
+            this.leaveController.deleteDocument
         );
 
         // Get all leaves
@@ -50,15 +59,15 @@ export class LeaveRoute implements Routes {
         );
 
         // Approve leave
-        this.router.patch(
-            `${this.path}/approveLeave/:leaveId`,
+        this.router.put(
+            `${this.path}/approveLeave`,
             authorizationMiddleware,
             this.leaveController.approveLeave
         );
 
         // Reject leave
-        this.router.patch(
-            `${this.path}/rejectLeave/:leaveId`,
+        this.router.put(
+            `${this.path}/rejectLeave`,
             authorizationMiddleware,
             this.leaveController.rejectLeave
         );
@@ -67,7 +76,7 @@ export class LeaveRoute implements Routes {
         this.router.get(
             `${this.path}/getEmployeeLeave/:employeeId`,
             authorizationMiddleware,
-            this.leaveController.getLeaveByEmployeeId
+            this.leaveController.getAllLeavesByEmployeeId
         );
     }
 }

@@ -10,7 +10,7 @@ export class AuthRepository implements IAuthRepository {
     public async findUserByEmail(email: string): Promise<IUser | null> {
         return User.findOne({
             where: { email },
-            attributes: ['id', 'email', 'password', 'role', 'otp', 'phoneNumber', 'fullName', 'employeeId'],
+            attributes: ['id', 'email', 'password', 'role', 'otp', 'phoneNumber', 'fullName', 'employeeId', 'position'],
             raw: true
         });
     }

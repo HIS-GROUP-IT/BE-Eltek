@@ -5,7 +5,7 @@ import fs from "fs";
 import { HttpException } from "@/exceptions/HttpException";
 
 // Ensure the uploads directory exists
-const uploadDir = "uploads/";
+const uploadDir = "leaves/";
 if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
 }
@@ -21,20 +21,10 @@ const storage = multer.diskStorage({
     }
 });
 
-// File filter: Allow images and videos
-const fileFilter = (req: Request, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
-    if (file.mimetype.startsWith("image") || file.mimetype.startsWith("video")) {
-        cb(null, true);
-    } else {
-        cb(new HttpException(400, "Invalid file type. Please upload an image or video."));
-    }
-};
-
 // Initialize Multer
 const upload = multer({
     storage,
-    fileFilter,
-    limits: { fileSize: 100 * 1024 * 1024 } // 100MB limit
+    limits: { fileSize: 100 * 1024 * 1024 }, // 100MB limit
 }).array("files", 10); // Allow up to 10 files
 
 /**
@@ -57,4 +47,3 @@ const multerMiddleware = (req: Request, res: Response, next: NextFunction) => {
 };
 
 export default multerMiddleware;
-
