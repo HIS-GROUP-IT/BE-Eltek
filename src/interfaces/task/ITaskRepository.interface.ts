@@ -24,4 +24,30 @@ export interface ITaskRepository {
       year: number,
       month: number
     ): Promise<MonthlyTasks>
+    getTaskTimeStatistics(): Promise<{
+      today: { totalHours: number, average: number, completionRate: number, data: number[] },
+      yesterday: { totalHours: number, average: number, completionRate: number, data: number[] }
+  }>
+  getWeeklyTaskStatistics(): Promise<{
+    thisWeek: { totalHours: number, average: number, completionRate: number, data: number[] },
+    lastWeek: { totalHours: number, average: number, completionRate: number, data: number[] }
+}> 
+getYearlyTaskStatistics(): Promise<{
+  thisYear: { totalHours: number, average: number, completionRate: number, data: number[] },
+  lastYear: { totalHours: number, average: number, completionRate: number, data: number[] }
+}>
+
+
+getEmployeeTaskTimeStatistics(employeeId:number): Promise<{
+  today: { totalHours: number, average: number, completionRate: number, data: number[] },
+  yesterday: { totalHours: number, average: number, completionRate: number, data: number[] }
+}>
+getEmployeeWeeklyTaskStatistics(employeeId:number): Promise<{
+  thisWeek: { totalHours: number, average: number, completionRate: number, data: number[] },
+  lastWeek: { totalHours: number, average: number, completionRate: number, data: number[] }
+}>
+getEmployeeYearlyTaskStatistics(employeeId:number): Promise<{
+  thisYear: { totalHours: number, average: number, completionRate: number, data: number[] },
+  lastYear: { totalHours: number, average: number, completionRate: number, data: number[] }
+}>
 }

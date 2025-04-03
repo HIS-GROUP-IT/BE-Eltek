@@ -141,4 +141,62 @@ export class TaskService implements ITaskService {
             throw new HttpException(400, error)
         }
     }
+    public async getTaskTimeStatistics(): Promise<{ today: { totalHours: number; average: number; completionRate: number; data: number[]; }; yesterday: { totalHours: number; average: number; completionRate: number; data: number[]; }; }> {
+        try {
+            const timeStatistics = await this.taskRepository.getTaskTimeStatistics();
+            return timeStatistics; 
+        } catch (error) {
+            throw new HttpException(400,error)
+        }
+    }
+
+    public async getWeeklyTaskStatistics(): Promise<{ thisWeek: { totalHours: number; average: number; completionRate: number; data: number[]; }; lastWeek: { totalHours: number; average: number; completionRate: number; data: number[]; }; }> {
+        try {
+            const weeklyTimeStats = await this.taskRepository.getWeeklyTaskStatistics();
+            return weeklyTimeStats;
+        } catch (error) {
+            throw new HttpException(400,error)
+        }
+    }
+    
+
+    public async  getYearlyTaskStatistics(): Promise<{ thisYear: { totalHours: number; average: number; completionRate: number; data: number[]; }; lastYear: { totalHours: number; average: number; completionRate: number; data: number[]; }; }> {
+        try {
+            const yearlyTimeStats = await this.taskRepository.getYearlyTaskStatistics();
+            return yearlyTimeStats;
+        } catch (error) {
+            throw new HttpException(400,error)
+        }
+    }
+
+
+    public async getEmployeeTaskTimeStatistics(employeeId:number): Promise<{ today: { totalHours: number; average: number; completionRate: number; data: number[]; }; yesterday: { totalHours: number; average: number; completionRate: number; data: number[]; }; }> {
+        try {
+            const timeStatistics = await this.taskRepository.getEmployeeTaskTimeStatistics(employeeId);
+            return timeStatistics; 
+        } catch (error) {
+            throw new HttpException(400,error)
+        }
+    }
+
+    public async getEmployeeWeeklyTaskStatistics(employeeId:number): Promise<{ thisWeek: { totalHours: number; average: number; completionRate: number; data: number[]; }; lastWeek: { totalHours: number; average: number; completionRate: number; data: number[]; }; }> {
+        try {
+            const weeklyTimeStats = await this.taskRepository.getEmployeeWeeklyTaskStatistics(employeeId);
+            return weeklyTimeStats;
+        } catch (error) {
+            throw new HttpException(400,error)
+        }
+    }
+    
+
+    public async  getEmployeeYearlyTaskStatistics(employeeId:number): Promise<{ thisYear: { totalHours: number; average: number; completionRate: number; data: number[]; }; lastYear: { totalHours: number; average: number; completionRate: number; data: number[]; }; }> {
+        try {
+            const yearlyTimeStats = await this.taskRepository.getEmployeeYearlyTaskStatistics(employeeId);
+            return yearlyTimeStats;
+        } catch (error) {
+            throw new HttpException(400,error)
+        }
+    }
+
+
 }

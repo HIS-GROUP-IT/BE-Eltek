@@ -272,4 +272,383 @@ export class TaskRepository implements ITaskRepository {
         }
       }
       
+      public async getTaskTimeStatistics(): Promise<{
+        today: { totalHours: number, average: number, completionRate: number, data: number[] },
+        yesterday: { totalHours: number, average: number, completionRate: number, data: number[] }
+    }> {
+        const getDateRange = (daysOffset: number) => {
+            const date = new Date();
+            date.setDate(date.getDate() - daysOffset);
+            date.setHours(0, 0, 0, 0);
+            const start = new Date(date);
+            const end = new Date(date);
+            end.setHours(23, 59, 59, 999);
+            return { start, end };
+        };
+    
+        const getTimeBucket = (createdAt: Date) => {
+            const hours = createdAt.getHours();
+            if (hours >= 9 && hours < 12) return 0;   // 9AM-11:59AM
+            if (hours >= 12 && hours < 15) return 1;  // 12PM-2:59PM
+            if (hours >= 15 && hours < 18) return 2;  // 3PM-5:59PM
+            if (hours >= 18 && hours < 21) return 3;  // 6PM-8:59PM
+            if (hours >= 21) return 4;                // 9PM-11:59PM
+            return -1; // Ignore times before 9AM
+        };
+    
+        const processDay = async (daysOffset: number) => {
+            const { start, end } = getDateRange(daysOffset);
+            const tasks = await Task.findAll({
+                where: { createdAt: { [Op.between]: [start, end] } },
+                raw: true
+            });
+    
+            let totalHours = 0;
+            let completedTasks = 0;
+            let totalTaskCount = 0;
+            const data = [0, 0, 0, 0, 0]; // For approved tasks only
+    
+            tasks.forEach(task => {
+                // Count all hours regardless of status
+                totalHours += task.hours;
+                totalTaskCount++;
+    
+                // Only count approved tasks for completion rate and time buckets
+                if (task.status === 'completed') {
+                    completedTasks++;
+                    const bucket = getTimeBucket(new Date(task.createdAt));
+                    if (bucket !== -1) {
+                        data[bucket] += task.hours;
+                    }
+                }
+            });
+    
+            return {
+                totalHours,
+                average: totalTaskCount > 0 ? totalHours / totalTaskCount : 0,
+                completionRate: totalTaskCount > 0 ? (completedTasks / totalTaskCount) * 100 : 0,
+                data
+            };
+        };
+    
+        return {
+            today: await processDay(0),
+            yesterday: await processDay(1)
+        };
+    }
+
+    public async getWeeklyTaskStatistics(): Promise<{
+        thisWeek: { totalHours: number, average: number, completionRate: number, data: number[] },
+        lastWeek: { totalHours: number, average: number, completionRate: number, data: number[] }
+    }> {
+        const getWeekRange = (weeksOffset: number) => {
+            const date = new Date();
+            date.setDate(date.getDate() - (weeksOffset * 7));
+            const dayOfWeek = date.getDay(); // 0 = Sunday
+            const diff = date.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
+            const start = new Date(date.setDate(diff));
+            start.setHours(0, 0, 0, 0);
+            const end = new Date(start);
+            end.setDate(start.getDate() + 6);
+            end.setHours(23, 59, 59, 999);
+            return { start, end };
+        };
+    
+        const getDayIndex = (createdAt: Date) => {
+            const day = createdAt.getDay(); 
+            return day === 0 ? 6 : day - 1; 
+        };
+    
+        const processWeek = async (weeksOffset: number) => {
+            const { start, end } = getWeekRange(weeksOffset);          
+            const tasks = await Task.findAll({
+                where: { createdAt: { [Op.between]: [start, end] } },
+                raw: true
+            });
+            let totalHours = 0;
+            let completedTasks = 0;
+            let totalTaskCount = 0;
+            const data = new Array(7).fill(0);
+    
+            tasks.forEach(task => {
+                totalHours += task.hours;
+                totalTaskCount++;
+    
+                if (task.status === 'completed') {
+                    completedTasks++;
+                    const dayIndex = getDayIndex(new Date(task.createdAt));
+                    data[dayIndex] += task.hours;
+                }
+            });
+    
+            return {
+                totalHours,
+                average: totalTaskCount > 0 ? totalHours / totalTaskCount : 0,
+                completionRate: totalTaskCount > 0 ? (completedTasks / totalTaskCount) * 100 : 0,
+                data
+            };
+        };
+    
+        return {
+            thisWeek: await processWeek(0),
+            lastWeek: await processWeek(1)
+        };
+    }
+    public async getYearlyTaskStatistics(): Promise<{
+        thisYear: { totalHours: number, average: number, completionRate: number, data: number[] },
+        lastYear: { totalHours: number, average: number, completionRate: number, data: number[] }
+    }> {
+        const getYearRange = (yearOffset: number) => {
+            const now = new Date();
+            const year = now.getFullYear() - yearOffset;
+            
+            const start = new Date(year, 0, 1); 
+            start.setHours(0, 0, 0, 0);
+            
+            const end = new Date(year, 11, 31); 
+            end.setHours(23, 59, 59, 999);
+            
+            return { start, end, year };
+        };
+    
+        const processYear = async (yearOffset: number) => {
+            const { start, end, year } = getYearRange(yearOffset);
+            const tasks = await Task.findAll({
+                where: { createdAt: { [Op.between]: [start, end] } },
+                raw: true
+            });
+    
+            let totalHours = 0;
+            let completedTasks = 0;
+            let totalTaskCount = 0;
+            const data = new Array(12).fill(0);
+    
+            tasks.forEach(task => {
+                totalHours += task.hours;
+                totalTaskCount++;
+    
+                if (task.status === 'completed') {
+                    completedTasks++;
+                    const taskDate = new Date(task.createdAt);
+                    if (taskDate.getFullYear() === year) {
+                        const monthIndex = taskDate.getMonth();
+                        data[monthIndex] += task.hours;
+                    }
+                }
+            });
+    
+            return {
+                totalHours,
+                average: totalTaskCount > 0 ? totalHours / totalTaskCount : 0,
+                completionRate: totalTaskCount > 0 ? (completedTasks / totalTaskCount) * 100 : 0,
+                data
+            };
+        };
+    
+        return {
+            thisYear: await processYear(0),
+            lastYear: await processYear(1)
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+    public async getEmployeeTaskTimeStatistics(employeeId:number): Promise<{
+        today: { totalHours: number, average: number, completionRate: number, data: number[] },
+        yesterday: { totalHours: number, average: number, completionRate: number, data: number[] }
+    }> {
+        const getDateRange = (daysOffset: number) => {
+            const date = new Date();
+            date.setDate(date.getDate() - daysOffset);
+            date.setHours(0, 0, 0, 0);
+            const start = new Date(date);
+            const end = new Date(date);
+            end.setHours(23, 59, 59, 999);
+            return { start, end };
+        };
+    
+        const getTimeBucket = (createdAt: Date) => {
+            const hours = createdAt.getHours();
+            if (hours >= 9 && hours < 12) return 0;   // 9AM-11:59AM
+            if (hours >= 12 && hours < 15) return 1;  // 12PM-2:59PM
+            if (hours >= 15 && hours < 18) return 2;  // 3PM-5:59PM
+            if (hours >= 18 && hours < 21) return 3;  // 6PM-8:59PM
+            if (hours >= 21) return 4;                // 9PM-11:59PM
+            return -1; // Ignore times before 9AM
+        };
+    
+        const processDay = async (daysOffset: number) => {
+            const { start, end } = getDateRange(daysOffset);
+            const tasks = await Task.findAll({
+                where: { 
+                    employeeId,
+                    createdAt: { [Op.between]: [start, end] } },
+                raw: true
+            });
+    
+            let totalHours = 0;
+            let completedTasks = 0;
+            let totalTaskCount = 0;
+            const data = [0, 0, 0, 0, 0]; // For approved tasks only
+    
+            tasks.forEach(task => {
+                // Count all hours regardless of status
+                totalHours += task.hours;
+                totalTaskCount++;
+    
+                // Only count approved tasks for completion rate and time buckets
+                if (task.status === 'completed') {
+                    completedTasks++;
+                    const bucket = getTimeBucket(new Date(task.createdAt));
+                    if (bucket !== -1) {
+                        data[bucket] += task.hours;
+                    }
+                }
+            });
+    
+            return {
+                totalHours,
+                average: totalTaskCount > 0 ? totalHours / totalTaskCount : 0,
+                completionRate: totalTaskCount > 0 ? (completedTasks / totalTaskCount) * 100 : 0,
+                data
+            };
+        };
+    
+        return {
+            today: await processDay(0),
+            yesterday: await processDay(1)
+        };
+    }
+
+    public async getEmployeeWeeklyTaskStatistics(employeeId:number): Promise<{
+        thisWeek: { totalHours: number, average: number, completionRate: number, data: number[] },
+        lastWeek: { totalHours: number, average: number, completionRate: number, data: number[] }
+    }> {
+        const getWeekRange = (weeksOffset: number) => {
+            const date = new Date();
+            date.setDate(date.getDate() - (weeksOffset * 7));
+            const dayOfWeek = date.getDay(); // 0 = Sunday
+            const diff = date.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
+            const start = new Date(date.setDate(diff));
+            start.setHours(0, 0, 0, 0);
+            const end = new Date(start);
+            end.setDate(start.getDate() + 6);
+            end.setHours(23, 59, 59, 999);
+            return { start, end };
+        };
+    
+        const getDayIndex = (createdAt: Date) => {
+            const day = createdAt.getDay(); 
+            return day === 0 ? 6 : day - 1; 
+        };
+    
+        const processWeek = async (weeksOffset: number) => {
+            const { start, end } = getWeekRange(weeksOffset);          
+            const tasks = await Task.findAll({
+                where: { 
+                    employeeId,
+                    createdAt: { [Op.between]: [start, end] } },
+                raw: true
+            });
+
+
+            let totalHours = 0;
+            let completedTasks = 0;
+            let totalTaskCount = 0;
+            const data = new Array(7).fill(0);
+    
+            tasks.forEach(task => {
+                totalHours += task.hours;
+                totalTaskCount++;
+    
+                if (task.status === 'completed') {
+                    completedTasks++;
+                    const dayIndex = getDayIndex(new Date(task.createdAt));
+                    data[dayIndex] += task.hours;
+                }
+            });
+    
+            return {
+                totalHours,
+                average: totalTaskCount > 0 ? totalHours / totalTaskCount : 0,
+                completionRate: totalTaskCount > 0 ? (completedTasks / totalTaskCount) * 100 : 0,
+                data
+            };
+        };
+    
+        return {
+            thisWeek: await processWeek(0),
+            lastWeek: await processWeek(1)
+        };
+    }
+    public async getEmployeeYearlyTaskStatistics(employeeId:number): Promise<{
+        thisYear: { totalHours: number, average: number, completionRate: number, data: number[] },
+        lastYear: { totalHours: number, average: number, completionRate: number, data: number[] }
+    }> {
+        const getYearRange = (yearOffset: number) => {
+            const now = new Date();
+            const year = now.getFullYear() - yearOffset;
+            
+            const start = new Date(year, 0, 1); 
+            start.setHours(0, 0, 0, 0);
+            
+            const end = new Date(year, 11, 31); 
+            end.setHours(23, 59, 59, 999);
+            
+            return { start, end, year };
+        };
+    
+        const processYear = async (yearOffset: number) => {
+            const { start, end, year } = getYearRange(yearOffset);
+            const tasks = await Task.findAll({
+                where: { 
+                    employeeId,
+                    createdAt: { [Op.between]: [start, end] } },
+                raw: true
+            });
+    
+            let totalHours = 0;
+            let completedTasks = 0;
+            let totalTaskCount = 0;
+            const data = new Array(12).fill(0);
+    
+            tasks.forEach(task => {
+                totalHours += task.hours;
+                totalTaskCount++;
+    
+                if (task.status === 'completed') {
+                    completedTasks++;
+                    const taskDate = new Date(task.createdAt);
+                    if (taskDate.getFullYear() === year) {
+                        const monthIndex = taskDate.getMonth();
+                        data[monthIndex] += task.hours;
+                    }
+                }
+            });
+    
+            return {
+                totalHours,
+                average: totalTaskCount > 0 ? totalHours / totalTaskCount : 0,
+                completionRate: totalTaskCount > 0 ? (completedTasks / totalTaskCount) * 100 : 0,
+                data
+            };
+        };
+    
+        return {
+            thisYear: await processYear(0),
+            lastYear: await processYear(1)
+        };
+    }
+
+
+
+
+
 }

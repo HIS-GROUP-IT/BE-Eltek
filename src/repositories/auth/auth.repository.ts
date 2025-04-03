@@ -70,3 +70,4 @@ export class AuthRepository implements IAuthRepository {
         await RefreshToken.destroy({ where: { token } });
     }
 }
+

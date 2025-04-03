@@ -912,3 +912,804 @@
 2025-04-03 12:56:40 info: [0mPOST /api/auth/login [33m400[0m 388.748 ms - 30[0m
 2025-04-03 12:56:47 info: [0mOPTIONS /api/auth/login [32m200[0m 0.329 ms - 0[0m
 2025-04-03 12:56:48 info: [0mPOST /api/auth/login [32m200[0m 341.481 ms - 554[0m
+2025-04-03 13:26:15 info: =================================
+2025-04-03 13:26:15 info: ======= ENV: development =======
+2025-04-03 13:26:15 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:26:15 info: =================================
+2025-04-03 13:26:21 info: =================================
+2025-04-03 13:26:21 info: ======= ENV: development =======
+2025-04-03 13:26:21 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:26:21 info: =================================
+2025-04-03 13:26:24 info: Database connection established successfully.
+2025-04-03 13:26:24 info: Database connection established successfully.
+2025-04-03 13:26:24 info: Database connection established successfully.
+2025-04-03 13:26:27 info: Database tables synced successfully.
+2025-04-03 13:28:01 info: =================================
+2025-04-03 13:28:01 info: ======= ENV: development =======
+2025-04-03 13:28:01 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:28:01 info: =================================
+2025-04-03 13:28:04 info: Database connection established successfully.
+2025-04-03 13:28:04 info: Database connection established successfully.
+2025-04-03 13:28:04 info: Database connection established successfully.
+2025-04-03 13:28:06 info: Database tables synced successfully.
+2025-04-03 13:52:49 info: =================================
+2025-04-03 13:52:49 info: ======= ENV: development =======
+2025-04-03 13:52:49 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:52:49 info: =================================
+2025-04-03 13:52:52 info: Database connection established successfully.
+2025-04-03 13:52:52 info: Database connection established successfully.
+2025-04-03 13:52:52 info: Database connection established successfully.
+2025-04-03 13:52:52 info: Database connection established successfully.
+2025-04-03 13:52:54 info: Database tables synced successfully.
+2025-04-03 13:53:13 info: =================================
+2025-04-03 13:53:13 info: ======= ENV: development =======
+2025-04-03 13:53:13 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:53:13 info: =================================
+2025-04-03 13:53:23 info: =================================
+2025-04-03 13:53:23 info: ======= ENV: development =======
+2025-04-03 13:53:23 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:53:23 info: =================================
+2025-04-03 13:53:27 info: Database connection established successfully.
+2025-04-03 13:53:30 info: Database tables synced successfully.
+2025-04-03 13:53:53 info: =================================
+2025-04-03 13:53:53 info: ======= ENV: development =======
+2025-04-03 13:53:53 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:53:53 info: =================================
+2025-04-03 13:53:56 info: Database connection established successfully.
+2025-04-03 13:53:56 info: Database connection established successfully.
+2025-04-03 13:53:56 info: Database connection established successfully.
+2025-04-03 13:53:56 info: Database connection established successfully.
+2025-04-03 13:54:01 info: =================================
+2025-04-03 13:54:01 info: ======= ENV: development =======
+2025-04-03 13:54:01 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:54:01 info: =================================
+2025-04-03 13:54:04 info: Database connection established successfully.
+2025-04-03 13:54:04 info: Database connection established successfully.
+2025-04-03 13:54:04 info: Database connection established successfully.
+2025-04-03 13:54:04 info: Database connection established successfully.
+2025-04-03 13:54:07 info: Database tables synced successfully.
+2025-04-03 13:54:47 info: =================================
+2025-04-03 13:54:47 info: ======= ENV: development =======
+2025-04-03 13:54:47 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:54:47 info: =================================
+2025-04-03 13:55:25 info: =================================
+2025-04-03 13:55:25 info: ======= ENV: development =======
+2025-04-03 13:55:25 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:55:25 info: =================================
+2025-04-03 13:55:37 info: =================================
+2025-04-03 13:55:37 info: ======= ENV: development =======
+2025-04-03 13:55:37 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:55:37 info: =================================
+2025-04-03 13:55:39 info: Database connection established successfully.
+2025-04-03 13:55:39 info: Database connection established successfully.
+2025-04-03 13:55:39 info: Database connection established successfully.
+2025-04-03 13:55:39 info: Database connection established successfully.
+2025-04-03 13:55:42 info: Database tables synced successfully.
+2025-04-03 13:55:53 info: =================================
+2025-04-03 13:55:53 info: ======= ENV: development =======
+2025-04-03 13:55:53 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:55:53 info: =================================
+2025-04-03 13:56:01 info: =================================
+2025-04-03 13:56:01 info: ======= ENV: development =======
+2025-04-03 13:56:01 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:56:01 info: =================================
+2025-04-03 13:56:20 info: =================================
+2025-04-03 13:56:20 info: ======= ENV: development =======
+2025-04-03 13:56:20 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:56:20 info: =================================
+2025-04-03 13:56:23 info: Database connection established successfully.
+2025-04-03 13:56:23 info: Database connection established successfully.
+2025-04-03 13:56:23 info: Database connection established successfully.
+2025-04-03 13:56:23 info: Database connection established successfully.
+2025-04-03 13:56:26 info: Database tables synced successfully.
+2025-04-03 13:56:31 info: =================================
+2025-04-03 13:56:31 info: ======= ENV: development =======
+2025-04-03 13:56:31 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:56:31 info: =================================
+2025-04-03 13:56:33 info: Database connection established successfully.
+2025-04-03 13:56:33 info: Database connection established successfully.
+2025-04-03 13:56:33 info: Database connection established successfully.
+2025-04-03 13:56:34 info: Database connection established successfully.
+2025-04-03 13:56:36 info: Database tables synced successfully.
+2025-04-03 13:56:56 info: =================================
+2025-04-03 13:56:56 info: ======= ENV: development =======
+2025-04-03 13:56:56 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:56:56 info: =================================
+2025-04-03 13:56:58 info: Database connection established successfully.
+2025-04-03 13:56:58 info: Database connection established successfully.
+2025-04-03 13:56:58 info: Database connection established successfully.
+2025-04-03 13:56:58 info: Database connection established successfully.
+2025-04-03 13:57:01 info: Database tables synced successfully.
+2025-04-03 13:57:43 error: [GET] /api/tasks/getTaskTimeStatistics >> StatusCode:: 400, Message:: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: Error: RangeError: Maximum call stack size exceeded
+2025-04-03 13:57:43 info: [0mGET /api/tasks/getTaskTimeStatistics [33m400[0m 1029.844 ms - 26[0m
+2025-04-03 13:58:18 info: =================================
+2025-04-03 13:58:18 info: ======= ENV: development =======
+2025-04-03 13:58:18 info: 🚀 Identity Service listening on port 5000
+2025-04-03 13:58:18 info: =================================
+2025-04-03 13:58:21 info: Database connection established successfully.
+2025-04-03 13:58:21 info: Database connection established successfully.
+2025-04-03 13:58:21 info: Database connection established successfully.
+2025-04-03 13:58:21 info: Database connection established successfully.
+2025-04-03 13:58:24 info: Database tables synced successfully.
+2025-04-03 13:58:47 info: [0mGET /api/tasks/getTaskTimeStatistics [32m200[0m 374.132 ms - 237[0m
+2025-04-03 14:00:40 info: [0mGET /api/tasks/getTaskTimeStatistics [32m200[0m 1491.943 ms - 243[0m
+2025-04-03 14:08:13 info: =================================
+2025-04-03 14:08:13 info: ======= ENV: development =======
+2025-04-03 14:08:13 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:08:13 info: =================================
+2025-04-03 14:08:16 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 14:08:16 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 14:08:16 info: Database connection established successfully.
+2025-04-03 14:08:16 info: Database connection established successfully.
+2025-04-03 14:08:16 info: [0mGET /api/tasks/getTaskTimeStatistics [32m200[0m 2970.283 ms - 243[0m
+2025-04-03 14:08:18 info: Database tables synced successfully.
+2025-04-03 14:09:12 info: [0mGET /api/tasks/getTaskTimeStatistics [32m200[0m 1938.343 ms - 271[0m
+2025-04-03 14:13:49 info: =================================
+2025-04-03 14:13:49 info: ======= ENV: development =======
+2025-04-03 14:13:49 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:13:49 info: =================================
+2025-04-03 14:13:52 info: Database connection established successfully.
+2025-04-03 14:13:52 info: Database connection established successfully.
+2025-04-03 14:13:52 info: Database connection established successfully.
+2025-04-03 14:13:52 info: Database connection established successfully.
+2025-04-03 14:13:55 info: Database tables synced successfully.
+2025-04-03 14:19:11 info: [0mOPTIONS /api/auth/login [32m200[0m 29.256 ms - 0[0m
+2025-04-03 14:19:13 info: [0mPOST /api/auth/login [32m200[0m 1831.803 ms - 541[0m
+2025-04-03 14:19:26 info: [0mGET /api/employees/getAllEmployees [32m200[0m 1374.479 ms - 878[0m
+2025-04-03 14:19:26 info: [0mGET /api/employees/getNumberOfAssignedEmployees [32m200[0m 1344.157 ms - 88[0m
+2025-04-03 14:19:26 info: [0mGET /api/projects/getAllProjects [32m200[0m 1333.580 ms - 614[0m
+2025-04-03 14:19:27 info: [0mGET /api/employees/getAllEmployees [36m304[0m 189.211 ms - -[0m
+2025-04-03 14:19:27 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 187.766 ms - -[0m
+2025-04-03 14:19:27 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 189.075 ms - 70[0m
+2025-04-03 14:19:27 info: [0mGET /api/projects/getAllProjects [36m304[0m 352.346 ms - -[0m
+2025-04-03 14:19:27 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 179.978 ms - 70[0m
+2025-04-03 14:19:58 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1460.086 ms - -[0m
+2025-04-03 14:19:58 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1403.643 ms - -[0m
+2025-04-03 14:19:58 info: [0mGET /api/projects/getAllProjects [36m304[0m 1400.073 ms - -[0m
+2025-04-03 14:19:58 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 186.245 ms - 70[0m
+2025-04-03 14:20:05 info: [0mGET /api/employees/getAllEmployees [36m304[0m 191.754 ms - -[0m
+2025-04-03 14:20:05 info: [0mGET /api/projects/getAllProjects [36m304[0m 184.168 ms - -[0m
+2025-04-03 14:20:05 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 185.054 ms - -[0m
+2025-04-03 14:20:06 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 182.705 ms - 70[0m
+2025-04-03 14:20:51 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1747.050 ms - -[0m
+2025-04-03 14:20:51 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1556.039 ms - -[0m
+2025-04-03 14:20:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 1576.019 ms - -[0m
+2025-04-03 14:20:51 info: [0mGET /api/tasks/getTaskTimeStatistics [32m200[0m 1876.486 ms - 277[0m
+2025-04-03 14:20:51 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 188.246 ms - 70[0m
+2025-04-03 14:21:04 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1345.388 ms - -[0m
+2025-04-03 14:21:04 info: [0mGET /api/projects/getAllProjects [36m304[0m 1477.734 ms - -[0m
+2025-04-03 14:21:04 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 252.402 ms - 70[0m
+2025-04-03 14:21:04 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1357.180 ms - -[0m
+2025-04-03 14:21:04 info: [0mGET /api/tasks/getTaskTimeStatistics [36m304[0m 1655.993 ms - -[0m
+2025-04-03 14:24:35 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1587.246 ms - -[0m
+2025-04-03 14:24:35 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1428.082 ms - -[0m
+2025-04-03 14:24:35 info: [0mGET /api/employees/getAllEmployees [36m304[0m 188.488 ms - -[0m
+2025-04-03 14:24:35 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 186.520 ms - -[0m
+2025-04-03 14:36:29 info: =================================
+2025-04-03 14:36:29 info: ======= ENV: development =======
+2025-04-03 14:36:29 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:36:29 info: =================================
+2025-04-03 14:37:13 info: =================================
+2025-04-03 14:37:13 info: ======= ENV: development =======
+2025-04-03 14:37:13 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:37:13 info: =================================
+2025-04-03 14:37:16 info: Database connection established successfully.
+2025-04-03 14:37:16 info: Database connection established successfully.
+2025-04-03 14:37:16 info: Database connection established successfully.
+2025-04-03 14:37:16 info: Database connection established successfully.
+2025-04-03 14:37:18 info: Database tables synced successfully.
+2025-04-03 14:37:54 info: =================================
+2025-04-03 14:37:54 info: ======= ENV: development =======
+2025-04-03 14:37:54 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:37:54 info: =================================
+2025-04-03 14:37:56 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 14:37:56 info: Database connection established successfully.
+2025-04-03 14:37:56 info: Database connection established successfully.
+2025-04-03 14:37:56 info: Database connection established successfully.
+2025-04-03 14:38:07 info: =================================
+2025-04-03 14:38:07 info: ======= ENV: development =======
+2025-04-03 14:38:07 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:38:07 info: =================================
+2025-04-03 14:38:18 info: =================================
+2025-04-03 14:38:18 info: ======= ENV: development =======
+2025-04-03 14:38:18 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:38:18 info: =================================
+2025-04-03 14:38:27 info: =================================
+2025-04-03 14:38:27 info: ======= ENV: development =======
+2025-04-03 14:38:27 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:38:27 info: =================================
+2025-04-03 14:38:33 info: =================================
+2025-04-03 14:38:33 info: ======= ENV: development =======
+2025-04-03 14:38:33 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:38:33 info: =================================
+2025-04-03 14:38:35 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 14:38:35 info: Database connection established successfully.
+2025-04-03 14:38:35 info: Database connection established successfully.
+2025-04-03 14:38:35 info: Database connection established successfully.
+2025-04-03 14:38:38 info: Database tables synced successfully.
+2025-04-03 14:39:08 info: =================================
+2025-04-03 14:39:08 info: ======= ENV: development =======
+2025-04-03 14:39:08 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:39:08 info: =================================
+2025-04-03 14:40:08 info: =================================
+2025-04-03 14:40:08 info: ======= ENV: development =======
+2025-04-03 14:40:08 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:40:08 info: =================================
+2025-04-03 14:40:11 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 14:40:11 info: Database connection established successfully.
+2025-04-03 14:40:11 info: Database connection established successfully.
+2025-04-03 14:40:11 info: Database connection established successfully.
+2025-04-03 14:40:13 info: Database tables synced successfully.
+2025-04-03 14:40:44 info: =================================
+2025-04-03 14:40:44 info: ======= ENV: development =======
+2025-04-03 14:40:44 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:40:44 info: =================================
+2025-04-03 14:40:53 info: =================================
+2025-04-03 14:40:53 info: ======= ENV: development =======
+2025-04-03 14:40:53 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:40:53 info: =================================
+2025-04-03 14:41:02 info: =================================
+2025-04-03 14:41:02 info: ======= ENV: development =======
+2025-04-03 14:41:02 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:41:02 info: =================================
+2025-04-03 14:41:04 info: Database connection established successfully.
+2025-04-03 14:41:04 info: Database connection established successfully.
+2025-04-03 14:41:05 info: Database connection established successfully.
+2025-04-03 14:41:10 info: =================================
+2025-04-03 14:41:10 info: ======= ENV: development =======
+2025-04-03 14:41:10 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:41:10 info: =================================
+2025-04-03 14:41:26 info: =================================
+2025-04-03 14:41:26 info: ======= ENV: development =======
+2025-04-03 14:41:26 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:41:26 info: =================================
+2025-04-03 14:41:29 info: Database connection established successfully.
+2025-04-03 14:41:29 info: Database connection established successfully.
+2025-04-03 14:41:29 info: Database connection established successfully.
+2025-04-03 14:41:29 info: Database connection established successfully.
+2025-04-03 14:41:46 info: =================================
+2025-04-03 14:41:46 info: ======= ENV: development =======
+2025-04-03 14:41:46 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:41:46 info: =================================
+2025-04-03 14:41:49 info: Database connection established successfully.
+2025-04-03 14:41:49 info: Database connection established successfully.
+2025-04-03 14:41:49 info: Database connection established successfully.
+2025-04-03 14:41:49 info: Database connection established successfully.
+2025-04-03 14:41:51 info: Database tables synced successfully.
+2025-04-03 14:42:15 info: =================================
+2025-04-03 14:42:15 info: ======= ENV: development =======
+2025-04-03 14:42:15 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:42:15 info: =================================
+2025-04-03 14:42:18 info: Database connection established successfully.
+2025-04-03 14:42:18 info: Database connection established successfully.
+2025-04-03 14:42:18 info: Database connection established successfully.
+2025-04-03 14:42:18 info: Database connection established successfully.
+2025-04-03 14:42:21 info: Database tables synced successfully.
+2025-04-03 14:47:02 info: =================================
+2025-04-03 14:47:02 info: ======= ENV: development =======
+2025-04-03 14:47:02 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:47:02 info: =================================
+2025-04-03 14:47:04 info: Database connection established successfully.
+2025-04-03 14:47:04 info: Database connection established successfully.
+2025-04-03 14:47:04 info: Database connection established successfully.
+2025-04-03 14:47:04 info: Database connection established successfully.
+2025-04-03 14:47:07 info: Database tables synced successfully.
+2025-04-03 14:47:28 info: =================================
+2025-04-03 14:47:28 info: ======= ENV: development =======
+2025-04-03 14:47:28 info: 🚀 Identity Service listening on port 5000
+2025-04-03 14:47:28 info: =================================
+2025-04-03 14:47:31 info: Database connection established successfully.
+2025-04-03 14:47:31 info: Database connection established successfully.
+2025-04-03 14:47:31 info: Database connection established successfully.
+2025-04-03 14:47:31 info: Database connection established successfully.
+2025-04-03 14:47:34 info: Database tables synced successfully.
+2025-04-03 14:47:45 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 382.145 ms - 277[0m
+2025-04-03 14:47:57 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 365.945 ms - 296[0m
+2025-04-03 14:53:50 info: [0mOPTIONS /api/auth/login [32m200[0m 7.211 ms - 0[0m
+2025-04-03 14:53:52 error: [POST] /api/auth/login >> StatusCode:: 404, Message:: Email venica@gmail.com not found
+2025-04-03 14:53:52 info: [0mPOST /api/auth/login [33m404[0m 1487.978 ms - 46[0m
+2025-04-03 14:54:08 info: [0mOPTIONS /api/auth/login [32m200[0m 1.117 ms - 0[0m
+2025-04-03 14:54:09 info: [0mPOST /api/auth/login [32m200[0m 1501.746 ms - 554[0m
+2025-04-03 14:54:11 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 391.140 ms - 277[0m
+2025-04-03 14:54:12 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 368.445 ms - -[0m
+2025-04-03 14:54:12 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 370.125 ms - -[0m
+2025-04-03 14:54:12 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 381.883 ms - -[0m
+2025-04-03 14:54:44 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1509.020 ms - -[0m
+2025-04-03 14:54:44 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 1529.021 ms - 296[0m
+2025-04-03 14:54:44 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 361.450 ms - -[0m
+2025-04-03 14:54:44 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 368.724 ms - -[0m
+2025-04-03 14:56:12 info: [0mOPTIONS /api/auth/login [32m200[0m 1.939 ms - 0[0m
+2025-04-03 14:56:14 info: [0mPOST /api/auth/login [32m200[0m 1470.158 ms - 541[0m
+2025-04-03 14:56:15 info: [0mGET /api/employees/getAllEmployees [32m200[0m 221.219 ms - 1620[0m
+2025-04-03 14:56:15 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 735.378 ms - -[0m
+2025-04-03 14:56:15 info: [0mGET /api/projects/getAllProjects [32m200[0m 904.157 ms - 872[0m
+2025-04-03 14:56:16 info: [0mGET /api/employees/getAllEmployees [36m304[0m 916.923 ms - -[0m
+2025-04-03 14:56:16 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 1083.121 ms - 70[0m
+2025-04-03 14:56:16 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1312.581 ms - -[0m
+2025-04-03 14:56:16 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1332.934 ms - -[0m
+2025-04-03 14:56:16 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 597.306 ms - -[0m
+2025-04-03 14:56:16 info: [0mGET /api/projects/getAllProjects [36m304[0m 418.369 ms - -[0m
+2025-04-03 14:56:16 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 181.342 ms - 70[0m
+2025-04-03 14:56:16 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 357.197 ms - -[0m
+2025-04-03 14:56:16 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 359.561 ms - -[0m
+2025-04-03 15:03:34 info: [0mGET /api/employees/getAllEmployees [36m304[0m 2249.330 ms - -[0m
+2025-04-03 15:03:34 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 2187.320 ms - -[0m
+2025-04-03 15:03:34 info: [0mGET /api/projects/getAllProjects [36m304[0m 2164.359 ms - -[0m
+2025-04-03 15:03:34 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 2359.597 ms - -[0m
+2025-04-03 15:03:34 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 2355.318 ms - -[0m
+2025-04-03 15:03:34 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 185.535 ms - 70[0m
+2025-04-03 15:04:25 info: =================================
+2025-04-03 15:04:25 info: ======= ENV: development =======
+2025-04-03 15:04:25 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:04:25 info: =================================
+2025-04-03 15:04:27 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:04:27 info: Database connection established successfully.
+2025-04-03 15:04:27 info: Database connection established successfully.
+2025-04-03 15:04:27 info: Database connection established successfully.
+2025-04-03 15:06:46 info: =================================
+2025-04-03 15:06:46 info: ======= ENV: development =======
+2025-04-03 15:06:46 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:06:46 info: =================================
+2025-04-03 15:06:53 info: =================================
+2025-04-03 15:06:53 info: ======= ENV: development =======
+2025-04-03 15:06:53 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:06:53 info: =================================
+2025-04-03 15:06:56 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:06:56 info: Database connection established successfully.
+2025-04-03 15:06:56 info: Database connection established successfully.
+2025-04-03 15:06:56 info: Database connection established successfully.
+2025-04-03 15:06:59 info: Database tables synced successfully.
+2025-04-03 15:07:12 info: =================================
+2025-04-03 15:07:12 info: ======= ENV: development =======
+2025-04-03 15:07:12 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:07:12 info: =================================
+2025-04-03 15:07:15 info: Database connection established successfully.
+2025-04-03 15:08:35 info: =================================
+2025-04-03 15:08:35 info: ======= ENV: development =======
+2025-04-03 15:08:35 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:08:35 info: =================================
+2025-04-03 15:08:38 info: Database connection established successfully.
+2025-04-03 15:08:38 info: Database connection established successfully.
+2025-04-03 15:08:38 info: Database connection established successfully.
+2025-04-03 15:08:38 info: Database connection established successfully.
+2025-04-03 15:08:41 info: Database tables synced successfully.
+2025-04-03 15:08:49 info: =================================
+2025-04-03 15:08:49 info: ======= ENV: development =======
+2025-04-03 15:08:49 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:08:49 info: =================================
+2025-04-03 15:08:52 info: Database connection established successfully.
+2025-04-03 15:08:52 info: Database connection established successfully.
+2025-04-03 15:08:52 info: Database connection established successfully.
+2025-04-03 15:08:52 info: Database connection established successfully.
+2025-04-03 15:08:54 info: Database tables synced successfully.
+2025-04-03 15:09:18 info: =================================
+2025-04-03 15:09:18 info: ======= ENV: development =======
+2025-04-03 15:09:18 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:09:18 info: =================================
+2025-04-03 15:09:21 info: Database connection established successfully.
+2025-04-03 15:09:21 info: Database connection established successfully.
+2025-04-03 15:09:21 info: Database connection established successfully.
+2025-04-03 15:09:21 info: Database connection established successfully.
+2025-04-03 15:09:23 info: Database tables synced successfully.
+2025-04-03 15:09:33 info: =================================
+2025-04-03 15:09:33 info: ======= ENV: development =======
+2025-04-03 15:09:33 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:09:33 info: =================================
+2025-04-03 15:09:49 info: =================================
+2025-04-03 15:09:49 info: ======= ENV: development =======
+2025-04-03 15:09:49 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:09:49 info: =================================
+2025-04-03 15:09:52 info: Database connection established successfully.
+2025-04-03 15:09:52 info: Database connection established successfully.
+2025-04-03 15:09:52 info: Database connection established successfully.
+2025-04-03 15:09:52 info: Database connection established successfully.
+2025-04-03 15:09:54 info: Database tables synced successfully.
+2025-04-03 15:10:07 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 384.063 ms - 316[0m
+2025-04-03 15:16:53 info: [0mOPTIONS /api/auth/login [32m200[0m 26.334 ms - 0[0m
+2025-04-03 15:16:55 info: [0mPOST /api/auth/login [32m200[0m 1929.931 ms - 541[0m
+2025-04-03 15:16:56 info: [0mGET /api/employees/getAllEmployees [32m200[0m 217.605 ms - 1605[0m
+2025-04-03 15:16:57 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 820.107 ms - -[0m
+2025-04-03 15:16:57 info: [0mGET /api/projects/getAllProjects [32m200[0m 996.345 ms - 872[0m
+2025-04-03 15:16:57 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1085.109 ms - -[0m
+2025-04-03 15:16:57 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 1340.189 ms - 316[0m
+2025-04-03 15:16:57 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1333.762 ms - -[0m
+2025-04-03 15:16:57 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1355.181 ms - -[0m
+2025-04-03 15:16:57 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 527.141 ms - 70[0m
+2025-04-03 15:16:57 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 360.897 ms - -[0m
+2025-04-03 15:16:58 info: [0mGET /api/projects/getAllProjects [36m304[0m 290.722 ms - -[0m
+2025-04-03 15:16:58 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 192.483 ms - 70[0m
+2025-04-03 15:16:58 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 380.603 ms - -[0m
+2025-04-03 15:16:58 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 398.457 ms - -[0m
+2025-04-03 15:16:58 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 365.189 ms - -[0m
+2025-04-03 15:18:42 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1668.625 ms - -[0m
+2025-04-03 15:18:42 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1645.165 ms - -[0m
+2025-04-03 15:18:42 info: [0mGET /api/projects/getAllProjects [32m200[0m 1736.340 ms - 872[0m
+2025-04-03 15:18:43 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1839.486 ms - -[0m
+2025-04-03 15:18:43 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1889.924 ms - -[0m
+2025-04-03 15:18:43 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1910.266 ms - -[0m
+2025-04-03 15:18:43 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 246.107 ms - 70[0m
+2025-04-03 15:18:55 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1319.486 ms - -[0m
+2025-04-03 15:18:56 info: [0mGET /api/projects/getAllProjects [36m304[0m 1340.474 ms - -[0m
+2025-04-03 15:18:56 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1414.697 ms - -[0m
+2025-04-03 15:18:56 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1502.844 ms - -[0m
+2025-04-03 15:18:56 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 230.460 ms - 70[0m
+2025-04-03 15:18:56 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1511.601 ms - -[0m
+2025-04-03 15:18:56 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1526.738 ms - -[0m
+2025-04-03 15:19:31 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1467.513 ms - -[0m
+2025-04-03 15:19:31 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1486.322 ms - -[0m
+2025-04-03 15:19:31 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1518.285 ms - -[0m
+2025-04-03 15:19:33 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 365.674 ms - -[0m
+2025-04-03 15:19:34 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 375.865 ms - -[0m
+2025-04-03 15:19:34 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 392.508 ms - -[0m
+2025-04-03 15:20:08 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1329.443 ms - -[0m
+2025-04-03 15:20:08 info: [0mGET /api/projects/getAllProjects [36m304[0m 1345.259 ms - -[0m
+2025-04-03 15:20:08 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1355.110 ms - -[0m
+2025-04-03 15:20:09 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 293.967 ms - 70[0m
+2025-04-03 15:20:09 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1506.300 ms - -[0m
+2025-04-03 15:20:09 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1517.406 ms - -[0m
+2025-04-03 15:20:09 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1531.152 ms - -[0m
+2025-04-03 15:21:05 info: =================================
+2025-04-03 15:21:05 info: ======= ENV: development =======
+2025-04-03 15:21:05 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:21:05 info: =================================
+2025-04-03 15:21:16 info: =================================
+2025-04-03 15:21:16 info: ======= ENV: development =======
+2025-04-03 15:21:16 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:21:16 info: =================================
+2025-04-03 15:21:18 info: Database connection established successfully.
+2025-04-03 15:21:18 info: Database connection established successfully.
+2025-04-03 15:21:18 info: Database connection established successfully.
+2025-04-03 15:21:18 info: Database connection established successfully.
+2025-04-03 15:21:26 info: =================================
+2025-04-03 15:21:26 info: ======= ENV: development =======
+2025-04-03 15:21:26 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:21:26 info: =================================
+2025-04-03 15:21:28 info: Database connection established successfully.
+2025-04-03 15:21:28 info: Database connection established successfully.
+2025-04-03 15:21:28 info: Database connection established successfully.
+2025-04-03 15:21:28 info: Database connection established successfully.
+2025-04-03 15:22:03 info: =================================
+2025-04-03 15:22:03 info: ======= ENV: development =======
+2025-04-03 15:22:03 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:22:03 info: =================================
+2025-04-03 15:22:05 info: Database connection established successfully.
+2025-04-03 15:22:05 info: Database connection established successfully.
+2025-04-03 15:22:05 info: Database connection established successfully.
+2025-04-03 15:22:05 info: Database connection established successfully.
+2025-04-03 15:22:08 info: Database tables synced successfully.
+2025-04-03 15:22:14 info: =================================
+2025-04-03 15:22:14 info: ======= ENV: development =======
+2025-04-03 15:22:15 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:22:15 info: =================================
+2025-04-03 15:22:28 info: =================================
+2025-04-03 15:22:28 info: ======= ENV: development =======
+2025-04-03 15:22:28 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:22:28 info: =================================
+2025-04-03 15:22:30 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:22:30 info: Database connection established successfully.
+2025-04-03 15:22:30 info: Database connection established successfully.
+2025-04-03 15:22:30 info: Database connection established successfully.
+2025-04-03 15:22:43 info: =================================
+2025-04-03 15:22:43 info: ======= ENV: development =======
+2025-04-03 15:22:43 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:22:43 info: =================================
+2025-04-03 15:22:45 info: Database connection established successfully.
+2025-04-03 15:22:45 info: Database connection established successfully.
+2025-04-03 15:22:45 info: Database connection established successfully.
+2025-04-03 15:22:45 info: Database connection established successfully.
+2025-04-03 15:22:48 info: Database tables synced successfully.
+2025-04-03 15:23:09 info: =================================
+2025-04-03 15:23:09 info: ======= ENV: development =======
+2025-04-03 15:23:09 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:23:09 info: =================================
+2025-04-03 15:23:11 info: Database connection established successfully.
+2025-04-03 15:23:11 info: Database connection established successfully.
+2025-04-03 15:23:11 info: Database connection established successfully.
+2025-04-03 15:23:11 info: Database connection established successfully.
+2025-04-03 15:23:14 info: Database tables synced successfully.
+2025-04-03 15:23:31 info: =================================
+2025-04-03 15:23:31 info: ======= ENV: development =======
+2025-04-03 15:23:31 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:23:31 info: =================================
+2025-04-03 15:23:34 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:23:34 info: Database connection established successfully.
+2025-04-03 15:23:34 info: Database connection established successfully.
+2025-04-03 15:23:37 info: Database tables synced successfully.
+2025-04-03 15:23:43 info: =================================
+2025-04-03 15:23:43 info: ======= ENV: development =======
+2025-04-03 15:23:43 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:23:43 info: =================================
+2025-04-03 15:23:46 info: Database connection established successfully.
+2025-04-03 15:23:46 info: Database connection established successfully.
+2025-04-03 15:23:46 info: Database connection established successfully.
+2025-04-03 15:23:46 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:23:46 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 1938.896 ms - 294[0m
+2025-04-03 15:23:48 info: Database tables synced successfully.
+2025-04-03 15:23:54 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 360.408 ms - 274[0m
+2025-04-03 15:23:57 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 363.269 ms - 257[0m
+2025-04-03 15:24:47 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 1541.386 ms - 274[0m
+2025-04-03 15:24:47 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 1518.243 ms - 294[0m
+2025-04-03 15:24:47 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 1512.106 ms - 257[0m
+2025-04-03 15:24:50 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 369.269 ms - -[0m
+2025-04-03 15:24:50 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 433.131 ms - -[0m
+2025-04-03 15:24:50 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 436.676 ms - -[0m
+2025-04-03 15:24:59 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 364.655 ms - -[0m
+2025-04-03 15:24:59 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 369.148 ms - -[0m
+2025-04-03 15:24:59 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 376.720 ms - -[0m
+2025-04-03 15:25:02 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 379.241 ms - -[0m
+2025-04-03 15:25:02 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 396.078 ms - -[0m
+2025-04-03 15:25:02 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 398.150 ms - -[0m
+2025-04-03 15:36:59 error: [GET] /api/projects/getEmployeeProjects/4 >> StatusCode:: 400, Message:: Error: No projects assigned to this employee
+2025-04-03 15:36:59 info: [0mGET /api/projects/getEmployeeProjects/4 [33m400[0m 1687.539 ms - 14[0m
+2025-04-03 15:38:26 info: [0mGET /api/projects/getEmployeeProjects/ [33m404[0m 60.157 ms - 172[0m
+2025-04-03 15:38:32 info: [0mGET /api/projects/getEmployeeProjects/4 [32m200[0m 1553.302 ms - 226[0m
+2025-04-03 15:40:09 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 2022.032 ms - -[0m
+2025-04-03 15:40:09 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1996.618 ms - -[0m
+2025-04-03 15:40:09 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1993.358 ms - -[0m
+2025-04-03 15:40:11 info: [0mGET /api/employees/getAllEmployees [32m200[0m 229.288 ms - 1605[0m
+2025-04-03 15:40:11 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 402.729 ms - -[0m
+2025-04-03 15:40:12 info: [0mGET /api/projects/getAllProjects [32m200[0m 225.823 ms - 1123[0m
+2025-04-03 15:40:12 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 385.301 ms - -[0m
+2025-04-03 15:40:12 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 315.777 ms - -[0m
+2025-04-03 15:40:12 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 476.616 ms - -[0m
+2025-04-03 15:40:12 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 317.812 ms - 70[0m
+2025-04-03 15:40:30 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1360.443 ms - -[0m
+2025-04-03 15:40:30 info: [0mGET /api/projects/getAllProjects [36m304[0m 1504.558 ms - -[0m
+2025-04-03 15:40:30 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1367.854 ms - -[0m
+2025-04-03 15:40:31 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 365.042 ms - 70[0m
+2025-04-03 15:40:31 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1695.469 ms - -[0m
+2025-04-03 15:40:31 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1692.266 ms - -[0m
+2025-04-03 15:40:31 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1555.878 ms - -[0m
+2025-04-03 15:41:29 info: [0mGET /api/projects/getAllProjects [36m304[0m 1314.860 ms - -[0m
+2025-04-03 15:41:29 info: [0mGET /api/tasks/getProjectHoursSummary [32m200[0m 1301.297 ms - 131[0m
+2025-04-03 15:41:29 info: [0mGET /api/projects/getAllProjects [36m304[0m 194.727 ms - -[0m
+2025-04-03 15:41:29 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 194.442 ms - -[0m
+2025-04-03 15:41:36 info: [0mGET /api/tasks/getTaskByProject/4 [32m200[0m 189.327 ms - 64[0m
+2025-04-03 15:41:36 info: [0mGET /api/tasks/getTaskByProject/4 [36m304[0m 188.321 ms - -[0m
+2025-04-03 15:41:45 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.348 ms - -[0m
+2025-04-03 15:41:45 info: [0mGET /api/projects/getAllProjects [36m304[0m 505.376 ms - -[0m
+2025-04-03 15:41:45 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 846.220 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1073.073 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1396.714 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 894.392 ms - 70[0m
+2025-04-03 15:41:46 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1395.983 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/projects/getAllProjects [36m304[0m 546.611 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1344.951 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 350.270 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 195.303 ms - 70[0m
+2025-04-03 15:41:46 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 389.445 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 378.177 ms - -[0m
+2025-04-03 15:41:46 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 370.785 ms - -[0m
+2025-04-03 15:41:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 189.837 ms - -[0m
+2025-04-03 15:41:47 info: [0mGET /api/projects/getAllProjects [36m304[0m 193.998 ms - -[0m
+2025-04-03 15:41:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 186.629 ms - -[0m
+2025-04-03 15:41:47 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 185.631 ms - 70[0m
+2025-04-03 15:41:47 info: [0mGET /api/projects/getAllProjects [36m304[0m 186.290 ms - -[0m
+2025-04-03 15:41:47 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 192.365 ms - 70[0m
+2025-04-03 15:44:27 info: [0mGET /api/projects/getEmployeeProjects/4 [32m200[0m 1559.054 ms - 226[0m
+2025-04-03 15:45:51 info: [0mGET /api/employees/getNumberOfAssignedEmployees [32m200[0m 1331.647 ms - 88[0m
+2025-04-03 15:45:51 info: [0mGET /api/employees/getAllEmployees [32m200[0m 1321.450 ms - 1605[0m
+2025-04-03 15:45:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 1317.600 ms - -[0m
+2025-04-03 15:45:51 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1540.863 ms - -[0m
+2025-04-03 15:45:51 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1521.187 ms - -[0m
+2025-04-03 15:45:51 info: [0mGET /api/employees/getAllEmployees [36m304[0m 194.530 ms - -[0m
+2025-04-03 15:45:51 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 202.840 ms - -[0m
+2025-04-03 15:45:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 275.690 ms - -[0m
+2025-04-03 15:45:51 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1642.462 ms - -[0m
+2025-04-03 15:45:51 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 186.951 ms - 70[0m
+2025-04-03 15:45:52 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 177.271 ms - 70[0m
+2025-04-03 15:45:52 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 382.777 ms - -[0m
+2025-04-03 15:45:52 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 371.598 ms - -[0m
+2025-04-03 15:45:52 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 355.730 ms - -[0m
+2025-04-03 15:46:49 info: =================================
+2025-04-03 15:46:49 info: ======= ENV: development =======
+2025-04-03 15:46:49 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:46:49 info: =================================
+2025-04-03 15:46:55 info: =================================
+2025-04-03 15:46:55 info: ======= ENV: development =======
+2025-04-03 15:46:55 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:46:55 info: =================================
+2025-04-03 15:46:58 info: Database connection established successfully.
+2025-04-03 15:46:58 info: Database connection established successfully.
+2025-04-03 15:46:58 info: Database connection established successfully.
+2025-04-03 15:46:58 info: Database connection established successfully.
+2025-04-03 15:47:05 info: =================================
+2025-04-03 15:47:05 info: ======= ENV: development =======
+2025-04-03 15:47:05 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:47:05 info: =================================
+2025-04-03 15:47:21 info: =================================
+2025-04-03 15:47:21 info: ======= ENV: development =======
+2025-04-03 15:47:21 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:47:21 info: =================================
+2025-04-03 15:47:24 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:47:24 info: Database connection established successfully.
+2025-04-03 15:47:24 info: Database connection established successfully.
+2025-04-03 15:47:24 info: Database connection established successfully.
+2025-04-03 15:47:27 info: Database tables synced successfully.
+2025-04-03 15:47:43 info: =================================
+2025-04-03 15:47:43 info: ======= ENV: development =======
+2025-04-03 15:47:43 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:47:43 info: =================================
+2025-04-03 15:47:45 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:47:54 info: =================================
+2025-04-03 15:47:54 info: ======= ENV: development =======
+2025-04-03 15:47:54 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:47:54 info: =================================
+2025-04-03 15:48:08 info: =================================
+2025-04-03 15:48:08 info: ======= ENV: development =======
+2025-04-03 15:48:08 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:48:08 info: =================================
+2025-04-03 15:48:11 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:48:11 info: Database connection established successfully.
+2025-04-03 15:48:11 info: Database connection established successfully.
+2025-04-03 15:48:11 info: Database connection established successfully.
+2025-04-03 15:48:14 info: Database tables synced successfully.
+2025-04-03 15:48:36 info: =================================
+2025-04-03 15:48:36 info: ======= ENV: development =======
+2025-04-03 15:48:36 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:48:36 info: =================================
+2025-04-03 15:48:43 info: =================================
+2025-04-03 15:48:43 info: ======= ENV: development =======
+2025-04-03 15:48:43 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:48:43 info: =================================
+2025-04-03 15:48:45 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:48:45 info: Database connection established successfully.
+2025-04-03 15:48:45 info: Database connection established successfully.
+2025-04-03 15:48:45 info: Database connection established successfully.
+2025-04-03 15:48:48 info: Database tables synced successfully.
+2025-04-03 15:49:05 info: =================================
+2025-04-03 15:49:05 info: ======= ENV: development =======
+2025-04-03 15:49:05 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:49:05 info: =================================
+2025-04-03 15:49:08 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:49:08 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:49:34 info: =================================
+2025-04-03 15:49:34 info: ======= ENV: development =======
+2025-04-03 15:49:34 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:49:34 info: =================================
+2025-04-03 15:49:57 info: =================================
+2025-04-03 15:49:57 info: ======= ENV: development =======
+2025-04-03 15:49:57 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:49:57 info: =================================
+2025-04-03 15:50:00 info: Database connection established successfully.
+2025-04-03 15:50:00 info: Database connection established successfully.
+2025-04-03 15:50:00 info: Database connection established successfully.
+2025-04-03 15:50:00 info: Database connection established successfully.
+2025-04-03 15:50:03 info: Database tables synced successfully.
+2025-04-03 15:50:14 info: =================================
+2025-04-03 15:50:14 info: ======= ENV: development =======
+2025-04-03 15:50:14 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:50:14 info: =================================
+2025-04-03 15:50:17 info: Database connection established successfully.
+2025-04-03 15:50:17 info: Database connection established successfully.
+2025-04-03 15:50:17 info: Database connection established successfully.
+2025-04-03 15:50:17 info: Database connection established successfully.
+2025-04-03 15:50:19 info: Database tables synced successfully.
+2025-04-03 15:50:59 info: =================================
+2025-04-03 15:50:59 info: ======= ENV: development =======
+2025-04-03 15:50:59 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:50:59 info: =================================
+2025-04-03 15:51:11 info: =================================
+2025-04-03 15:51:11 info: ======= ENV: development =======
+2025-04-03 15:51:11 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:51:11 info: =================================
+2025-04-03 15:51:13 error: Unable to connect to the database: User 'aa010d_kultwano' has exceeded the 'max_user_connections' resource (current value: 10)
+2025-04-03 15:51:13 info: Database connection established successfully.
+2025-04-03 15:51:13 info: Database connection established successfully.
+2025-04-03 15:51:13 info: Database connection established successfully.
+2025-04-03 15:51:22 info: =================================
+2025-04-03 15:51:22 info: ======= ENV: development =======
+2025-04-03 15:51:22 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:51:22 info: =================================
+2025-04-03 15:51:24 info: Database connection established successfully.
+2025-04-03 15:51:24 info: Database connection established successfully.
+2025-04-03 15:51:25 info: Database connection established successfully.
+2025-04-03 15:51:25 info: Database connection established successfully.
+2025-04-03 15:51:48 info: =================================
+2025-04-03 15:51:48 info: ======= ENV: development =======
+2025-04-03 15:51:48 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:51:48 info: =================================
+2025-04-03 15:52:01 info: =================================
+2025-04-03 15:52:01 info: ======= ENV: development =======
+2025-04-03 15:52:01 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:52:01 info: =================================
+2025-04-03 15:52:01 info: =================================
+2025-04-03 15:52:01 info: ======= ENV: development =======
+2025-04-03 15:52:01 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:52:01 info: =================================
+2025-04-03 15:52:10 info: =================================
+2025-04-03 15:52:10 info: ======= ENV: development =======
+2025-04-03 15:52:10 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:52:10 info: =================================
+2025-04-03 15:52:13 info: Database connection established successfully.
+2025-04-03 15:52:13 info: Database connection established successfully.
+2025-04-03 15:52:13 info: Database connection established successfully.
+2025-04-03 15:52:13 info: Database connection established successfully.
+2025-04-03 15:52:15 info: Database tables synced successfully.
+2025-04-03 15:52:50 info: =================================
+2025-04-03 15:52:50 info: ======= ENV: development =======
+2025-04-03 15:52:50 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:52:50 info: =================================
+2025-04-03 15:53:13 info: =================================
+2025-04-03 15:53:13 info: ======= ENV: development =======
+2025-04-03 15:53:13 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:53:13 info: =================================
+2025-04-03 15:53:16 info: Database connection established successfully.
+2025-04-03 15:53:16 info: Database connection established successfully.
+2025-04-03 15:53:16 info: Database connection established successfully.
+2025-04-03 15:53:16 info: Database connection established successfully.
+2025-04-03 15:53:18 info: Database tables synced successfully.
+2025-04-03 15:53:51 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/1 [32m200[0m 1497.920 ms - 257[0m
+2025-04-03 15:54:20 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/1 [32m200[0m 1482.018 ms - 274[0m
+2025-04-03 15:54:42 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/1 [32m200[0m 1480.963 ms - 294[0m
+2025-04-03 15:57:55 info: =================================
+2025-04-03 15:57:55 info: ======= ENV: development =======
+2025-04-03 15:57:55 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:57:55 info: =================================
+2025-04-03 15:57:57 info: Database connection established successfully.
+2025-04-03 15:57:57 info: Database connection established successfully.
+2025-04-03 15:57:57 info: Database connection established successfully.
+2025-04-03 15:57:57 info: Database connection established successfully.
+2025-04-03 15:58:00 info: Database tables synced successfully.
+2025-04-03 15:58:37 info: Database connection established successfully.
+2025-04-03 15:59:04 info: =================================
+2025-04-03 15:59:04 info: ======= ENV: development =======
+2025-04-03 15:59:04 info: 🚀 Identity Service listening on port 5000
+2025-04-03 15:59:04 info: =================================
+2025-04-03 15:59:07 info: Database connection established successfully.
+2025-04-03 15:59:07 info: Database connection established successfully.
+2025-04-03 15:59:07 info: Database connection established successfully.
+2025-04-03 15:59:07 info: Database connection established successfully.
+2025-04-03 15:59:09 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/1 [32m200[0m 370.998 ms - 257[0m
+2025-04-03 15:59:10 info: Database tables synced successfully.
+2025-04-03 16:00:06 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/1 [32m200[0m 1591.830 ms - 274[0m
+2025-04-03 16:00:17 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/1 [32m200[0m 380.605 ms - 294[0m
+2025-04-03 16:01:38 info: [0mGET /api/employees/getAllEmployees [32m200[0m 1635.094 ms - 1605[0m
+2025-04-03 16:01:38 info: [0mGET /api/projects/getAllProjects [32m200[0m 1474.928 ms - 1370[0m
+2025-04-03 16:01:38 info: [0mGET /api/employees/getNumberOfAssignedEmployees [32m200[0m 1463.154 ms - 88[0m
+2025-04-03 16:01:38 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 1684.482 ms - 274[0m
+2025-04-03 16:01:38 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 1662.532 ms - 294[0m
+2025-04-03 16:01:38 info: [0mGET /api/employees/getAllEmployees [36m304[0m 189.221 ms - -[0m
+2025-04-03 16:01:38 info: [0mGET /api/projects/getAllProjects [36m304[0m 192.293 ms - -[0m
+2025-04-03 16:01:38 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 184.652 ms - -[0m
+2025-04-03 16:01:38 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 191.881 ms - 70[0m
+2025-04-03 16:01:39 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 365.420 ms - -[0m
+2025-04-03 16:01:39 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 369.247 ms - -[0m
+2025-04-03 16:01:39 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 181.309 ms - 70[0m
+2025-04-03 16:03:53 info: [0mOPTIONS /api/auth/login [32m200[0m 12.365 ms - 0[0m
+2025-04-03 16:03:55 info: [0mPOST /api/auth/login [32m200[0m 1760.014 ms - 554[0m
+2025-04-03 16:03:56 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/1 [32m200[0m 787.736 ms - 274[0m
+2025-04-03 16:03:56 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/1 [32m200[0m 964.633 ms - 294[0m
+2025-04-03 16:03:57 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/1 [32m200[0m 1210.053 ms - 257[0m
+2025-04-03 16:03:57 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/1 [36m304[0m 670.567 ms - -[0m
+2025-04-03 16:03:57 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/1 [36m304[0m 795.252 ms - -[0m
+2025-04-03 16:03:57 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/1 [36m304[0m 524.101 ms - -[0m
+2025-04-03 16:04:12 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/1 [36m304[0m 1583.002 ms - -[0m
+2025-04-03 16:04:12 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/1 [36m304[0m 1576.758 ms - -[0m
+2025-04-03 16:04:12 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/1 [36m304[0m 1679.766 ms - -[0m
+2025-04-03 16:04:12 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/1 [36m304[0m 434.510 ms - -[0m
+2025-04-03 16:04:12 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/1 [36m304[0m 373.553 ms - -[0m
+2025-04-03 16:04:12 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/1 [36m304[0m 409.249 ms - -[0m
+2025-04-03 16:04:34 info: [0mOPTIONS /api/auth/login [32m200[0m 1.792 ms - 0[0m
+2025-04-03 16:04:36 info: [0mPOST /api/auth/login [32m200[0m 1482.798 ms - 541[0m
+2025-04-03 16:04:37 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.174 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/projects/getAllProjects [36m304[0m 907.222 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1092.042 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1093.020 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1309.613 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1314.850 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 1329.334 ms - 258[0m
+2025-04-03 16:04:38 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 410.056 ms - 70[0m
+2025-04-03 16:04:38 info: [0mGET /api/projects/getAllProjects [36m304[0m 366.494 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 186.064 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 316.114 ms - 70[0m
+2025-04-03 16:04:38 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 378.336 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 379.147 ms - -[0m
+2025-04-03 16:04:38 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 377.076 ms - -[0m
+2025-04-03 16:04:58 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1315.527 ms - -[0m
+2025-04-03 16:04:58 info: [0mGET /api/projects/getAllProjects [36m304[0m 1342.699 ms - -[0m
+2025-04-03 16:04:58 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1461.278 ms - -[0m
+2025-04-03 16:04:58 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1475.916 ms - -[0m
+2025-04-03 16:04:58 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1474.708 ms - -[0m
+2025-04-03 16:04:58 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1473.873 ms - -[0m
+2025-04-03 16:04:58 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 229.722 ms - 70[0m

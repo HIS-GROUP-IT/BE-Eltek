@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { Container } from "typedi";
 import { CustomResponse } from "@/types/response.interface";
-import { EmployeeTimesheet, IProjectsHours, ITask } from "@/types/task.type";
+import { EmployeeTimesheet, IProjectsHours, ITask, TimeTrackingReport } from "@/types/task.type";
 import { TASK_SERVICE_TOKEN } from "@/interfaces/task/ITaskService.interface";
 import { RequestWithUser } from "@/types/auth.types";
 import { HttpException } from "@/exceptions/HttpException";
@@ -72,6 +72,9 @@ export class TaskController {
             next(error);
         }
     };
+
+
+
 
     public getAllTasks = async (req: Request, res: Response, next: NextFunction) => {
         try {
@@ -252,6 +255,98 @@ export class TaskController {
             const response: CustomResponse<ITask[]> = {
                 data: tasks,
                 message: "Tasks fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+
+    public getTaskTimeStatistics = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const tasks = await this.taskService.getTaskTimeStatistics();
+            const response: CustomResponse<TimeTrackingReport> = {
+                data: tasks,
+                message: "Tasks Stats fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    public getWeeklyTaskTimeStatistics = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const tasks = await this.taskService.getWeeklyTaskStatistics();
+            const response: CustomResponse<any> = {
+                data: tasks,
+                message: "Weekly Tasks Stats fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    
+    public getYearlyTaskStatistics = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const tasks = await this.taskService.getYearlyTaskStatistics();
+            const response: CustomResponse<any> = {
+                data: tasks,
+                message: "yearly Tasks Stats fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+
+
+    public getEmployeeTaskTimeStatistics = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const employeeId = req.params.employeeId
+            const tasks = await this.taskService.getEmployeeTaskTimeStatistics(employeeId);
+            const response: CustomResponse<TimeTrackingReport> = {
+                data: tasks,
+                message: "Tasks Stats fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    public getEmployeeWeeklyTaskTimeStatistics = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const employeeId = req.params.employeeId
+            const tasks = await this.taskService.getEmployeeWeeklyTaskStatistics(employeeId);
+            const response: CustomResponse<any> = {
+                data: tasks,
+                message: "Weekly Tasks Stats fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    
+    public getEmployeeYearlyTaskStatistics = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const employeeId = req.params.employeeId
+            const tasks = await this.taskService.getEmployeeYearlyTaskStatistics(employeeId);
+            const response: CustomResponse<any> = {
+                data: tasks,
+                message: "yearly Tasks Stats fetched successfully",
                 error: false,
             };
             res.status(200).json(response);

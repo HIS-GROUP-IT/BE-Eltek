@@ -63,3 +63,17 @@ export type MonthlyTasks = {
     date: string;
   }>;
 };
+
+
+
+export type TimeTrackingStats = {
+  totalHours: number;
+  averageHoursDaily: number;
+  completionRate: number;
+  data: number[];
+}
+
+export type TimeTrackingReport = {
+  today: TimeTrackingStats;
+  yesterday: TimeTrackingStats;
+}
