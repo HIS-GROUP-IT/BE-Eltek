@@ -29,6 +29,11 @@ export class EmployeeRoute implements Routes {
       this.employeeController.updateEmployee
     );
 
+    this.router.put(
+      `${this.path}/activeEmployee`,
+      this.employeeController.activeEmployee
+    );
+
     this.router.delete(
       `${this.path}/deleteEmployee/:id`,
       authorizationMiddleware,

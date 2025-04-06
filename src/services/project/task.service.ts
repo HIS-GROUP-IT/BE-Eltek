@@ -198,5 +198,14 @@ export class TaskService implements ITaskService {
         }
     }
 
+    public async getEmployeeProjectHoursSummary(employeeId: string): Promise<IProjectsHours> {
+        try {
+            const fetchedHours = await this.taskRepository.getEmployeeProjectHoursSummary(employeeId);
+            return fetchedHours;
+        } catch (error) {
+            throw new HttpException(400, error)
+
+        }
+    }
 
 }

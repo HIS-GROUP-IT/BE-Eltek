@@ -50,4 +50,5 @@ getEmployeeYearlyTaskStatistics(employeeId:number): Promise<{
   thisYear: { totalHours: number, average: number, completionRate: number, data: number[] },
   lastYear: { totalHours: number, average: number, completionRate: number, data: number[] }
 }>
+ getEmployeeProjectHoursSummary(employeeId: string): Promise<IProjectsHours>
 }

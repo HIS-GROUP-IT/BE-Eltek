@@ -15,6 +15,11 @@ export class ProjectRepository implements IProjectRepository {
         return project.get({ plain: true });
     }
 
+      public async getProjectByName(name: string): Promise<IProject | null> {
+        const project = await Project.findOne({ where: { name }, raw: true });
+        return project;
+      }
+
     public async updateProject(projectData: Partial<IProject>): Promise<IProject> {
         const project = await Project.findByPk(projectData.id);
         if (!project) throw new Error("Project not found");
@@ -56,6 +61,34 @@ export class ProjectRepository implements IProjectRepository {
         const projects = employeeProjects.map(ep => (ep as any).project);
         return projects;
       }
+
+      
+  public async activeProject(
+    projectData: Partial<IProject>
+  ): Promise<IProject> {
+    const transaction = await Employee.sequelize!.transaction();
+  
+    try {
+    
+      const project = await Project.findOne({ 
+        where: {
+            name : projectData.name
+        },
+        transaction
+      });
+  
+      await project.update(projectData, { transaction });
+  
+      await transaction.commit();
+      
+      return project.get({ plain: true });
+    } catch (error) {
+      await transaction.rollback();
+      throw error instanceof HttpException
+        ? error
+        : new HttpException(500, "Error updating project");
+    }
+  }
       
 
     public async deleteProject(projectId: number): Promise<void> {

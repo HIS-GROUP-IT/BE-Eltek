@@ -355,4 +355,18 @@ export class TaskController {
         }
     };
 
+    public getEmployeeProjectHoursSummary = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const employeeId = req.params.employeeId
+            const tasks = await this.taskService.getEmployeeProjectHoursSummary(employeeId);
+            const response: CustomResponse<IProjectsHours> = {
+                data: tasks,
+                message: "Employee hours fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
 }

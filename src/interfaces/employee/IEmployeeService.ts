@@ -14,6 +14,10 @@ export interface IEmployeeService {
   ): Promise<void>;
   getEmployeesByProjectId(projectId: number): Promise<IAssignedEmployees[]>;
   removeEmployeeFromProject(employeeId: number, projectId: number): Promise<void>
+  activeEmployee(
+    employeeData: Partial<IEmployee>
+  ): Promise<IEmployee> 
+
 }
 
 export const EMPLOYEE_SERVICE_TOKEN = new Token<IEmployeeService>(

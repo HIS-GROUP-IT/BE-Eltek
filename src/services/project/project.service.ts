@@ -9,10 +9,19 @@ export class ProjectService implements IProjectService {
     constructor(private projectRepository: ProjectRepository) {}
 
     public async createProject(projectData: Partial<IProject>): Promise<IProject> {
+
+        const existingProject = await this.projectRepository.getProjectByName(projectData.name);
+        if (existingProject) {
+            if (existingProject.status === "cancelled") {
+                throw new HttpException(409, "Project name already exists and project is cancelled. Please reactivate the project to proceed.");
+            } else {
+                throw new HttpException(409, "Project name already exists");
+            }
+        }
         try {
             return await this.projectRepository.createProject(projectData);
         } catch (error) {
-            throw new HttpException(500, `Error creating project: ${error.message}`);
+            throw new HttpException(500, `Error creating project: ${error}`);
         }
     }
 
@@ -59,6 +68,12 @@ export class ProjectService implements IProjectService {
         }
     }
 
-    
+    public async activeProject(projectData: Partial<IProject>): Promise<IProject> {
+        try {
+            return await this.projectRepository.activeProject(projectData);
+        } catch (error) {
+            throw new HttpException(500, `Error activating project: ${error.message}`);
+        }
+    }
 
 }

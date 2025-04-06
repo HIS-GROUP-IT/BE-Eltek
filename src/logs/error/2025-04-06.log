@@ -1,0 +1,82 @@
+2025-04-06 12:11:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/task.service.ts[0m:[93m203[0m:[93m2[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m203[0m }
+[7m   [0m [91m [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/task.service.ts[0m:[93m203[0m:[93m2[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m203[0m }
+[7m   [0m [91m [0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-06 12:12:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/project/task.controller.ts[0m:[93m360[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m360[0m 
+[7m   [0m [91m[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/project/task.controller.ts[0m:[93m360[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m360[0m 
+[7m   [0m [91m[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-06 12:12:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/project/task.controller.ts[0m:[93m363[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m363[0m         } catch (error) {
+[7m   [0m [91m          ~~~~~[0m
+[96msrc/controllers/project/task.controller.ts[0m:[93m367[0m:[93m1[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m367[0m }
+[7m   [0m [91m~[0m
+[96msrc/controllers/project/task.controller.ts[0m:[93m368[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m368[0m 
+[7m   [0m [91m[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/project/task.controller.ts[0m:[93m363[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m363[0m         } catch (error) {
+[7m   [0m [91m          ~~~~~[0m
+[96msrc/controllers/project/task.controller.ts[0m:[93m367[0m:[93m1[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m367[0m }
+[7m   [0m [91m~[0m
+[96msrc/controllers/project/task.controller.ts[0m:[93m368[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m368[0m 
+[7m   [0m [91m[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)

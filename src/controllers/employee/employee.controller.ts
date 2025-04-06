@@ -172,9 +172,22 @@ public getEmployeesByProjectId = async (req: Request, res: Response, next: NextF
       next(error);
     }
   };
+  public activeEmployee = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const employeeData = req.body;
+      const activatedEmployee = await this.employeeService.activeEmployee(employeeData);
+      
+      const response: CustomResponse<IEmployee> = {
+        data: activatedEmployee,
+        message: "Employee activated successfully",
+        error: false
+      };
   
-
- 
+      res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
 
 
 public getEmployeeProjects = async (req: Request, res: Response, next: NextFunction) => {

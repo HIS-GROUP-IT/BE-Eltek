@@ -36,5 +36,6 @@ export class TaskRoute {
         this.router.get(`${this.path}/getEmployeeChartTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeTaskTimeStatistics);
         this.router.get(`${this.path}/getEmployeeChartWeeklyTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeWeeklyTaskTimeStatistics);
         this.router.get(`${this.path}/getEmployeeChartYearlyTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeYearlyTaskStatistics);
+        this.router.get(`${this.path}/getEmployeeProjectHours/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeProjectHoursSummary);
     }
 }

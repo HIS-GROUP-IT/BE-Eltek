@@ -141,6 +141,28 @@ export class TaskRepository implements ITaskRepository {
         };
       }
 
+      public async getEmployeeProjectHoursSummary(employeeId: string): Promise<IProjectsHours> {
+        const result = await Task.findOne({
+          attributes: [
+            [Sequelize.fn('SUM', Sequelize.col('hours')), 'totalHours'],
+            [Sequelize.literal(`SUM(CASE WHEN status = 'pending' THEN hours ELSE 0 END)`), 'pendingHours'],
+            [Sequelize.literal(`SUM(CASE WHEN status = 'completed' THEN hours ELSE 0 END)`), 'completedHours'],
+            [Sequelize.literal(`SUM(CASE WHEN status = 'rejected' THEN hours ELSE 0 END)`), 'rejectedHours']
+          ],
+          where: {
+            employeeId: employeeId
+          },
+          raw: true
+        });
+      
+        return {
+          totalHours: Number(result?.totalHours || 0),
+          pendingHours: Number(result?.pendingHours || 0),
+          completedHours: Number(result?.completedHours || 0),
+          rejectedHours: Number(result?.rejectedHours || 0)
+        };
+    }
+
       public async getCurrentWeekHours(projectId: number): Promise<EmployeeTimesheet[]> {
         const { start, end } = this.getCurrentWeekDates();
         const weekDays = this.generateWeekDays(start);

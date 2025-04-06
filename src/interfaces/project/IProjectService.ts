@@ -10,6 +10,9 @@ export interface IProjectService {
     getAllProjects(): Promise<IProject[]> ;
     getProjectById(projectId: number): Promise<IProject | null>;
     getProjectsByEmployee(employeeId: number): Promise<IProject[]>
+    activeProject(
+        projectData: Partial<IProject>
+      ): Promise<IProject>
 }
 
 

@@ -100,4 +100,20 @@ export class ProjectController {
             next(error);
         }
     }
+
+
+    public activeProject = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const project = req.body;
+            const activetedProject = await this.projectService.activeProject(project);
+            const response: CustomResponse<IProject[]> = {
+                data: activetedProject,
+                message: "Project actived successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
 }

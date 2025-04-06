@@ -1,0 +1,216 @@
+2025-04-06 12:03:38 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1851.236 ms - -[0m
+2025-04-06 12:03:38 info: [0mGET /api/projects/getAllProjects [36m304[0m 1675.561 ms - -[0m
+2025-04-06 12:03:38 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1656.391 ms - -[0m
+2025-04-06 12:03:38 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1901.020 ms - -[0m
+2025-04-06 12:03:38 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1863.363 ms - -[0m
+2025-04-06 12:03:38 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 194.348 ms - -[0m
+2025-04-06 12:03:38 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 184.900 ms - 70[0m
+2025-04-06 12:03:38 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 1902.116 ms - 223[0m
+2025-04-06 12:04:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1465.064 ms - -[0m
+2025-04-06 12:04:19 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 1454.100 ms - -[0m
+2025-04-06 12:04:19 info: [0mGET /api/projects/getAllProjects [36m304[0m 1593.283 ms - -[0m
+2025-04-06 12:04:19 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 189.848 ms - -[0m
+2025-04-06 12:04:19 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1635.930 ms - -[0m
+2025-04-06 12:04:19 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1633.248 ms - -[0m
+2025-04-06 12:04:19 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1637.444 ms - -[0m
+2025-04-06 12:04:19 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 320.739 ms - 70[0m
+2025-04-06 12:04:23 info: [0mGET /api/employees/getAllEmployees [36m304[0m 180.211 ms - -[0m
+2025-04-06 12:04:23 info: [0mGET /api/employees/getAllEmployees [36m304[0m 184.717 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/employees/getAllEmployees [36m304[0m 228.349 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 205.437 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/projects/getAllProjects [36m304[0m 376.364 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 394.235 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 182.251 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 399.579 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 411.289 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/employees/getAllEmployees [36m304[0m 349.695 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 195.958 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.034 ms - -[0m
+2025-04-06 12:04:24 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 184.305 ms - 70[0m
+2025-04-06 12:04:25 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 343.842 ms - -[0m
+2025-04-06 12:04:25 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 178.076 ms - 70[0m
+2025-04-06 12:04:25 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 368.154 ms - -[0m
+2025-04-06 12:04:25 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 366.166 ms - -[0m
+2025-04-06 12:04:25 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 361.389 ms - -[0m
+2025-04-06 12:04:27 info: [0mGET /api/employees/getAllEmployees [36m304[0m 185.793 ms - -[0m
+2025-04-06 12:04:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 182.272 ms - -[0m
+2025-04-06 12:04:36 info: [0mGET /api/employees/getAllEmployees [36m304[0m 182.845 ms - -[0m
+2025-04-06 12:04:36 info: [0mGET /api/projects/getAllProjects [36m304[0m 366.096 ms - -[0m
+2025-04-06 12:04:36 info: [0mGET /api/employees/getAllEmployees [36m304[0m 364.297 ms - -[0m
+2025-04-06 12:04:36 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 534.959 ms - 70[0m
+2025-04-06 12:04:36 info: [0mGET /api/projects/getAllProjects [36m304[0m 540.670 ms - -[0m
+2025-04-06 12:04:37 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 358.205 ms - 70[0m
+2025-04-06 12:04:40 info: [0mGET /api/employees/getAllEmployees [36m304[0m 199.086 ms - -[0m
+2025-04-06 12:04:40 info: [0mGET /api/employees/getAllEmployees [36m304[0m 182.108 ms - -[0m
+2025-04-06 12:04:44 info: [0mGET /api/employees/getAllEmployees [36m304[0m 181.521 ms - -[0m
+2025-04-06 12:04:44 info: [0mGET /api/projects/getAllProjects [36m304[0m 185.968 ms - -[0m
+2025-04-06 12:04:44 info: [0mGET /api/employees/getAllEmployees [36m304[0m 181.615 ms - -[0m
+2025-04-06 12:04:44 info: [0mGET /api/projects/getAllProjects [36m304[0m 183.652 ms - -[0m
+2025-04-06 12:04:44 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 179.835 ms - 70[0m
+2025-04-06 12:04:44 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 178.474 ms - 70[0m
+2025-04-06 12:04:52 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 184.041 ms - -[0m
+2025-04-06 12:04:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 187.026 ms - -[0m
+2025-04-06 12:04:52 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 179.458 ms - -[0m
+2025-04-06 12:04:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 183.635 ms - -[0m
+2025-04-06 12:04:59 info: [0mGET /api/tasks/getTaskByProject/9 [32m200[0m 186.875 ms - 661[0m
+2025-04-06 12:04:59 info: [0mGET /api/tasks/getTaskByProject/9 [36m304[0m 189.038 ms - -[0m
+2025-04-06 12:05:05 info: [0mGET /api/projects/getAllProjects [36m304[0m 188.619 ms - -[0m
+2025-04-06 12:05:05 info: [0mGET /api/projects/getAllProjects [36m304[0m 182.878 ms - -[0m
+2025-04-06 12:05:07 info: [0mGET /api/tasks/getProjectWeeklySummary/1 [32m201[0m 195.975 ms - 279[0m
+2025-04-06 12:05:08 info: [0mGET /api/tasks/getProjectWeeklySummary/1 [32m201[0m 189.181 ms - 279[0m
+2025-04-06 12:05:10 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 189.469 ms - -[0m
+2025-04-06 12:05:11 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 186.399 ms - -[0m
+2025-04-06 12:05:19 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 219.119 ms - -[0m
+2025-04-06 12:05:25 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.080 ms - -[0m
+2025-04-06 12:05:25 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 689.172 ms - -[0m
+2025-04-06 12:05:25 info: [0mGET /api/projects/getAllProjects [36m304[0m 866.781 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 1053.719 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1330.254 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1329.364 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/employees/getAllEmployees [36m304[0m 641.490 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 460.074 ms - 70[0m
+2025-04-06 12:05:26 info: [0mGET /api/tasks/getProjectHoursSummary [36m304[0m 367.932 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1363.097 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/projects/getAllProjects [36m304[0m 191.457 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/employees/getNumberOfAssignedEmployees [36m304[0m 192.235 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/employees/getProjectEmployees/0 [32m201[0m 242.683 ms - 70[0m
+2025-04-06 12:05:26 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 371.520 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 453.051 ms - -[0m
+2025-04-06 12:05:26 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 379.885 ms - -[0m
+2025-04-06 12:05:56 info: [0mOPTIONS /api/auth/login [32m200[0m 0.174 ms - 0[0m
+2025-04-06 12:05:57 info: [0mPOST /api/auth/login [32m200[0m 1565.614 ms - 553[0m
+2025-04-06 12:06:02 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [32m200[0m 725.298 ms - 240[0m
+2025-04-06 12:06:02 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [32m200[0m 884.054 ms - 260[0m
+2025-04-06 12:06:02 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [32m200[0m 1053.924 ms - 223[0m
+2025-04-06 12:06:03 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 699.266 ms - -[0m
+2025-04-06 12:06:03 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 593.430 ms - -[0m
+2025-04-06 12:06:03 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 420.068 ms - -[0m
+2025-04-06 12:06:09 info: [0mGET /api/projects/getEmployeeProjects/15 [32m200[0m 187.417 ms - 223[0m
+2025-04-06 12:06:09 info: [0mGET /api/projects/getEmployeeProjects/15 [36m304[0m 177.218 ms - -[0m
+2025-04-06 12:06:10 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 354.073 ms - -[0m
+2025-04-06 12:06:10 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 360.330 ms - -[0m
+2025-04-06 12:06:10 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 366.292 ms - -[0m
+2025-04-06 12:06:10 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 357.834 ms - -[0m
+2025-04-06 12:06:10 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 353.432 ms - -[0m
+2025-04-06 12:06:10 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 363.779 ms - -[0m
+2025-04-06 12:10:43 info: =================================
+2025-04-06 12:10:43 info: ======= ENV: development =======
+2025-04-06 12:10:43 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:10:43 info: =================================
+2025-04-06 12:10:49 info: =================================
+2025-04-06 12:10:49 info: ======= ENV: development =======
+2025-04-06 12:10:49 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:10:49 info: =================================
+2025-04-06 12:10:52 info: Database connection established successfully.
+2025-04-06 12:10:54 info: Database tables synced successfully.
+2025-04-06 12:11:03 info: =================================
+2025-04-06 12:11:03 info: ======= ENV: development =======
+2025-04-06 12:11:03 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:03 info: =================================
+2025-04-06 12:11:05 info: Database connection established successfully.
+2025-04-06 12:11:09 info: =================================
+2025-04-06 12:11:09 info: ======= ENV: development =======
+2025-04-06 12:11:09 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:09 info: =================================
+2025-04-06 12:11:12 info: Database connection established successfully.
+2025-04-06 12:11:14 info: Database tables synced successfully.
+2025-04-06 12:11:19 info: =================================
+2025-04-06 12:11:20 info: ======= ENV: development =======
+2025-04-06 12:11:20 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:20 info: =================================
+2025-04-06 12:11:26 info: =================================
+2025-04-06 12:11:26 info: ======= ENV: development =======
+2025-04-06 12:11:26 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:26 info: =================================
+2025-04-06 12:11:30 info: =================================
+2025-04-06 12:11:30 info: ======= ENV: development =======
+2025-04-06 12:11:30 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:30 info: =================================
+2025-04-06 12:11:33 info: Database connection established successfully.
+2025-04-06 12:11:40 info: =================================
+2025-04-06 12:11:40 info: ======= ENV: development =======
+2025-04-06 12:11:40 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:40 info: =================================
+2025-04-06 12:11:43 info: Database connection established successfully.
+2025-04-06 12:11:45 info: Database tables synced successfully.
+2025-04-06 12:11:51 info: =================================
+2025-04-06 12:11:51 info: ======= ENV: development =======
+2025-04-06 12:11:51 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:51 info: =================================
+2025-04-06 12:11:53 info: Database connection established successfully.
+2025-04-06 12:11:56 info: =================================
+2025-04-06 12:11:56 info: ======= ENV: development =======
+2025-04-06 12:11:56 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:11:56 info: =================================
+2025-04-06 12:11:59 info: Database connection established successfully.
+2025-04-06 12:12:13 info: =================================
+2025-04-06 12:12:13 info: ======= ENV: development =======
+2025-04-06 12:12:13 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:12:13 info: =================================
+2025-04-06 12:12:15 info: Database connection established successfully.
+2025-04-06 12:12:25 info: =================================
+2025-04-06 12:12:25 info: ======= ENV: development =======
+2025-04-06 12:12:25 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:12:25 info: =================================
+2025-04-06 12:12:28 info: Database connection established successfully.
+2025-04-06 12:12:33 info: =================================
+2025-04-06 12:12:33 info: ======= ENV: development =======
+2025-04-06 12:12:33 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:12:33 info: =================================
+2025-04-06 12:12:36 info: Database connection established successfully.
+2025-04-06 12:12:39 info: Database tables synced successfully.
+2025-04-06 12:12:54 info: =================================
+2025-04-06 12:12:54 info: ======= ENV: development =======
+2025-04-06 12:12:54 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:12:54 info: =================================
+2025-04-06 12:12:57 info: Database connection established successfully.
+2025-04-06 12:12:59 info: Database tables synced successfully.
+2025-04-06 12:13:25 info: =================================
+2025-04-06 12:13:25 info: ======= ENV: development =======
+2025-04-06 12:13:25 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:13:25 info: =================================
+2025-04-06 12:13:27 info: Database connection established successfully.
+2025-04-06 12:13:30 info: Database tables synced successfully.
+2025-04-06 12:13:38 info: =================================
+2025-04-06 12:13:38 info: ======= ENV: development =======
+2025-04-06 12:13:38 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:13:38 info: =================================
+2025-04-06 12:13:41 info: Database connection established successfully.
+2025-04-06 12:13:43 info: Database tables synced successfully.
+2025-04-06 12:13:49 info: =================================
+2025-04-06 12:13:49 info: ======= ENV: development =======
+2025-04-06 12:13:49 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:13:49 info: =================================
+2025-04-06 12:13:54 info: =================================
+2025-04-06 12:13:54 info: ======= ENV: development =======
+2025-04-06 12:13:54 info: 🚀 Identity Service listening on port 5000
+2025-04-06 12:13:54 info: =================================
+2025-04-06 12:13:57 info: Database connection established successfully.
+2025-04-06 12:14:00 info: Database tables synced successfully.
+2025-04-06 12:14:33 info: [0mGET /api/tasks/getEmployeeProjectHours/15 [32m200[0m 1344.528 ms - 141[0m
+2025-04-06 12:14:45 info: [0mGET /api/tasks/getEmployeeProjectHours/2 [32m200[0m 1313.710 ms - 141[0m
+2025-04-06 12:14:49 info: [0mGET /api/tasks/getEmployeeProjectHours/3 [32m200[0m 190.258 ms - 141[0m
+2025-04-06 12:14:51 info: [0mGET /api/tasks/getEmployeeProjectHours/4 [32m200[0m 190.629 ms - 143[0m
+2025-04-06 12:17:37 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 1716.638 ms - -[0m
+2025-04-06 12:17:37 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 1582.683 ms - -[0m
+2025-04-06 12:17:37 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 1559.207 ms - -[0m
+2025-04-06 12:17:41 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 374.536 ms - -[0m
+2025-04-06 12:17:41 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 377.735 ms - -[0m
+2025-04-06 12:17:41 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 366.877 ms - -[0m
+2025-04-06 12:17:42 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 354.755 ms - -[0m
+2025-04-06 12:17:42 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 355.191 ms - -[0m
+2025-04-06 12:17:42 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 376.209 ms - -[0m
+2025-04-06 12:18:36 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 1616.122 ms - -[0m
+2025-04-06 12:18:36 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 1573.913 ms - -[0m
+2025-04-06 12:18:36 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 1569.669 ms - -[0m
+2025-04-06 12:18:37 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 369.794 ms - -[0m
+2025-04-06 12:18:37 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 395.951 ms - -[0m
+2025-04-06 12:18:37 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 403.698 ms - -[0m
+2025-04-06 12:20:29 info: [0mGET /api/tasks/getEmployeeProjectHours/15 [32m200[0m 1781.148 ms - 141[0m
+2025-04-06 12:20:29 info: [0mGET /api/tasks/getEmployeeProjectHours/15 [36m304[0m 189.458 ms - -[0m
+2025-04-06 12:20:29 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 2064.289 ms - -[0m
+2025-04-06 12:20:29 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 2050.173 ms - -[0m
+2025-04-06 12:20:29 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 2072.354 ms - -[0m
+2025-04-06 12:20:29 info: [0mGET /api/tasks/getEmployeeChartWeeklyTaskTimeStatistics/15 [36m304[0m 457.023 ms - -[0m
+2025-04-06 12:20:29 info: [0mGET /api/tasks/getEmployeeChartTaskTimeStatistics/15 [36m304[0m 488.545 ms - -[0m
+2025-04-06 12:20:30 info: [0mGET /api/tasks/getEmployeeChartYearlyTaskTimeStatistics/15 [36m304[0m 602.061 ms - -[0m
