@@ -21,9 +21,9 @@ export class CreateEmployeeDto {
     @IsNotEmpty()
     public position!: string;
 
-    @IsEnum(['admin', 'manager', 'employee'])
+    @IsEnum(['admin', 'SuperAdmin', 'employee'])
     @IsNotEmpty()
-    public role!: 'admin' | 'manager' | 'employee';
+    public role!: 'admin' | 'SuperAdmin' | 'employee';
 
     @IsEnum(['male', 'female', 'other'])
     @IsNotEmpty()

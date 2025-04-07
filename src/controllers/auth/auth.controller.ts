@@ -189,4 +189,15 @@ export class AuthController {
             next(error);
         }
     }
+
+    public updateUser = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const userData: Partial<IUser> = req.body;
+            const updatedUser = await this.auth.updateUser(userData);
+            const response: CustomResponse<IUser> = { data: updatedUser, message: "User updated successfully", error: false };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
 }

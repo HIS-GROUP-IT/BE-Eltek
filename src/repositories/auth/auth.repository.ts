@@ -1,7 +1,7 @@
 import { Service } from "typedi";
 import RefreshToken from "@/models/user/refreshToken.model";
 import User from "@/models/user/user.model";
-import { IUser } from "@/types/auth.types";
+import { IUser, TokenData } from "@/types/auth.types";
 import { hash } from "bcryptjs";
 import { IAuthRepository } from "@/interfaces/auth/IAuthRepository .interface";
 
@@ -14,6 +14,14 @@ export class AuthRepository implements IAuthRepository {
             raw: true
         });
     }
+    public async findById(userId: number): Promise<IUser> {
+        return User.findOne({
+          where: { id: userId },
+          attributes: ['id', 'email', 'role', 'fullName', 'phoneNumber', 'employeeId', 'position'],
+          raw: true
+        });
+      }
+      
     public async saveOtp(email: string, otp: string): Promise<void> {
         const user = await User.findOne({
             where: { email },
@@ -69,5 +77,27 @@ export class AuthRepository implements IAuthRepository {
     public async deleteRefreshToken(token: string): Promise<void> {
         await RefreshToken.destroy({ where: { token } });
     }
+
+    public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+        const user = await User.findOne({
+          where: { id: userData.id },
+          raw: false, 
+        });
+      
+        if (!user) {
+          return null;
+        }
+      
+        await user.update(userData);
+      
+        const updatedUser = await User.findOne({
+          where: { id: userData.id },
+          attributes: ['id', 'email', 'role', 'fullName', 'phoneNumber', 'employeeId', 'position'],
+          raw: true,
+        });
+      
+        return updatedUser;
+      }
+      
 }
 

@@ -153,26 +153,36 @@ export class AuthService implements IAuthService {
         return "OTP verified successfully";
     }
 
-    // public async updatePassword(email: string, otp: string, newPassword: string): Promise<IUser> {
-    //     // const user = await this.authRepository.findUserByEmail(email);
-    //     // if (!user) {
-    //     //     throw new HttpException(404, "User Not Found");
-    //     // }
-        
-    //     // const isValid = await this.authRepository.validateOtp(email, otp);
-    //     // if (!isValid) {
-    //     //     throw new HttpException(400, "Invalid OTP");
-    //     // }
-        
-    //     // const hashedPassword = await hash(newPassword, 10);
-    //     // const updatedUser = await this.authRepository.updateUserPassword(email, hashedPassword);
-    //     // return updatedUser;
-    // }
+    public async updateUser(userData: Partial<IUser>): Promise<TokenData> {
+        if (!userData.id) {
+            throw new HttpException(400, 'User ID is required for update');
+        }
+    
+        const existingUser = await this.authRepository.findById(userData.id);
+        if (!existingUser) {
+            throw new HttpException(404, 'User not found');
+        }
+    
+        if (userData.password) {
+            userData.password = await hash(userData.password, 10);
+        }
+    
+        const updateResult = await this.authRepository.updateUser(userData);
+    
+        if (!updateResult) {
+            throw new HttpException(500, 'Failed to update user');
+        }
+    
+        // 🔥 Fetch the updated user with all necessary fields
+        const updatedUser = await this.authRepository.findById(userData.id);
+    
+        if (!updatedUser) {
+            throw new HttpException(500, 'Failed to retrieve updated user');
+        }
+    
+        return await this.createToken(updatedUser);
+    }
+    
+      
 
-    // Additional method for cookie-based authentication
-    // public async loginWithCookies(userData: IUserLogin, res: Response): Promise<TokenData> {
-    //     const tokenData = await this.login(userData);
-    //     await this.createToken(tokenData as unknown as IUser, res);
-    //     return tokenData;
-    // }
 }

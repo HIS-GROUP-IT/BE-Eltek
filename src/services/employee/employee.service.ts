@@ -79,10 +79,10 @@ export class EmployeeService implements IEmployeeService {
     employeeData: Partial<IEmployee>
   ): Promise<IEmployee> {
     try {
-      return await this.employeeRepository.updateEmployee(employeeData);
     } catch (error) {
       throw new HttpException(400, "Error updating employee");
     }
+    return await this.employeeRepository.updateEmployee(employeeData);
   }
 
   public async deleteEmployee(id: number): Promise<void> {

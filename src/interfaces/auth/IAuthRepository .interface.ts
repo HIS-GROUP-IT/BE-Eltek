@@ -1,5 +1,5 @@
 import RefreshToken from "@/models/user/refreshToken.model";
-import { IUser } from "@/types/auth.types";
+import { IUser, TokenData } from "@/types/auth.types";
 
 export interface IAuthRepository {
     findUserByEmail(email: string): Promise<IUser | null>;
@@ -11,6 +11,8 @@ export interface IAuthRepository {
     saveOtp(email: string, otp: string): Promise<void>
     validateOtp(email: string, otp: string): Promise<IUser>
     forgotPassword(email: string, otp: string, newPassword: string) : Promise<IUser>;
+    updateUser(userData: Partial<IUser>): Promise<IUser>;
+    findById(userId: number): Promise<IUser>
   
    
 }
