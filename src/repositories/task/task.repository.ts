@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import  Task  from "@/models/project/task.model"; // Task model
+import  Task  from "@/models/task/task.model"; // Task model
 import { Op, Sequelize } from "sequelize";
 import { ITaskRepository } from "@/interfaces/task/ITaskRepository.interface";
 import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";

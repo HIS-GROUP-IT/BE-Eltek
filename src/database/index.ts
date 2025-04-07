@@ -2,10 +2,11 @@ import { Sequelize } from 'sequelize';
 import User from '@/models/user/user.model';
 import RefreshToken from '@/models/user/refreshToken.model';
 import Employee from '@/models/employee/employee.model';
-import Task from '@/models/project/task.model';
+import Task from '@/models/task/task.model';
 import Project from '@/models/project/project.model';
 import EmployeeProject from '@/models/employee/projectEmployees.model';
 import Leave from '@/models/leave/leave.model';
+import Notification from '@/models/notifications/notification.model';
 
 const DB_NAME = "db_aa010d_eltek";
 const DB_HOST = "MYSQL6013.site4now.net";
@@ -33,7 +34,6 @@ const dbConnection = new Sequelize({
   }
 });
 
-// Initialize all models
 User.initialize(dbConnection);
 RefreshToken.initialize(dbConnection);
 Employee.initialize(dbConnection);
@@ -41,22 +41,21 @@ Task.initialize(dbConnection);
 Project.initialize(dbConnection);
 EmployeeProject.initialize(dbConnection);
 Leave.initialize(dbConnection)
+Notification.initialize(dbConnection);
 
-// Set up associations
 User.hasMany(RefreshToken, { foreignKey: 'userId' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId' });
 
 Employee.hasMany(Task, { foreignKey: 'employeeId' });
 Task.belongsTo(Employee, { foreignKey: 'employeeId' });
 
-// Many-to-Many Association between Employee and Project
+
 Employee.belongsToMany(Project, {
   through: EmployeeProject,
   foreignKey: 'employeeId',
   otherKey: 'projectId'
 });
 
-// Define Associations
 Leave.belongsTo(Employee, {
   foreignKey: 'employeeId',
   as: 'employee'
@@ -67,6 +66,16 @@ Employee.hasMany(Leave, {
   as: 'leaves'
 });
 
+Notification.belongsTo(Employee, {
+  foreignKey: 'employeeId',
+  as: 'employee'
+});
+
+
+Notification.belongsTo(Project, {
+  foreignKey: 'projectId',
+  as: 'project'
+});
 
 Project.belongsToMany(Employee, {
   through: EmployeeProject,

@@ -2,7 +2,7 @@ import { Service } from "typedi";
 import { ITaskService, TASK_SERVICE_TOKEN } from "@/interfaces/task/ITaskService.interface";
 import { HttpException } from "@/exceptions/HttpException"; // Custom Exception Handling
 import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";
-import { TaskRepository } from "@/repositories/project/task.repository";
+import { TaskRepository } from "@/repositories/task/task.repository";
 
 @Service({ id: TASK_SERVICE_TOKEN, type: TaskService })
 export class TaskService implements ITaskService {

@@ -22,10 +22,13 @@ import { EMPLOYEE_SERVICE_TOKEN } from "./interfaces/employee/IEmployeeService";
 import { EmployeeService } from "./services/employee/employee.service";
 import { EmployeeRepository } from "./repositories/employee/employee.repository";
 import { LEAVE_SERVICE_TOKEN } from "./interfaces/leave/ILeaveService.interface";
-import { TaskService } from "./services/project/task.service";
-import { TaskRepository } from "./repositories/project/task.repository";
+import { TaskService } from "./services/task/task.service";
+import { TaskRepository } from "./repositories/task/task.repository";
 import { LeaveService } from "./services/leave/leave.service";
 import { LeaveRepository } from "./repositories/leave/leaveRepository";
+import { NOTIFICATION_SERVICE_TOKEN } from "./interfaces/notification/INotificationService.interface";
+import { NotificationService } from "./services/notication/notification.service";
+import { NotificationRepository } from "./repositories/notification/notification.repository";
 
 export class App {
   public app: express.Application;
@@ -122,6 +125,12 @@ export class App {
       LEAVE_SERVICE_TOKEN,
       new LeaveService(Container.get(LeaveRepository))
     );
+
+    Container.set(
+      NOTIFICATION_SERVICE_TOKEN,
+      new NotificationService(Container.get(NotificationRepository))
+    );
+
   }
 
   private initializeRoutes(routes: Routes[]) {

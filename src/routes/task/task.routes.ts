@@ -1,5 +1,5 @@
-import { TaskController } from "@/controllers/project/task.controller";
-import { TaskDTO } from "@/dots/project/task.dto";
+import { TaskController } from "@/controllers/task/task.controller";
+import { TaskDTO } from "@/dots/task/task.dto";
 import { authorizationMiddleware } from "@/middlewares/authorizationMiddleware";
 import { ValidationMiddleware } from "@/middlewares/ValidationMiddleware";
 import { Router } from "express";

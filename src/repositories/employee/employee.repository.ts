@@ -9,7 +9,7 @@ import { Service } from "typedi";
 import { Transaction } from "sequelize";
 import User from "@/models/user/user.model";
 import { MonthlyTasks } from "@/types/task.type";
-import Task from "@/models/project/task.model";
+import Task from "@/models/task/task.model";
 
 @Service()
 export class EmployeeRepository implements IEmployeeRepository {

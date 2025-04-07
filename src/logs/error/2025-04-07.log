@@ -109,3 +109,42 @@ TSError: ⨯ Unable to compile TypeScript:
 2025-04-07 11:51:04 error: [POST] /api/auth/login >> StatusCode:: 400, Message:: Invalid password
 2025-04-07 11:52:46 error: [POST] /api/auth/login >> StatusCode:: 400, Message:: Invalid password
 2025-04-07 11:52:53 error: [POST] /api/auth/login >> StatusCode:: 400, Message:: Invalid password
+2025-04-07 17:16:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/notification/notification.routes.ts[0m:[93m18[0m:[93m129[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m18[0m         this.router.post(`${this.path}/createNotification`, authorizationMiddleware,ValidationMiddleware(CreateNotificationDto) this.notificationController.createNotification);
+[7m  [0m [91m                                                                                                                                ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/notification/notification.routes.ts[0m:[93m18[0m:[93m129[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m18[0m         this.router.post(`${this.path}/createNotification`, authorizationMiddleware,ValidationMiddleware(CreateNotificationDto) this.notificationController.createNotification);
+[7m  [0m [91m                                                                                                                                ~~~~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-07 17:42:53 error: uncaughtException: IsEnum is not defined
+ReferenceError: IsEnum is not defined
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\dots\notification\notification.dto.ts:9:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-04-07 17:45:08 error: [PUT] /api/notifications/updateNotification >> StatusCode:: 500, Message:: Error updating notification: WHERE parameter "id" has invalid "undefined" value
+2025-04-07 17:45:23 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Unknown column 'projectId' in 'field list'
+2025-04-07 17:46:52 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Unknown column 'projectId' in 'field list'
+2025-04-07 17:46:55 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Unknown column 'projectId' in 'field list'
+2025-04-07 17:46:57 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Unknown column 'projectId' in 'field list'

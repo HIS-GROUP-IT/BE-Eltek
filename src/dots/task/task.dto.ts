@@ -1,5 +1,5 @@
 import { IsString, IsInt, IsOptional, IsDate, IsEnum, IsPositive, MaxLength } from 'class-validator';
-import  TaskStatus  from '@/models/project/task.model'; 
+import  TaskStatus  from '@/models/task/task.model'; 
 
 export class TaskDTO {
     @IsInt()
