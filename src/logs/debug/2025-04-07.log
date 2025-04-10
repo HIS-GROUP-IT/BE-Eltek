@@ -1204,3 +1204,67 @@
 2025-04-07 17:57:30 info: Database tables synced successfully.
 2025-04-07 17:57:40 info: [0mPOST /api/notifications/createNotification [32m201[0m 472.446 ms - 5468[0m
 2025-04-07 17:57:44 info: [0mGET /api/notifications/getEmployeeNotifications/15 [32m200[0m 203.531 ms - 1068[0m
+2025-04-07 18:41:22 info: =================================
+2025-04-07 18:41:22 info: ======= ENV: development =======
+2025-04-07 18:41:22 info: 🚀 Identity Service listening on port 5000
+2025-04-07 18:41:22 info: =================================
+2025-04-07 18:41:25 info: Database connection established successfully.
+2025-04-07 18:41:26 info: [0mPOST /api/notifications/createNotification [32m201[0m 429.523 ms - 5470[0m
+2025-04-07 18:41:28 info: Database tables synced successfully.
+2025-04-07 18:42:18 info: [0mGET /api/notifications/getEmployeeNotifications/15 [32m200[0m 1487.357 ms - 1398[0m
+2025-04-07 18:42:47 info: [0mPOST /api/notifications/createNotification [32m201[0m 1988.869 ms - 5470[0m
+2025-04-07 18:42:52 info: [0mGET /api/notifications/getEmployeeNotifications/15 [32m200[0m 182.511 ms - 1728[0m
+2025-04-07 18:43:28 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`notifications`, CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+2025-04-07 18:43:28 info: [0mPOST /api/notifications/createNotification [31m500[0m 1491.653 ms - 244[0m
+2025-04-07 18:46:11 info: [0mPOST /api/notifications/createNotification [32m201[0m 1388.532 ms - 413[0m
+2025-04-07 18:47:23 info: [0mPOST /api/notifications/createNotification [32m201[0m 1330.837 ms - 413[0m
+2025-04-07 18:47:29 info: [0mGET /api/notifications/getEmployeeNotifications/16 [32m200[0m 203.519 ms - 1398[0m
+2025-04-07 18:51:28 info: [0mGET /api/employees/getEmployee/3 [32m200[0m 1604.346 ms - 443[0m
+2025-04-07 19:10:46 error: [POST] /api/employees/createEmployee >> StatusCode:: 409, Message:: Email already exists and employee is inactive. Please reactivate the employee to proceed.
+2025-04-07 19:10:46 info: [0mPOST /api/employees/createEmployee [33m409[0m 2197.263 ms - 103[0m
+2025-04-07 19:40:09 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`notifications`, CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+2025-04-07 19:40:09 info: [0mPOST /api/notifications/createNotification [31m500[0m 1891.178 ms - 244[0m
+2025-04-07 20:13:47 info: =================================
+2025-04-07 20:13:47 info: ======= ENV: development =======
+2025-04-07 20:13:47 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:13:47 info: =================================
+2025-04-07 20:13:51 info: Database connection established successfully.
+2025-04-07 20:13:54 info: Database tables synced successfully.
+2025-04-07 20:14:49 info: =================================
+2025-04-07 20:14:49 info: ======= ENV: development =======
+2025-04-07 20:14:49 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:14:49 info: =================================
+2025-04-07 20:14:53 info: Database connection established successfully.
+2025-04-07 20:14:59 info: =================================
+2025-04-07 20:14:59 info: ======= ENV: development =======
+2025-04-07 20:14:59 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:14:59 info: =================================
+2025-04-07 20:15:02 info: Database connection established successfully.
+2025-04-07 20:15:06 info: Database tables synced successfully.
+2025-04-07 20:15:15 info: =================================
+2025-04-07 20:15:15 info: ======= ENV: development =======
+2025-04-07 20:15:15 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:15:15 info: =================================
+2025-04-07 20:15:19 info: Database connection established successfully.
+2025-04-07 20:15:28 info: =================================
+2025-04-07 20:15:28 info: ======= ENV: development =======
+2025-04-07 20:15:28 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:15:28 info: =================================
+2025-04-07 20:15:33 info: Database connection established successfully.
+2025-04-07 20:15:38 info: =================================
+2025-04-07 20:15:38 info: ======= ENV: development =======
+2025-04-07 20:15:38 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:15:38 info: =================================
+2025-04-07 20:15:41 info: Database connection established successfully.
+2025-04-07 20:15:44 info: Database tables synced successfully.
+2025-04-07 20:15:50 info: =================================
+2025-04-07 20:15:50 info: ======= ENV: development =======
+2025-04-07 20:15:50 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:15:50 info: =================================
+2025-04-07 20:15:54 info: Database connection established successfully.
+2025-04-07 20:15:58 info: =================================
+2025-04-07 20:15:58 info: ======= ENV: development =======
+2025-04-07 20:15:58 info: 🚀 Identity Service listening on port 5000
+2025-04-07 20:15:58 info: =================================
+2025-04-07 20:16:01 info: Database connection established successfully.
+2025-04-07 20:16:04 info: Database tables synced successfully.

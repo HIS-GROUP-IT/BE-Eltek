@@ -148,3 +148,6 @@ ReferenceError: IsEnum is not defined
 2025-04-07 17:46:52 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Unknown column 'projectId' in 'field list'
 2025-04-07 17:46:55 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Unknown column 'projectId' in 'field list'
 2025-04-07 17:46:57 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Unknown column 'projectId' in 'field list'
+2025-04-07 18:43:28 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`notifications`, CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+2025-04-07 19:10:46 error: [POST] /api/employees/createEmployee >> StatusCode:: 409, Message:: Email already exists and employee is inactive. Please reactivate the employee to proceed.
+2025-04-07 19:40:09 error: [POST] /api/notifications/createNotification >> StatusCode:: 500, Message:: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`notifications`, CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)

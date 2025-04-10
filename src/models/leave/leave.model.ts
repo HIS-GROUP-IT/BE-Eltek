@@ -48,7 +48,7 @@ class Leave extends Model<ILeave, LeaveCreationAttributes> implements ILeave {
           allowNull: false
         },
         documents: {
-          type: DataTypes.JSON, // Supports array of objects
+          type: DataTypes.JSON,
           allowNull: true,
           defaultValue: []
         },

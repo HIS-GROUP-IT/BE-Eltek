@@ -18,6 +18,7 @@ interface EmployeeAttributes {
   assigned: boolean;
   password: string;
   createdBy: number;
+  
 }
 
 class Employee extends Model<EmployeeAttributes> implements EmployeeAttributes {
