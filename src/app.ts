@@ -89,7 +89,7 @@ export class App {
       "X-Requested-With"
     ],
     credentials: true,
-    optionsSuccessStatus: 200 // For legacy browser support
+    optionsSuccessStatus: 200 
   };
   
   private initializeMiddlewares() {
@@ -100,7 +100,7 @@ export class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser("X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H"));
-    this.app.set("trust proxy", 1); // Crucial for Vercel deployments
+    this.app.set("trust proxy", 1); 
   }
 
   private initializeInterfaces() {

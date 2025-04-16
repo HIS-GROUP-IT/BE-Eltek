@@ -21,7 +21,7 @@ export class NotificationRoute implements Routes {
         this.router.get(`${this.path}/getAllNotifications`, authorizationMiddleware, this.notificationController.getAllNotifications);
         this.router.get(`${this.path}/getNotification/:notificationId`, authorizationMiddleware, this.notificationController.getNotificationById);
         this.router.get(`${this.path}/getEmployeeNotifications/:employeeId`, authorizationMiddleware, this.notificationController.getNotificationsByEmployee);
-        this.router.patch(`${this.path}/mark-read/:notificationId`, authorizationMiddleware, this.notificationController.markAsRead);
+        this.router.put(`${this.path}/mark-read/:notificationId`, authorizationMiddleware, this.notificationController.markAsRead);
         this.router.patch(`${this.path}/mark-all-read/:employeeId`, authorizationMiddleware, this.notificationController.markAllAsRead);
         this.router.get(`${this.path}/unread-count/:employeeId`, authorizationMiddleware, this.notificationController.getUnreadCount);
     }

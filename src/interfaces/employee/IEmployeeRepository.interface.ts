@@ -11,7 +11,6 @@ export interface IEmployeeRepository {
     assignEmployeesToProject(assignedEmployees:IAssignedEmployees[]): Promise<void>
     getEmployeesByProjectId(projectId: number): Promise<IAssignedEmployees[]>;
     removeEmployeeFromProject(employeeId: number, projectId: number): Promise<void>
-    // getEmployeeProjects(employeeId: number): Promise<IProject[]>;
     getNumberOfAssignedEmployees(): Promise<number>;
     getEmployeeByEmail(email: string): Promise<IEmployee | null> 
     getEmployeeByIdNumber(idNumber: string): Promise<IEmployee | null> 
