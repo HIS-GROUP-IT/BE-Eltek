@@ -2,7 +2,6 @@ import { DataTypes, Model, Optional } from 'sequelize';
 import { Sequelize } from 'sequelize';
 import User from '../user/user.model';
 import Employee from '../employee/employee.model';
-import EmployeeProject from '../employee/projectEmployees.model';
 import { IProject, Phase, ProjectStatus, Role } from '@/types/project.types';
 
 type ProjectCreationAttributes = Optional<IProject, 'id' | 'createdAt' | 'updatedAt'>;

@@ -3,7 +3,6 @@ import { HttpException } from "@/exceptions/HttpException";
 import { NotificationRepository } from "@/repositories/notification/notification.repository";
 import { INotification } from "@/types/notification.types";
 import { INotificationService, NOTIFICATION_SERVICE_TOKEN } from "@/interfaces/notification/INotificationService.interface";
-import EmployeeProject from "@/models/employee/projectEmployees.model";
 import Employee from "@/models/employee/employee.model";
 
 @Service({ id: NOTIFICATION_SERVICE_TOKEN, type: NotificationService })
@@ -14,14 +13,7 @@ export class NotificationService implements INotificationService {
     switch(data.audiance) {
         case 'employee':
             return [data.employeeId];
-        
-        case 'project':
-            const assignments = await EmployeeProject.findAll({
-                where: { projectId: data.projectId },
-                attributes: ['employeeId'],
-                raw: true
-            });
-            return assignments.map(a => a.employeeId);
+
         
         case 'department':
             const employees = await Employee.findAll({

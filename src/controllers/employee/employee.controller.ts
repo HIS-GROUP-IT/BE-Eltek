@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import Container from "typedi";
-import { IEmployee } from "@/types/employee.types";
+import { Allocation, IEmployee } from "@/types/employee.types";
 import { CustomResponse } from "@/types/response.interface";
 import { EMPLOYEE_SERVICE_TOKEN } from "@/interfaces/employee/IEmployeeService";
 import { RequestWithUser } from "@/types/auth.types";
@@ -126,27 +126,27 @@ public assignEmployeesToProject = async (req: Request, res: Response, next: Next
     }
 };
 
-public getEmployeesByProjectId = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const  projectId  = req.params.projectId;  
-      const parsedProjectId = Number(projectId);
-      if (isNaN(parsedProjectId)) {
-        return res.status(400).json({
-          message: "Invalid project ID format",
-          error: true
-        });
-      }  
-      const employees = await this.employeeService.getEmployeesByProjectId(parsedProjectId);  
-      const response : CustomResponse<IProject> = {
-        data: employees,
-        message: "Employees retrieved successfully",
-        error: false
-      }
-      res.status(201).json(response);
-    } catch (error) {
-      next(error);
-    }
-  };
+// public getEmployeesByProjectId = async (req: Request, res: Response, next: NextFunction) => {
+//     try {
+//       const  projectId  = req.params.projectId;  
+//       const parsedProjectId = Number(projectId);
+//       if (isNaN(parsedProjectId)) {
+//         return res.status(400).json({
+//           message: "Invalid project ID format",
+//           error: true
+//         });
+//       }  
+//       const employees = await this.employeeService.getEmployeesByProjectId(parsedProjectId);  
+//       const response : CustomResponse<IProject> = {
+//         data: employees,
+//         message: "Employees retrieved successfully",
+//         error: false
+//       }
+//       res.status(201).json(response);
+//     } catch (error) {
+//       next(error);
+//     }
+//   };
 
   public removeEmployeeFromProject = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -208,5 +208,104 @@ public getEmployeeProjects = async (req: Request, res: Response, next: NextFunct
       next(error);
     }
   };
+  public addAllocation = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const employeeId = parseInt(req.params.employeeId);
+        const allocation: Allocation = req.body;
+        
+        const updatedEmployee = await this.employeeService.addAllocation(
+            employeeId,
+            allocation
+        );
+        
+        const response: CustomResponse<IEmployee> = {
+            data: updatedEmployee,
+            message: "Allocation added successfully",
+            error: false
+        };
+        
+        res.status(201).json(response);
+    } catch (error) {
+        next(error);
+    }
+};
+
+public removeAllocation = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+      const data = req.body
+      const updatedEmployee = await this.employeeService.removeAllocation(
+         data
+      );      
+      const response: CustomResponse<IEmployee> = {
+          data: updatedEmployee,
+          message: `All allocations for project ID ${data.projectId} removed successfully`,
+          error: false
+      };
+      
+      res.status(200).json(response);
+  } catch (error) {
+      next(error);
+  }
+};
+
+
+public updateAllocation = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const employeeId = parseInt(req.params.employeeId);
+        const { project, phase } = req.query;
+        const updates: Partial<Allocation> = req.body;
+        
+        const updatedEmployee = await this.employeeService.updateAllocation(
+            employeeId,
+            project as string,
+            phase as string,
+            updates
+        );
+        
+        const response: CustomResponse<IEmployee> = {
+            data: updatedEmployee,
+            message: "Allocation updated successfully",
+            error: false
+        };
+        
+        res.status(200).json(response);
+    } catch (error) {
+        next(error);
+    }
+};
+
+public getAllocations = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const employeeId = parseInt(req.params.employeeId);
+        const allocations = await this.employeeService.getEmployeeAllocations(employeeId);
+        
+        const response: CustomResponse<Allocation[]> = {
+            data: allocations,
+            message: "Allocations retrieved successfully",
+            error: false
+        };
+        
+        res.status(200).json(response);
+    } catch (error) {
+        next(error);
+    }
+};
+public getEmployeesByProjectId = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+      const projectId = parseInt(req.params.projectId);
+      console.log("My Id", projectId)
+      const projects = await this.employeeService.getEmployeesByProjectId(projectId);
+      
+      const response: CustomResponse<Allocation[]> = {
+          data: projects,
+          message: "projects retrieved successfully",
+          error: false
+      };
+      
+      res.status(200).json(response);
+  } catch (error) {
+      next(error);
+  }
+};
 
 }

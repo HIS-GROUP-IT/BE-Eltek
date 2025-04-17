@@ -1,5 +1,4 @@
-import { IAssignedEmployees, IEmployee } from "@/types/employee.types";
-import { IProject } from "@/types/project.types";
+import { Allocation, IEmployee } from "@/types/employee.types";
 
 
 export interface IEmployeeRepository {
@@ -8,13 +7,10 @@ export interface IEmployeeRepository {
     deleteEmployee(id: number): Promise<void>;
     getEmployeeById(id: number): Promise<IEmployee>;
     getAllEmployees(): Promise<IEmployee[]>;
-    assignEmployeesToProject(assignedEmployees:IAssignedEmployees[]): Promise<void>
-    getEmployeesByProjectId(projectId: number): Promise<IAssignedEmployees[]>;
-    removeEmployeeFromProject(employeeId: number, projectId: number): Promise<void>
-    getNumberOfAssignedEmployees(): Promise<number>;
     getEmployeeByEmail(email: string): Promise<IEmployee | null> 
     getEmployeeByIdNumber(idNumber: string): Promise<IEmployee | null> 
     activeEmployee(
         employeeData: Partial<IEmployee>
-      ): Promise<IEmployee> 
+      ): Promise<IEmployee> ;
+    
 }

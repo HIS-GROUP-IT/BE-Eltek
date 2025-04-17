@@ -7,13 +7,9 @@ export interface IProjectRepository {
     deleteProject(projectId: number): Promise<void>;
     deleteProject(projectId: number): Promise<void>
     getAllProjects(): Promise<IProject[]> ;
-    getProjectsByEmployee(employeeId: number): Promise<IProject[]>
     getProjectById(projectId: number): Promise<IProject | null>;
     getProjectByName(name: string): Promise<IProject | null> ;
     activeProject(
-        projectData: Partial<IProject>
-      ): Promise<IProject>
-      activeProject(
         projectData: Partial<IProject>
       ): Promise<IProject>
 

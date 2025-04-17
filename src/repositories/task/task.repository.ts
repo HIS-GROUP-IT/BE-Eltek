@@ -5,7 +5,7 @@ import { ITaskRepository } from "@/interfaces/task/ITaskRepository.interface";
 import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";
 import Employee from "@/models/employee/employee.model";
 import { HttpException } from "@/exceptions/HttpException";
-import EmployeeProject from "@/models/employee/projectEmployees.model";
+import AllocationModel from "@/models/allocation/allocation.model";
 
 @Service()
 export class TaskRepository implements ITaskRepository {
@@ -234,72 +234,79 @@ export class TaskRepository implements ITaskRepository {
 
 
     public async getEmployeeMonthlyTasks(
-        projectId: number,
-        employeeId: number,
-        year: number,
-        month: number
-      ): Promise<MonthlyTasks> {
-        try {
+      projectId: number,
+      employeeId: number,
+      year: number,
+      month: number
+  ): Promise<MonthlyTasks> {
+      try {
           if (!projectId || !employeeId || !year || !month) {
-            throw new HttpException(400, 'Missing required parameters');
+              throw new HttpException(400, 'Missing required parameters');
           }
-      
-          const employeeProject = await EmployeeProject.findOne({
-            where: {
-              employeeId,
-              projectId
-            },
-            raw: true
+  
+          // First get the employee with allocations
+          const employee = await Employee.findOne({
+              where: { id: employeeId },
+              include: [{
+                  association: 'allocations',
+                  where: { projectId: projectId.toString() } // Assuming projectId in Allocation is string
+              }],
+              raw: false // Need instance for associations
           });
-      
-          if (!employeeProject) {
-            throw new HttpException(404, 'Employee is not assigned to this project');
+  
+          if (!employee || !employee || employee.allAllocation.length === 0) {
+              throw new HttpException(404, 'Employee is not assigned to this project');
           }
-      
+  
+          // Get the specific allocation for this project
+          const projectAllocation = employee.allAllocation.find(a => a.projectId === projectId);
+          if (!projectAllocation) {
+              throw new HttpException(404, 'Employee allocation not found for this project');
+          }
+  
           const startDate = new Date(Date.UTC(year, month - 1, 1));
           const endDate = new Date(Date.UTC(year, month, 0));
           endDate.setUTCHours(23, 59, 59, 999);
-      
+  
           const tasks = await Task.findAll({
-            where: {
-              projectId,
-              employeeId,
-              status: 'completed',
-              createdAt: {
-                [Op.between]: [startDate, endDate]
-              }
-            },
-            order: [['createdAt', 'ASC']],
-            raw: true
+              where: {
+                  projectId,
+                  employeeId,
+                  status: 'completed',
+                  createdAt: {
+                      [Op.between]: [startDate, endDate]
+                  }
+              },
+              order: [['createdAt', 'ASC']],
+              raw: true
           });
-      
+  
           const totalHours = tasks.reduce((sum, task) => sum + task.hours, 0);
-          const rate =Number(employeeProject.rate);
+          const rate = Number(projectAllocation.chargeOutRate);
           const totalCost = totalHours * rate;
-      
+  
           return {
-            totalHours,
-            rate,
-            totalCost,
-            tasks: tasks.map(task => ({
-              id: task.id,
-              taskTitle: task.taskTitle,
-              taskDescription: task.taskDescription,
-              hours: task.hours,
-              status: task.status,
-              employeeName: task.employeeName,
-              position: task.position,
-              date: task.createdAt.toISOString().split('T')[0],
-              rate: rate 
-            }))
+              totalHours,
+              rate,
+              totalCost,
+              tasks: tasks.map(task => ({
+                  id: task.id,
+                  taskTitle: task.taskTitle,
+                  taskDescription: task.taskDescription,
+                  hours: task.hours,
+                  status: task.status,
+                  employeeName: task.employeeName,
+                  position: task.position,
+                  date: task.createdAt.toISOString().split('T')[0],
+                  rate: rate 
+              }))
           };
-      
-        } catch (error) {
+  
+      } catch (error) {
           if (error instanceof HttpException) throw error;
           throw new HttpException(500, 'Failed to fetch monthly tasks');
-        }
       }
-
+  }
       
    
       

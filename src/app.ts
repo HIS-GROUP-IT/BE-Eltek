@@ -19,8 +19,6 @@ import { ProjectRepository } from "./repositories/project/project.repository";
 import { ProjectService } from "./services/project/project.service";
 import { TASK_SERVICE_TOKEN } from "./interfaces/task/ITaskService.interface";
 import { EMPLOYEE_SERVICE_TOKEN } from "./interfaces/employee/IEmployeeService";
-import { EmployeeService } from "./services/employee/employee.service";
-import { EmployeeRepository } from "./repositories/employee/employee.repository";
 import { LEAVE_SERVICE_TOKEN } from "./interfaces/leave/ILeaveService.interface";
 import { TaskService } from "./services/task/task.service";
 import { TaskRepository } from "./repositories/task/task.repository";
@@ -29,6 +27,11 @@ import { LeaveRepository } from "./repositories/leave/leaveRepository";
 import { NOTIFICATION_SERVICE_TOKEN } from "./interfaces/notification/INotificationService.interface";
 import { NotificationService } from "./services/notication/notification.service";
 import { NotificationRepository } from "./repositories/notification/notification.repository";
+import { EmployeeService } from "./services/employee/employee.service";
+import { EmployeeRepository } from "./repositories/employee/employee.repository";
+import { ALLOCATION_SERVICE_TOKEN } from "./interfaces/allocation/IAllocationService.interface";
+import { AllocationService } from "./services/allocation/allocation.service";
+import { AllocationRepository } from "./repositories/allocation/allocation.repository";
 
 export class App {
   public app: express.Application;
@@ -117,10 +120,17 @@ export class App {
       TASK_SERVICE_TOKEN,
       new TaskService(Container.get(TaskRepository))
     );
+
     Container.set(
       EMPLOYEE_SERVICE_TOKEN,
       new EmployeeService(Container.get(EmployeeRepository))
     );
+
+    Container.set(
+      ALLOCATION_SERVICE_TOKEN,
+      new AllocationService(Container.get(AllocationRepository))
+    );
+
     Container.set(
       LEAVE_SERVICE_TOKEN,
       new LeaveService(Container.get(LeaveRepository))

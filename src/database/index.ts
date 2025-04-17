@@ -4,9 +4,9 @@ import RefreshToken from '@/models/user/refreshToken.model';
 import Employee from '@/models/employee/employee.model';
 import Task from '@/models/task/task.model';
 import Project from '@/models/project/project.model';
-import EmployeeProject from '@/models/employee/projectEmployees.model';
 import Leave from '@/models/leave/leave.model';
 import Notification from '@/models/notifications/notification.model';
+import AllocationModel from '@/models/allocation/allocation.model';
 
 const DB_NAME = "db_aa010d_eltek";
 const DB_HOST = "MYSQL6013.site4now.net";
@@ -39,9 +39,10 @@ RefreshToken.initialize(dbConnection);
 Employee.initialize(dbConnection);
 Task.initialize(dbConnection);
 Project.initialize(dbConnection);
-EmployeeProject.initialize(dbConnection);
 Leave.initialize(dbConnection)
 Notification.initialize(dbConnection);
+AllocationModel.initialize(dbConnection);
+
 
 User.hasMany(RefreshToken, { foreignKey: 'userId' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId' });
@@ -49,12 +50,6 @@ RefreshToken.belongsTo(User, { foreignKey: 'userId' });
 Employee.hasMany(Task, { foreignKey: 'employeeId' });
 Task.belongsTo(Employee, { foreignKey: 'employeeId' });
 
-
-Employee.belongsToMany(Project, {
-  through: EmployeeProject,
-  foreignKey: 'employeeId',
-  otherKey: 'projectId'
-});
 
 Leave.belongsTo(Employee, {
   foreignKey: 'employeeId',
@@ -77,14 +72,20 @@ Notification.belongsTo(Project, {
   as: 'project'
 });
 
-Project.belongsToMany(Employee, {
-  through: EmployeeProject,
-  foreignKey: 'projectId',
-  otherKey: 'employeeId'
+AllocationModel.belongsTo(Employee, {
+  foreignKey: 'employeeId',
+  as: 'employee'
 });
 
-EmployeeProject.belongsTo(Project, { foreignKey: 'projectId', as: 'project' });
+AllocationModel.belongsTo(Project, { 
+  foreignKey: 'projectId',
+  as: 'project'
+});
 
+Employee.hasMany(AllocationModel, {
+  foreignKey: 'employeeId',
+  as: 'allocations' 
+});
 
 dbConnection.sync({ alter: true })
   .then(() => console.log('Database synced successfully'))

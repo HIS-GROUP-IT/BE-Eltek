@@ -37,7 +37,5 @@ export class CreateEmployeeDto {
     @IsNotEmpty()
     public location!: string;
 
-    @IsString()
-    @IsNotEmpty()
-    public password!: string;
+
 }

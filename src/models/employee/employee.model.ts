@@ -1,27 +1,9 @@
 import { DataTypes, Model } from 'sequelize';
 import { Sequelize } from 'sequelize';
 import Project from '../project/project.model';
+import { Allocation, Commitment, IEmployee } from '@/types/employee.types';
 
-interface EmployeeAttributes {
-  id: number;
-  fullName: string;
-  email: string;
-  phoneNumber: string;
-  idNumber: string;
-  position: string;
-  department: string;
-  role: 'employee';
-  gender: 'male' | 'female' | 'other';
-  race?: string;
-  status: 'active' | 'inactive';
-  location: string;
-  assigned: boolean;
-  password: string;
-  createdBy: number;
-  
-}
-
-class Employee extends Model<EmployeeAttributes> implements EmployeeAttributes {
+class Employee extends Model<IEmployee> implements IEmployee {
   public id!: number;
   public fullName!: string;
   public email!: string;
@@ -35,14 +17,23 @@ class Employee extends Model<EmployeeAttributes> implements EmployeeAttributes {
   public status!: 'active' | 'inactive';
   public location!: string;
   public assigned!: boolean;
-  public password!: string;
+  public utilization!:number;
+  public skills!: string[];
+  public experience! : number;
+  public ctc?: number;
   public createdBy!: number;
-  public projects : Project[]
+  public allAllocation?: Allocation[];
+  public commitments?: Commitment[];
 
   static initialize(sequelize: Sequelize) {
     Employee.init(
       {
-        id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true,allowNull:false },
+        id: { 
+          type: DataTypes.INTEGER, 
+          autoIncrement: true, 
+          primaryKey: true,
+          allowNull: false 
+        },
         fullName: { type: DataTypes.STRING, allowNull: false },
         email: { type: DataTypes.STRING, allowNull: false, unique: true },
         phoneNumber: { type: DataTypes.STRING, allowNull: false },
@@ -63,15 +54,23 @@ class Employee extends Model<EmployeeAttributes> implements EmployeeAttributes {
           allowNull: false, 
           defaultValue: 'active' 
         },
+        ctc: { 
+          type: DataTypes.INTEGER, 
+          allowNull: true, 
+          defaultValue: 0 
+        },
         race: { type: DataTypes.STRING, allowNull: true },
+        experience: { type: DataTypes.INTEGER, allowNull: true },
+        utilization: { type: DataTypes.INTEGER, allowNull: true },
         location: { type: DataTypes.STRING, allowNull: false },
         assigned: { 
           type: DataTypes.BOOLEAN, 
           allowNull: false, 
           defaultValue: false 
         },
-        password: { type: DataTypes.STRING, allowNull: false },
+        skills: { type: DataTypes.JSON, allowNull: true,defaultValue:[] },
         createdBy: { type: DataTypes.INTEGER, allowNull: false }
+        
       },
       { 
         sequelize, 
@@ -79,7 +78,12 @@ class Employee extends Model<EmployeeAttributes> implements EmployeeAttributes {
         timestamps: true
       }
     );
+
+
   }
+
+
+ 
 }
 
 export default Employee;
