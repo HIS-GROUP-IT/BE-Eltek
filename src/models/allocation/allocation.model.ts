@@ -10,7 +10,7 @@ class AllocationModel extends Model<Allocation, AllocationCreationAttributes> im
   public projectName!: string;
   public employeeId!: number;
   public projectId!: number;
-  public phase!: string;
+  public phases!: string[];
   public start!: Date;
   public end!: Date;
   public hoursWeek!: number;
@@ -49,9 +49,10 @@ class AllocationModel extends Model<Allocation, AllocationCreationAttributes> im
             key:"id" 
           }
         },
-        phase: {
-          type: DataTypes.STRING,
-          allowNull: false
+        phases: {
+          type: DataTypes.JSON,
+          allowNull: true,
+          defaultValue:[]
         },
         start: {
           type: DataTypes.DATEONLY,

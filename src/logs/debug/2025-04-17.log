@@ -443,3 +443,122 @@
 2025-04-17 09:11:41 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 197.472 ms - -[0m
 2025-04-17 09:11:41 info: [0mGET /api/employees/getAllEmployees [36m304[0m 194.383 ms - -[0m
 2025-04-17 09:11:41 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 195.851 ms - -[0m
+2025-04-17 09:14:21 info: =================================
+2025-04-17 09:14:21 info: ======= ENV: development =======
+2025-04-17 09:14:21 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:14:21 info: =================================
+2025-04-17 09:14:23 info: Database connection established successfully.
+2025-04-17 09:14:26 info: Database tables synced successfully.
+2025-04-17 09:26:05 info: [0mGET /api/notifications/getAllNotifications [36m304[0m 1717.755 ms - -[0m
+2025-04-17 09:26:05 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 09:26:05 info: [0mGET /api/employees/getEmployee/0 [33m404[0m 1447.089 ms - 32[0m
+2025-04-17 09:26:05 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1458.400 ms - -[0m
+2025-04-17 09:26:05 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 1461.164 ms - -[0m
+2025-04-17 09:27:02 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1649.339 ms - -[0m
+2025-04-17 09:27:02 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 1672.728 ms - -[0m
+2025-04-17 09:27:04 info: [0mGET /api/employees/getAllEmployees [36m304[0m 201.302 ms - -[0m
+2025-04-17 09:27:04 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 233.181 ms - -[0m
+2025-04-17 09:27:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1326.088 ms - -[0m
+2025-04-17 09:27:19 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 1320.025 ms - -[0m
+2025-04-17 09:33:56 info: [0mGET /api/notifications/getAllNotifications [36m304[0m 1795.728 ms - -[0m
+2025-04-17 09:33:56 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 09:33:56 info: [0mGET /api/employees/getEmployee/0 [33m404[0m 1817.865 ms - 32[0m
+2025-04-17 09:33:56 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1798.346 ms - -[0m
+2025-04-17 09:33:56 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 1805.556 ms - -[0m
+2025-04-17 09:34:02 info: [0mGET /api/employees/getAllEmployees [36m304[0m 237.863 ms - -[0m
+2025-04-17 09:34:02 info: [0mGET /api/employees/getAllEmployees [36m304[0m 203.386 ms - -[0m
+2025-04-17 09:41:58 info: [0mGET /api/notifications/getAllNotifications [36m304[0m 1875.112 ms - -[0m
+2025-04-17 09:41:58 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1702.312 ms - -[0m
+2025-04-17 09:41:58 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 09:41:58 info: [0mGET /api/employees/getEmployee/0 [33m404[0m 1644.442 ms - 32[0m
+2025-04-17 09:42:04 info: [0mGET /api/projects/getAllProjects [36m304[0m 283.241 ms - -[0m
+2025-04-17 09:42:04 info: [0mGET /api/projects/getAllProjects [36m304[0m 193.843 ms - -[0m
+2025-04-17 09:42:08 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 227.581 ms - -[0m
+2025-04-17 09:42:08 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 189.775 ms - -[0m
+2025-04-17 09:42:08 info: [0mGET /api/employees/getAllEmployees [36m304[0m 197.165 ms - -[0m
+2025-04-17 09:42:08 info: [0mGET /api/employees/getAllEmployees [36m304[0m 198.106 ms - -[0m
+2025-04-17 09:42:51 info: [0mOPTIONS /api/allocations/createAllocation [32m200[0m 2.536 ms - 0[0m
+2025-04-17 09:42:52 info: [0mPOST /api/allocations/createAllocation [32m201[0m 1900.091 ms - 370[0m
+2025-04-17 09:42:53 info: [0mGET /api/allocations/getProjectAllocations/1 [32m200[0m 200.350 ms - 1159[0m
+2025-04-17 09:42:53 info: [0mGET /api/notifications/getAllNotifications [36m304[0m 371.156 ms - -[0m
+2025-04-17 09:42:53 info: [0mGET /api/employees/getAllEmployees [32m200[0m 351.432 ms - 4374[0m
+2025-04-17 09:43:01 info: [0mGET /api/notifications/getAllNotifications [36m304[0m 192.090 ms - -[0m
+2025-04-17 09:43:01 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 199.721 ms - -[0m
+2025-04-17 09:43:01 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.453 ms - -[0m
+2025-04-17 09:45:31 info: =================================
+2025-04-17 09:45:31 info: ======= ENV: development =======
+2025-04-17 09:45:31 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:45:31 info: =================================
+2025-04-17 09:45:35 info: =================================
+2025-04-17 09:45:35 info: ======= ENV: development =======
+2025-04-17 09:45:35 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:45:35 info: =================================
+2025-04-17 09:45:37 info: Database connection established successfully.
+2025-04-17 09:45:44 info: =================================
+2025-04-17 09:45:44 info: ======= ENV: development =======
+2025-04-17 09:45:44 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:45:44 info: =================================
+2025-04-17 09:45:47 info: Database connection established successfully.
+2025-04-17 09:45:50 info: Database tables synced successfully.
+2025-04-17 09:45:53 info: =================================
+2025-04-17 09:45:53 info: ======= ENV: development =======
+2025-04-17 09:45:53 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:45:53 info: =================================
+2025-04-17 09:45:56 info: Database connection established successfully.
+2025-04-17 09:46:01 info: =================================
+2025-04-17 09:46:01 info: ======= ENV: development =======
+2025-04-17 09:46:01 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:46:01 info: =================================
+2025-04-17 09:46:04 info: Database connection established successfully.
+2025-04-17 09:46:07 info: Database tables synced successfully.
+2025-04-17 09:46:37 info: =================================
+2025-04-17 09:46:37 info: ======= ENV: development =======
+2025-04-17 09:46:37 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:46:37 info: =================================
+2025-04-17 09:46:40 info: Database connection established successfully.
+2025-04-17 09:46:43 info: Database tables synced successfully.
+2025-04-17 09:47:15 info: =================================
+2025-04-17 09:47:15 info: ======= ENV: development =======
+2025-04-17 09:47:15 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:47:15 info: =================================
+2025-04-17 09:47:17 info: Database connection established successfully.
+2025-04-17 09:47:23 info: =================================
+2025-04-17 09:47:23 info: ======= ENV: development =======
+2025-04-17 09:47:23 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:47:23 info: =================================
+2025-04-17 09:47:26 info: Database connection established successfully.
+2025-04-17 09:47:29 info: Database tables synced successfully.
+2025-04-17 09:47:38 info: =================================
+2025-04-17 09:47:38 info: ======= ENV: development =======
+2025-04-17 09:47:38 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:47:38 info: =================================
+2025-04-17 09:47:41 info: Database connection established successfully.
+2025-04-17 09:47:44 info: Database tables synced successfully.
+2025-04-17 09:47:50 info: =================================
+2025-04-17 09:47:50 info: ======= ENV: development =======
+2025-04-17 09:47:50 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:47:50 info: =================================
+2025-04-17 09:47:53 info: Database connection established successfully.
+2025-04-17 09:47:56 info: Database tables synced successfully.
+2025-04-17 09:48:56 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: Unknown column 'phases' in 'field list'
+2025-04-17 09:48:56 info: [0mPOST /api/allocations/createAllocation [31m500[0m 1387.058 ms - 53[0m
+2025-04-17 09:51:22 info: =================================
+2025-04-17 09:51:22 info: ======= ENV: development =======
+2025-04-17 09:51:22 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:51:22 info: =================================
+2025-04-17 09:51:25 info: Database connection established successfully.
+2025-04-17 09:51:28 info: Database tables synced successfully.
+2025-04-17 09:52:17 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: Unknown column 'Allocation.phase' in 'where clause'
+2025-04-17 09:52:17 info: [0mPOST /api/allocations/createAllocation [31m500[0m 1377.721 ms - 65[0m
+2025-04-17 09:53:00 info: =================================
+2025-04-17 09:53:00 info: ======= ENV: development =======
+2025-04-17 09:53:00 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:53:00 info: =================================
+2025-04-17 09:53:02 info: Database connection established successfully.
+2025-04-17 09:53:05 info: =================================
+2025-04-17 09:53:05 info: ======= ENV: development =======
+2025-04-17 09:53:05 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:53:05 info: =================================
+2025-04-17 09:53:08 info: Database connection established successfully.
+2025-04-17 09:53:11 info: Database tables synced successfully.
+2025-04-17 09:53:16 info: [0mPOST /api/allocations/createAllocation [32m201[0m 600.063 ms - 385[0m

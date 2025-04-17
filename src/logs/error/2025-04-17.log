@@ -54,3 +54,8 @@
 2025-04-17 09:07:28 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
 2025-04-17 09:07:28 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
 2025-04-17 09:10:23 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 09:26:05 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 09:33:56 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 09:41:58 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 09:48:56 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: Unknown column 'phases' in 'field list'
+2025-04-17 09:52:17 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: Unknown column 'Allocation.phase' in 'where clause'

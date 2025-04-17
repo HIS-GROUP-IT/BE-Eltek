@@ -14,7 +14,7 @@ export class AllocationService implements IAllocationService {
     const existing = await this.allocationRepository.findExistingAllocation(
       allocationData.employeeId!,
       allocationData.projectId,
-      allocationData.phase
+      allocationData.phases
     );
 
     if (existing) {

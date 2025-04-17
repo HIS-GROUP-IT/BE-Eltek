@@ -66,7 +66,7 @@ export class AllocationRepository implements IAllocationRepository {
             'projectName',
             'employeeId',
             'projectId',
-            'phase',
+            'phases',
             'start',
             'end',
             'hoursWeek',
@@ -84,13 +84,13 @@ export class AllocationRepository implements IAllocationRepository {
   public async findExistingAllocation(
     employeeId: number,
     projectId: number,
-    phase: string
+    phases: string
   ): Promise<Allocation | null> {
     return await AllocationModel.findOne({
       where: {
         employeeId,
         projectId,
-        phase
+        phases
       },
       raw: true
     });
