@@ -494,3 +494,19 @@ Require stack:
 2025-04-17 10:27:34 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: Error fetching employees
 2025-04-17 10:28:00 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: SequelizeDatabaseError: Unknown column 'allocations.phase' in 'field list'
 2025-04-17 10:28:36 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: Unknown column 'allocations.phase' in 'field list'
+2025-04-17 10:38:07 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:41:01 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:41:23 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: phases is not iterable
+2025-04-17 10:41:45 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:42:12 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: phases is not iterable
+2025-04-17 10:47:14 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:49:06 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: phases is not iterable
+2025-04-17 10:52:28 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:52:55 error: [POST] /api/allocations/createAllocation >> StatusCode:: 409, Message:: Allocation for this phase already exists
+2025-04-17 10:54:59 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: phases is not iterable
+2025-04-17 10:56:02 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:56:25 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:56:25 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:58:32 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:58:57 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
+2025-04-17 10:58:57 error: [GET] /api/employees/getEmployee/0 >> StatusCode:: 404, Message:: Employee not found
