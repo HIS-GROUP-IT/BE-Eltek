@@ -67,7 +67,7 @@ export class EmployeeService implements IEmployeeService {
     try {
       return await this.employeeRepository.getAllEmployees();
     } catch (error) {
-      throw new HttpException(500, "Error fetching employees");
+      throw new HttpException(500, error.message);
     }
   }
 

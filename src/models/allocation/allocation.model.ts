@@ -12,6 +12,7 @@ class AllocationModel extends Model<Allocation, AllocationCreationAttributes> im
   public projectId!: number;
   public phases!: string[];
   public start!: Date;
+  public normalizedPhases:string
   public end!: Date;
   public hoursWeek!: number;
   public status!: 'confirmed' | 'tentative';
@@ -54,6 +55,11 @@ class AllocationModel extends Model<Allocation, AllocationCreationAttributes> im
           allowNull: true,
           defaultValue:[]
         },
+        normalizedPhases: {
+          type: DataTypes.STRING,
+          allowNull: true
+        }
+,        
         start: {
           type: DataTypes.DATEONLY,
           allowNull: false

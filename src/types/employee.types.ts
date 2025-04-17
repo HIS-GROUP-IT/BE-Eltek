@@ -12,9 +12,9 @@ export type IEmployee = {
   status: "active" | "inactive";
   location: string;
   assigned: boolean;
-  utilization:number
-  skills : string[]
-  experience:number;
+  utilization?:number
+  skills ?: string[]
+  experience?:number;
   commitments?: Commitment[];
   allocations?: Allocation[];
   ctc?: number;
@@ -43,6 +43,7 @@ export type Allocation = {
   employeeId: number;
   projectId: number;
   phases: string[];
+  normalizedPhases:string;
   start: Date;
   end: Date;
   hoursWeek: number;

@@ -11,12 +11,28 @@ import { IAllocationRepository } from "@/interfaces/allocation/IAllocationReposi
 export class AllocationRepository implements IAllocationRepository {
   public async createAllocation(allocationData: Partial<Allocation>): Promise<Allocation> {
     try {
-      const allocation = await AllocationModel.create(allocationData);
+      // Ensure phases is present and an array
+      if (!allocationData.phases || !Array.isArray(allocationData.phases)) {
+        throw new HttpException(400, "Phases must be a non-empty array");
+      }
+  
+      // Normalize phases before saving
+      const normalizedPhases = JSON.stringify([...allocationData.phases].sort());
+  
+      // Add normalizedPhases to the data
+      const allocation = await AllocationModel.create({
+        ...allocationData,
+        normalizedPhases
+      });
+  
       return allocation.get({ plain: true });
+  
     } catch (error) {
+      console.error("Create allocation error:", error);
       throw new HttpException(500, "Error creating allocation");
     }
   }
+  
 
   public async getAllocationById(id: number): Promise<Allocation | null> {
     return await AllocationModel.findByPk(id, {
@@ -84,15 +100,19 @@ export class AllocationRepository implements IAllocationRepository {
   public async findExistingAllocation(
     employeeId: number,
     projectId: number,
-    phases: string
+    phases: string[]
   ): Promise<Allocation | null> {
+    const normalizedPhases = JSON.stringify([...phases].sort());
+  
     return await AllocationModel.findOne({
       where: {
         employeeId,
         projectId,
-        phases
+        normalizedPhases
       },
       raw: true
     });
   }
+  
+  
 }

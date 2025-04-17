@@ -562,3 +562,201 @@
 2025-04-17 09:53:08 info: Database connection established successfully.
 2025-04-17 09:53:11 info: Database tables synced successfully.
 2025-04-17 09:53:16 info: [0mPOST /api/allocations/createAllocation [32m201[0m 600.063 ms - 385[0m
+2025-04-17 09:55:30 info: =================================
+2025-04-17 09:55:30 info: ======= ENV: development =======
+2025-04-17 09:55:30 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:55:30 info: =================================
+2025-04-17 09:55:33 info: Database connection established successfully.
+2025-04-17 09:55:36 info: Database tables synced successfully.
+2025-04-17 09:55:39 info: [0mPOST /api/allocations/createAllocation [32m201[0m 605.470 ms - 385[0m
+2025-04-17 09:55:43 info: [0mPOST /api/allocations/createAllocation [32m201[0m 370.671 ms - 385[0m
+2025-04-17 09:57:35 info: =================================
+2025-04-17 09:57:35 info: ======= ENV: development =======
+2025-04-17 09:57:35 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:57:35 info: =================================
+2025-04-17 09:57:38 info: =================================
+2025-04-17 09:57:38 info: ======= ENV: development =======
+2025-04-17 09:57:38 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:57:38 info: =================================
+2025-04-17 09:57:40 info: Database connection established successfully.
+2025-04-17 09:57:43 info: Database tables synced successfully.
+2025-04-17 09:57:48 info: =================================
+2025-04-17 09:57:48 info: ======= ENV: development =======
+2025-04-17 09:57:48 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:57:48 info: =================================
+2025-04-17 09:57:50 info: Database connection established successfully.
+2025-04-17 09:57:50 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@> '[\"Development\"]' AND `Allocation`.`phases` @> '[\"Testiing\"]') AND `Alloc' at line 1
+2025-04-17 09:57:50 info: [0mPOST /api/allocations/createAllocation [31m500[0m 2236.216 ms - 248[0m
+2025-04-17 09:57:53 info: Database tables synced successfully.
+2025-04-17 09:58:32 info: =================================
+2025-04-17 09:58:32 info: ======= ENV: development =======
+2025-04-17 09:58:32 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:58:32 info: =================================
+2025-04-17 09:58:35 info: Database connection established successfully.
+2025-04-17 09:58:38 info: Database tables synced successfully.
+2025-04-17 09:58:41 info: =================================
+2025-04-17 09:58:41 info: ======= ENV: development =======
+2025-04-17 09:58:41 info: 🚀 Identity Service listening on port 5000
+2025-04-17 09:58:41 info: =================================
+2025-04-17 09:58:44 info: Database connection established successfully.
+2025-04-17 09:58:46 info: [0mPOST /api/allocations/createAllocation [32m201[0m 604.318 ms - 385[0m
+2025-04-17 09:58:47 info: Database tables synced successfully.
+2025-04-17 09:58:49 info: [0mPOST /api/allocations/createAllocation [32m201[0m 557.763 ms - 385[0m
+2025-04-17 10:00:38 info: =================================
+2025-04-17 10:00:38 info: ======= ENV: development =======
+2025-04-17 10:00:38 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:00:38 info: =================================
+2025-04-17 10:00:41 info: Database connection established successfully.
+2025-04-17 10:00:41 info: [0mPOST /api/allocations/createAllocation [32m201[0m 1487.704 ms - 385[0m
+2025-04-17 10:00:43 info: [0mPOST /api/allocations/createAllocation [32m201[0m 545.370 ms - 385[0m
+2025-04-17 10:00:44 info: Database tables synced successfully.
+2025-04-17 10:01:44 info: =================================
+2025-04-17 10:01:44 info: ======= ENV: development =======
+2025-04-17 10:01:44 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:01:44 info: =================================
+2025-04-17 10:01:47 info: Database connection established successfully.
+2025-04-17 10:01:49 info: Database tables synced successfully.
+2025-04-17 10:01:55 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: Unknown column 'Allocation.normalizedPhases' in 'where clause'
+2025-04-17 10:01:55 info: [0mPOST /api/allocations/createAllocation [31m500[0m 213.212 ms - 76[0m
+2025-04-17 10:01:58 error: [POST] /api/allocations/createAllocation >> StatusCode:: 500, Message:: Unknown column 'Allocation.normalizedPhases' in 'where clause'
+2025-04-17 10:01:58 info: [0mPOST /api/allocations/createAllocation [31m500[0m 186.477 ms - 76[0m
+2025-04-17 10:04:01 info: =================================
+2025-04-17 10:04:01 info: ======= ENV: development =======
+2025-04-17 10:04:01 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:04:01 info: =================================
+2025-04-17 10:04:04 info: Database connection established successfully.
+2025-04-17 10:04:07 info: Database tables synced successfully.
+2025-04-17 10:04:12 info: =================================
+2025-04-17 10:04:12 info: ======= ENV: development =======
+2025-04-17 10:04:12 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:04:12 info: =================================
+2025-04-17 10:04:14 info: Database connection established successfully.
+2025-04-17 10:04:17 info: Database tables synced successfully.
+2025-04-17 10:04:29 info: =================================
+2025-04-17 10:04:29 info: ======= ENV: development =======
+2025-04-17 10:04:29 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:04:29 info: =================================
+2025-04-17 10:04:32 info: Database connection established successfully.
+2025-04-17 10:04:35 info: Database tables synced successfully.
+2025-04-17 10:05:58 info: =================================
+2025-04-17 10:05:58 info: ======= ENV: development =======
+2025-04-17 10:05:58 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:05:58 info: =================================
+2025-04-17 10:06:02 info: Database connection established successfully.
+2025-04-17 10:06:05 info: Database tables synced successfully.
+2025-04-17 10:06:12 info: =================================
+2025-04-17 10:06:12 info: ======= ENV: development =======
+2025-04-17 10:06:12 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:06:12 info: =================================
+2025-04-17 10:06:15 info: Database connection established successfully.
+2025-04-17 10:06:18 info: Database tables synced successfully.
+2025-04-17 10:07:03 info: =================================
+2025-04-17 10:07:03 info: ======= ENV: development =======
+2025-04-17 10:07:03 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:07:03 info: =================================
+2025-04-17 10:07:06 info: Database connection established successfully.
+2025-04-17 10:07:10 info: Database tables synced successfully.
+2025-04-17 10:07:33 info: [0mPOST /api/allocations/createAllocation [32m201[0m 2218.296 ms - 385[0m
+2025-04-17 10:07:36 info: [0mPOST /api/allocations/createAllocation [32m201[0m 365.190 ms - 385[0m
+2025-04-17 10:07:38 info: [0mPOST /api/allocations/createAllocation [32m201[0m 366.668 ms - 385[0m
+2025-04-17 10:09:18 info: =================================
+2025-04-17 10:09:18 info: ======= ENV: development =======
+2025-04-17 10:09:18 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:09:18 info: =================================
+2025-04-17 10:09:21 info: Database connection established successfully.
+2025-04-17 10:09:25 info: =================================
+2025-04-17 10:09:25 info: ======= ENV: development =======
+2025-04-17 10:09:25 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:09:25 info: =================================
+2025-04-17 10:09:28 info: Database connection established successfully.
+2025-04-17 10:09:32 info: =================================
+2025-04-17 10:09:32 info: ======= ENV: development =======
+2025-04-17 10:09:32 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:09:32 info: =================================
+2025-04-17 10:09:35 info: Database connection established successfully.
+2025-04-17 10:09:44 info: =================================
+2025-04-17 10:09:44 info: ======= ENV: development =======
+2025-04-17 10:09:44 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:09:44 info: =================================
+2025-04-17 10:09:46 info: Database connection established successfully.
+2025-04-17 10:09:49 info: Database tables synced successfully.
+2025-04-17 10:11:03 info: =================================
+2025-04-17 10:11:03 info: ======= ENV: development =======
+2025-04-17 10:11:03 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:11:03 info: =================================
+2025-04-17 10:11:06 info: Database connection established successfully.
+2025-04-17 10:11:09 info: Database tables synced successfully.
+2025-04-17 10:11:14 info: [0mPOST /api/allocations/createAllocation [32m201[0m 600.282 ms - 385[0m
+2025-04-17 10:14:20 info: =================================
+2025-04-17 10:14:20 info: ======= ENV: development =======
+2025-04-17 10:14:20 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:14:20 info: =================================
+2025-04-17 10:14:22 info: Database connection established successfully.
+2025-04-17 10:14:25 info: Database tables synced successfully.
+2025-04-17 10:14:49 info: =================================
+2025-04-17 10:14:49 info: ======= ENV: development =======
+2025-04-17 10:14:49 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:14:49 info: =================================
+2025-04-17 10:14:52 info: Database connection established successfully.
+2025-04-17 10:14:55 info: Database tables synced successfully.
+2025-04-17 10:15:08 info: [0mPOST /api/allocations/createAllocation [32m201[0m 1740.047 ms - 437[0m
+2025-04-17 10:15:23 error: [POST] /api/allocations/createAllocation >> StatusCode:: 409, Message:: Allocation for this phase already exists
+2025-04-17 10:15:23 info: [0mPOST /api/allocations/createAllocation [33m409[0m 1311.555 ms - 54[0m
+2025-04-17 10:15:36 info: [0mPOST /api/allocations/createAllocation [32m201[0m 1688.251 ms - 435[0m
+2025-04-17 10:15:57 info: =================================
+2025-04-17 10:15:57 info: ======= ENV: development =======
+2025-04-17 10:15:57 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:15:57 info: =================================
+2025-04-17 10:16:00 info: Database connection established successfully.
+2025-04-17 10:16:04 info: Database tables synced successfully.
+2025-04-17 10:23:56 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: Error fetching employees
+2025-04-17 10:23:56 info: [0mGET /api/employees/getAllEmployees [31m500[0m 2857.592 ms - 38[0m
+2025-04-17 10:24:55 info: =================================
+2025-04-17 10:24:55 info: ======= ENV: development =======
+2025-04-17 10:24:55 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:24:55 info: =================================
+2025-04-17 10:24:58 info: Database connection established successfully.
+2025-04-17 10:25:01 info: Database tables synced successfully.
+2025-04-17 10:25:08 error: [POST] /api/employees/createEmployee >> StatusCode:: 409, Message:: Email already exists
+2025-04-17 10:25:08 info: [0mPOST /api/employees/createEmployee [33m409[0m 234.132 ms - 34[0m
+2025-04-17 10:26:06 info: [0mPOST /api/employees/createEmployee [32m201[0m 1899.006 ms - 491[0m
+2025-04-17 10:26:11 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: Error fetching employees
+2025-04-17 10:26:11 info: [0mGET /api/employees/getAllEmployees [31m500[0m 209.362 ms - 38[0m
+2025-04-17 10:27:30 info: =================================
+2025-04-17 10:27:30 info: ======= ENV: development =======
+2025-04-17 10:27:30 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:27:30 info: =================================
+2025-04-17 10:27:32 info: Database connection established successfully.
+2025-04-17 10:27:33 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: Error fetching employees
+2025-04-17 10:27:33 info: [0mGET /api/employees/getAllEmployees [31m500[0m 281.553 ms - 38[0m
+2025-04-17 10:27:34 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: Error fetching employees
+2025-04-17 10:27:34 info: [0mGET /api/employees/getAllEmployees [31m500[0m 195.670 ms - 38[0m
+2025-04-17 10:27:36 info: Database tables synced successfully.
+2025-04-17 10:27:58 info: =================================
+2025-04-17 10:27:58 info: ======= ENV: development =======
+2025-04-17 10:27:58 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:27:58 info: =================================
+2025-04-17 10:28:00 info: Database connection established successfully.
+2025-04-17 10:28:00 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: SequelizeDatabaseError: Unknown column 'allocations.phase' in 'field list'
+2025-04-17 10:28:00 info: [0mGET /api/employees/getAllEmployees [31m500[0m 2317.063 ms - 3892[0m
+2025-04-17 10:28:03 info: Database tables synced successfully.
+2025-04-17 10:28:33 info: =================================
+2025-04-17 10:28:33 info: ======= ENV: development =======
+2025-04-17 10:28:33 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:28:33 info: =================================
+2025-04-17 10:28:36 info: Database connection established successfully.
+2025-04-17 10:28:36 error: [GET] /api/employees/getAllEmployees >> StatusCode:: 500, Message:: Unknown column 'allocations.phase' in 'field list'
+2025-04-17 10:28:36 info: [0mGET /api/employees/getAllEmployees [31m500[0m 1820.391 ms - 64[0m
+2025-04-17 10:28:39 info: Database tables synced successfully.
+2025-04-17 10:28:55 info: =================================
+2025-04-17 10:28:55 info: ======= ENV: development =======
+2025-04-17 10:28:55 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:28:55 info: =================================
+2025-04-17 10:28:57 info: Database connection established successfully.
+2025-04-17 10:29:01 info: =================================
+2025-04-17 10:29:01 info: ======= ENV: development =======
+2025-04-17 10:29:01 info: 🚀 Identity Service listening on port 5000
+2025-04-17 10:29:01 info: =================================
+2025-04-17 10:29:05 info: Database connection established successfully.
+2025-04-17 10:29:06 info: [0mGET /api/employees/getAllEmployees [32m200[0m 198.832 ms - 5877[0m
+2025-04-17 10:29:08 info: Database tables synced successfully.
