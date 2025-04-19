@@ -60,8 +60,8 @@ export class TaskController {
 
     public getTasksByProject = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const  projectId  = req.params.projectId;
-            const tasks = await this.taskService.getTasksByProject(+projectId);
+            const  allocationId  = req.params.allocationId;
+            const tasks = await this.taskService.getTasksByProject(+allocationId);
             const response: CustomResponse<ITask[]> = {
                 data: tasks,
                 message: "Tasks fetched successfully",
@@ -147,7 +147,7 @@ export class TaskController {
                 new Date(startDate as string),
                 new Date(endDate as string)
             );
-            const response: CustomResponse<{ projectId: number, totalHours: number }[]> = {
+            const response: CustomResponse<{ allocationId: number, totalHours: number }[]> = {
                 data: summary,
                 message: "Task summary generated",
                 error: false,
@@ -204,8 +204,8 @@ export class TaskController {
 
     public getWeekelySummery = async (req:Request , res:Response , next:NextFunction) => {
         try {
-            const projectId = req.params.projectId;        
-            const summary = await this.taskService.getCurrentWeekHours(Number(projectId));
+            const allocationId = req.params.allocationId;        
+            const summary = await this.taskService.getCurrentWeekHours(Number(allocationId));
             const response: CustomResponse<EmployeeTimesheet> = {
                 data: summary,
                 message: "Project summary fetched",
@@ -220,15 +220,15 @@ export class TaskController {
 
     public getEmployeeMonthlyTasks = async (req: Request, res: Response, next: NextFunction) => {
         try {
-          const { projectId, employeeId } = req.params;
+          const { allocationId, employeeId } = req.params;
           const { year, month } = req.query;
     
-          if (!projectId || !employeeId || !year || !month) {
-            throw new HttpException(400, 'Missing required parameters: projectId, employeeId, year, month');
+          if (!allocationId || !employeeId || !year || !month) {
+            throw new HttpException(400, 'Missing required parameters: allocationId, employeeId, year, month');
           }
     
           const monthlyTasks = await this.taskService.getEmployeeMonthlyTasks(
-            Number(projectId),
+            Number(allocationId),
             Number(employeeId),
             Number(year),
             Number(month)
@@ -249,9 +249,9 @@ export class TaskController {
 
       public getTasksByEmployeeAndProject = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const  projectId  = req.params.projectId;
+            const  allocationId  = req.params.allocationId;
             const employeeId = req.params.employeeId;
-            const tasks = await this.taskService.getTasksByEmployeeAndProject(+employeeId,+projectId);
+            const tasks = await this.taskService.getTasksByEmployeeAndProject(+employeeId,+allocationId);
             const response: CustomResponse<ITask[]> = {
                 data: tasks,
                 message: "Tasks fetched successfully",

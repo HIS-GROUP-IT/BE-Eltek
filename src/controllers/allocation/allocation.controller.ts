@@ -3,6 +3,7 @@ import Container from "typedi";
 import { Allocation } from "@/types/employee.types";
 import { CustomResponse } from "@/types/response.interface";
 import { ALLOCATION_SERVICE_TOKEN } from "@/interfaces/allocation/IAllocationService.interface";
+import { RequestWithUser } from "@/types/auth.types";
 
 export class AllocationController {
   private allocationService;
@@ -11,10 +12,14 @@ export class AllocationController {
     this.allocationService = Container.get(ALLOCATION_SERVICE_TOKEN);
   }
 
-  public createAllocation = async (req: Request, res: Response, next: NextFunction) => {
+  public createAllocation = async (req: RequestWithUser, res: Response, next: NextFunction) => {
     try {
       const allocationData: Allocation = req.body;
-      const allocation = await this.allocationService.createAllocation(allocationData);
+      const data = {
+        ...allocationData,
+        createdBy: req.user.id
+      }
+      const allocation = await this.allocationService.createAllocation(data);
       
       const response: CustomResponse<Allocation> = {
         data: allocation,
@@ -100,6 +105,57 @@ export class AllocationController {
       const response: CustomResponse<Allocation> = {
         data: allocation,
         message: "Allocation retrieved successfully",
+        error: false
+      };
+      res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public checkForOverlaps = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const data = req.body;
+      const allocation = await this.allocationService.checkForOverlaps(data.employeeId,
+        data.startDate,
+        data.endDate);      
+      const response: CustomResponse<Allocation> = {
+        data: allocation,
+        message: "Overlaping allocations retrieved successfully",
+        error: false
+      };
+      res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public overrideConflictingAllocations = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const data = req.body;
+      const allocation = await this.allocationService.overrideConflictingAllocations(data.employeeId,
+        data.startDate,
+        data.endDate);      
+      const response: CustomResponse<Allocation> = {
+        data: null,
+        message: "Overlaping allocations solved successfully",
+        error: false
+      };
+      res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
+  
+  public checkOverridePossibility = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const data = req.body;
+      const allocation = await this.allocationService.checkOverridePossibility(data.employeeId,
+        data.startDate,
+        data.endDate);      
+      const response: CustomResponse<Allocation> = {
+        data: allocation,
+        message: "Possibility for solving conflicts checked successfully",
         error: false
       };
       res.status(200).json(response);

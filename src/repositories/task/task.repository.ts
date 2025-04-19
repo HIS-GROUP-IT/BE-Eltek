@@ -35,9 +35,9 @@ export class TaskRepository implements ITaskRepository {
         });
     }
 
-    public async getTasksByProject(projectId: number): Promise<ITask[]> {
+    public async getTasksByProject(allocationId: number): Promise<ITask[]> {
         return await Task.findAll({ 
-            where: { projectId }, 
+            where: { allocationId }, 
             raw: true,
             order: [['taskTitle', 'ASC']]
         });
@@ -72,26 +72,27 @@ export class TaskRepository implements ITaskRepository {
         });
     }
 
-    public async getTasksByEmployeeAndProject(employeeId: number, projectId: number): Promise<ITask[]> {
-        return await Task.findAll({
-            where: { employeeId, projectId },
-            raw: true,
-            order: [['taskTitle', 'ASC']]
-        });
-    }
+    public async getTasksByEmployeeAndProject(employeeId: number, allocationId: number): Promise<ITask[]> {
+      return await Task.findAll({
+          where: { employeeId, allocationId },
+          raw: true,
+          order: [['taskDate', 'ASC']] 
+      });
+  }
+  
 
-    public async getTotalHoursByEmployee(employeeId: number): Promise<number> {
-        const result = await Task.findOne({
-            where: { employeeId },
-            attributes: [
-                [Sequelize.fn('SUM', Sequelize.col('hours')), 'totalHours']
-            ],
-            raw: true
-        });
-        return result?.hours || 0;
-    }
+    // public async getTotalHoursByEmployee(employeeId: number): Promise<number> {
+    //     const result = await Task.findOne({
+    //         where: { employeeId },
+    //         attributes: [
+    //             [Sequelize.fn('SUM', Sequelize.col('hours')), 'totalHours']
+    //         ],
+    //         raw: true
+    //     });
+    //     return result?.hours || 0;
+    // }
 
-    public async getTaskSummary(employeeId: number, startDate: Date, endDate: Date): Promise<{ projectId: number, totalHours: number }[]> {
+    public async getTaskSummary(employeeId: number, startDate: Date, endDate: Date): Promise<{ allocationId: number, totalHours: number }[]> {
         return await Task.findAll({
             where: {
                 employeeId,
@@ -100,12 +101,12 @@ export class TaskRepository implements ITaskRepository {
                 }
             },
             attributes: [
-                'projectId', 
+                'allocationId', 
                 [Sequelize.fn('SUM', Sequelize.col('hours')), 'totalHours']
             ],
-            group: ['projectId'],
+            group: ['allocationId'],
             raw: true
-        }) as unknown as { projectId: number, totalHours: number }[];
+        }) as unknown as { allocationId: number, totalHours: number }[];
     }
 
     public async approveTask(approvalData: ITaskModification): Promise<ITask> {
@@ -163,13 +164,13 @@ export class TaskRepository implements ITaskRepository {
         };
     }
 
-      public async getCurrentWeekHours(projectId: number): Promise<EmployeeTimesheet[]> {
+      public async getCurrentWeekHours(allocationId: number): Promise<EmployeeTimesheet[]> {
         const { start, end } = this.getCurrentWeekDates();
         const weekDays = this.generateWeekDays(start);
     
         const tasks = await Task.findAll({
             where: {
-                projectId,
+                allocationId,
                 status : "completed",
                 createdAt: { [Op.between]: [start, end] }
             },
@@ -185,7 +186,7 @@ export class TaskRepository implements ITaskRepository {
             const employeeId = task.employeeId;
             if (!employeesMap.has(employeeId)) {
                 employeesMap.set(employeeId, {
-                    projectId: task.projectId,
+                    allocationId: task.allocationId,
                     employeeId: employeeId,
                     employeeName: task.employeeName,
                     email: task.employee?.email || '',
@@ -199,7 +200,7 @@ export class TaskRepository implements ITaskRepository {
             const taskDateString = this.formatDate(taskDate);
     
             if (weekDays.includes(taskDateString)) {
-                employeeData!.days[taskDateString] += task.hours;
+                employeeData!.days[taskDateString] += task.actualHours;
             }
         }
     
@@ -234,32 +235,30 @@ export class TaskRepository implements ITaskRepository {
 
 
     public async getEmployeeMonthlyTasks(
-      projectId: number,
+      allocationId: number,
       employeeId: number,
       year: number,
       month: number
   ): Promise<MonthlyTasks> {
       try {
-          if (!projectId || !employeeId || !year || !month) {
+          if (!allocationId || !employeeId || !year || !month) {
               throw new HttpException(400, 'Missing required parameters');
           }
   
-          // First get the employee with allocations
           const employee = await Employee.findOne({
               where: { id: employeeId },
               include: [{
                   association: 'allocations',
-                  where: { projectId: projectId.toString() } // Assuming projectId in Allocation is string
+                  where: { allocationId: allocationId.toString() } 
               }],
-              raw: false // Need instance for associations
+              raw: false 
           });
   
           if (!employee || !employee || employee.allAllocation.length === 0) {
               throw new HttpException(404, 'Employee is not assigned to this project');
           }
   
-          // Get the specific allocation for this project
-          const projectAllocation = employee.allAllocation.find(a => a.projectId === projectId);
+          const projectAllocation = employee.allAllocation.find(a => a.id === allocationId);
           if (!projectAllocation) {
               throw new HttpException(404, 'Employee allocation not found for this project');
           }
@@ -270,7 +269,7 @@ export class TaskRepository implements ITaskRepository {
   
           const tasks = await Task.findAll({
               where: {
-                  projectId,
+                  allocationId,
                   employeeId,
                   status: 'completed',
                   createdAt: {
@@ -281,7 +280,7 @@ export class TaskRepository implements ITaskRepository {
               raw: true
           });
   
-          const totalHours = tasks.reduce((sum, task) => sum + task.hours, 0);
+          const totalHours = tasks.reduce((sum, task) => sum + task.actualHours, 0);
           const rate = Number(projectAllocation.chargeOutRate);
           const totalCost = totalHours * rate;
   
@@ -293,7 +292,7 @@ export class TaskRepository implements ITaskRepository {
                   id: task.id,
                   taskTitle: task.taskTitle,
                   taskDescription: task.taskDescription,
-                  hours: task.hours,
+                  hours: task.actualHours,
                   status: task.status,
                   employeeName: task.employeeName,
                   position: task.position,
@@ -308,7 +307,16 @@ export class TaskRepository implements ITaskRepository {
       }
   }
       
-   
+  public async getTotalHoursByEmployee(employeeId: number): Promise<number> {
+    const result = await Task.findOne({
+        where: { employeeId },
+        attributes: [
+            [Sequelize.fn('SUM', Sequelize.col('hours')), 'totalHours']
+        ],
+        raw: true
+    });
+    return result?.actualHours || 0;
+}
       
 
         public async getTaskTimeStatistics(): Promise<{
@@ -349,14 +357,14 @@ export class TaskRepository implements ITaskRepository {
             const data = [0, 0, 0, 0, 0];
       
             tasks.forEach(task => {
-              totalHours += task.hours;
+              totalHours += task.actualHours;
               totalTaskCount++;
       
               if (task.status === 'completed') {
                 completedTasks++;
                 const bucket = getTimeBucket(new Date(task.createdAt));
                 if (bucket !== -1) {
-                  data[bucket] += task.hours;
+                  data[bucket] += task.actualHours;
                 }
               }
             });
@@ -411,13 +419,13 @@ export class TaskRepository implements ITaskRepository {
             const data = new Array(7).fill(0);
       
             tasks.forEach(task => {
-              totalHours += task.hours;
+              totalHours += task.actualHours;
               totalTaskCount++;
       
               if (task.status === 'completed') {
                 completedTasks++;
                 const dayIndex = getDayIndex(new Date(task.createdAt));
-                data[dayIndex] += task.hours;
+                data[dayIndex] += task.actualHours;
               }
             });
       
@@ -462,7 +470,7 @@ export class TaskRepository implements ITaskRepository {
             const data = new Array(12).fill(0);
       
             tasks.forEach(task => {
-              totalHours += task.hours;
+              totalHours += task.actualHours;
               totalTaskCount++;
       
               if (task.status === 'completed') {
@@ -470,7 +478,7 @@ export class TaskRepository implements ITaskRepository {
                 const taskDate = this.adjustTimezone(new Date(task.createdAt));
                 if (taskDate.getFullYear() === year) {
                   const monthIndex = taskDate.getMonth();
-                  data[monthIndex] += task.hours;
+                  data[monthIndex] += task.actualHours;
                 }
               }
             });
@@ -530,14 +538,14 @@ export class TaskRepository implements ITaskRepository {
             const data = [0, 0, 0, 0, 0];
       
             tasks.forEach(task => {
-              totalHours += task.hours;
+              totalHours += task.actualHours;
               totalTaskCount++;
       
               if (task.status === 'completed') {
                 completedTasks++;
                 const bucket = getTimeBucket(new Date(task.createdAt));
                 if (bucket !== -1) {
-                  data[bucket] += task.hours;
+                  data[bucket] += task.actualHours;
                 }
               }
             });
@@ -595,13 +603,13 @@ export class TaskRepository implements ITaskRepository {
             const data = new Array(7).fill(0);
       
             tasks.forEach(task => {
-              totalHours += task.hours;
+              totalHours += task.actualHours;
               totalTaskCount++;
       
               if (task.status === 'completed') {
                 completedTasks++;
                 const dayIndex = getDayIndex(new Date(task.createdAt));
-                data[dayIndex] += task.hours;
+                data[dayIndex] += task.actualHours;
               }
             });
       
@@ -649,7 +657,7 @@ export class TaskRepository implements ITaskRepository {
             const data = new Array(12).fill(0);
       
             tasks.forEach(task => {
-              totalHours += task.hours;
+              totalHours += task.actualHours;
               totalTaskCount++;
       
               if (task.status === 'completed') {
@@ -657,7 +665,7 @@ export class TaskRepository implements ITaskRepository {
                 const taskDate = this.adjustTimezone(new Date(task.createdAt));
                 if (taskDate.getFullYear() === year) {
                   const monthIndex = taskDate.getMonth();
-                  data[monthIndex] += task.hours;
+                  data[monthIndex] += task.actualHours;
                 }
               }
             });

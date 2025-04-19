@@ -1,16 +1,21 @@
 import { HttpException } from "@/exceptions/HttpException";
 import { Service } from "typedi";
 import { AllocationRepository } from "@/repositories/allocation/allocation.repository";
-import { ALLOCATION_SERVICE_TOKEN, IAllocationService } from "@/interfaces/allocation/IAllocationService.interface";
+import {
+  ALLOCATION_SERVICE_TOKEN,
+  IAllocationService,
+} from "@/interfaces/allocation/IAllocationService.interface";
 import { Allocation } from "@/types/employee.types";
 import Employee from "@/models/employee/employee.model";
 import Project from "@/models/project/project.model";
 
-@Service({ id: ALLOCATION_SERVICE_TOKEN, type : AllocationService})
+@Service({ id: ALLOCATION_SERVICE_TOKEN, type: AllocationService })
 export class AllocationService implements IAllocationService {
   constructor(private allocationRepository: AllocationRepository) {}
 
-  public async createAllocation(allocationData: Partial<Allocation>): Promise<Allocation> {
+  public async createAllocation(
+    allocationData: Partial<Allocation>
+  ): Promise<Allocation> {
     const existing = await this.allocationRepository.findExistingAllocation(
       allocationData.employeeId!,
       allocationData.projectId,
@@ -24,7 +29,10 @@ export class AllocationService implements IAllocationService {
     return this.allocationRepository.createAllocation(allocationData);
   }
 
-  public async updateAllocation(id: number, updates: Partial<Allocation>): Promise<Allocation> {
+  public async updateAllocation(
+    id: number,
+    updates: Partial<Allocation>
+  ): Promise<Allocation> {
     return this.allocationRepository.updateAllocation(id, updates);
   }
 
@@ -32,7 +40,9 @@ export class AllocationService implements IAllocationService {
     return this.allocationRepository.deleteAllocation(id);
   }
 
-  public async getEmployeeAllocations(employeeId: number): Promise<Allocation[]> {
+  public async getEmployeeAllocations(
+    employeeId: number
+  ): Promise<Allocation[]> {
     return this.allocationRepository.getEmployeeAllocations(employeeId);
   }
 
@@ -44,5 +54,61 @@ export class AllocationService implements IAllocationService {
     const allocation = await this.allocationRepository.getAllocationById(id);
     if (!allocation) throw new HttpException(404, "Allocation not found");
     return allocation;
+  }
+
+  public async checkForOverlaps(
+    employeeId: number,
+    startDate: Date,
+    endDate: Date
+  ): Promise<Allocation[]> {
+    try {
+      const allocation = await this.allocationRepository.checkForOverlaps(
+        employeeId,
+        startDate,
+        endDate
+      );
+      return allocation;
+    } catch (error) {
+      throw new HttpException(400, error.message);
+    }
+  }
+
+  public async overrideConflictingAllocations(
+    employeeId: number,
+    newStart: Date,
+    newEnd: Date
+  ): Promise<void> {
+    try {
+      await this.allocationRepository.overrideConflictingAllocations(
+        employeeId,
+        newStart,
+        newEnd
+      );
+    } catch (error) {
+      throw new HttpException(400, error.message);
+    }
+  }
+
+  public async checkOverridePossibility(
+    employeeId: number,
+    startDate: Date | string,
+    endDate: Date | string
+  ): Promise<{
+    canOverride: boolean;
+    conflicts: Allocation[];
+    wouldDelete: Allocation[];
+    wouldModify: Allocation[];
+  }> {
+    try {
+      const canBeOverriden =
+        await this.allocationRepository.checkOverridePossibility(
+          employeeId,
+          startDate,
+          endDate
+        );
+      return canBeOverriden;
+    } catch (error) {
+      throw new HttpException(400, "Cannot override conflicting allocations. Please resolve manually");
+    }
   }
 }

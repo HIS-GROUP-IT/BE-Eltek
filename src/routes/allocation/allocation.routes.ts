@@ -48,5 +48,21 @@ export class AllocationRoute implements Routes {
       authorizationMiddleware,
       this.allocationController.getAllocationById
     );
+
+    this.router.post(
+      `${this.path}/checkResourceConflicts`,
+      authorizationMiddleware,
+      this.allocationController.checkForOverlaps
+    );
+    this.router.put(
+      `${this.path}/solveResourceConflicts`,
+      authorizationMiddleware,
+      this.allocationController.overrideConflictingAllocations
+    );
+    this.router.post(
+      `${this.path}/checkOverridePossibility`,
+      authorizationMiddleware,
+      this.allocationController.checkOverridePossibility
+    );
   }
 }

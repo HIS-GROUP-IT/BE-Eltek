@@ -8,7 +8,7 @@ export class TaskDTO {
     
     @IsInt()
     @IsPositive()
-    public projectId: number;
+    public allocationId: number;
 
     @IsString()
     @MaxLength(255)
@@ -27,9 +27,11 @@ export class TaskDTO {
     @MaxLength(500)
     public taskDescription?: string;
 
+
+
     @IsInt()
     @IsPositive()
-    public hours: number;
+    public estimatedHours : number;
 
     @IsString()
     @IsOptional()

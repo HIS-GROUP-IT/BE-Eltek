@@ -52,6 +52,8 @@ export type Allocation = {
   chargeType?: "fixed" | "markup";
   createdAt?: Date;
   updatedAt?: Date;
+  canOverride: boolean,
+
 };
 
 export type Commitment = {

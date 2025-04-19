@@ -7,5 +7,26 @@ export interface IAllocationRepository {
   deleteAllocation(id: number): Promise<void>;
   getEmployeeAllocations(employeeId: number): Promise<Allocation[]>;
   getProjectAllocations(projectId: number): Promise<Allocation[]>;
-  findExistingAllocation(employeeId: number, projectId: number, phase: string): Promise<Allocation | null>;
+  findExistingAllocation(employeeId: number, projectId: number, phases: string[]): Promise<Allocation | null>;
+  checkForOverlaps(
+    employeeId: number, 
+    startDate: Date, 
+    endDate: Date, 
+  ): Promise<Allocation[]>
+overrideConflictingAllocations(
+    employeeId: number,
+    newStart: Date,
+    newEnd: Date,
+    currentAllocationId?: number
+  ): Promise<void>;
+  checkOverridePossibility(
+    employeeId: number,
+    startDate: Date | string,
+    endDate: Date | string
+  ): Promise<{
+    canOverride: boolean;
+    conflicts: Allocation[];
+    wouldDelete: Allocation[];
+    wouldModify: Allocation[];
+  }>
 }

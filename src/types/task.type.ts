@@ -3,11 +3,17 @@ export type ITask = {
   employeeName: string;
   employeeId: number;
   position: string;
+  allocationId: number;
+  createdBy: number;
   taskTitle: string;
   taskDescription: string;
-  hours: number;
+  phase : string ;
+  estimatedHours : number;
+  actualHours : number;
+  comment?: IComment
   status: "pending" | "in-progress" | "completed" | "rejected";
   reasonForRejection?: string;
+  taskDate: Date;
   modifiedBy: number;
   createdAt?: Date;
   updatedAt?: Date;
@@ -40,7 +46,7 @@ export type Week = {
   timesheets: TimesheetEntry[];
 };
 export type EmployeeTimesheet = {
-  projectId: number;
+  allocationId: number;
   employeeId: number;
   employeeName: string;
   email: string;
@@ -64,16 +70,20 @@ export type MonthlyTasks = {
   }>;
 };
 
-
-
 export type TimeTrackingStats = {
   totalHours: number;
   averageHoursDaily: number;
   completionRate: number;
   data: number[];
-}
+};
 
 export type TimeTrackingReport = {
   today: TimeTrackingStats;
   yesterday: TimeTrackingStats;
+};
+
+
+export type IComment = {
+  documments : string[];
+  comment : string
 }

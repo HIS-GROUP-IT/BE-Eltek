@@ -32,9 +32,9 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getTasksByProject(projectId: number): Promise<ITask[]> {
+    public async getTasksByProject(allocationId: number): Promise<ITask[]> {
         try {
-            return await this.taskRepository.getTasksByProject(projectId);
+            return await this.taskRepository.getTasksByProject(allocationId);
         } catch (error) {
             throw new HttpException(500, `Error fetching tasks: ${error.message}`);
         }
@@ -72,9 +72,9 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getTasksByEmployeeAndProject(employeeId: number, projectId: number): Promise<ITask[]> {
+    public async getTasksByEmployeeAndProject(employeeId: number, allocationId: number): Promise<ITask[]> {
         try {
-            return await this.taskRepository.getTasksByEmployeeAndProject(employeeId, projectId);
+            return await this.taskRepository.getTasksByEmployeeAndProject(employeeId, allocationId);
         } catch (error) {
             throw new HttpException(500, `Error fetching tasks: ${error.message}`);
         }
@@ -88,7 +88,7 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getTaskSummary(employeeId: number, startDate: Date, endDate: Date): Promise<{ projectId: number, totalHours: number }[]> {
+    public async getTaskSummary(employeeId: number, startDate: Date, endDate: Date): Promise<{ allocationId: number, totalHours: number }[]> {
         try {
             return await this.taskRepository.getTaskSummary(employeeId, startDate, endDate);
         } catch (error) {
@@ -121,21 +121,21 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getCurrentWeekHours(projectId: number): Promise<EmployeeTimesheet[]> {
+    public async getCurrentWeekHours(allocationId: number): Promise<EmployeeTimesheet[]> {
         try {
-            const timsheetSummary = await this.taskRepository.getCurrentWeekHours(projectId);
+            const timsheetSummary = await this.taskRepository.getCurrentWeekHours(allocationId);
             return timsheetSummary;
         } catch (error) {
             throw new HttpException(400, error)
         }
     }
 
-    public async getEmployeeMonthlyTasks( projectId: number,
+    public async getEmployeeMonthlyTasks( allocationId: number,
         employeeId: number,
         year: number,
         month: number): Promise<MonthlyTasks> {
         try {
-            const fetchedHours = await this.taskRepository.getEmployeeMonthlyTasks(projectId,employeeId,year,month);
+            const fetchedHours = await this.taskRepository.getEmployeeMonthlyTasks(allocationId,employeeId,year,month);
             return fetchedHours;
         } catch (error) {
             throw new HttpException(400, error)
@@ -207,5 +207,6 @@ export class TaskService implements ITaskService {
 
         }
     }
+
 
 }

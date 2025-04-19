@@ -49,6 +49,11 @@ RefreshToken.belongsTo(User, { foreignKey: 'userId' });
 
 Employee.hasMany(Task, { foreignKey: 'employeeId' });
 Task.belongsTo(Employee, { foreignKey: 'employeeId' });
+Task.belongsTo(AllocationModel, {
+  foreignKey: 'allocationId',
+  as: 'allocation',
+});
+
 
 
 Leave.belongsTo(Employee, {
