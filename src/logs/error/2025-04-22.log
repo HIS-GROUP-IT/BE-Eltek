@@ -4888,3 +4888,4 @@ TSError: ⨯ Unable to compile TypeScript:
 2025-04-22 12:56:42 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
 2025-04-22 12:57:07 error: [POST] /api/tasks/createTask >> StatusCode:: 500, Message:: Error creating task: notNull Violation: Task.phase cannot be null
 2025-04-22 13:00:36 error: [PUT] /api/tasks/updateTask >> StatusCode:: 500, Message:: Error updating task: Task not found
+2025-04-22 13:31:29 error: Unable to connect to the database: Table 'db_aa010d_eltek.employees' doesn't exist

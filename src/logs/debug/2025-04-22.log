@@ -2043,3 +2043,56 @@
 2025-04-22 13:23:20 info: =================================
 2025-04-22 13:23:23 info: Database connection established successfully.
 2025-04-22 13:23:26 info: Database tables synced successfully.
+2025-04-22 13:31:25 info: =================================
+2025-04-22 13:31:25 info: ======= ENV: development =======
+2025-04-22 13:31:25 info: 🚀 Identity Service listening on port 5000
+2025-04-22 13:31:25 info: =================================
+2025-04-22 13:31:28 info: Database connection established successfully.
+2025-04-22 13:31:29 error: Unable to connect to the database: Table 'db_aa010d_eltek.employees' doesn't exist
+2025-04-22 13:31:47 info: =================================
+2025-04-22 13:31:47 info: ======= ENV: development =======
+2025-04-22 13:31:47 info: 🚀 Identity Service listening on port 5000
+2025-04-22 13:31:47 info: =================================
+2025-04-22 13:31:50 info: Database connection established successfully.
+2025-04-22 13:31:55 info: Database tables synced successfully.
+2025-04-22 15:25:23 info: =================================
+2025-04-22 15:25:23 info: ======= ENV: development =======
+2025-04-22 15:25:23 info: 🚀 Identity Service listening on port 5000
+2025-04-22 15:25:23 info: =================================
+2025-04-22 15:25:26 info: Database connection established successfully.
+2025-04-22 15:25:29 info: Database tables synced successfully.
+2025-04-22 16:40:50 info: =================================
+2025-04-22 16:40:50 info: ======= ENV: development =======
+2025-04-22 16:40:50 info: 🚀 Identity Service listening on port 5000
+2025-04-22 16:40:50 info: =================================
+2025-04-22 16:40:54 info: Database connection established successfully.
+2025-04-22 16:40:57 info: Database tables synced successfully.
+2025-04-22 17:02:15 info: =================================
+2025-04-22 17:02:15 info: ======= ENV: development =======
+2025-04-22 17:02:15 info: 🚀 Identity Service listening on port 5000
+2025-04-22 17:02:15 info: =================================
+2025-04-22 17:02:20 info: Database connection established successfully.
+2025-04-22 17:02:23 info: Database tables synced successfully.
+2025-04-22 17:02:34 info: =================================
+2025-04-22 17:02:34 info: ======= ENV: development =======
+2025-04-22 17:02:34 info: 🚀 Identity Service listening on port 5000
+2025-04-22 17:02:34 info: =================================
+2025-04-22 17:02:36 info: Database connection established successfully.
+2025-04-22 17:02:39 info: Database tables synced successfully.
+2025-04-22 17:07:56 info: =================================
+2025-04-22 17:07:56 info: ======= ENV: development =======
+2025-04-22 17:07:56 info: 🚀 Identity Service listening on port 5000
+2025-04-22 17:07:56 info: =================================
+2025-04-22 17:07:59 info: Database connection established successfully.
+2025-04-22 17:08:02 info: Database tables synced successfully.
+2025-04-22 17:10:20 info: =================================
+2025-04-22 17:10:20 info: ======= ENV: development =======
+2025-04-22 17:10:20 info: 🚀 Identity Service listening on port 5000
+2025-04-22 17:10:20 info: =================================
+2025-04-22 17:10:23 info: Database connection established successfully.
+2025-04-22 17:10:26 info: Database tables synced successfully.
+2025-04-22 17:10:37 info: =================================
+2025-04-22 17:10:37 info: ======= ENV: development =======
+2025-04-22 17:10:37 info: 🚀 Identity Service listening on port 5000
+2025-04-22 17:10:37 info: =================================
+2025-04-22 17:10:40 info: Database connection established successfully.

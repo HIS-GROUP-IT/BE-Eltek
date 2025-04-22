@@ -727,40 +727,60 @@ export class TaskRepository implements ITaskRepository {
               }
             } = {};
         
-            // Pre-process allocations into weekly buckets
+            // Pre-process allocations into weekly buckets (Monday-Friday weeks)
             const allocationMap = new Map<string, number>();
             for (const allocation of allocations) {
               const start = new Date(allocation.start);
               const end = new Date(allocation.end);
-              const weeks = this.getWeeksBetweenDates(start, end);
-              const weeklyHours = Number(allocation.hoursWeek) || 0;
-              
-              // Distribute allocation hours evenly across weeks
-              const hoursPerWeek = weeklyHours / weeks;
-              
               let current = new Date(start);
-              while (current <= end) {
-                const year = current.getFullYear();
-                const month = String(current.getMonth() + 1).padStart(2, '0');
-                const week = this.getWeekOfMonth(current);
-                const key = `${year}-${month}-${week}`;
         
-                allocationMap.set(key, (allocationMap.get(key) || 0) + hoursPerWeek);
-                
-                // Move to next week
+              while (current <= end) {
+                // Get Monday of the current week
+                const weekStart = new Date(current);
+                weekStart.setDate(current.getDate() - (current.getDay() === 0 ? 6 : current.getDay() - 1));
+                weekStart.setHours(0, 0, 0, 0);
+        
+                // Get Friday of the current week
+                const weekEnd = new Date(weekStart);
+                weekEnd.setDate(weekStart.getDate() + 4);
+                weekEnd.setHours(23, 59, 59, 999);
+        
+                // Calculate overlapping days
+                const overlapStart = start > weekStart ? start : weekStart;
+                const overlapEnd = end < weekEnd ? end : weekEnd;
+                const workDays = Math.max(0, Math.ceil((overlapEnd.getTime() - overlapStart.getTime()) / (1000 * 60 * 60 * 24)) + 1);        
+                // Only count weeks with actual work days
+                if (workDays > 0) {
+                  const year = weekStart.getFullYear();
+                  const month = String(weekStart.getMonth() + 1).padStart(2, '0');
+                  const week = this.getWeekOfMonth(weekStart);
+                  const key = `${year}-${month}-${week}`;
+        
+                  // Calculate allocated hours for this week (pro-rated if partial week)
+                  const weeklyHours = Number(allocation.hoursWeek) || 0;
+                  const dailyHours = weeklyHours / 5; // Assuming 5-day work week
+                  const allocatedHours = dailyHours * workDays;
+        
+                  allocationMap.set(key, (allocationMap.get(key) || 0) + allocatedHours);
+                }
+        
+                // Move to next Monday
                 current.setDate(current.getDate() + 7);
               }
             }
         
-            // Process tasks
+            // Process tasks (group by work week)
             for (const task of tasks) {
               const taskDate = new Date(task.taskDate);
-              const year = taskDate.getFullYear();
-              const month = String(taskDate.getMonth() + 1).padStart(2, '0');
-              const week = this.getWeekOfMonth(taskDate);
+              const weekStart = new Date(taskDate);
+              weekStart.setDate(taskDate.getDate() - (taskDate.getDay() === 0 ? 6 : taskDate.getDay() - 1));
+              weekStart.setHours(0, 0, 0, 0);
+        
+              const year = weekStart.getFullYear();
+              const month = String(weekStart.getMonth() + 1).padStart(2, '0');
+              const week = this.getWeekOfMonth(weekStart);
               const key = `${year}-${month}-${week}`;
         
-              // Initialize structure
               if (!utilizationMap[year]) utilizationMap[year] = {};
               if (!utilizationMap[year][month]) utilizationMap[year][month] = {};
               if (!utilizationMap[year][month][week]) {
@@ -770,7 +790,6 @@ export class TaskRepository implements ITaskRepository {
                 };
               }
         
-              // Accumulate actual hours
               utilizationMap[year][month][week].actual += Number(task.actualHours) || 0;
             }
         
@@ -790,7 +809,7 @@ export class TaskRepository implements ITaskRepository {
         
                 for (const [week, data] of Object.entries(weeks)) {
                   const weekNumber = Number(week);
-                  if (weekNumber > 4) continue; // Only support up to week4
+                  if (weekNumber > 4) continue;
         
                   const weekKey = `week${weekNumber}` as keyof typeof utilization[number][string];
                   const utilizationPercent = data.allocated > 0 
@@ -802,7 +821,6 @@ export class TaskRepository implements ITaskRepository {
               }
             }
         
-            // Update employee record
             await Employee.update(
               { utilization },
               { where: { id: employeeId } }
@@ -816,19 +834,14 @@ export class TaskRepository implements ITaskRepository {
           }
         }
         
-        private getWeeksBetweenDates(start: Date, end: Date): number {
-          const msPerWeek = 1000 * 60 * 60 * 24 * 7;
-          return Math.ceil((end.getTime() - start.getTime()) / msPerWeek);
-        }
-        
+        // Get week of month (Monday-based)
         private getWeekOfMonth(date: Date): number {
-          const start = new Date(date);
-          start.setDate(1);
-          start.setHours(0, 0, 0, 0);
-        
-          const day = date.getDay() || 7; 
-          const diff = date.getDate() - start.getDate() + ((start.getDay() || 7) - day);
-          return Math.ceil((diff + 1) / 7);
+          const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+          const firstMonday = new Date(firstDayOfMonth);
+          firstMonday.setDate(firstDayOfMonth.getDate() + ((1 - firstDayOfMonth.getDay() + 7) % 7));
+          
+          const diffInDays = Math.floor((date.getTime() - firstMonday.getTime()) / (1000 * 60 * 60 * 24));
+          return Math.floor(diffInDays / 7) + 1;
         }
       }
 

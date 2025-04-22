@@ -13,7 +13,6 @@ import Task from "@/models/task/task.model";
 export class AllocationRepository implements IAllocationRepository {
   public async createAllocation(allocationData: Partial<Allocation>): Promise<Allocation> {
     try {
-        // Validate required fields
         if (!allocationData.phases || !Array.isArray(allocationData.phases)) {
             throw new HttpException(400, "Phases must be a non-empty array");
         }
