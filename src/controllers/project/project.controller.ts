@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { Container } from "typedi";
-import { IProject } from "@/types/project.types";
+import { IEstimatedCost, IProject } from "@/types/project.types";
 import { CustomResponse } from "@/types/response.interface";
 import { PROJECT_SERVICE_TOKEN } from "@/interfaces/project/IProjectService";
 import { RequestWithUser } from "@/types/auth.types";
@@ -109,6 +109,21 @@ export class ProjectController {
             const response: CustomResponse<IProject[]> = {
                 data: activetedProject,
                 message: "Project actived successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    public calculateEstimatedCost = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId;
+            const estimatedCost = await this.projectService.calculateEstimatedCost(projectId);
+            const response: CustomResponse<IEstimatedCost> = {
+                data: estimatedCost,
+                message: "Project estimatedCost fetched successfully",
                 error: false
             };
             res.status(200).json(response);

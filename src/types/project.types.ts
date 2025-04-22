@@ -12,6 +12,7 @@ export type IProject = {
     duration: number;
     clientName: string;
     clientEmail: string;
+    estimatedCost?: IEstimatedCost;
     createdBy:number;
     clientCompany: string;
     phases: Phase[];
@@ -35,3 +36,10 @@ export type IProject = {
     experience: number;
     rate?: number; 
   };
+
+
+  export type IEstimatedCost = {
+    [month: string]: number;
+  };
+  
+

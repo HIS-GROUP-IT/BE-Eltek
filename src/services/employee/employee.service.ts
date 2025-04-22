@@ -15,7 +15,7 @@ export class EmployeeService implements IEmployeeService {
     const existingEmployee = await this.employeeRepository.getEmployeeByEmail(employeeData.email);
     if (existingEmployee) {
       if (existingEmployee.status === "inactive") {
-        throw new HttpException(409, "Email exists. Reactivate employee.");
+        throw new HttpException(409, "Email already exists and employee is inactive. Please reactivate the employee to proceed.");
       }
       throw new HttpException(409, "Email already exists");
     }
@@ -23,7 +23,7 @@ export class EmployeeService implements IEmployeeService {
     const existingIdNumber = await this.employeeRepository.getEmployeeByIdNumber(employeeData.idNumber);
     if (existingIdNumber) {
       if (existingIdNumber.status === "inactive") {
-        throw new HttpException(409, "ID Number exists. Reactivate employee.");
+        throw new HttpException(409, "ID Number already exists and employee is inactive. Please reactivate the employee to proceed.");
       }
       throw new HttpException(409, "ID Number already exists");
     }

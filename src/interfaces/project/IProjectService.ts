@@ -1,5 +1,5 @@
 import { Token } from 'typedi';
-import { IProject } from "@/types/project.types";
+import { IEstimatedCost, IProject } from "@/types/project.types";
 
 
 export interface IProjectService {
@@ -9,10 +9,11 @@ export interface IProjectService {
     deleteProject(projectId: number): Promise<void>;
     getAllProjects(): Promise<IProject[]> ;
     getProjectById(projectId: number): Promise<IProject | null>;
-    getProjectsByEmployee(employeeId: number): Promise<IProject[]>
+   
     activeProject(
         projectData: Partial<IProject>
       ): Promise<IProject>
+       calculateEstimatedCost(projectId: number): Promise<IEstimatedCost>
 }
 
 

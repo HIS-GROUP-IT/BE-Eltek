@@ -6,13 +6,40 @@ import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTas
 import Employee from "@/models/employee/employee.model";
 import { HttpException } from "@/exceptions/HttpException";
 import AllocationModel from "@/models/allocation/allocation.model";
+import { IUtilization } from "@/types/employee.types";
 
 @Service()
 export class TaskRepository implements ITaskRepository {
-    public async createTask(taskData: Partial<ITask>): Promise<ITask> {
-        const task = await Task.create(taskData);
-        return task.get({ plain: true });
+  public async createTask(taskData: Partial<ITask>): Promise<ITask> {
+    const task = await Task.create(taskData);
+    await this.calculateUtilization(taskData.employeeId);
+    return task.get({ plain: true });
+  }
+  
+  public async updateTask(taskData: Partial<ITask>): Promise<ITask> {
+    const task = await Task.findByPk(taskData.id);
+    if (!task) throw new Error("Task not found");
+    
+    const prevEmployeeId = task.employeeId;
+    await task.update(taskData);
+    
+    // Recalculate for both previous and current employee if changed
+    await this.calculateUtilization(prevEmployeeId);
+    if (prevEmployeeId !== taskData.employeeId) {
+      await this.calculateUtilization(taskData.employeeId);
     }
+    
+    return task.get({ plain: true });
+  }
+  
+  public async deleteTask(id: number): Promise<void> {
+    const task = await Task.findByPk(id);
+    if (!task) throw new Error("Task not found");
+    
+    const employeeId = task.employeeId;
+    await task.destroy();
+    await this.calculateUtilization(employeeId);
+  }
 
     public adjustTimezone = (date: Date): Date => {
         const adjustedDate = new Date(date);
@@ -20,12 +47,6 @@ export class TaskRepository implements ITaskRepository {
         return adjustedDate;
       };
 
-    public async updateTask(taskData: Partial<ITask>): Promise<ITask> {
-        const task = await Task.findByPk(taskData.id);
-        if (!task) throw new Error("Task not found");
-        await task.update(taskData);
-        return task.get({ plain: true });
-    }
 
     public async getTasksByEmployee(employeeId: number): Promise<ITask[]> {
         return await Task.findAll({ 
@@ -50,11 +71,7 @@ export class TaskRepository implements ITaskRepository {
         });
     }
 
-    public async deleteTask(id: number): Promise<void> {
-        const task = await Task.findByPk(id);
-        if (!task) throw new Error("Task not found");
-        await task.destroy();
-    }
+
 
     public async getTaskById(id: number): Promise<ITask | null> {
         return await Task.findByPk(id, { raw: true });
@@ -113,6 +130,7 @@ export class TaskRepository implements ITaskRepository {
         const task = await Task.findByPk(approvalData.taskId);
         if (!task) throw new Error("Task not found");
         await task.update({ status: 'completed', modifiedBy: approvalData.modifiedBy });
+        await this.calculateUtilization(approvalData.employeeId);
         return task.get({ plain: true });
     }
 
@@ -682,6 +700,135 @@ export class TaskRepository implements ITaskRepository {
             thisYear: await processYear(0),
             lastYear: await processYear(1)
           };
+        }
+        
+
+        public async calculateUtilization(employeeId: number): Promise<IUtilization> {
+          try {
+            const [tasks, allocations] = await Promise.all([
+              Task.findAll({
+                where: { 
+                  employeeId,
+                  status: 'completed'
+                },
+                raw: true
+              }),
+              AllocationModel.findAll({
+                where: { employeeId },
+                raw: true
+              })
+            ]);
+        
+            const utilizationMap: {
+              [year: number]: {
+                [month: string]: {
+                  [week: string]: { actual: number; allocated: number }
+                }
+              }
+            } = {};
+        
+            // Pre-process allocations into weekly buckets
+            const allocationMap = new Map<string, number>();
+            for (const allocation of allocations) {
+              const start = new Date(allocation.start);
+              const end = new Date(allocation.end);
+              const weeks = this.getWeeksBetweenDates(start, end);
+              const weeklyHours = Number(allocation.hoursWeek) || 0;
+              
+              // Distribute allocation hours evenly across weeks
+              const hoursPerWeek = weeklyHours / weeks;
+              
+              let current = new Date(start);
+              while (current <= end) {
+                const year = current.getFullYear();
+                const month = String(current.getMonth() + 1).padStart(2, '0');
+                const week = this.getWeekOfMonth(current);
+                const key = `${year}-${month}-${week}`;
+        
+                allocationMap.set(key, (allocationMap.get(key) || 0) + hoursPerWeek);
+                
+                // Move to next week
+                current.setDate(current.getDate() + 7);
+              }
+            }
+        
+            // Process tasks
+            for (const task of tasks) {
+              const taskDate = new Date(task.taskDate);
+              const year = taskDate.getFullYear();
+              const month = String(taskDate.getMonth() + 1).padStart(2, '0');
+              const week = this.getWeekOfMonth(taskDate);
+              const key = `${year}-${month}-${week}`;
+        
+              // Initialize structure
+              if (!utilizationMap[year]) utilizationMap[year] = {};
+              if (!utilizationMap[year][month]) utilizationMap[year][month] = {};
+              if (!utilizationMap[year][month][week]) {
+                utilizationMap[year][month][week] = { 
+                  actual: 0, 
+                  allocated: allocationMap.get(key) || 0 
+                };
+              }
+        
+              // Accumulate actual hours
+              utilizationMap[year][month][week].actual += Number(task.actualHours) || 0;
+            }
+        
+            // Convert to IUtilization format and calculate percentages
+            const utilization: IUtilization = {};
+            for (const [yearStr, months] of Object.entries(utilizationMap)) {
+              const year = Number(yearStr);
+              utilization[year] = {};
+              
+              for (const [month, weeks] of Object.entries(months)) {
+                utilization[year][month] = { 
+                  week1: 0, 
+                  week2: 0, 
+                  week3: 0, 
+                  week4: 0 
+                };
+        
+                for (const [week, data] of Object.entries(weeks)) {
+                  const weekNumber = Number(week);
+                  if (weekNumber > 4) continue; // Only support up to week4
+        
+                  const weekKey = `week${weekNumber}` as keyof typeof utilization[number][string];
+                  const utilizationPercent = data.allocated > 0 
+                    ? Math.min((data.actual / data.allocated) * 100, 100)
+                    : 0;
+        
+                  utilization[year][month][weekKey] = Number(utilizationPercent.toFixed(1));
+                }
+              }
+            }
+        
+            // Update employee record
+            await Employee.update(
+              { utilization },
+              { where: { id: employeeId } }
+            );
+        
+            return utilization;
+        
+          } catch (error) {
+            console.error('Utilization calculation error:', error);
+            throw new HttpException(500, 'Failed to calculate utilization');
+          }
+        }
+        
+        private getWeeksBetweenDates(start: Date, end: Date): number {
+          const msPerWeek = 1000 * 60 * 60 * 24 * 7;
+          return Math.ceil((end.getTime() - start.getTime()) / msPerWeek);
+        }
+        
+        private getWeekOfMonth(date: Date): number {
+          const start = new Date(date);
+          start.setDate(1);
+          start.setHours(0, 0, 0, 0);
+        
+          const day = date.getDay() || 7; 
+          const diff = date.getDate() - start.getDate() + ((start.getDay() || 7) - day);
+          return Math.ceil((diff + 1) / 7);
         }
       }
 

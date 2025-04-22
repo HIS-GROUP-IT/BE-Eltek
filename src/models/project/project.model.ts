@@ -2,17 +2,18 @@ import { DataTypes, Model, Optional } from 'sequelize';
 import { Sequelize } from 'sequelize';
 import User from '../user/user.model';
 import Employee from '../employee/employee.model';
-import { IProject, Phase, ProjectStatus, Role } from '@/types/project.types';
+import { IEstimatedCost, IProject, Phase, ProjectStatus, Role } from '@/types/project.types';
 
 type ProjectCreationAttributes = Optional<IProject, 'id' | 'createdAt' | 'updatedAt'>;
 
 class Project extends Model<IProject, ProjectCreationAttributes> implements IProject {
-  public id!: number;
+  public id: number;
   public name!: string;
   public description!: string;
   public status!: ProjectStatus;
   public startDate!: Date;
   public endDate!: Date;
+  public estimatedCost?:IEstimatedCost
   public budget!: number;
   public duration!: number;
   public clientName!: string;
@@ -83,6 +84,11 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
           validate: {
             min: 0
           }
+        },
+        estimatedCost: { 
+          type: DataTypes.JSON, 
+          allowNull: true,
+          defaultValue: {}, 
         },
         clientName: {
           type: DataTypes.STRING,

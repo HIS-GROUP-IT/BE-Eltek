@@ -21,6 +21,7 @@ export const {
   FIREBASE_PRIVATE_KEY_ID,
   FIREBASE_PROJECT_ID,
   FIREBASE_TOKEN_URI,
+  SEND_GRID_API_KEY,
   FIREBASE_TYPE,
 } = process.env;
 export const { DB_NAME, DB_HOST, DB_PASSWORD, DB_USER } = process.env;

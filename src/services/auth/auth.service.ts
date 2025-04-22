@@ -116,33 +116,18 @@ export class AuthService implements IAuthService {
         await this.authRepository.deleteRefreshToken(token);
     }
 
-    public async sendOtp(email: string): Promise<string> {
-        const user = await this.authRepository.findUserByEmail(email);
+    public async sendOtp(email: string): Promise<any> {
+        const user = await this.authRepository.findUserByEmail("kwanelendaba69@gmail.com");
         if (!user) {
             throw new HttpException(404, "User Not Found");
         }
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         await this.authRepository.saveOtp(email, otp);
-        
-        const transporter = nodemailer.createTransport({
-            host: process.env.EMAIL_HOST,
-            port: parseInt(process.env.EMAIL_PORT || '587'),
-            secure: process.env.EMAIL_SECURE === 'true',
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
-            },
-        });    
-        
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: email,
-            subject: "Password Reset OTP",
-            html: `<p>Your OTP to reset your password is <strong>${otp}</strong></p>`,
-        };    
-        
-        await transporter.sendMail(mailOptions);    
-        return "OTP sent to your email";
+        const response = {
+            otp,
+            fullName : user.fullName 
+        }
+        return response;
     }
 
     public async verifyOtp(email: string, otp: string): Promise<string> {
@@ -183,6 +168,35 @@ export class AuthService implements IAuthService {
         return await this.createToken(updatedUser);
     }
     
-      
+    public async resetPassword(
+        email: string,
+        otp: string,
+        newPassword: string
+    ): Promise<IUser> {
+        try {
+            // Additional validation in service layer
+            if (!email || !email.includes('@')) {
+                throw new HttpException(400, "Valid email is required");
+            }
+    
+            if (!otp || otp.length !== 6) {
+                throw new HttpException(400, "Valid 6-digit OTP is required");
+            }
+    
+            const updatedUser = await this.authRepository.resetPasswordWithOtp(
+                email,
+                otp,
+                newPassword
+            );
+    
+            return updatedUser;
+        } catch (error) {
+            // More specific error handling
+            if (error instanceof HttpException) {
+                throw error;
+            }
+            throw new HttpException(400, error.message || "Password reset failed");
+        }
+    }
 
 }

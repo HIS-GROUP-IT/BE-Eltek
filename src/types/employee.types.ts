@@ -12,7 +12,7 @@ export type IEmployee = {
   status: "active" | "inactive";
   location: string;
   assigned: boolean;
-  utilization?:number
+  utilization?:IUtilization
   skills ?: string[]
   experience?:number;
   commitments?: Commitment[];
@@ -52,8 +52,7 @@ export type Allocation = {
   chargeType?: "fixed" | "markup";
   createdAt?: Date;
   updatedAt?: Date;
-  canOverride: boolean,
-
+  canOverride: boolean
 };
 
 export type Commitment = {
@@ -61,4 +60,15 @@ export type Commitment = {
   title: string;
   start: Date;
   end: Date;
+};
+
+export type IUtilization = {
+  [year: number]: {
+    [month: string]: {
+      week1: number;
+      week2: number;
+      week3: number;
+      week4: number;
+    };
+  };
 };

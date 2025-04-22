@@ -23,5 +23,6 @@ export class ProjectRoute implements Routes {
         this.router.delete(`${this.path}/deleteProject/:projectId`,authorizationMiddleware, this.projectController.deleteProject); 
         this.router.get(`${this.path}/getEmployeeProjects/:employeeId`,authorizationMiddleware, this.projectController.getProjectsByEmployee); 
         this.router.put(`${this.path}/activeProject`,authorizationMiddleware, this.projectController.activeProject); 
+        this.router.get(`${this.path}/getProjectEstimatedCost/:projectId`,authorizationMiddleware, this.projectController.calculateEstimatedCost); 
     }
 }

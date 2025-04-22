@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import { IProject } from "@/types/project.types";
+import { IEstimatedCost, IProject } from "@/types/project.types";
 import { HttpException } from "@/exceptions/HttpException"; // Custom Exception handling class
 import { IProjectService, PROJECT_SERVICE_TOKEN } from "@/interfaces/project/IProjectService";
 import { ProjectRepository } from "@/repositories/project/project.repository";
@@ -8,7 +8,7 @@ import { ProjectRepository } from "@/repositories/project/project.repository";
 export class ProjectService implements IProjectService {
     constructor(private projectRepository: ProjectRepository) {}
 
-    public async createProject(projectData: Partial<IProject>): Promise<IProject> {
+    public async createProject(projectData: IProject): Promise<IProject> {
 
         const existingProject = await this.projectRepository.getProjectByName(projectData.name);
         if (existingProject) {
@@ -25,7 +25,7 @@ export class ProjectService implements IProjectService {
         }
     }
 
-    public async updateProject(projectData: Partial<IProject>): Promise<IProject> {
+    public async updateProject(projectData: IProject): Promise<IProject> {
         try {
             return await this.projectRepository.updateProject(projectData);
         } catch (error) {
@@ -59,16 +59,9 @@ export class ProjectService implements IProjectService {
         }
     }
 
-    public async getProjectsByEmployee(employeeId: number): Promise<IProject[]> {
-        try {
-            const fetchedProjects = await this.projectRepository.getProjectsByEmployee(employeeId);
-            return fetchedProjects;
-        } catch (error) {
-            throw new HttpException(400, error);
-        }
-    }
 
-    public async activeProject(projectData: Partial<IProject>): Promise<IProject> {
+
+    public async activeProject(projectData: IProject): Promise<IProject> {
         try {
             return await this.projectRepository.activeProject(projectData);
         } catch (error) {
@@ -76,4 +69,11 @@ export class ProjectService implements IProjectService {
         }
     }
 
+    public async calculateEstimatedCost(projectId: number): Promise<IEstimatedCost> {
+        try {
+            return await this.projectRepository.calculateEstimatedCost(projectId);
+        } catch (error) {
+            throw new HttpException(500, `Error calculating estimated cost: ${error.message}`);
+        }
+    }
 }

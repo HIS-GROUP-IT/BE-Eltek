@@ -3,6 +3,7 @@ import { Sequelize } from "sequelize";
 import Employee from "../employee/employee.model";
 import User from "../user/user.model";
 import { IComment } from "@/types/task.type";
+import { Allocation } from "@/types/employee.types";
 
 class Task extends Model {
   public id!: number;
@@ -21,6 +22,7 @@ class Task extends Model {
   public reasonForRejection?: string;
   public taskDate: Date;
   public modifiedBy!: number;
+  public readonly allocation : Allocation
   public readonly totalHours: number;
   public readonly pendingHours: number;
   public readonly completedHours: number;

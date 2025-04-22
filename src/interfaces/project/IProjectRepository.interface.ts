@@ -1,4 +1,4 @@
-import { IProject } from "@/types/project.types";
+import { IEstimatedCost, IProject } from "@/types/project.types";
 
 
 export interface IProjectRepository {
@@ -12,5 +12,5 @@ export interface IProjectRepository {
     activeProject(
         projectData: Partial<IProject>
       ): Promise<IProject>
-
+ calculateEstimatedCost(projectId: number): Promise<IEstimatedCost>
 }

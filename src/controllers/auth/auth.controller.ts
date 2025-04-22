@@ -5,6 +5,8 @@ import { DataStoreInToken, IUser, IUserLogin, TokenData } from "@/types/auth.typ
 import { CustomResponse } from "@/types/response.interface";
 import jwt from 'jsonwebtoken';
 import crypto from "crypto";
+import { otpEmailTemplate, sendMail } from "@/utils/email";
+import { HttpException } from "@/exceptions/HttpException";
 
 export class AuthController {
     private auth;
@@ -160,8 +162,15 @@ export class AuthController {
     public sendOtp = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { email } = req.body;
+            console.log("Email", email)
             const message = await this.auth.sendOtp(email);
-            const response: CustomResponse<null> = { data: null, message, error: false };
+            await sendMail(
+                email,
+                "One Time OTP",
+                "One time OTP",
+                otpEmailTemplate(message.fullName,message.otp,"Eltek","Reset Password")
+            )           
+            const response: CustomResponse<null> = { data: null, message:"OTP sent successfully", error: false };
             res.status(200).json(response);
         } catch (error) {
             next(error);
@@ -179,17 +188,32 @@ export class AuthController {
         }
     }
 
-    public updatePassword = async (req: Request, res: Response, next: NextFunction) => {
+    public updatePasswordWithOtp = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { email, otp, newPassword } = req.body;
-            const updatedUser = await this.auth.updatePassword(email, otp, newPassword);
-            const response: CustomResponse<IUser> = { data: updatedUser, message: "Password updated successfully", error: false };
+            
+            // Basic validation in controller
+            if (!email || !otp || !newPassword) {
+                throw new HttpException(400, "Email, OTP and new password are required");
+            }
+    
+            const updatedUser = await this.auth.resetPassword(
+                email,
+                otp,
+                newPassword
+            );
+    
+            const response: CustomResponse<IUser> = { 
+                data: updatedUser, 
+                message: "Password updated successfully", 
+                error: false 
+            };
+            
             res.status(200).json(response);
         } catch (error) {
             next(error);
         }
     }
-
     public updateUser = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const userData: Partial<IUser> = req.body;

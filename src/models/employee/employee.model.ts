@@ -1,7 +1,7 @@
 import { DataTypes, Model } from 'sequelize';
 import { Sequelize } from 'sequelize';
 import Project from '../project/project.model';
-import { Allocation, Commitment, IEmployee } from '@/types/employee.types';
+import { Allocation, Commitment, IEmployee, IUtilization } from '@/types/employee.types';
 
 class Employee extends Model<IEmployee> implements IEmployee {
   public id!: number;
@@ -17,7 +17,7 @@ class Employee extends Model<IEmployee> implements IEmployee {
   public status!: 'active' | 'inactive';
   public location!: string;
   public assigned!: boolean;
-  public utilization!:number;
+  public utilization!:IUtilization;
   public skills!: string[];
   public experience! : number;
   public ctc?: number;
@@ -61,7 +61,7 @@ class Employee extends Model<IEmployee> implements IEmployee {
         },
         race: { type: DataTypes.STRING, allowNull: true },
         experience: { type: DataTypes.INTEGER, allowNull: true },
-        utilization: { type: DataTypes.INTEGER, allowNull: true },
+        utilization: { type: DataTypes.JSON, allowNull: true },
         location: { type: DataTypes.STRING, allowNull: false },
         assigned: { 
           type: DataTypes.BOOLEAN, 

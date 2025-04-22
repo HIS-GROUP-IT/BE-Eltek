@@ -13,24 +13,35 @@ import Task from "@/models/task/task.model";
 export class AllocationRepository implements IAllocationRepository {
   public async createAllocation(allocationData: Partial<Allocation>): Promise<Allocation> {
     try {
-      if (!allocationData.phases || !Array.isArray(allocationData.phases)) {
-        throw new HttpException(400, "Phases must be a non-empty array");
-      }
-  
-      const normalizedPhases = JSON.stringify([...allocationData.phases].sort());
-  
-      const allocation = await AllocationModel.create({
-        ...allocationData,
-        normalizedPhases
-      });
-  
-      return allocation.get({ plain: true });
-  
+        // Validate required fields
+        if (!allocationData.phases || !Array.isArray(allocationData.phases)) {
+            throw new HttpException(400, "Phases must be a non-empty array");
+        }
+
+        if (!allocationData.employeeId) {
+            throw new HttpException(400, "Employee ID is required");
+        }
+        const employee = await Employee.findByPk(allocationData.employeeId);
+        if (!employee) {
+            throw new HttpException(404, "Employee not found");
+        }
+        const normalizedPhases = JSON.stringify([...allocationData.phases].sort());
+
+        const allocation = await AllocationModel.create({
+            ...allocationData,
+            normalizedPhases
+        });
+        await employee.update({ assigned: true });
+        return allocation.get({ plain: true });
+
     } catch (error) {
-      console.error("Create allocation error:", error);
-      throw new HttpException(500, "Error creating allocation");
+        console.error("Create allocation error:", error);
+        if (error instanceof HttpException) {
+            throw error;
+        }
+        throw new HttpException(500, "Error creating allocation");
     }
-  }
+}
   
 
   public async getAllocationById(id: number): Promise<Allocation | null> {
@@ -151,11 +162,20 @@ export class AllocationRepository implements IAllocationRepository {
 
   public async getEmployeeAllocations(employeeId: number): Promise<Allocation[]> {
     return await AllocationModel.findAll({
-      where: { employeeId },
-      include: [{ model: Project, as: 'project' }],
-      raw: true
+        where: { employeeId },  
+        include: [{
+            model: Project,
+            as: 'project',
+            where: {
+                status: {
+                    [Op.or]: ['completed', 'on going']
+                }
+            },
+            required: true
+        }],
+        raw: true
     });
-  }
+}
 
   public async getProjectAllocations(projectId: number): Promise<Allocation[]> {
     return await AllocationModel.findAll({

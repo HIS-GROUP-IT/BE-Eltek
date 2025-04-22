@@ -23,6 +23,7 @@ export type ITaskModification = {
   taskId: number;
   reasonForRejection?: string;
   modifiedBy: number;
+  employeeId?: number
 };
 
 export type IProjectsHours = {

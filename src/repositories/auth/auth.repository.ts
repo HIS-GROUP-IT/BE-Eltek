@@ -98,6 +98,42 @@ export class AuthRepository implements IAuthRepository {
       
         return updatedUser;
       }
-      
+      public async resetPasswordWithOtp(
+        email: string, 
+        otp: string, 
+        newPassword: string
+    ): Promise<IUser> {
+        // Validate inputs
+        if (!email || !otp || !newPassword) {
+            throw new Error("Email, OTP and new password are required");
+        }
+    
+        const user = await User.findOne({
+            where: { email, otp },
+            raw: false
+        });
+    
+        if (!user) {
+            throw new Error("Invalid OTP or email");
+        }
+    
+        // Additional password validation
+        if (typeof newPassword !== 'string' || newPassword.length < 8) {
+            throw new Error("Password must be at least 8 characters");
+        }
+    
+        try {
+            const hashedPassword = await hash(newPassword, 10);
+            
+            await user.update({ 
+                password: hashedPassword,
+                otp: "" // Clear the OTP after successful reset
+            });
+    
+            return user.get({ plain: true });
+        } catch (error) {
+            throw new Error(`Password hashing failed: ${error.message}`);
+        }
+    }
 }
 

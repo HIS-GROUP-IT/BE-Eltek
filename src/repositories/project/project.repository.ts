@@ -4,9 +4,11 @@ import Project from "@/models/project/project.model";
 import Employee from "@/models/employee/employee.model"; 
 import { HttpException } from "@/exceptions/HttpException";
 import { Op, Transaction } from "sequelize";
-import { IProject, ProjectStatus } from "@/types/project.types";
+import { IEstimatedCost, IProject, ProjectStatus } from "@/types/project.types";
+import AllocationModel from "@/models/allocation/allocation.model";
+import Task from "@/models/task/task.model";
 
-type UpdateProjectData = Partial<IProject> & { id: number };
+type UpdateProjectData = IProject & { id?: number };
 
 @Service()
 export class ProjectRepository implements IProjectRepository {
@@ -114,4 +116,45 @@ export class ProjectRepository implements IProjectRepository {
         : new HttpException(500, "Error deleting project");
     }
   }
+
+  public async calculateEstimatedCost(projectId: number): Promise<IEstimatedCost> {
+    const project = await Project.findByPk(projectId);
+    if (!project) {
+        throw new HttpException(404, "Project not found");
+    }
+
+    const tasks = await Task.findAll({
+        where: { 
+            status: "completed" // Add status filter here
+        },
+        include: [{
+            model: AllocationModel,
+            as: "allocation",
+            where: { projectId: projectId },
+            attributes: ["chargeOutRate"],
+        }],
+    });
+
+    const monthlyCosts: IEstimatedCost = {};
+
+    for (const task of tasks) {
+        const allocation = task.allocation as AllocationModel;
+        if (!allocation || allocation.chargeOutRate == null) continue;
+
+        const actualHours = task.actualHours || 0;
+        if (actualHours <= 0) continue;
+
+        const taskDate = new Date(task.taskDate);
+        const month = `${taskDate.getFullYear()}-${(taskDate.getMonth() + 1)
+            .toString()
+            .padStart(2, "0")}`;
+
+        const cost = actualHours * allocation.chargeOutRate;
+        monthlyCosts[month] = (monthlyCosts[month] || 0) + cost;
+    }
+
+    return monthlyCosts;
+}
+
+
 }

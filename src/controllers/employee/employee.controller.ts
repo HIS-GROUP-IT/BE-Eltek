@@ -5,6 +5,7 @@ import { CustomResponse } from "@/types/response.interface";
 import { EMPLOYEE_SERVICE_TOKEN } from "@/interfaces/employee/IEmployeeService";
 import { RequestWithUser } from "@/types/auth.types";
 import { IProject } from "@/types/project.types";
+import {sendMail, welcomeEmployeeTemplate } from "@/utils/email";
 
 export class EmployeeController {
     private employeeService;
@@ -22,6 +23,16 @@ export class EmployeeController {
               createdBy:createdBy
             }
             const createdEmployee = await this.employeeService.createEmployee(data);
+            await sendMail(createdEmployee.email,
+                "Your Eltek account has been successfully created",
+                `Good Day ${createdEmployee.fullName}`,
+                welcomeEmployeeTemplate(createdEmployee.fullName,
+                    "Eltek",
+                    "https://eltek-frontend.vercel.app/",
+                    
+                )
+            )
+
             const response: CustomResponse<IEmployee> = {
                 data: createdEmployee,
                 message: "Employee created successfully",
