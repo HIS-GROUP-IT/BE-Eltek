@@ -2037,3 +2037,9 @@
 2025-04-22 13:05:33 info: ======= ENV: development =======
 2025-04-22 13:05:33 info: 🚀 Identity Service listening on port 5000
 2025-04-22 13:05:33 info: =================================
+2025-04-22 13:23:20 info: =================================
+2025-04-22 13:23:20 info: ======= ENV: development =======
+2025-04-22 13:23:20 info: 🚀 Identity Service listening on port 5000
+2025-04-22 13:23:20 info: =================================
+2025-04-22 13:23:23 info: Database connection established successfully.
+2025-04-22 13:23:26 info: Database tables synced successfully.
