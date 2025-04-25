@@ -1,0 +1,432 @@
+2025-04-23 11:19:19 info: [0mOPTIONS /api/auth/login [32m200[0m 62.788 ms - 0[0m
+2025-04-23 11:19:22 info: [0mPOST /api/auth/login [32m200[0m 2251.736 ms - 541[0m
+2025-04-23 11:19:23 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 11:19:23 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 10.367 ms - 81[0m
+2025-04-23 11:19:23 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 11:19:23 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 2.598 ms - 81[0m
+2025-04-23 11:19:24 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 11:19:24 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 853.170 ms - 46[0m
+2025-04-23 11:19:24 info: [0mGET /api/projects/getAllProjects [32m200[0m 1027.964 ms - 1814[0m
+2025-04-23 11:19:24 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 1274.602 ms - 260[0m
+2025-04-23 11:19:25 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 1428.377 ms - 280[0m
+2025-04-23 11:19:25 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 1449.479 ms - 276[0m
+2025-04-23 11:19:25 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 11:19:25 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 463.458 ms - 46[0m
+2025-04-23 11:19:25 info: [0mGET /api/projects/getAllProjects [36m304[0m 508.987 ms - -[0m
+2025-04-23 11:19:25 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 572.799 ms - -[0m
+2025-04-23 11:19:25 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 396.598 ms - -[0m
+2025-04-23 11:19:25 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 433.229 ms - -[0m
+2025-04-23 12:10:19 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 12:10:19 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 35.430 ms - 81[0m
+2025-04-23 12:10:21 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 12:10:21 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 2182.654 ms - 46[0m
+2025-04-23 12:10:21 info: [0mGET /api/projects/getAllProjects [36m304[0m 2132.614 ms - -[0m
+2025-04-23 12:10:21 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 2952.917 ms - -[0m
+2025-04-23 12:10:21 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 2346.430 ms - -[0m
+2025-04-23 12:10:21 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 2344.340 ms - -[0m
+2025-04-23 13:25:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 1888.818 ms - -[0m
+2025-04-23 13:25:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.643 ms - -[0m
+2025-04-23 13:30:43 info: [0mGET /api/projects/getAllProjects [36m304[0m 1451.585 ms - -[0m
+2025-04-23 13:33:26 info: [0mGET /api/projects/getAllProjects [36m304[0m 1915.362 ms - -[0m
+2025-04-23 13:33:27 info: [0mGET /api/projects/getAllProjects [36m304[0m 238.555 ms - -[0m
+2025-04-23 13:33:46 info: [0mGET /api/allocations/getProjectAllocations/3 [32m200[0m 1604.413 ms - 1168[0m
+2025-04-23 13:33:46 info: [0mGET /api/projects/getProjectEstimatedCost/3 [32m200[0m 1842.079 ms - 80[0m
+2025-04-23 13:33:46 info: [0mGET /api/allocations/getProjectAllocations/3 [36m304[0m 200.043 ms - -[0m
+2025-04-23 13:33:47 info: [0mGET /api/employees/getAllEmployees [32m200[0m 286.762 ms - 2189[0m
+2025-04-23 13:33:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 185.107 ms - -[0m
+2025-04-23 13:33:47 info: [0mGET /api/projects/getProjectEstimatedCost/3 [36m304[0m 464.946 ms - -[0m
+2025-04-23 13:33:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 187.168 ms - -[0m
+2025-04-23 13:33:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.445 ms - -[0m
+2025-04-23 13:34:44 info: [0mGET /api/projects/getAllProjects [36m304[0m 1346.627 ms - -[0m
+2025-04-23 13:34:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 13:34:44 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1381.760 ms - 46[0m
+2025-04-23 13:34:44 info: [0mGET /api/projects/getAllProjects [36m304[0m 180.107 ms - -[0m
+2025-04-23 13:34:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 13:34:44 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 183.509 ms - 46[0m
+2025-04-23 13:34:49 info: [0mGET /api/allocations/getProjectAllocations/2 [36m304[0m 199.020 ms - -[0m
+2025-04-23 13:34:49 info: [0mGET /api/allocations/getProjectAllocations/2 [36m304[0m 185.302 ms - -[0m
+2025-04-23 13:34:55 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/1/3 [36m304[0m 203.829 ms - -[0m
+2025-04-23 13:34:55 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/1/3 [36m304[0m 184.881 ms - -[0m
+2025-04-23 13:35:15 info: [0mGET /api/projects/getAllProjects [36m304[0m 1316.982 ms - -[0m
+2025-04-23 13:35:15 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.958 ms - -[0m
+2025-04-23 13:35:17 info: [0mGET /api/allocations/getProjectAllocations/2 [36m304[0m 368.695 ms - -[0m
+2025-04-23 13:35:17 info: [0mGET /api/projects/getProjectEstimatedCost/2 [32m200[0m 574.966 ms - 94[0m
+2025-04-23 13:35:17 info: [0mGET /api/allocations/getProjectAllocations/2 [36m304[0m 367.856 ms - -[0m
+2025-04-23 13:35:18 info: [0mGET /api/employees/getAllEmployees [36m304[0m 420.055 ms - -[0m
+2025-04-23 13:35:18 info: [0mGET /api/employees/getAllEmployees [36m304[0m 358.202 ms - -[0m
+2025-04-23 13:35:18 info: [0mGET /api/projects/getProjectEstimatedCost/2 [36m304[0m 722.822 ms - -[0m
+2025-04-23 13:36:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 1871.595 ms - -[0m
+2025-04-23 13:36:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.531 ms - -[0m
+2025-04-23 13:36:55 info: [0mGET /api/allocations/getProjectAllocations/2 [36m304[0m 383.343 ms - -[0m
+2025-04-23 13:36:55 info: [0mGET /api/projects/getProjectEstimatedCost/2 [36m304[0m 567.688 ms - -[0m
+2025-04-23 13:36:55 info: [0mGET /api/allocations/getProjectAllocations/2 [36m304[0m 355.327 ms - -[0m
+2025-04-23 13:36:56 info: [0mGET /api/employees/getAllEmployees [36m304[0m 528.043 ms - -[0m
+2025-04-23 13:36:56 info: [0mGET /api/employees/getAllEmployees [36m304[0m 401.532 ms - -[0m
+2025-04-23 13:36:56 info: [0mGET /api/projects/getProjectEstimatedCost/2 [36m304[0m 796.770 ms - -[0m
+2025-04-23 13:38:36 info: [0mGET /api/projects/getAllProjects [36m304[0m 1294.742 ms - -[0m
+2025-04-23 13:38:37 info: [0mGET /api/projects/getAllProjects [36m304[0m 185.362 ms - -[0m
+2025-04-23 13:38:39 info: [0mGET /api/allocations/getProjectAllocations/3 [36m304[0m 375.277 ms - -[0m
+2025-04-23 13:38:39 info: [0mGET /api/projects/getProjectEstimatedCost/3 [36m304[0m 567.969 ms - -[0m
+2025-04-23 13:38:40 info: [0mGET /api/allocations/getProjectAllocations/3 [36m304[0m 361.420 ms - -[0m
+2025-04-23 13:38:40 info: [0mGET /api/employees/getAllEmployees [36m304[0m 533.119 ms - -[0m
+2025-04-23 13:38:40 info: [0mGET /api/employees/getAllEmployees [36m304[0m 374.952 ms - -[0m
+2025-04-23 13:38:40 info: [0mGET /api/projects/getProjectEstimatedCost/3 [36m304[0m 744.574 ms - -[0m
+2025-04-23 13:38:59 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 13:38:59 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1318.955 ms - 46[0m
+2025-04-23 13:38:59 info: [0mGET /api/projects/getAllProjects [36m304[0m 1315.155 ms - -[0m
+2025-04-23 13:38:59 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 13:38:59 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 186.657 ms - 46[0m
+2025-04-23 13:38:59 info: [0mGET /api/projects/getAllProjects [36m304[0m 192.171 ms - -[0m
+2025-04-23 13:41:06 info: [0mGET /api/projects/getAllProjects [36m304[0m 1320.052 ms - -[0m
+2025-04-23 13:41:06 info: [0mGET /api/projects/getAllProjects [36m304[0m 183.391 ms - -[0m
+2025-04-23 13:41:19 info: [0mGET /api/allocations/getProjectAllocations/3 [36m304[0m 1341.524 ms - -[0m
+2025-04-23 13:41:19 info: [0mGET /api/projects/getProjectEstimatedCost/3 [36m304[0m 1509.425 ms - -[0m
+2025-04-23 13:41:19 info: [0mGET /api/allocations/getProjectAllocations/3 [36m304[0m 190.916 ms - -[0m
+2025-04-23 13:41:20 info: [0mGET /api/employees/getAllEmployees [36m304[0m 338.743 ms - -[0m
+2025-04-23 13:41:20 info: [0mGET /api/employees/getAllEmployees [36m304[0m 183.098 ms - -[0m
+2025-04-23 13:41:20 info: [0mGET /api/projects/getProjectEstimatedCost/3 [36m304[0m 394.945 ms - -[0m
+2025-04-23 13:43:57 info: [0mGET /api/projects/getAllProjects [36m304[0m 1934.179 ms - -[0m
+2025-04-23 13:43:57 info: [0mGET /api/projects/getAllProjects [36m304[0m 184.557 ms - -[0m
+2025-04-23 13:44:15 info: [0mGET /api/allocations/getProjectAllocations/1 [32m200[0m 1353.310 ms - 1237[0m
+2025-04-23 13:44:15 info: [0mGET /api/projects/getProjectEstimatedCost/1 [32m200[0m 1540.484 ms - 94[0m
+2025-04-23 13:44:15 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 189.189 ms - -[0m
+2025-04-23 13:44:15 info: [0mGET /api/employees/getAllEmployees [36m304[0m 355.074 ms - -[0m
+2025-04-23 13:44:16 info: [0mGET /api/employees/getAllEmployees [36m304[0m 208.375 ms - -[0m
+2025-04-23 13:44:16 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 392.878 ms - -[0m
+2025-04-23 13:44:39 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 13:44:39 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1301.059 ms - 46[0m
+2025-04-23 13:44:39 info: [0mGET /api/projects/getAllProjects [36m304[0m 1325.005 ms - -[0m
+2025-04-23 13:44:39 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 13:44:39 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 184.583 ms - 46[0m
+2025-04-23 13:44:39 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.416 ms - -[0m
+2025-04-23 13:46:42 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 1667.309 ms - -[0m
+2025-04-23 13:46:42 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 180.998 ms - -[0m
+2025-04-23 13:46:44 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/2/1 [32m200[0m 190.820 ms - 1648[0m
+2025-04-23 13:46:44 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/2/1 [36m304[0m 224.316 ms - -[0m
+2025-04-23 14:50:18 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 14:50:18 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1851.193 ms - 46[0m
+2025-04-23 14:50:18 info: [0mGET /api/projects/getAllProjects [32m200[0m 1748.838 ms - 2898[0m
+2025-04-23 14:50:18 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 14:50:18 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 185.432 ms - 46[0m
+2025-04-23 14:50:18 info: [0mGET /api/projects/getAllProjects [36m304[0m 191.848 ms - -[0m
+2025-04-23 14:50:25 info: [0mGET /api/allocations/getProjectAllocations/1 [32m200[0m 234.033 ms - 1537[0m
+2025-04-23 14:50:25 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 190.271 ms - -[0m
+2025-04-23 14:50:27 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/2/1 [32m200[0m 193.156 ms - 1648[0m
+2025-04-23 14:50:27 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/2/1 [36m304[0m 184.132 ms - -[0m
+2025-04-23 16:08:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 16:08:51 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 4361.345 ms - 46[0m
+2025-04-23 16:08:51 info: [0mGET /api/projects/getAllProjects [32m200[0m 4187.844 ms - 4054[0m
+2025-04-23 16:08:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 184.066 ms - -[0m
+2025-04-23 16:08:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 16:08:51 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 192.145 ms - 46[0m
+2025-04-23 16:08:53 info: [0mGET /api/allocations/getProjectAllocations/1 [32m200[0m 210.725 ms - 1537[0m
+2025-04-23 16:08:53 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 185.215 ms - -[0m
+2025-04-23 16:08:56 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/2/1 [32m200[0m 185.326 ms - 2426[0m
+2025-04-23 16:08:56 info: [0mGET /api/tasks/getTaskByEmployeeAndProject/2/1 [36m304[0m 182.503 ms - -[0m
+2025-04-23 16:21:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 16:21:51 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 2580.707 ms - 46[0m
+2025-04-23 16:21:51 info: [0mGET /api/projects/getAllProjects [32m200[0m 2536.555 ms - 4055[0m
+2025-04-23 16:21:52 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 16:21:52 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 472.249 ms - 46[0m
+2025-04-23 16:21:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 470.515 ms - -[0m
+2025-04-23 16:28:29 info: [0mGET /api/projects/getAllProjects [36m304[0m 1812.231 ms - -[0m
+2025-04-23 16:28:29 info: [0mGET /api/projects/getAllProjects [36m304[0m 185.396 ms - -[0m
+2025-04-23 16:28:36 info: [0mGET /api/allocations/getProjectAllocations/7 [32m200[0m 445.637 ms - 80[0m
+2025-04-23 16:28:36 info: [0mGET /api/projects/getProjectEstimatedCost/7 [32m200[0m 681.721 ms - 80[0m
+2025-04-23 16:28:36 info: [0mGET /api/allocations/getProjectAllocations/7 [36m304[0m 386.795 ms - -[0m
+2025-04-23 16:28:36 info: [0mGET /api/employees/getAllEmployees [32m200[0m 637.480 ms - 3052[0m
+2025-04-23 16:28:37 info: [0mGET /api/employees/getAllEmployees [36m304[0m 438.805 ms - -[0m
+2025-04-23 16:28:37 info: [0mGET /api/projects/getProjectEstimatedCost/7 [36m304[0m 997.754 ms - -[0m
+2025-04-23 16:28:42 info: [0mGET /api/projects/getAllProjects [36m304[0m 182.779 ms - -[0m
+2025-04-23 16:28:42 info: [0mGET /api/projects/getAllProjects [36m304[0m 182.792 ms - -[0m
+2025-04-23 16:28:47 info: [0mGET /api/allocations/getProjectAllocations/1 [32m200[0m 205.300 ms - 1836[0m
+2025-04-23 16:28:47 info: [0mGET /api/projects/getProjectEstimatedCost/1 [32m200[0m 389.829 ms - 94[0m
+2025-04-23 16:28:47 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 184.559 ms - -[0m
+2025-04-23 16:28:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 187.893 ms - -[0m
+2025-04-23 16:28:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 187.916 ms - -[0m
+2025-04-23 16:28:47 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 380.794 ms - -[0m
+2025-04-23 16:29:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 1335.116 ms - -[0m
+2025-04-23 16:29:52 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 16:29:52 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1363.716 ms - 46[0m
+2025-04-23 16:29:52 info: [0mGET /api/projects/getAllProjects [36m304[0m 185.280 ms - -[0m
+2025-04-23 16:29:52 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 16:29:52 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 188.936 ms - 46[0m
+2025-04-23 16:38:50 info: =================================
+2025-04-23 16:38:50 info: ======= ENV: development =======
+2025-04-23 16:38:50 info: 🚀 Identity Service listening on port 5000
+2025-04-23 16:38:50 info: =================================
+2025-04-23 16:38:59 info: =================================
+2025-04-23 16:38:59 info: ======= ENV: development =======
+2025-04-23 16:38:59 info: 🚀 Identity Service listening on port 5000
+2025-04-23 16:38:59 info: =================================
+2025-04-23 16:39:01 info: Database connection established successfully.
+2025-04-23 16:39:06 info: =================================
+2025-04-23 16:39:06 info: ======= ENV: development =======
+2025-04-23 16:39:06 info: 🚀 Identity Service listening on port 5000
+2025-04-23 16:39:06 info: =================================
+2025-04-23 16:39:09 info: Database connection established successfully.
+2025-04-23 16:39:12 info: Database tables synced successfully.
+2025-04-23 16:50:33 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1867.661 ms - -[0m
+2025-04-23 16:50:33 info: [0mGET /api/employees/getAllEmployees [36m304[0m 212.304 ms - -[0m
+2025-04-23 16:52:21 info: [0mGET /api/projects/getAllProjects [36m304[0m 1369.789 ms - -[0m
+2025-04-23 16:52:21 info: [0mGET /api/projects/getAllProjects [36m304[0m 189.904 ms - -[0m
+2025-04-23 16:52:24 info: [0mGET /api/allocations/getProjectAllocations/7 [36m304[0m 216.508 ms - -[0m
+2025-04-23 16:52:24 info: [0mGET /api/allocations/getProjectAllocations/7 [36m304[0m 368.179 ms - -[0m
+2025-04-23 16:52:24 info: [0mGET /api/employees/getAllEmployees [36m304[0m 543.841 ms - -[0m
+2025-04-23 16:52:25 info: [0mGET /api/projects/getProjectEstimatedCost/7 [36m304[0m 942.346 ms - -[0m
+2025-04-23 16:52:25 info: [0mGET /api/employees/getAllEmployees [36m304[0m 375.356 ms - -[0m
+2025-04-23 16:52:25 info: [0mGET /api/projects/getProjectEstimatedCost/7 [36m304[0m 560.728 ms - -[0m
+2025-04-23 16:52:31 info: [0mGET /api/projects/getAllProjects [36m304[0m 184.667 ms - -[0m
+2025-04-23 16:52:31 info: [0mGET /api/projects/getAllProjects [36m304[0m 187.794 ms - -[0m
+2025-04-23 16:52:33 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 199.710 ms - -[0m
+2025-04-23 16:52:33 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 374.881 ms - -[0m
+2025-04-23 16:52:33 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 193.450 ms - -[0m
+2025-04-23 16:52:33 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.195 ms - -[0m
+2025-04-23 16:52:34 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.333 ms - -[0m
+2025-04-23 16:52:34 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 399.882 ms - -[0m
+2025-04-23 17:12:57 info: =================================
+2025-04-23 17:12:57 info: ======= ENV: development =======
+2025-04-23 17:12:57 info: 🚀 Identity Service listening on port 5000
+2025-04-23 17:12:57 info: =================================
+2025-04-23 17:13:00 info: Database connection established successfully.
+2025-04-23 17:13:03 info: Database tables synced successfully.
+2025-04-23 17:13:18 info: =================================
+2025-04-23 17:13:18 info: ======= ENV: development =======
+2025-04-23 17:13:18 info: 🚀 Identity Service listening on port 5000
+2025-04-23 17:13:18 info: =================================
+2025-04-23 17:13:21 info: Database connection established successfully.
+2025-04-23 17:13:24 info: Database tables synced successfully.
+2025-04-23 17:13:28 info: =================================
+2025-04-23 17:13:28 info: ======= ENV: development =======
+2025-04-23 17:13:28 info: 🚀 Identity Service listening on port 5000
+2025-04-23 17:13:28 info: =================================
+2025-04-23 17:13:31 info: Database connection established successfully.
+2025-04-23 17:13:34 info: Database tables synced successfully.
+2025-04-23 17:13:38 info: =================================
+2025-04-23 17:13:38 info: ======= ENV: development =======
+2025-04-23 17:13:38 info: 🚀 Identity Service listening on port 5000
+2025-04-23 17:13:38 info: =================================
+2025-04-23 17:13:41 info: Database connection established successfully.
+2025-04-23 17:13:44 info: Database tables synced successfully.
+2025-04-23 17:19:11 info: [0mGET /api/projects/getAllProjects [36m304[0m 1894.133 ms - -[0m
+2025-04-23 17:29:29 info: [0mGET /api/projects/getAllProjects [36m304[0m 1978.337 ms - -[0m
+2025-04-23 17:41:55 info: [0mGET /api/projects/getAllProjects [36m304[0m 1779.116 ms - -[0m
+2025-04-23 17:45:30 info: [0mGET /api/projects/getAllProjects [36m304[0m 1697.898 ms - -[0m
+2025-04-23 17:50:46 info: [0mGET /api/projects/getAllProjects [36m304[0m 1419.125 ms - -[0m
+2025-04-23 17:51:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 1539.575 ms - -[0m
+2025-04-23 17:51:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 17:51:51 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1729.210 ms - 46[0m
+2025-04-23 17:51:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 272.396 ms - -[0m
+2025-04-23 17:51:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 17:51:51 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 196.835 ms - 46[0m
+2025-04-23 17:52:29 info: [0mGET /api/projects/getAllProjects [36m304[0m 1308.883 ms - -[0m
+2025-04-23 17:52:30 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.016 ms - -[0m
+2025-04-23 17:52:32 info: [0mGET /api/employees/getAllEmployees [36m304[0m 215.402 ms - -[0m
+2025-04-23 17:52:33 info: [0mGET /api/employees/getAllEmployees [36m304[0m 188.065 ms - -[0m
+2025-04-23 18:08:49 info: [0mGET /api/projects/getAllProjects [36m304[0m 1478.393 ms - -[0m
+2025-04-23 18:08:49 info: [0mGET /api/projects/getAllProjects [36m304[0m 183.630 ms - -[0m
+2025-04-23 18:08:56 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 416.907 ms - -[0m
+2025-04-23 18:08:56 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 658.931 ms - -[0m
+2025-04-23 18:08:56 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 361.092 ms - -[0m
+2025-04-23 18:08:57 info: [0mGET /api/employees/getAllEmployees [36m304[0m 535.691 ms - -[0m
+2025-04-23 18:08:57 info: [0mGET /api/employees/getAllEmployees [36m304[0m 392.746 ms - -[0m
+2025-04-23 18:08:57 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 774.576 ms - -[0m
+2025-04-23 18:09:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1478.887 ms - -[0m
+2025-04-23 18:09:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 185.270 ms - -[0m
+2025-04-23 18:15:08 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1823.544 ms - -[0m
+2025-04-23 18:15:09 info: [0mGET /api/employees/getAllEmployees [36m304[0m 200.446 ms - -[0m
+2025-04-23 18:15:09 info: [0mGET /api/employees/getAllEmployees [36m304[0m 212.820 ms - -[0m
+2025-04-23 18:18:24 info: [0mGET /api/projects/getAllProjects [36m304[0m 2494.423 ms - -[0m
+2025-04-23 18:18:25 info: [0mGET /api/projects/getAllProjects [36m304[0m 210.691 ms - -[0m
+2025-04-23 18:18:25 info: [0mGET /api/employees/getAllEmployees [36m304[0m 229.755 ms - -[0m
+2025-04-23 18:18:26 info: [0mGET /api/employees/getAllEmployees [36m304[0m 208.718 ms - -[0m
+2025-04-23 19:33:15 info: [0mGET /api/projects/getAllProjects [36m304[0m 1834.558 ms - -[0m
+2025-04-23 19:33:15 info: [0mGET /api/projects/getAllProjects [36m304[0m 183.766 ms - -[0m
+2025-04-23 19:35:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1742.804 ms - -[0m
+2025-04-23 19:35:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 195.555 ms - -[0m
+2025-04-23 19:40:20 info: [0mGET /api/projects/getAllProjects [36m304[0m 1640.652 ms - -[0m
+2025-04-23 19:40:20 info: [0mGET /api/projects/getAllProjects [36m304[0m 184.717 ms - -[0m
+2025-04-23 19:40:30 info: [0mGET /api/employees/getAllEmployees [36m304[0m 200.672 ms - -[0m
+2025-04-23 19:40:30 info: [0mGET /api/employees/getAllEmployees [36m304[0m 193.552 ms - -[0m
+2025-04-23 19:47:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 1537.719 ms - -[0m
+2025-04-23 19:47:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 197.470 ms - -[0m
+2025-04-23 19:47:58 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 398.464 ms - -[0m
+2025-04-23 19:47:58 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 611.908 ms - -[0m
+2025-04-23 19:47:59 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 266.996 ms - -[0m
+2025-04-23 19:47:59 info: [0mGET /api/employees/getAllEmployees [36m304[0m 413.677 ms - -[0m
+2025-04-23 19:47:59 info: [0mGET /api/employees/getAllEmployees [36m304[0m 374.178 ms - -[0m
+2025-04-23 19:47:59 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 886.349 ms - -[0m
+2025-04-23 19:48:19 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 19:48:19 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 12.454 ms - 81[0m
+2025-04-23 19:48:19 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 19:48:19 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 4.281 ms - 81[0m
+2025-04-23 19:48:20 info: [0mGET /api/projects/getAllProjects [36m304[0m 1391.737 ms - -[0m
+2025-04-23 19:48:20 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1364.306 ms - 46[0m
+2025-04-23 19:48:20 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.640 ms - -[0m
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 1567.510 ms - 275[0m
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 1544.865 ms - 249[0m
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 1551.807 ms - 294[0m
+2025-04-23 19:48:20 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 190.076 ms - 46[0m
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 369.146 ms - -[0m
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 367.095 ms - -[0m
+2025-04-23 19:48:20 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 371.333 ms - -[0m
+2025-04-23 19:52:00 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1955.698 ms - -[0m
+2025-04-23 19:52:01 info: [0mGET /api/employees/getAllEmployees [36m304[0m 189.684 ms - -[0m
+2025-04-23 19:55:43 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1753.284 ms - -[0m
+2025-04-23 19:59:34 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1649.334 ms - -[0m
+2025-04-23 20:00:14 info: [0mGET /api/employees/getAllEmployees [36m304[0m 2352.071 ms - -[0m
+2025-04-23 20:00:15 info: [0mGET /api/employees/getAllEmployees [36m304[0m 276.024 ms - -[0m
+2025-04-23 20:00:15 info: [0mGET /api/employees/getAllEmployees [36m304[0m 200.446 ms - -[0m
+2025-04-23 20:00:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 204.231 ms - -[0m
+2025-04-23 20:00:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 220.829 ms - -[0m
+2025-04-23 20:00:20 info: [0mGET /api/employees/getAllEmployees [36m304[0m 199.960 ms - -[0m
+2025-04-23 20:01:10 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1434.902 ms - -[0m
+2025-04-23 20:01:22 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1342.722 ms - -[0m
+2025-04-23 20:01:22 info: [0mGET /api/employees/getAllEmployees [36m304[0m 199.166 ms - -[0m
+2025-04-23 20:01:22 info: [0mGET /api/employees/getAllEmployees [36m304[0m 193.775 ms - -[0m
+2025-04-23 20:01:27 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.784 ms - -[0m
+2025-04-23 20:01:27 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.186 ms - -[0m
+2025-04-23 20:01:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 196.679 ms - -[0m
+2025-04-23 20:01:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 193.090 ms - -[0m
+2025-04-23 20:01:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.999 ms - -[0m
+2025-04-23 20:01:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 197.973 ms - -[0m
+2025-04-23 20:01:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 193.529 ms - -[0m
+2025-04-23 20:02:05 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1409.602 ms - -[0m
+2025-04-23 20:02:06 info: [0mGET /api/employees/getAllEmployees [36m304[0m 187.071 ms - -[0m
+2025-04-23 20:02:44 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1679.001 ms - -[0m
+2025-04-23 20:02:44 info: [0mGET /api/employees/getAllEmployees [36m304[0m 329.752 ms - -[0m
+2025-04-23 20:02:44 info: [0mGET /api/employees/getAllEmployees [36m304[0m 261.745 ms - -[0m
+2025-04-23 20:02:48 info: [0mGET /api/employees/getAllEmployees [36m304[0m 195.482 ms - -[0m
+2025-04-23 20:03:59 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1323.494 ms - -[0m
+2025-04-23 20:03:59 info: [0mGET /api/employees/getAllEmployees [36m304[0m 188.343 ms - -[0m
+2025-04-23 20:03:59 info: [0mGET /api/employees/getAllEmployees [36m304[0m 194.564 ms - -[0m
+2025-04-23 20:04:05 info: [0mGET /api/employees/getAllEmployees [36m304[0m 200.110 ms - -[0m
+2025-04-23 20:04:05 info: [0mGET /api/employees/getAllEmployees [36m304[0m 187.705 ms - -[0m
+2025-04-23 20:04:05 info: [0mGET /api/employees/getAllEmployees [36m304[0m 189.515 ms - -[0m
+2025-04-23 20:04:08 info: [0mGET /api/employees/getAllEmployees [36m304[0m 194.652 ms - -[0m
+2025-04-23 20:04:08 info: [0mGET /api/employees/getAllEmployees [36m304[0m 190.124 ms - -[0m
+2025-04-23 20:04:09 info: [0mGET /api/employees/getAllEmployees [36m304[0m 187.729 ms - -[0m
+2025-04-23 20:04:32 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1375.006 ms - -[0m
+2025-04-23 20:04:32 info: [0mGET /api/employees/getAllEmployees [36m304[0m 212.376 ms - -[0m
+2025-04-23 20:04:32 info: [0mGET /api/employees/getAllEmployees [36m304[0m 191.352 ms - -[0m
+2025-04-23 20:04:37 info: [0mGET /api/employees/getAllEmployees [36m304[0m 196.786 ms - -[0m
+2025-04-23 20:04:37 info: [0mGET /api/employees/getAllEmployees [36m304[0m 203.678 ms - -[0m
+2025-04-23 20:04:37 info: [0mGET /api/employees/getAllEmployees [36m304[0m 199.123 ms - -[0m
+2025-04-23 20:04:41 info: [0mGET /api/projects/getAllProjects [36m304[0m 194.099 ms - -[0m
+2025-04-23 20:04:41 info: [0mGET /api/projects/getAllProjects [36m304[0m 189.224 ms - -[0m
+2025-04-23 20:05:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1383.653 ms - -[0m
+2025-04-23 20:05:19 info: [0mGET /api/employees/getAllEmployees [36m304[0m 184.143 ms - -[0m
+2025-04-23 20:05:58 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1375.242 ms - -[0m
+2025-04-23 20:05:58 info: [0mGET /api/employees/getAllEmployees [36m304[0m 191.827 ms - -[0m
+2025-04-23 20:07:17 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1833.252 ms - -[0m
+2025-04-23 20:07:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1732.829 ms - -[0m
+2025-04-23 20:08:01 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1342.475 ms - -[0m
+2025-04-23 20:08:01 info: [0mGET /api/employees/getAllEmployees [36m304[0m 208.893 ms - -[0m
+2025-04-23 20:08:01 info: [0mGET /api/employees/getAllEmployees [36m304[0m 185.445 ms - -[0m
+2025-04-23 20:08:26 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1413.802 ms - -[0m
+2025-04-23 20:08:26 info: [0mGET /api/employees/getAllEmployees [36m304[0m 392.789 ms - -[0m
+2025-04-23 20:08:27 info: [0mGET /api/employees/getAllEmployees [36m304[0m 193.726 ms - -[0m
+2025-04-23 20:08:27 info: [0mGET /api/employees/getAllEmployees [36m304[0m 191.464 ms - -[0m
+2025-04-23 20:08:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 187.770 ms - -[0m
+2025-04-23 20:08:28 info: [0mGET /api/employees/getAllEmployees [36m304[0m 201.791 ms - -[0m
+2025-04-23 20:08:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1358.411 ms - -[0m
+2025-04-23 20:08:47 info: [0mGET /api/employees/getAllEmployees [36m304[0m 208.496 ms - -[0m
+2025-04-23 20:08:48 info: [0mGET /api/employees/getAllEmployees [36m304[0m 186.589 ms - -[0m
+2025-04-23 20:08:55 info: [0mGET /api/employees/getAllEmployees [36m304[0m 201.411 ms - -[0m
+2025-04-23 20:08:59 info: [0mGET /api/employees/getAllEmployees [36m304[0m 188.980 ms - -[0m
+2025-04-23 20:08:59 info: [0mGET /api/employees/getAllEmployees [36m304[0m 185.786 ms - -[0m
+2025-04-23 20:09:28 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 20:09:28 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 29.015 ms - 81[0m
+2025-04-23 20:09:28 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 20:09:28 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 3.377 ms - 81[0m
+2025-04-23 20:09:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1403.163 ms - 46[0m
+2025-04-23 20:09:30 info: [0mGET /api/projects/getAllProjects [36m304[0m 1329.865 ms - -[0m
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1561.034 ms - -[0m
+2025-04-23 20:09:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 185.681 ms - 46[0m
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1539.968 ms - -[0m
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1537.959 ms - -[0m
+2025-04-23 20:09:30 info: [0mGET /api/projects/getAllProjects [36m304[0m 195.560 ms - -[0m
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 382.634 ms - -[0m
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 379.525 ms - -[0m
+2025-04-23 20:09:30 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 375.816 ms - -[0m
+2025-04-23 20:09:50 info: [0mGET /api/projects/getAllProjects [36m304[0m 1307.472 ms - -[0m
+2025-04-23 20:09:50 info: [0mGET /api/projects/getAllProjects [36m304[0m 182.046 ms - -[0m
+2025-04-23 20:11:38 info: [0mGET /api/projects/getAllProjects [36m304[0m 1667.620 ms - -[0m
+2025-04-23 20:11:38 info: [0mGET /api/projects/getAllProjects [36m304[0m 198.689 ms - -[0m
+2025-04-23 20:11:59 info: [0mGET /api/leaves/getAllLeaves [32m200[0m 1381.101 ms - 67[0m
+2025-04-23 20:11:59 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 189.109 ms - -[0m
+2025-04-23 20:13:50 info: [0mGET /api/projects/getAllProjects [36m304[0m 1448.305 ms - -[0m
+2025-04-23 20:13:50 info: [0mGET /api/projects/getAllProjects [36m304[0m 185.947 ms - -[0m
+2025-04-23 20:14:00 info: [0mGET /api/employees/getAllEmployees [36m304[0m 238.544 ms - -[0m
+2025-04-23 20:14:00 info: [0mGET /api/employees/getAllEmployees [36m304[0m 194.715 ms - -[0m
+2025-04-23 20:16:11 info: [0mGET /api/projects/getAllProjects [36m304[0m 1430.158 ms - -[0m
+2025-04-23 20:16:11 info: [0mGET /api/projects/getAllProjects [36m304[0m 181.430 ms - -[0m
+2025-04-23 20:16:21 info: [0mGET /api/allocations/getProjectAllocations/7 [36m304[0m 379.477 ms - -[0m
+2025-04-23 20:16:21 info: [0mGET /api/projects/getProjectEstimatedCost/7 [36m304[0m 1083.775 ms - -[0m
+2025-04-23 20:16:21 info: [0mGET /api/allocations/getProjectAllocations/7 [36m304[0m 356.078 ms - -[0m
+2025-04-23 20:16:22 info: [0mGET /api/employees/getAllEmployees [36m304[0m 534.259 ms - -[0m
+2025-04-23 20:16:22 info: [0mGET /api/employees/getAllEmployees [36m304[0m 358.946 ms - -[0m
+2025-04-23 20:16:22 info: [0mGET /api/projects/getProjectEstimatedCost/7 [36m304[0m 858.378 ms - -[0m
+2025-04-23 20:41:57 info: [0mGET /api/employees/getAllEmployees [36m304[0m 3060.526 ms - -[0m
+2025-04-23 20:41:57 info: [0mGET /api/employees/getAllEmployees [36m304[0m 231.938 ms - -[0m
+2025-04-23 20:42:42 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1896.664 ms - -[0m
+2025-04-23 20:42:43 info: [0mGET /api/employees/getAllEmployees [36m304[0m 196.595 ms - -[0m
+2025-04-23 20:42:43 info: [0mGET /api/employees/getAllEmployees [36m304[0m 214.569 ms - -[0m
+2025-04-23 20:43:00 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1556.659 ms - -[0m
+2025-04-23 20:43:00 info: [0mGET /api/employees/getAllEmployees [36m304[0m 210.995 ms - -[0m
+2025-04-23 20:43:00 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.006 ms - -[0m
+2025-04-23 21:24:46 info: =================================
+2025-04-23 21:24:46 info: ======= ENV: development =======
+2025-04-23 21:24:46 info: 🚀 Identity Service listening on port 5000
+2025-04-23 21:24:46 info: =================================
+2025-04-23 21:24:50 info: Database connection established successfully.
+2025-04-23 21:24:53 info: Database tables synced successfully.
+2025-04-23 21:26:26 info: [0mOPTIONS /api/auth/login [32m200[0m 4.993 ms - 0[0m
+2025-04-23 21:26:26 error: [POST] /api/auth/login >> StatusCode:: 400, Message:: Password is required
+2025-04-23 21:26:26 info: [0mPOST /api/auth/login [33m400[0m 96.772 ms - 34[0m
+2025-04-23 21:26:33 info: [0mOPTIONS /api/auth/login [32m200[0m 0.333 ms - 0[0m
+2025-04-23 21:26:35 info: [0mPOST /api/auth/login [32m200[0m 1578.980 ms - 541[0m
+2025-04-23 21:26:39 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 21:26:39 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 11.884 ms - 81[0m
+2025-04-23 21:26:39 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-23 21:26:39 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 1.381 ms - 81[0m
+2025-04-23 21:26:40 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 21:26:40 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 800.245 ms - 46[0m
+2025-04-23 21:26:40 info: [0mGET /api/projects/getAllProjects [36m304[0m 974.189 ms - -[0m
+2025-04-23 21:26:40 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1186.360 ms - -[0m
+2025-04-23 21:26:41 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1354.119 ms - -[0m
+2025-04-23 21:26:41 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1529.370 ms - -[0m
+2025-04-23 21:26:41 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-23 21:26:41 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 784.961 ms - 46[0m
+2025-04-23 21:26:41 info: [0mGET /api/projects/getAllProjects [36m304[0m 608.753 ms - -[0m
+2025-04-23 21:26:41 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 634.614 ms - -[0m
+2025-04-23 21:26:41 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 458.145 ms - -[0m
+2025-04-23 21:26:41 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 363.032 ms - -[0m
+2025-04-23 21:32:06 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 1641.916 ms - -[0m
+2025-04-23 21:32:06 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 192.111 ms - -[0m
+2025-04-23 21:36:33 info: [0mPOST /api/leaves/createLeave [32m201[0m 1953.495 ms - 478[0m
+2025-04-23 21:36:35 info: [0mPOST /api/leaves/createLeave [32m201[0m 193.762 ms - 478[0m
+2025-04-23 21:36:36 info: [0mPOST /api/leaves/createLeave [32m201[0m 231.553 ms - 478[0m
+2025-04-23 21:36:37 info: [0mPOST /api/leaves/createLeave [32m201[0m 205.856 ms - 478[0m
+2025-04-23 21:36:38 info: [0mPOST /api/leaves/createLeave [32m201[0m 197.470 ms - 478[0m
+2025-04-23 21:36:38 info: [0mPOST /api/leaves/createLeave [32m201[0m 191.294 ms - 478[0m
+2025-04-23 21:36:39 info: [0mPOST /api/leaves/createLeave [32m201[0m 203.287 ms - 478[0m
+2025-04-23 21:36:44 info: [0mGET /api/leaves/getAllLeaves [32m200[0m 374.891 ms - 3699[0m
+2025-04-23 21:36:44 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 274.214 ms - -[0m
+2025-04-23 21:42:47 info: [0mGET /api/leaves/getAllLeaves [36m304[0m 1565.949 ms - -[0m
+2025-04-23 22:03:21 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1858.050 ms - -[0m
+2025-04-23 22:03:21 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.711 ms - -[0m
+2025-04-23 22:05:45 info: [0mGET /api/employees/getAllEmployees [36m304[0m 1522.750 ms - -[0m
+2025-04-23 22:05:46 info: [0mGET /api/employees/getAllEmployees [36m304[0m 185.685 ms - -[0m
+2025-04-23 22:05:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 196.201 ms - -[0m
+2025-04-23 22:05:51 info: [0mGET /api/projects/getAllProjects [36m304[0m 179.646 ms - -[0m
+2025-04-23 22:06:00 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 386.791 ms - -[0m
+2025-04-23 22:06:00 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 598.587 ms - -[0m
+2025-04-23 22:06:00 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 366.524 ms - -[0m
+2025-04-23 22:06:01 info: [0mGET /api/employees/getAllEmployees [36m304[0m 545.258 ms - -[0m
+2025-04-23 22:06:01 info: [0mGET /api/employees/getAllEmployees [36m304[0m 363.947 ms - -[0m
+2025-04-23 22:06:01 info: [0mGET /api/projects/getProjectEstimatedCost/1 [36m304[0m 749.346 ms - -[0m

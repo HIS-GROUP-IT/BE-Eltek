@@ -6,7 +6,6 @@ import Employee from "@/models/employee/employee.model";
 import Project from "@/models/project/project.model";
 import { Allocation } from "@/types/employee.types";
 import { IAllocationRepository } from "@/interfaces/allocation/IAllocationRepository.interface";
-import sequelize from "sequelize/types/sequelize";
 import Task from "@/models/task/task.model";
 
 @Service()
@@ -28,7 +27,7 @@ export class AllocationRepository implements IAllocationRepository {
 
         const allocation = await AllocationModel.create({
             ...allocationData,
-            normalizedPhases
+            normalizedPhaseIds: normalizedPhases,
         });
         await employee.update({ assigned: true });
         return allocation.get({ plain: true });
@@ -172,7 +171,7 @@ export class AllocationRepository implements IAllocationRepository {
             },
             required: true
         }],
-        raw: true
+        
     });
 }
 
@@ -206,22 +205,58 @@ export class AllocationRepository implements IAllocationRepository {
     });
   }
 
-  public async findExistingAllocation(
+  public async getPhaseAllocations(phaseId: string): Promise<Allocation[]> {
+    return await AllocationModel.findAll({
+      where: {
+        [Op.and]: [
+          // Use model name as table alias
+          AllocationModel.sequelize.literal(`JSON_CONTAINS(Allocation.phases, JSON_ARRAY('${phaseId}'))`),
+        ]
+      },
+      include: [{
+        model: Employee,
+        as: 'employee',
+        attributes: { exclude: ['password'] },
+        include: [{
+          model: AllocationModel,
+          as: 'allocations',
+          attributes: [
+            'id',
+            'projectName',
+            'employeeId', 
+            'projectId',
+            'phases',
+            'start',
+            'end',
+            'hoursWeek',
+            'status',
+            'chargeOutRate',
+            'chargeType',
+            'createdAt',
+            'updatedAt'
+          ]
+        }]
+      }]
+    });
+  }
+
+  public async findExistingAllocations(
     employeeId: number,
     projectId: number,
-    phases: string[]
+    phaseIds: string[] 
   ): Promise<Allocation | null> {
-    const normalizedPhases = JSON.stringify([...phases].sort());
-  
+    const normalizedPhaseIds = JSON.stringify([...phaseIds].sort());
+    
     return await AllocationModel.findOne({
       where: {
         employeeId,
         projectId,
-        normalizedPhases
+        normalizedPhaseIds 
       },
       raw: true
     });
   }
+  
   
   public async checkForOverlaps(
     employeeId: number, 

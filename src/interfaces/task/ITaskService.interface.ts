@@ -1,9 +1,7 @@
 import {
-  EmployeeTimesheet,
   IProjectsHours,
   ITask,
   ITaskModification,
-  MonthlyTasks,
 } from "@/types/task.type";
 import { Token } from "typedi";
 
@@ -11,7 +9,7 @@ export interface ITaskService {
   createTask(taskData: Partial<ITask>): Promise<ITask>;
   updateTask(taskData: Partial<ITask>): Promise<ITask>;
   getTasksByEmployee(employeeId: number): Promise<ITask[]>;
-  getTasksByProject(allocationId: number): Promise<ITask[]>;
+  getTasksByProject(phaseId: number): Promise<ITask[]>;
   getAllTasks(): Promise<ITask[]>;
   deleteTask(id: number): Promise<void>;
 
@@ -19,24 +17,13 @@ export interface ITaskService {
   getTasksByDateRange(startDate: Date, endDate: Date): Promise<ITask[]>;
   getTasksByEmployeeAndProject(
     employeeId: number,
-    allocationId: number
+    phaseId: number
   ): Promise<ITask[]>;
   getTotalHoursByEmployee(employeeId: number): Promise<number>;
-  getTaskSummary(
-    employeeId: number,
-    startDate: Date,
-    endDate: Date
-  ): Promise<{ allocationId: number; totalHours: number }[]>;
   approveTask(approvalData: ITaskModification): Promise<ITask>;
   rejectTask(rejectionData: ITaskModification): Promise<ITask>;
   getProjectHoursSummary(): Promise<IProjectsHours>;
-  getCurrentWeekHours(allocationId: number): Promise<EmployeeTimesheet[]>;
-  getEmployeeMonthlyTasks(
-    allocationId: number,
-    employeeId: number,
-    year: number,
-    month: number
-  ): Promise<MonthlyTasks>;
+
   getTaskTimeStatistics(): Promise<{
     today: {
       totalHours: number;
@@ -81,7 +68,7 @@ export interface ITaskService {
   }>;
 
 
-
+  getTasksByPhaseId(phaseId: string): Promise<ITask[]> 
   getEmployeeTaskTimeStatistics(employeeId:number): Promise<{
     today: { totalHours: number, average: number, completionRate: number, data: number[] },
     yesterday: { totalHours: number, average: number, completionRate: number, data: number[] }

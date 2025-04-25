@@ -43,7 +43,7 @@ export type Allocation = {
   employeeId: number;
   projectId: number;
   phases: string[];
-  normalizedPhases:string;
+  normalizedPhaseIds:string;
   start: Date;
   end: Date;
   hoursWeek: number;

@@ -25,6 +25,8 @@ export type IProject = {
   export type Phase = {
     name: string;
     description: string;
+    startDate: Date;
+    endDate: Date;
     duration: string;
     assignedResources: number[];
   };

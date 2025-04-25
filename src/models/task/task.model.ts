@@ -3,18 +3,21 @@ import { Sequelize } from "sequelize";
 import Employee from "../employee/employee.model";
 import User from "../user/user.model";
 import { IComment } from "@/types/task.type";
-import { Allocation } from "@/types/employee.types";
+import Project from "../project/project.model";
 
 class Task extends Model {
   public id!: number;
   public employeeName!: string;
-  public allocationId!: number;
+  public phaseId!: string;
+  public projectId!: number;
   public createdBy!: number;
   public employeeId!: number;
   public position!: string;
   public taskTitle!: string;
   public taskDescription!: string;
   public phase!: string;
+  public priority!: string;
+  public isSubmitted!: boolean;
   public estimatedHours!: number;
   public actualHours!: number;
   public comment?: IComment;
@@ -22,7 +25,6 @@ class Task extends Model {
   public reasonForRejection?: string;
   public taskDate: Date;
   public modifiedBy!: number;
-  public readonly allocation : Allocation
   public readonly totalHours: number;
   public readonly pendingHours: number;
   public readonly completedHours: number;
@@ -36,14 +38,13 @@ class Task extends Model {
       {
         id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
         employeeName: { type: DataTypes.STRING, allowNull: false },
-        employeeId: { type: DataTypes.INTEGER, allowNull: false },
-        allocationId: {
-          type: DataTypes.INTEGER,
+        employeeId: { type: DataTypes.INTEGER, allowNull: false, references: {
+          model: "employees",
+          key: "id",
+        }, },
+        phaseId: {
+          type: DataTypes.STRING,
           allowNull: false,
-          references: {
-            model: "allocations",
-            key: "id",
-          },
         },
         createdBy: {
           type: DataTypes.INTEGER,
@@ -53,7 +54,19 @@ class Task extends Model {
             key: "id",
           },
         },
+        projectId: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          references: {
+            model: "projects",
+            key: "id",
+          },
+        },      
+
         position: { type: DataTypes.STRING, allowNull: false },
+        isSubmitted: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false },
+        priority: { type: DataTypes.STRING, allowNull: false },
+
         taskTitle: { type: DataTypes.STRING, allowNull: false },
         taskDescription: { type: DataTypes.TEXT, allowNull: false },
         estimatedHours: { type: DataTypes.INTEGER, allowNull: false },

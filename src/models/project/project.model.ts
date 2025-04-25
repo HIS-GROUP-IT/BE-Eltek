@@ -1,3 +1,4 @@
+import { Allocation } from '@/types/employee.types';
 import { DataTypes, Model, Optional } from 'sequelize';
 import { Sequelize } from 'sequelize';
 import User from '../user/user.model';
@@ -19,6 +20,7 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
   public clientName!: string;
   public clientEmail!: string;
   public clientCompany!: string;
+
   public phases!: Phase[];
   public resources!: Role[];
   public createdAt!: Date;
@@ -26,6 +28,7 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
   public createdBy!: number; 
 
   public readonly employees?: Employee[];
+  public readonly Allocations!: Allocation[];
 
   static initialize(sequelize: Sequelize) {
     Project.init(

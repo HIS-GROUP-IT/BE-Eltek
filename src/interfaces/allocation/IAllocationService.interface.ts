@@ -8,6 +8,7 @@ export interface IAllocationService {
     getEmployeeAllocations(employeeId: number): Promise<Allocation[]>;
     getProjectAllocations(projectId: number): Promise<Allocation[]>;
     getAllocationById(id: number): Promise<Allocation>;
+    getPhaseAllocations(phaseId: string): Promise<Allocation[]> 
     checkForOverlaps(
         employeeId: number, 
         startDate: Date, 

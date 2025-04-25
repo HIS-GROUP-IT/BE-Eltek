@@ -113,6 +113,22 @@ export class AllocationController {
     }
   };
 
+  public getPhaseAllocations = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const phaseId = req.params.phaseId
+      const allocation = await this.allocationService.getPhaseAllocations(phaseId);
+      
+      const response: CustomResponse<Allocation> = {
+        data: allocation,
+        message: "Allocation retrieved successfully",
+        error: false
+      };
+      res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public checkForOverlaps = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const data = req.body;

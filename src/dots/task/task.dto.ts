@@ -1,18 +1,21 @@
-import { IsString, IsInt, IsOptional, IsDate, IsEnum, IsPositive, MaxLength } from 'class-validator';
+import { IsString, IsInt, IsOptional, IsDate, IsEnum, IsPositive, MaxLength, IsNotEmpty } from 'class-validator';
 import  TaskStatus  from '@/models/task/task.model'; 
 
 export class TaskDTO {
-    @IsInt()
-    @IsPositive()
-    public employeeId: number;
+
     
-    @IsInt()
-    @IsPositive()
-    public allocationId: number;
+    @IsNotEmpty()
+    @IsString()
+    public phaseId: string;
 
     @IsString()
     @MaxLength(255)
     public employeeName: string;
+
+    @IsString()
+    @MaxLength(10)
+    public priority: string;
+
 
     @IsString()
     @MaxLength(255)
@@ -24,7 +27,7 @@ export class TaskDTO {
 
     @IsString()
     @IsOptional()
-    @MaxLength(500)
+    @MaxLength(2000)
     public taskDescription?: string;
 
 

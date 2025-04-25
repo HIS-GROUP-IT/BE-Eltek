@@ -27,7 +27,7 @@ export class TaskRoute {
         this.router.get(`${this.path}/getProjectHoursSummary`, authorizationMiddleware, this.taskController.getProjectHoursSummary);
         this.router.get(`${this.path}/getProjectWeeklySummary/:allocationId`, authorizationMiddleware, this.taskController.getWeekelySummery);
         this.router.get(`${this.path}/:allocationId/employees/:employeeId/tasks`, authorizationMiddleware, this.taskController.getEmployeeMonthlyTasks);
-        this.router.get(`${this.path}/:getTaskByEmployeeAndProject/:employeeId/:allocationId`, authorizationMiddleware, this.taskController.getTasksByEmployeeAndProject);
+        this.router.get(`${this.path}/getTaskByEmployeeAndProject/:employeeId/:projectId`, authorizationMiddleware, this.taskController.getTasksByEmployeeAndProject);
         this.router.get(`${this.path}/getChartTaskTimeStatistics`, authorizationMiddleware, this.taskController.getTaskTimeStatistics);
         this.router.get(`${this.path}/getChartWeeklyTaskTimeStatistics`, authorizationMiddleware, this.taskController.getWeeklyTaskTimeStatistics);
         this.router.get(`${this.path}/getChartYearlyTaskTimeStatistics`, authorizationMiddleware, this.taskController.getYearlyTaskStatistics);
@@ -37,5 +37,7 @@ export class TaskRoute {
         this.router.get(`${this.path}/getEmployeeChartWeeklyTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeWeeklyTaskTimeStatistics);
         this.router.get(`${this.path}/getEmployeeChartYearlyTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeYearlyTaskStatistics);
         this.router.get(`${this.path}/getEmployeeProjectHours/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeProjectHoursSummary);
+        this.router.get(`${this.path}/getPhaseTasks/:phaseId`, authorizationMiddleware, this.taskController.getTasksByPhaseId);
+
     }
 }

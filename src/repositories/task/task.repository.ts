@@ -18,12 +18,9 @@ export class TaskRepository implements ITaskRepository {
   
   public async updateTask(taskData: Partial<ITask>): Promise<ITask> {
     const task = await Task.findByPk(taskData.id);
-    if (!task) throw new Error("Task not found");
-    
+    if (!task) throw new Error("Task not found");    
     const prevEmployeeId = task.employeeId;
     await task.update(taskData);
-    
-    // Recalculate for both previous and current employee if changed
     await this.calculateUtilization(prevEmployeeId);
     if (prevEmployeeId !== taskData.employeeId) {
       await this.calculateUtilization(taskData.employeeId);
@@ -43,7 +40,7 @@ export class TaskRepository implements ITaskRepository {
 
     public adjustTimezone = (date: Date): Date => {
         const adjustedDate = new Date(date);
-        adjustedDate.setHours(adjustedDate.getHours() + 2); // Add 2 hours to compensate
+        adjustedDate.setHours(adjustedDate.getHours() + 2); 
         return adjustedDate;
       };
 
@@ -56,9 +53,9 @@ export class TaskRepository implements ITaskRepository {
         });
     }
 
-    public async getTasksByProject(allocationId: number): Promise<ITask[]> {
+    public async getTasksByProject(projectId: number): Promise<ITask[]> {
         return await Task.findAll({ 
-            where: { allocationId }, 
+            where: { projectId }, 
             raw: true,
             order: [['taskTitle', 'ASC']]
         });
@@ -89,42 +86,23 @@ export class TaskRepository implements ITaskRepository {
         });
     }
 
-    public async getTasksByEmployeeAndProject(employeeId: number, allocationId: number): Promise<ITask[]> {
+    public async getTasksByEmployeeAndProject(employeeId: number, projectId: number): Promise<ITask[]> {
       return await Task.findAll({
-          where: { employeeId, allocationId },
+          where: { employeeId, projectId },
           raw: true,
           order: [['taskDate', 'ASC']] 
       });
   }
-  
 
-    // public async getTotalHoursByEmployee(employeeId: number): Promise<number> {
-    //     const result = await Task.findOne({
-    //         where: { employeeId },
-    //         attributes: [
-    //             [Sequelize.fn('SUM', Sequelize.col('hours')), 'totalHours']
-    //         ],
-    //         raw: true
-    //     });
-    //     return result?.hours || 0;
-    // }
 
-    public async getTaskSummary(employeeId: number, startDate: Date, endDate: Date): Promise<{ allocationId: number, totalHours: number }[]> {
-        return await Task.findAll({
-            where: {
-                employeeId,
-                startDate: {
-                    [Op.between]: [startDate, endDate]
-                }
-            },
-            attributes: [
-                'allocationId', 
-                [Sequelize.fn('SUM', Sequelize.col('hours')), 'totalHours']
-            ],
-            group: ['allocationId'],
-            raw: true
-        }) as unknown as { allocationId: number, totalHours: number }[];
-    }
+  public async getTasksByPhaseId(phaseId: string): Promise<ITask[]> {
+    return await Task.findAll({
+        where: { phaseId },
+        raw: true,
+        order: [['taskDate', 'ASC']] 
+    });
+}
+
 
     public async approveTask(approvalData: ITaskModification): Promise<ITask> {
         const task = await Task.findByPk(approvalData.taskId);
@@ -181,150 +159,7 @@ export class TaskRepository implements ITaskRepository {
           rejectedHours: Number(result?.rejectedHours || 0)
         };
     }
-
-      public async getCurrentWeekHours(allocationId: number): Promise<EmployeeTimesheet[]> {
-        const { start, end } = this.getCurrentWeekDates();
-        const weekDays = this.generateWeekDays(start);
-    
-        const tasks = await Task.findAll({
-            where: {
-                allocationId,
-                status : "completed",
-                createdAt: { [Op.between]: [start, end] }
-            },
-            include: [{ 
-                model: Employee,
-                attributes: ['email'] 
-            }]
-        });
-    
-        const employeesMap = new Map<number, EmployeeTimesheet>();
-    
-        for (const task of tasks) {
-            const employeeId = task.employeeId;
-            if (!employeesMap.has(employeeId)) {
-                employeesMap.set(employeeId, {
-                    allocationId: task.allocationId,
-                    employeeId: employeeId,
-                    employeeName: task.employeeName,
-                    email: task.employee?.email || '',
-                    position: task.position,
-                    days: Object.fromEntries(weekDays.map(date => [date, 0])) as Record<string, number>
-                });
-            }
-    
-            const employeeData = employeesMap.get(employeeId);
-            const taskDate = new Date(task.createdAt);
-            const taskDateString = this.formatDate(taskDate);
-    
-            if (weekDays.includes(taskDateString)) {
-                employeeData!.days[taskDateString] += task.actualHours;
-            }
-        }
-    
-        return Array.from(employeesMap.values());
-    }
-    private getCurrentWeekDates(): { start: Date; end: Date } {
-        const now = new Date();
-        const currentDay = now.getDay();
-        const monday = new Date(now);
-        monday.setDate(now.getDate() - currentDay + (currentDay === 0 ? -6 : 1));
-        monday.setHours(0, 0, 0, 0);
-        const sunday = new Date(monday);
-        sunday.setDate(monday.getDate() + 6);
-        sunday.setHours(23, 59, 59, 999);
-        return { start: monday, end: sunday };
-    }
-
-    private generateWeekDays(startDate: Date): string[] {
-        const weekDays: string[] = [];
-        const current = new Date(startDate);
-        for (let i = 0; i < 7; i++) {
-            const date = new Date(current);
-            weekDays.push(this.formatDate(date));
-            current.setDate(current.getDate() + 1);
-        }
-        return weekDays;
-    }
-
-    private formatDate(date: Date): string {
-        return date.toISOString().split('T')[0];
-    }
-
-
-    public async getEmployeeMonthlyTasks(
-      allocationId: number,
-      employeeId: number,
-      year: number,
-      month: number
-  ): Promise<MonthlyTasks> {
-      try {
-          if (!allocationId || !employeeId || !year || !month) {
-              throw new HttpException(400, 'Missing required parameters');
-          }
-  
-          const employee = await Employee.findOne({
-              where: { id: employeeId },
-              include: [{
-                  association: 'allocations',
-                  where: { allocationId: allocationId.toString() } 
-              }],
-              raw: false 
-          });
-  
-          if (!employee || !employee || employee.allAllocation.length === 0) {
-              throw new HttpException(404, 'Employee is not assigned to this project');
-          }
-  
-          const projectAllocation = employee.allAllocation.find(a => a.id === allocationId);
-          if (!projectAllocation) {
-              throw new HttpException(404, 'Employee allocation not found for this project');
-          }
-  
-          const startDate = new Date(Date.UTC(year, month - 1, 1));
-          const endDate = new Date(Date.UTC(year, month, 0));
-          endDate.setUTCHours(23, 59, 59, 999);
-  
-          const tasks = await Task.findAll({
-              where: {
-                  allocationId,
-                  employeeId,
-                  status: 'completed',
-                  createdAt: {
-                      [Op.between]: [startDate, endDate]
-                  }
-              },
-              order: [['createdAt', 'ASC']],
-              raw: true
-          });
-  
-          const totalHours = tasks.reduce((sum, task) => sum + task.actualHours, 0);
-          const rate = Number(projectAllocation.chargeOutRate);
-          const totalCost = totalHours * rate;
-  
-          return {
-              totalHours,
-              rate,
-              totalCost,
-              tasks: tasks.map(task => ({
-                  id: task.id,
-                  taskTitle: task.taskTitle,
-                  taskDescription: task.taskDescription,
-                  hours: task.actualHours,
-                  status: task.status,
-                  employeeName: task.employeeName,
-                  position: task.position,
-                  date: task.createdAt.toISOString().split('T')[0],
-                  rate: rate 
-              }))
-          };
-  
-      } catch (error) {
-          if (error instanceof HttpException) throw error;
-          throw new HttpException(500, 'Failed to fetch monthly tasks');
-      }
-  }
-      
+     
   public async getTotalHoursByEmployee(employeeId: number): Promise<number> {
     const result = await Task.findOne({
         where: { employeeId },
@@ -727,60 +562,39 @@ export class TaskRepository implements ITaskRepository {
               }
             } = {};
         
-            // Pre-process allocations into weekly buckets (Monday-Friday weeks)
+            // Pre-process allocations into weekly buckets
             const allocationMap = new Map<string, number>();
             for (const allocation of allocations) {
               const start = new Date(allocation.start);
               const end = new Date(allocation.end);
+              const weeks = this.getWeeksBetweenDates(start, end);
+              const weeklyHours = Number(allocation.hoursWeek) || 0;
+              
+              // Distribute allocation hours evenly across weeks
+              const hoursPerWeek = weeklyHours / weeks;
+              
               let current = new Date(start);
-        
               while (current <= end) {
-                // Get Monday of the current week
-                const weekStart = new Date(current);
-                weekStart.setDate(current.getDate() - (current.getDay() === 0 ? 6 : current.getDay() - 1));
-                weekStart.setHours(0, 0, 0, 0);
+                const year = current.getFullYear();
+                const month = String(current.getMonth() + 1).padStart(2, '0');
+                const week = this.getWeekOfMonth(current);
+                const key = `${year}-${month}-${week}`;
         
-                // Get Friday of the current week
-                const weekEnd = new Date(weekStart);
-                weekEnd.setDate(weekStart.getDate() + 4);
-                weekEnd.setHours(23, 59, 59, 999);
-        
-                // Calculate overlapping days
-                const overlapStart = start > weekStart ? start : weekStart;
-                const overlapEnd = end < weekEnd ? end : weekEnd;
-                const workDays = Math.max(0, Math.ceil((overlapEnd.getTime() - overlapStart.getTime()) / (1000 * 60 * 60 * 24)) + 1);        
-                // Only count weeks with actual work days
-                if (workDays > 0) {
-                  const year = weekStart.getFullYear();
-                  const month = String(weekStart.getMonth() + 1).padStart(2, '0');
-                  const week = this.getWeekOfMonth(weekStart);
-                  const key = `${year}-${month}-${week}`;
-        
-                  // Calculate allocated hours for this week (pro-rated if partial week)
-                  const weeklyHours = Number(allocation.hoursWeek) || 0;
-                  const dailyHours = weeklyHours / 5; // Assuming 5-day work week
-                  const allocatedHours = dailyHours * workDays;
-        
-                  allocationMap.set(key, (allocationMap.get(key) || 0) + allocatedHours);
-                }
-        
-                // Move to next Monday
+                allocationMap.set(key, (allocationMap.get(key) || 0) + hoursPerWeek);
+                
                 current.setDate(current.getDate() + 7);
               }
             }
         
-            // Process tasks (group by work week)
+            // Process tasks
             for (const task of tasks) {
               const taskDate = new Date(task.taskDate);
-              const weekStart = new Date(taskDate);
-              weekStart.setDate(taskDate.getDate() - (taskDate.getDay() === 0 ? 6 : taskDate.getDay() - 1));
-              weekStart.setHours(0, 0, 0, 0);
-        
-              const year = weekStart.getFullYear();
-              const month = String(weekStart.getMonth() + 1).padStart(2, '0');
-              const week = this.getWeekOfMonth(weekStart);
+              const year = taskDate.getFullYear();
+              const month = String(taskDate.getMonth() + 1).padStart(2, '0');
+              const week = this.getWeekOfMonth(taskDate);
               const key = `${year}-${month}-${week}`;
         
+              // Initialize structure
               if (!utilizationMap[year]) utilizationMap[year] = {};
               if (!utilizationMap[year][month]) utilizationMap[year][month] = {};
               if (!utilizationMap[year][month][week]) {
@@ -790,6 +604,7 @@ export class TaskRepository implements ITaskRepository {
                 };
               }
         
+              // Accumulate actual hours
               utilizationMap[year][month][week].actual += Number(task.actualHours) || 0;
             }
         
@@ -809,7 +624,7 @@ export class TaskRepository implements ITaskRepository {
         
                 for (const [week, data] of Object.entries(weeks)) {
                   const weekNumber = Number(week);
-                  if (weekNumber > 4) continue;
+                  if (weekNumber > 4) continue; // Only support up to week4
         
                   const weekKey = `week${weekNumber}` as keyof typeof utilization[number][string];
                   const utilizationPercent = data.allocated > 0 
@@ -821,6 +636,7 @@ export class TaskRepository implements ITaskRepository {
               }
             }
         
+            // Update employee record
             await Employee.update(
               { utilization },
               { where: { id: employeeId } }
@@ -834,14 +650,21 @@ export class TaskRepository implements ITaskRepository {
           }
         }
         
-        // Get week of month (Monday-based)
+        // Helper to get number of weeks between dates
+        private getWeeksBetweenDates(start: Date, end: Date): number {
+          const msPerWeek = 1000 * 60 * 60 * 24 * 7;
+          return Math.ceil((end.getTime() - start.getTime()) / msPerWeek);
+        }
+        
+        // Improved week of month calculation
         private getWeekOfMonth(date: Date): number {
-          const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
-          const firstMonday = new Date(firstDayOfMonth);
-          firstMonday.setDate(firstDayOfMonth.getDate() + ((1 - firstDayOfMonth.getDay() + 7) % 7));
-          
-          const diffInDays = Math.floor((date.getTime() - firstMonday.getTime()) / (1000 * 60 * 60 * 24));
-          return Math.floor(diffInDays / 7) + 1;
+          const start = new Date(date);
+          start.setDate(1);
+          start.setHours(0, 0, 0, 0);
+        
+          const day = date.getDay() || 7; // Convert Sunday to 7
+          const diff = date.getDate() - start.getDate() + ((start.getDay() || 7) - day);
+          return Math.ceil((diff + 1) / 7);
         }
       }
 

@@ -45,7 +45,7 @@ export class ProjectService implements IProjectService {
         try {
             return await this.projectRepository.getAllProjects();
         } catch (error) {
-            throw new HttpException(500, `Error retrieving projects: ${error.message}`);
+            throw new HttpException(500, `Error retrieving projects: ${error}`);
         }
     }
 

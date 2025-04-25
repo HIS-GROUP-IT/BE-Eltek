@@ -3,6 +3,7 @@ import { ITaskService, TASK_SERVICE_TOKEN } from "@/interfaces/task/ITaskService
 import { HttpException } from "@/exceptions/HttpException"; // Custom Exception Handling
 import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";
 import { TaskRepository } from "@/repositories/task/task.repository";
+import { Allocation } from "@/types/employee.types";
 
 @Service({ id: TASK_SERVICE_TOKEN, type: TaskService })
 export class TaskService implements ITaskService {
@@ -32,9 +33,9 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getTasksByProject(allocationId: number): Promise<ITask[]> {
+    public async getTasksByProject(projectId: number): Promise<ITask[]> {
         try {
-            return await this.taskRepository.getTasksByProject(allocationId);
+            return await this.taskRepository.getTasksByProject(projectId);
         } catch (error) {
             throw new HttpException(500, `Error fetching tasks: ${error.message}`);
         }
@@ -72,9 +73,9 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getTasksByEmployeeAndProject(employeeId: number, allocationId: number): Promise<ITask[]> {
+    public async getTasksByEmployeeAndProject(employeeId: number, projectId: number): Promise<ITask[]> {
         try {
-            return await this.taskRepository.getTasksByEmployeeAndProject(employeeId, allocationId);
+            return await this.taskRepository.getTasksByEmployeeAndProject(employeeId, projectId);
         } catch (error) {
             throw new HttpException(500, `Error fetching tasks: ${error.message}`);
         }
@@ -88,13 +89,7 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getTaskSummary(employeeId: number, startDate: Date, endDate: Date): Promise<{ allocationId: number, totalHours: number }[]> {
-        try {
-            return await this.taskRepository.getTaskSummary(employeeId, startDate, endDate);
-        } catch (error) {
-            throw new HttpException(500, `Error generating summary: ${error.message}`);
-        }
-    }
+
 
     public async approveTask(approvalData: ITaskModification): Promise<ITask> {
         try {
@@ -121,26 +116,8 @@ export class TaskService implements ITaskService {
         }
     }
 
-    public async getCurrentWeekHours(allocationId: number): Promise<EmployeeTimesheet[]> {
-        try {
-            const timsheetSummary = await this.taskRepository.getCurrentWeekHours(allocationId);
-            return timsheetSummary;
-        } catch (error) {
-            throw new HttpException(400, error)
-        }
-    }
 
-    public async getEmployeeMonthlyTasks( allocationId: number,
-        employeeId: number,
-        year: number,
-        month: number): Promise<MonthlyTasks> {
-        try {
-            const fetchedHours = await this.taskRepository.getEmployeeMonthlyTasks(allocationId,employeeId,year,month);
-            return fetchedHours;
-        } catch (error) {
-            throw new HttpException(400, error)
-        }
-    }
+
     public async getTaskTimeStatistics(): Promise<{ today: { totalHours: number; average: number; completionRate: number; data: number[]; }; yesterday: { totalHours: number; average: number; completionRate: number; data: number[]; }; }> {
         try {
             const timeStatistics = await this.taskRepository.getTaskTimeStatistics();
@@ -208,5 +185,12 @@ export class TaskService implements ITaskService {
         }
     }
 
-
+    public async getTasksByPhaseId(phaseId: string): Promise<ITask[]> {
+        try {
+            return await this.taskRepository.getTasksByPhaseId(phaseId);
+        } catch (error) {
+            throw new HttpException(500, `Error fetching tasks: ${error.message}`);
+        }
+    }
+  
 }

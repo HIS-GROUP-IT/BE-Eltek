@@ -1,0 +1,138 @@
+2025-04-24 08:00:33 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error fetching projects
+2025-04-24 08:00:57 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error fetching projects
+2025-04-24 08:01:23 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error fetching projects
+2025-04-24 08:01:23 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error fetching projects
+2025-04-24 08:03:02 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Error fetching projects
+2025-04-24 08:03:40 error: Unable to connect to the database: connect ETIMEDOUT
+2025-04-24 08:06:07 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Allocation is not associated to Project!
+2025-04-24 11:27:35 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Allocation is not associated to Project!
+2025-04-24 11:27:36 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Allocation is not associated to Project!
+2025-04-24 11:27:49 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Allocation is not associated to Project!
+2025-04-24 11:30:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Allocation is associated to Project using an alias. You've included an alias (allocations), but it does not match the alias(es) defined in your association (Allocations).
+2025-04-24 11:32:29 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Allocation is associated to Project using an alias. You've included an alias (allocations), but it does not match the alias(es) defined in your association (Allocations).
+2025-04-24 12:16:48 error: [POST] /api/tasks/createTask >> StatusCode:: 400, Message:: employeeId must be a positive number, phaseId must be a positive number,phaseId must be an integer number, priority must be shorter than or equal to 10 characters,priority must be a string
+2025-04-24 12:18:06 error: [POST] /api/tasks/createTask >> StatusCode:: 400, Message:: phaseId must be a positive number,phaseId must be an integer number, priority must be shorter than or equal to 10 characters,priority must be a string
+2025-04-24 12:26:28 error: [POST] /api/tasks/createTask >> StatusCode:: 400, Message:: phaseId must be a positive number,phaseId must be an integer number
+2025-04-24 12:27:05 error: [POST] /api/tasks/createTask >> StatusCode:: 400, Message:: phaseId must be a positive number,phaseId must be an integer number
+2025-04-24 12:28:50 error: [POST] /api/tasks/createTask >> StatusCode:: 400, Message:: phaseId must be a positive number,phaseId must be an integer number
+2025-04-24 12:30:04 error: [POST] /api/tasks/createTask >> StatusCode:: 500, Message:: Error creating task: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`tasks`, CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-04-24 12:31:43 error: [POST] /api/tasks/createTask >> StatusCode:: 500, Message:: Error creating task: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`tasks`, CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-04-24 12:32:19 error: [POST] /api/tasks/createTask >> StatusCode:: 500, Message:: Error creating task: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`tasks`, CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-04-24 12:32:23 error: [POST] /api/tasks/createTask >> StatusCode:: 500, Message:: Error creating task: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`tasks`, CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-04-24 12:40:50 error: [POST] /api/tasks/createTask >> StatusCode:: 500, Message:: Error creating task: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`tasks`, CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-04-24 12:43:32 error: [POST] /api/tasks/createTask >> StatusCode:: 500, Message:: Error creating task: Cannot add or update a child row: a foreign key constraint fails (`db_aa010d_eltek`.`tasks`, CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2025-04-24 12:46:42 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 12:46:42 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 12:46:42 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 12:46:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 12:50:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/task/task.service.ts[0m:[93m75[0m:[93m67[0m - [91merror[0m[90m TS1138: [0mParameter declaration expected.
+
+[7m75[0m     public async getTasksByEmployeeAndProject(employeeId: number, : string): Promise<ITask[]> {
+[7m  [0m [91m                                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/task/task.service.ts[0m:[93m75[0m:[93m67[0m - [91merror[0m[90m TS1138: [0mParameter declaration expected.
+
+[7m75[0m     public async getTasksByEmployeeAndProject(employeeId: number, : string): Promise<ITask[]> {
+[7m  [0m [91m                                                                  ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-24 13:32:17 error: [POST] /api/tasks/createTask >> StatusCode:: 400, Message:: taskDescription must be shorter than or equal to 500 characters
+2025-04-24 15:05:32 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Column 'normalizedPhaseIds' in where clause is ambiguous
+2025-04-24 15:05:32 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Column 'normalizedPhaseIds' in where clause is ambiguous
+2025-04-24 15:06:01 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Column 'normalizedPhaseIds' in where clause is ambiguous
+2025-04-24 15:06:01 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Column 'normalizedPhaseIds' in where clause is ambiguous
+2025-04-24 15:07:42 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Column 'phases' in where clause is ambiguous
+2025-04-24 15:07:42 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Column 'phases' in where clause is ambiguous
+2025-04-24 15:12:04 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Unknown column 'allocations.normalizedPhaseIds' in 'where clause'
+2025-04-24 15:12:04 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Unknown column 'allocations.normalizedPhaseIds' in 'where clause'
+2025-04-24 15:12:41 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Unknown column 'allocations.phases' in 'where clause'
+2025-04-24 15:12:41 error: [GET] /api/allocations/getPhaseAllocations/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching phase allocations: Unknown column 'allocations.phases' in 'where clause'
+2025-04-24 15:54:15 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 15:54:15 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 15:54:16 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 15:54:16 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 16:26:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 16:26:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 16:26:48 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 16:26:49 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 17:09:38 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 17:09:39 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 20:08:53 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 20:08:53 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 20:08:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 20:08:54 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 20:11:01 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 20:11:02 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 20:12:19 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 20:12:19 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 20:12:19 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 20:12:20 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 20:13:02 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 20:13:02 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 20:27:46 error: [GET] /api/tasks/getTaskByEmployeeAndProject/1/15 >> StatusCode:: 500, Message:: Error fetching tasks: allocationId is not defined
+2025-04-24 20:27:46 error: [GET] /api/tasks/getTaskByEmployeeAndProject/1/15 >> StatusCode:: 500, Message:: Error fetching tasks: allocationId is not defined
+2025-04-24 20:31:20 error: [GET] /api/tasks/getTaskByEmployeeAndProject/1/15 >> StatusCode:: 500, Message:: Error fetching tasks: allocationId is not defined
+2025-04-24 20:31:20 error: [GET] /api/tasks/getTaskByEmployeeAndProject/1/15 >> StatusCode:: 500, Message:: Error fetching tasks: allocationId is not defined
+2025-04-24 22:27:23 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:27:23 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:27:25 error: [GET] /api/tasks/getChartWeeklyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:27:25 error: [GET] /api/tasks/getChartYearlyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:27:25 error: [GET] /api/tasks/getChartTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:27:25 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 22:27:25 error: [GET] /api/tasks/getChartWeeklyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:27:25 error: [GET] /api/tasks/getChartYearlyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:27:25 error: [GET] /api/tasks/getChartTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:27:26 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 22:32:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:32:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:32:50 error: [GET] /api/tasks/getChartWeeklyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:32:50 error: [GET] /api/tasks/getChartYearlyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:32:50 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 22:32:50 error: [GET] /api/tasks/getChartTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:32:51 error: [GET] /api/tasks/getChartWeeklyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:32:51 error: [GET] /api/tasks/getChartYearlyTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:32:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 22:32:51 error: [GET] /api/tasks/getChartTaskTimeStatistics >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:32:59 error: [GET] /api/tasks/getPhaseTasks/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching tasks: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:33:00 error: [GET] /api/tasks/getPhaseTasks/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching tasks: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:33:21 error: [GET] /api/tasks/getPhaseTasks/92017d35-94a3-4891-bb26-5182ecf6b6d5 >> StatusCode:: 500, Message:: Error fetching tasks: Unknown column 'isSubmitted' in 'field list'
+2025-04-24 22:43:22 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 22:43:22 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 22:49:09 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 22:49:20 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 22:49:21 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 22:49:25 error: [GET] /api/projects/getEmployeeProjects/1 >> StatusCode:: 500, Message:: this.projectService.getProjectsByEmployee is not a function
+2025-04-24 22:49:25 error: [GET] /api/projects/getEmployeeProjects/1 >> StatusCode:: 500, Message:: this.projectService.getProjectsByEmployee is not a function
+2025-04-24 22:58:54 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:58:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:58:55 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 22:58:56 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 22:59:08 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:59:08 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 22:59:08 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 22:59:09 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 23:19:07 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 23:19:08 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 23:27:08 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 23:27:08 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 23:27:08 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 23:27:09 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 23:29:35 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 23:29:35 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-24 23:30:52 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 23:30:52 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 23:30:52 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 23:30:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-24 23:40:35 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-24 23:40:37 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours

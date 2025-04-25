@@ -16,7 +16,7 @@ export class AllocationService implements IAllocationService {
   public async createAllocation(
     allocationData: Partial<Allocation>
   ): Promise<Allocation> {
-    const existing = await this.allocationRepository.findExistingAllocation(
+    const existing = await this.allocationRepository.findExistingAllocations(
       allocationData.employeeId!,
       allocationData.projectId,
       allocationData.phases
@@ -49,6 +49,8 @@ export class AllocationService implements IAllocationService {
   public async getProjectAllocations(projectId: number): Promise<Allocation[]> {
     return this.allocationRepository.getProjectAllocations(projectId);
   }
+
+  
 
   public async getAllocationById(id: number): Promise<Allocation> {
     const allocation = await this.allocationRepository.getAllocationById(id);
@@ -109,6 +111,14 @@ export class AllocationService implements IAllocationService {
       return canBeOverriden;
     } catch (error) {
       throw new HttpException(400, "Cannot override conflicting allocations. Please resolve manually");
+    }
+  }
+
+  public async getPhaseAllocations(phaseId: string): Promise<Allocation[]> {
+    try {
+      return await this.allocationRepository.getPhaseAllocations(phaseId);
+    } catch (error) {
+      throw new HttpException(500, `Error fetching phase allocations: ${error.message}`);
     }
   }
 }

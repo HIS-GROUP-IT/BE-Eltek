@@ -7,7 +7,8 @@ export interface IAllocationRepository {
   deleteAllocation(id: number): Promise<void>;
   getEmployeeAllocations(employeeId: number): Promise<Allocation[]>;
   getProjectAllocations(projectId: number): Promise<Allocation[]>;
-  findExistingAllocation(employeeId: number, projectId: number, phases: string[]): Promise<Allocation | null>;
+  findExistingAllocations(employeeId: number, projectId: number, phaseIds: string[]): Promise<Allocation | null>;
+  getPhaseAllocations(phaseId: string): Promise<Allocation[]> 
   checkForOverlaps(
     employeeId: number, 
     startDate: Date, 

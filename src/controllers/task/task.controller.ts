@@ -120,6 +120,21 @@ export class TaskController {
         }
     };
 
+    public getTasksByPhaseId = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const phaseId = req.params.phaseId;
+            const task = await this.taskService.getTasksByPhaseId(phaseId);
+            const response: CustomResponse<ITask | null> = {
+                data: task,
+                message: "Task fetched successfully",
+                error: false,
+            };
+            res.status(task ? 200 : 404).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
     public getTasksByDateRange = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { startDate, endDate } = req.query;
@@ -249,9 +264,9 @@ export class TaskController {
 
       public getTasksByEmployeeAndProject = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const  allocationId  = req.params.allocationId;
+            const projectId  = req.params.projectId;
             const employeeId = req.params.employeeId;
-            const tasks = await this.taskService.getTasksByEmployeeAndProject(+employeeId,+allocationId);
+            const tasks = await this.taskService.getTasksByEmployeeAndProject(+employeeId,+projectId);
             const response: CustomResponse<ITask[]> = {
                 data: tasks,
                 message: "Tasks fetched successfully",

@@ -34,63 +34,84 @@ const dbConnection = new Sequelize({
   }
 });
 
+// Initialize models
 User.initialize(dbConnection);
 RefreshToken.initialize(dbConnection);
 Employee.initialize(dbConnection);
 Task.initialize(dbConnection);
 Project.initialize(dbConnection);
-Leave.initialize(dbConnection)
+Leave.initialize(dbConnection);
 Notification.initialize(dbConnection);
 AllocationModel.initialize(dbConnection);
 
-
+// Define relationships
 User.hasMany(RefreshToken, { foreignKey: 'userId' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId' });
 
-Employee.hasMany(Task, { foreignKey: 'employeeId' });
-Task.belongsTo(Employee, { foreignKey: 'employeeId' });
+Employee.hasMany(Task, {
+  foreignKey: 'employeeId',
+  as: 'tasks'
+});
+Task.belongsTo(Employee, {
+  foreignKey: 'employeeId',
+  as: 'employee'
+});
+
 Task.belongsTo(AllocationModel, {
   foreignKey: 'allocationId',
   as: 'allocation',
 });
 
-
-
-Leave.belongsTo(Employee, {
-  foreignKey: 'employeeId',
-  as: 'employee'
+// Project-Task relationship
+Project.hasMany(Task, {
+  foreignKey: 'projectId',
+  as: 'tasks'
 });
-
-Employee.hasMany(Leave, {
-  foreignKey: 'employeeId',
-  as: 'leaves'
-});
-
-Notification.belongsTo(Employee, {
-  foreignKey: 'employeeId',
-  as: 'employee'
-});
-
-
-Notification.belongsTo(Project, {
+Task.belongsTo(Project, {
   foreignKey: 'projectId',
   as: 'project'
 });
 
-AllocationModel.belongsTo(Employee, {
-  foreignKey: 'employeeId',
-  as: 'employee'
+// Project-Allocation relationship (consistent with Project model)
+Project.hasMany(AllocationModel, {
+  foreignKey: 'projectId',
+  as: 'allocations' // Changed to lowercase for consistency
 });
-
 AllocationModel.belongsTo(Project, { 
   foreignKey: 'projectId',
   as: 'project'
 });
 
+// Employee-Allocation relationship
 Employee.hasMany(AllocationModel, {
   foreignKey: 'employeeId',
   as: 'allocations' 
 });
+AllocationModel.belongsTo(Employee, {
+  foreignKey: 'employeeId',
+  as: 'employee'
+});
+
+// Leave relationships
+Leave.belongsTo(Employee, {
+  foreignKey: 'employeeId',
+  as: 'employee'
+});
+Employee.hasMany(Leave, {
+  foreignKey: 'employeeId',
+  as: 'leaves'
+});
+
+// Notification relationships
+Notification.belongsTo(Employee, {
+  foreignKey: 'employeeId',
+  as: 'employee'
+});
+Notification.belongsTo(Project, {
+  foreignKey: 'projectId',
+  as: 'project'
+});
+
 
 dbConnection.sync({ alter: true })
   .then(() => console.log('Database synced successfully'))

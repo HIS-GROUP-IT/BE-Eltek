@@ -14,7 +14,7 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
   public employeeId!: number;
   public projectId!: number;
   public phases!: string[];
-  public normalizedPhases!: string;
+  public normalizedPhaseIds!: string;
   public start!: Date;
   public end!: Date;
   public canOverride!: boolean;
@@ -58,7 +58,7 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
           allowNull: true,
           defaultValue: [],
         },
-        normalizedPhases: {
+        normalizedPhaseIds: {
           type: DataTypes.STRING,
           allowNull: true,
         },

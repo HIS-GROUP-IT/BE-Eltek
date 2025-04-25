@@ -64,5 +64,10 @@ export class AllocationRoute implements Routes {
       authorizationMiddleware,
       this.allocationController.checkOverridePossibility
     );
+    this.router.get(
+      `${this.path}/getPhaseAllocations/:phaseId`,
+      authorizationMiddleware,
+      this.allocationController.getPhaseAllocations
+    );
   }
 }

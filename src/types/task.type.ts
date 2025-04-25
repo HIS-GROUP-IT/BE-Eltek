@@ -3,9 +3,10 @@ export type ITask = {
   employeeName: string;
   employeeId: number;
   position: string;
-  allocationId: number;
+  phaseId: string;
   createdBy: number;
   taskTitle: string;
+  isSubmitted: boolean;
   taskDescription: string;
   phase : string ;
   estimatedHours : number;
@@ -47,7 +48,7 @@ export type Week = {
   timesheets: TimesheetEntry[];
 };
 export type EmployeeTimesheet = {
-  allocationId: number;
+  projectId: number;
   employeeId: number;
   employeeName: string;
   email: string;

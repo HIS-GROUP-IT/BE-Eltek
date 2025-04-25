@@ -51,13 +51,17 @@ export class ProjectRepository implements IProjectRepository {
     try {
       const projects = await Project.findAll({
         order: [['createdAt', 'DESC']],
-        raw: true
+        include: [{
+          model: AllocationModel,
+          as: 'allocations'
+        }],
       });
       return projects as IProject[];
     } catch (error) {
-      throw new HttpException(500, "Error fetching projects");
+      throw new HttpException(500,error.message);
     }
   }
+
 
   public async getProjectById(projectId: number): Promise<IProject | null> {
     try {
@@ -118,43 +122,61 @@ export class ProjectRepository implements IProjectRepository {
   }
 
   public async calculateEstimatedCost(projectId: number): Promise<IEstimatedCost> {
+    // First verify the project exists
     const project = await Project.findByPk(projectId);
     if (!project) {
         throw new HttpException(404, "Project not found");
     }
 
+    // Get all allocations for this project
+    const allocations = await AllocationModel.findAll({
+        where: { projectId },
+        attributes: ['id', 'employeeId', 'chargeOutRate', 'chargeType']
+    });
+
+    // Create a map of employeeId to their allocation details
+    const allocationMap = new Map<number, AllocationModel>();
+    allocations.forEach(allocation => {
+        allocationMap.set(allocation.employeeId, allocation);
+    });
+
+    // Get all completed tasks for this project
     const tasks = await Task.findAll({
         where: { 
-            status: "completed" // Add status filter here
-        },
-        include: [{
-            model: AllocationModel,
-            as: "allocation",
-            where: { projectId: projectId },
-            attributes: ["chargeOutRate"],
-        }],
+            projectId,
+            status: "completed"
+        }
     });
 
     const monthlyCosts: IEstimatedCost = {};
 
     for (const task of tasks) {
-        const allocation = task.allocation as AllocationModel;
-        if (!allocation || allocation.chargeOutRate == null) continue;
+        if (!task.employeeId) continue;
+
+        const allocation = allocationMap.get(task.employeeId);
+        if (!allocation?.chargeOutRate) continue;
 
         const actualHours = task.actualHours || 0;
         if (actualHours <= 0) continue;
 
+        // Format month as YYYY-MM
         const taskDate = new Date(task.taskDate);
-        const month = `${taskDate.getFullYear()}-${(taskDate.getMonth() + 1)
+        const monthKey = `${taskDate.getFullYear()}-${(taskDate.getMonth() + 1)
             .toString()
             .padStart(2, "0")}`;
 
-        const cost = actualHours * allocation.chargeOutRate;
-        monthlyCosts[month] = (monthlyCosts[month] || 0) + cost;
+        // Calculate cost based on charge type
+        let cost = 0;
+        if (allocation.chargeType === "fixed") {
+            cost = allocation.chargeOutRate; // Fixed cost per task
+        } else {
+            cost = actualHours * allocation.chargeOutRate; // Hourly rate
+        }
+
+        // Accumulate monthly costs
+        monthlyCosts[monthKey] = (monthlyCosts[monthKey] || 0) + cost;
     }
 
     return monthlyCosts;
 }
-
-
 }
