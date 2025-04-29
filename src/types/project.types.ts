@@ -23,12 +23,14 @@ export type IProject = {
   };
   
   export type Phase = {
+    id?:string;
     name: string;
     description: string;
-    startDate: Date;
-    endDate: Date;
-    duration: string;
-    assignedResources: number[];
+    startDate : string;
+    endDate: string;
+    members : number;
+    completionRate:number;
+    numberOfTasks:number;
   };
   
   export type Role = {

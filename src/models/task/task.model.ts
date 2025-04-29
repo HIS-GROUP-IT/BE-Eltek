@@ -25,11 +25,12 @@ class Task extends Model {
   public reasonForRejection?: string;
   public taskDate: Date;
   public modifiedBy!: number;
+  public createdAt!: Date;
+  public updatedAt!: Date;
   public readonly totalHours: number;
   public readonly pendingHours: number;
   public readonly completedHours: number;
   public readonly rejectedHours: number;
-  public createdAt: Date;
   public readonly employee?: Employee;
   public readonly user?: User;
 

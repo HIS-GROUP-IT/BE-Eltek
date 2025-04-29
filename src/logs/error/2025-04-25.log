@@ -1,0 +1,983 @@
+2025-04-25 08:27:49 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-04-25 08:46:47 error: Unable to connect to the database: Table 'db_aa010d_eltek.employees' doesn't exist
+2025-04-25 10:53:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 10:53:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 10:53:57 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 10:53:58 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 11:32:06 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 11:32:06 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 11:32:07 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 11:32:07 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 12:07:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 12:07:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 12:07:48 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 12:07:48 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 12:13:45 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-25 12:13:46 error: [GET] /api/tasks/getEmployeeProjectHours/1 >> StatusCode:: 400, Message:: SequelizeDatabaseError: Unknown column 'hours' in 'field list'
+2025-04-25 12:38:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 12:38:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 12:38:52 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 12:38:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 14:03:09 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m750[0m:[93m9[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m750[0m         export type PhaseTimeline = {
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m16[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m               ~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m46[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m                                             ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m                                                                    ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m93[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m                                                                                            [0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m768[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m768[0m             const project = await Project.findByPk(filters.projectId);
+[7m   [0m [91m                  ~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m768[0m:[93m70[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m768[0m             const project = await Project.findByPk(filters.projectId);
+[7m   [0m [91m                                                                     ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m17[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                          ~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                                ~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                                                                           ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m772[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m772[0m             const phases = project.phases.filter(p =>
+[7m   [0m [91m                  ~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m774[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m774[0m             );
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m777[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m777[0m             const timelineData = await Promise.all(phases.map(async (phase) => {
+[7m   [0m [91m                  ~~~~~~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m820[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m820[0m             }));
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m822[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m822[0m             return timelineData;
+[7m   [0m [91m                   ~~~~~~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m822[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m822[0m             return timelineData;
+[7m   [0m [91m                               ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m825[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m825[0m         private generateIntervals(
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m826[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m826[0m             phaseStart: Date,
+[7m   [0m [91m                      ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m827[0m:[93m21[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m827[0m             phaseEnd: Date,
+[7m   [0m [91m                    ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m828[0m:[93m25[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m828[0m             filterStart?: Date,
+[7m   [0m [91m                        ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m829[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m829[0m             filterEnd?: Date
+[7m   [0m [91m                      ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m830[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m830[0m         ): { startDate: Date; endDate: Date }[] {
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m830[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m830[0m         ): { startDate: Date; endDate: Date }[] {
+[7m   [0m [91m                                                ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m833[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m833[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m833[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m833[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m869[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m869[0m       }
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m750[0m:[93m9[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m750[0m         export type PhaseTimeline = {
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m16[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m               ~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m46[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m                                             ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m                                                                    ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m767[0m:[93m93[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m767[0m         public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+[7m   [0m [91m                                                                                            [0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m768[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m768[0m             const project = await Project.findByPk(filters.projectId);
+[7m   [0m [91m                  ~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m768[0m:[93m70[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m768[0m             const project = await Project.findByPk(filters.projectId);
+[7m   [0m [91m                                                                     ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m17[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                          ~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                                ~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m769[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m769[0m             if (!project) throw new HttpException(404, "Project not found");
+[7m   [0m [91m                                                                           ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m772[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m772[0m             const phases = project.phases.filter(p =>
+[7m   [0m [91m                  ~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m774[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m774[0m             );
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m777[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m777[0m             const timelineData = await Promise.all(phases.map(async (phase) => {
+[7m   [0m [91m                  ~~~~~~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m820[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m820[0m             }));
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m822[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m822[0m             return timelineData;
+[7m   [0m [91m                   ~~~~~~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m822[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m822[0m             return timelineData;
+[7m   [0m [91m                               ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m825[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m825[0m         private generateIntervals(
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m826[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m826[0m             phaseStart: Date,
+[7m   [0m [91m                      ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m827[0m:[93m21[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m827[0m             phaseEnd: Date,
+[7m   [0m [91m                    ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m828[0m:[93m25[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m828[0m             filterStart?: Date,
+[7m   [0m [91m                        ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m829[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m829[0m             filterEnd?: Date
+[7m   [0m [91m                      ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m830[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m830[0m         ): { startDate: Date; endDate: Date }[] {
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m830[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m830[0m         ): { startDate: Date; endDate: Date }[] {
+[7m   [0m [91m                                                ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m833[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m833[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m833[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m833[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m869[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m869[0m       }
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:03:21 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:03:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:03:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:04:33 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:04:38 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:05:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:05:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:05:50 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/repositories/task/task.repository.ts[0m:[93m813[0m:[93m93[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m813[0m             const finalEnd = filterEnd ? Math.min(phaseEnd.getTime(), filterEnd.getTime())) : phaseEnd;
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:11:12 error: uncaughtException: Unexpected identifier 'getPhaseTimeline'
+C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\repositories\task\task.repository.ts:703
+    async get getPhaseTimeline(filters) { }
+              ^^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier 'getPhaseTimeline'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-04-25 14:11:39 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m858[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m858[0m       }
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m858[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m858[0m       }
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:11:52 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m862[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m862[0m       }
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m862[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m862[0m       }
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:11:59 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m853[0m:[93m12[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m853[0m      }     }
+[7m   [0m [91m           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m853[0m:[93m12[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m853[0m      }     }
+[7m   [0m [91m           ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:12:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m847[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m847[0m           return await this.(filters);
+[7m   [0m [91m                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/task/task.repository.ts[0m:[93m847[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m847[0m           return await this.(filters);
+[7m   [0m [91m                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:13:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/task/task.service.ts[0m:[93m197[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m197[0m           return await this.(filters);
+[7m   [0m [91m                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/task/task.service.ts[0m:[93m197[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m197[0m           return await this.(filters);
+[7m   [0m [91m                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:13:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/task/task.service.ts[0m:[93m197[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m197[0m           return await this.(filters);
+[7m   [0m [91m                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/task/task.service.ts[0m:[93m197[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m197[0m           return await this.(filters);
+[7m   [0m [91m                            ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 14:22:08 error: [POST] /api/tasks/getPhaseTimeline >> StatusCode:: 401, Message:: Authentication required
+2025-04-25 14:57:57 error: [POST] /api/tasks/getPhaseTimeline >> StatusCode:: 500, Message:: Project not found
+2025-04-25 18:40:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m244[0m:[93m11[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m244[0m   project.?.forEach(task => {
+[7m   [0m [91m          ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m244[0m:[93m11[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m244[0m   project.?.forEach(task => {
+[7m   [0m [91m          ~~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 18:42:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/project/project.controller.ts[0m:[93m154[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m154[0m 
+[7m   [0m [91m[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/project/project.controller.ts[0m:[93m154[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m154[0m 
+[7m   [0m [91m[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 18:59:39 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m232[0m:[93m22[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m232[0m     if (!allocation. || !allocation.chargeOutRate) return;
+[7m   [0m [91m                     ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m232[0m:[93m22[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m232[0m     if (!allocation. || !allocation.chargeOutRate) return;
+[7m   [0m [91m                     ~~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 19:00:56 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m245[0m:[93m27[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m245[0m       name: `${allocation.} ${allocation.employee.lastName}`,
+[7m   [0m [91m                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m245[0m:[93m27[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m245[0m       name: `${allocation.} ${allocation.employee.lastName}`,
+[7m   [0m [91m                          ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 19:01:06 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m245[0m:[93m27[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m245[0m       name: `${allocation.} ${allocation.employee.lastName}`,
+[7m   [0m [91m                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m245[0m:[93m27[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m245[0m       name: `${allocation.} ${allocation.employee.lastName}`,
+[7m   [0m [91m                          ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 19:12:50 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 19:13:03 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 19:13:07 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 19:13:11 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 19:13:14 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 19:13:20 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 19:14:25 error: [GET] /api/projects/getProfitabilityData/1/2024-05-01 >> StatusCode:: 500, Message:: Error fetching profitability data: date.getFullYear is not a function
+2025-04-25 19:21:43 error: [GET] /api/projects/getProfitabilityData/1/2024-05-01 >> StatusCode:: 500, Message:: Error fetching profitability data: date.getFullYear is not a function
+2025-04-25 19:21:46 error: [GET] /api/projects/getProfitabilityData/1/2024-05-01 >> StatusCode:: 500, Message:: Error fetching profitability data: date.getFullYear is not a function
+2025-04-25 19:29:51 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m252[0m:[93m48[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m252[0m       const entry = resourceMap.get(allocation.) || {
+[7m   [0m [91m                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m252[0m:[93m48[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m252[0m       const entry = resourceMap.get(allocation.) || {
+[7m   [0m [91m                                               ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 19:44:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m242[0m:[93m12[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m242[0m       name:,
+[7m   [0m [91m           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m242[0m:[93m12[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m242[0m       name:,
+[7m   [0m [91m           ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 20:03:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/project.service.ts[0m:[93m98[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m98[0m }
+[7m  [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/project.service.ts[0m:[93m98[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m98[0m }
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 20:03:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/project.service.ts[0m:[93m105[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m105[0m 
+[7m   [0m [91m[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/project.service.ts[0m:[93m105[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m105[0m 
+[7m   [0m [91m[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 20:03:20 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/project.service.ts[0m:[93m105[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m105[0m 
+[7m   [0m [91m[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/project.service.ts[0m:[93m105[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m105[0m 
+[7m   [0m [91m[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-04-25 20:04:21 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 20:04:32 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 20:05:11 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:521:19)
+    at ProjectRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:27:21)
+    at new ProjectRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\project\project.routes.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:17:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-04-25 22:30:35 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 22:30:35 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-04-25 22:30:37 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-04-25 22:30:37 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours

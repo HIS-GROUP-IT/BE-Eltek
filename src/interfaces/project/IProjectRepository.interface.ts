@@ -13,4 +13,5 @@ export interface IProjectRepository {
         projectData: Partial<IProject>
       ): Promise<IProject>
  calculateEstimatedCost(projectId: number): Promise<IEstimatedCost>
+ calculateEstimatedCostPerEmployee(projectId: number): Promise<Array<{ employeeId: number; estimatedCost: number }>>
 }

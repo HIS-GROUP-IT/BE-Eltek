@@ -32,12 +32,11 @@ export class TaskRoute {
         this.router.get(`${this.path}/getChartWeeklyTaskTimeStatistics`, authorizationMiddleware, this.taskController.getWeeklyTaskTimeStatistics);
         this.router.get(`${this.path}/getChartYearlyTaskTimeStatistics`, authorizationMiddleware, this.taskController.getYearlyTaskStatistics);
         this.router.delete(`${this.path}/deleteTask/:taskId`, authorizationMiddleware, this.taskController.deleteTask);
-
         this.router.get(`${this.path}/getEmployeeChartTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeTaskTimeStatistics);
         this.router.get(`${this.path}/getEmployeeChartWeeklyTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeWeeklyTaskTimeStatistics);
         this.router.get(`${this.path}/getEmployeeChartYearlyTaskTimeStatistics/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeYearlyTaskStatistics);
         this.router.get(`${this.path}/getEmployeeProjectHours/:employeeId`, authorizationMiddleware, this.taskController.getEmployeeProjectHoursSummary);
         this.router.get(`${this.path}/getPhaseTasks/:phaseId`, authorizationMiddleware, this.taskController.getTasksByPhaseId);
-
+        this.router.post(`${this.path}/getPhaseTimeline`, authorizationMiddleware, this.taskController.getPhaseTimeline);
     }
 }

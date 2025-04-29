@@ -131,4 +131,19 @@ export class ProjectController {
             next(error);
         }
     }
+
+    public calculateEstimatedCostPerEmployee = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId;
+            const profitabilityData = await this.projectService.calculateEstimatedCostPerEmployee(projectId);
+            const response: CustomResponse<any> = {
+                data: profitabilityData,
+                message: "Project profitabilityData fetched successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
 }

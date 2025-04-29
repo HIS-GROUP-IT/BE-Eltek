@@ -4,6 +4,7 @@ import { Sequelize } from 'sequelize';
 import User from '../user/user.model';
 import Employee from '../employee/employee.model';
 import { IEstimatedCost, IProject, Phase, ProjectStatus, Role } from '@/types/project.types';
+import Task from '../task/task.model';
 
 type ProjectCreationAttributes = Optional<IProject, 'id' | 'createdAt' | 'updatedAt'>;
 
@@ -29,6 +30,7 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
 
   public readonly employees?: Employee[];
   public readonly Allocations!: Allocation[];
+  public readonly tasks!: Task[];
 
   static initialize(sequelize: Sequelize) {
     Project.init(

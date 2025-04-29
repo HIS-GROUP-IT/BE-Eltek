@@ -2,6 +2,8 @@ import {
   IProjectsHours,
   ITask,
   ITaskModification,
+  PhaseTimeline,
+  PhaseTimelineFilters,
 } from "@/types/task.type";
 import { Token } from "typedi";
 
@@ -12,7 +14,7 @@ export interface ITaskService {
   getTasksByProject(phaseId: number): Promise<ITask[]>;
   getAllTasks(): Promise<ITask[]>;
   deleteTask(id: number): Promise<void>;
-
+ getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]>
   getTaskById(id: number): Promise<ITask | null>;
   getTasksByDateRange(startDate: Date, endDate: Date): Promise<ITask[]>;
   getTasksByEmployeeAndProject(

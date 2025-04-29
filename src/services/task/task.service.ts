@@ -1,7 +1,7 @@
 import { Service } from "typedi";
 import { ITaskService, TASK_SERVICE_TOKEN } from "@/interfaces/task/ITaskService.interface";
 import { HttpException } from "@/exceptions/HttpException"; // Custom Exception Handling
-import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";
+import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks, PhaseTimeline, PhaseTimelineFilters } from "@/types/task.type";
 import { TaskRepository } from "@/repositories/task/task.repository";
 import { Allocation } from "@/types/employee.types";
 
@@ -192,5 +192,11 @@ export class TaskService implements ITaskService {
             throw new HttpException(500, `Error fetching tasks: ${error.message}`);
         }
     }
-  
+    public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+        try {
+          return await this.taskRepository.getPhaseTimeline(filters);
+        } catch (error) {
+          throw new HttpException(500, error.message);
+        }
+      }
 }

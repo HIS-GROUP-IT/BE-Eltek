@@ -2,19 +2,45 @@ import { Service } from "typedi";
 import  Task  from "@/models/task/task.model"; // Task model
 import { Op, Sequelize } from "sequelize";
 import { ITaskRepository } from "@/interfaces/task/ITaskRepository.interface";
-import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";
+import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks, PhaseTimeline, PhaseTimelineFilters, PhaseTimelineInterval } from "@/types/task.type";
 import Employee from "@/models/employee/employee.model";
 import { HttpException } from "@/exceptions/HttpException";
 import AllocationModel from "@/models/allocation/allocation.model";
 import { IUtilization } from "@/types/employee.types";
+import Project from "@/models/project/project.model";
 
 @Service()
 export class TaskRepository implements ITaskRepository {
   public async createTask(taskData: Partial<ITask>): Promise<ITask> {
     const task = await Task.create(taskData);
     await this.calculateUtilization(taskData.employeeId);
+    const project = await Project.findByPk(task.projectId);
+    if (!project) return task.get({ plain: true });
+    const phases = [...project.phases];
+    const phaseIndex = phases.findIndex(p => p.id === task.phaseId);
+    if (phaseIndex === -1) return task.get({ plain: true });
+    const tasksInPhase = await Task.findAll({
+        where: {
+            projectId: task.projectId,
+            phaseId: task.phaseId
+        }
+    });
+    
+    const totalTasks = tasksInPhase.length;
+    const completedTasks = tasksInPhase.filter(t => t.status === 'completed').length;
+    const completionRate = totalTasks > 0 
+        ? Math.round((completedTasks / totalTasks) * 100)
+        : 0;
+    phases[phaseIndex] = {
+        ...phases[phaseIndex],
+        numberOfTasks: tasksInPhase.length,
+        completionRate:completionRate 
+    };
+
+    await project.update({ phases });
+
     return task.get({ plain: true });
-  }
+}
   
   public async updateTask(taskData: Partial<ITask>): Promise<ITask> {
     const task = await Task.findByPk(taskData.id);
@@ -34,9 +60,37 @@ export class TaskRepository implements ITaskRepository {
     if (!task) throw new Error("Task not found");
     
     const employeeId = task.employeeId;
+    const projectId = task.projectId;
+    const phaseId = task.phaseId;
+    
     await task.destroy();
     await this.calculateUtilization(employeeId);
-  }
+    const project = await Project.findByPk(projectId);
+    if (!project) return;
+
+    const phases = [...project.phases];
+    const phaseIndex = phases.findIndex(p => p.id === phaseId);
+    if (phaseIndex === -1) return;
+    const tasksInPhase = await Task.findAll({
+        where: {
+            projectId: projectId,
+            phaseId: phaseId
+        }
+    });
+
+    const totalTasks = tasksInPhase.length;
+    const completedTasks = tasksInPhase.filter(t => t.status === 'completed').length;
+    const completionRate = totalTasks > 0 
+        ? Math.round((completedTasks / totalTasks) * 100)
+        : 0;
+    phases[phaseIndex] = {
+        ...phases[phaseIndex],
+        numberOfTasks: totalTasks,
+        completionRate: completionRate
+    };
+
+    await project.update({ phases });
+}
 
     public adjustTimezone = (date: Date): Date => {
         const adjustedDate = new Date(date);
@@ -103,14 +157,35 @@ export class TaskRepository implements ITaskRepository {
     });
 }
 
-
-    public async approveTask(approvalData: ITaskModification): Promise<ITask> {
-        const task = await Task.findByPk(approvalData.taskId);
-        if (!task) throw new Error("Task not found");
-        await task.update({ status: 'completed', modifiedBy: approvalData.modifiedBy });
-        await this.calculateUtilization(approvalData.employeeId);
-        return task.get({ plain: true });
-    }
+public async approveTask(approvalData: ITaskModification): Promise<ITask> {
+  const task = await Task.findByPk(approvalData.taskId);
+  if (!task) throw new Error("Task not found");
+    await task.update({ status: 'completed', modifiedBy: approvalData.modifiedBy });
+    await this.calculateUtilization(approvalData.employeeId);
+  const project = await Project.findByPk(task.projectId);
+  if (!project) throw new Error("Project not found");
+  const phases = [...project.phases];
+  const phaseIndex = phases.findIndex(p => p.id === task.phaseId);
+  if (phaseIndex === -1) throw new Error(`Phase ${task.phaseId} not found`);
+  const tasksInPhase = await Task.findAll({
+      where: {
+          projectId: task.projectId,
+          phaseId: task.phaseId
+      }
+  });
+  const totalTasks = tasksInPhase.length;
+  const completedTasks = tasksInPhase.filter(t => t.status === 'completed').length;
+  const completionRate = totalTasks > 0 
+      ? Math.round((completedTasks / totalTasks) * 100)
+      : 0;
+  phases[phaseIndex] = {
+      ...phases[phaseIndex],
+      numberOfTasks: totalTasks,
+      completionRate: completionRate
+  };
+  await project.update({ phases });
+  return task.get({ plain: true });
+}
 
     public async rejectTask(rejectionData : ITaskModification): Promise<ITask> {
         const task = await Task.findByPk(rejectionData.taskId);
@@ -666,7 +741,121 @@ export class TaskRepository implements ITaskRepository {
           const diff = date.getDate() - start.getDate() + ((start.getDay() || 7) - day);
           return Math.ceil((diff + 1) / 7);
         }
+
+        
+        public async getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]> {
+          const project = await Project.findByPk(filters.projectId);
+          if (!project) throw new HttpException(404, "Project not found");
+      
+          // Filter phases if specified
+          const phases = project.phases.filter(p => 
+              !filters.phaseIds || filters.phaseIds.includes(p.id)
+          );
+      
+          // Process each phase
+          const timelineData = await Promise.all(phases.map(async (phase) => {
+              const tasks = await Task.findAll({
+                  where: {
+                      phaseId: phase.id,
+                      projectId: project.id
+                  },
+                  attributes: ['createdAt', 'updatedAt', 'status'],
+                  raw: true
+              });
+      
+              // Get interval days based on filter
+              const intervalDays = this.getDaysFromInterval(filters.interval || 'biweekly');
+      
+              // Generate intervals based on selected interval
+              const intervals = this.generateIntervals(
+                  new Date(phase.startDate),
+                  new Date(phase.endDate),
+                  filters.startDate ? new Date(filters.startDate) : undefined,
+                  filters.endDate ? new Date(filters.endDate) : undefined,
+                  intervalDays
+              );
+      
+              // Calculate completion rates for each interval
+              const dataPoints = intervals.map(interval => {
+                  const relevantTasks = tasks.filter(task => {
+                      const taskCreated = new Date(task.createdAt);
+                      const taskUpdated = new Date(task.updatedAt);
+                      return taskCreated <= interval.endDate && 
+                             taskUpdated <= interval.endDate;
+                  });
+      
+                  const totalTasks = relevantTasks.length;
+                  const completedTasks = relevantTasks.filter(t => t.status === 'completed').length;
+                  
+                  return {
+                      date: interval.endDate.toISOString().split('T')[0],
+                      completionRate: totalTasks > 0 
+                          ? Math.round((completedTasks / totalTasks) * 100)
+                          : 0
+                  };
+              });
+      
+              return {
+                  phaseId: phase.id,
+                  phaseName: phase.name,
+                  data: dataPoints
+              };
+          }));
+      
+          return timelineData;
       }
+      
+      // Add interval to days conversion
+      private getDaysFromInterval(interval: PhaseTimelineInterval): number {
+          switch(interval) {
+              case 'weekly': return 7;
+              case 'biweekly': return 15;
+              case 'monthly': return 30;
+              default: return 15; // default to biweekly
+          }
+      }
+      
+      // Update generateIntervals to use dynamic interval
+      private generateIntervals(
+          phaseStart: Date,
+          phaseEnd: Date,
+          filterStart?: Date,
+          filterEnd?: Date,
+          intervalDays: number = 15 // Default to biweekly
+      ): { startDate: Date; endDate: Date }[] {
+          const intervals = [];
+          let currentStart = new Date(Math.max(phaseStart.getTime(), (filterStart || phaseStart).getTime()));
+          const finalEnd = filterEnd 
+              ? Math.min(phaseEnd.getTime(), filterEnd.getTime()) 
+              : phaseEnd.getTime();
+      
+          while (currentStart.getTime() <= finalEnd) {
+              const currentEnd = new Date(currentStart);
+              currentEnd.setDate(currentEnd.getDate() + intervalDays);
+              
+              if (currentEnd.getTime() > finalEnd) {
+                  intervals.push({
+                      startDate: new Date(currentStart),
+                      endDate: new Date(finalEnd)
+                  });
+                  break;
+              }
+      
+              intervals.push({
+                  startDate: new Date(currentStart),
+                  endDate: currentEnd
+              });
+      
+              currentStart = new Date(currentEnd);
+              currentStart.setDate(currentStart.getDate() + 1);
+          }
+      
+          return intervals;
+      }
+
+
+
+     }
 
 
 

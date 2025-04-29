@@ -122,25 +122,18 @@ export class ProjectRepository implements IProjectRepository {
   }
 
   public async calculateEstimatedCost(projectId: number): Promise<IEstimatedCost> {
-    // First verify the project exists
     const project = await Project.findByPk(projectId);
     if (!project) {
         throw new HttpException(404, "Project not found");
     }
-
-    // Get all allocations for this project
     const allocations = await AllocationModel.findAll({
         where: { projectId },
         attributes: ['id', 'employeeId', 'chargeOutRate', 'chargeType']
     });
-
-    // Create a map of employeeId to their allocation details
     const allocationMap = new Map<number, AllocationModel>();
     allocations.forEach(allocation => {
         allocationMap.set(allocation.employeeId, allocation);
     });
-
-    // Get all completed tasks for this project
     const tasks = await Task.findAll({
         where: { 
             projectId,
@@ -158,25 +151,62 @@ export class ProjectRepository implements IProjectRepository {
 
         const actualHours = task.actualHours || 0;
         if (actualHours <= 0) continue;
-
-        // Format month as YYYY-MM
         const taskDate = new Date(task.taskDate);
         const monthKey = `${taskDate.getFullYear()}-${(taskDate.getMonth() + 1)
             .toString()
             .padStart(2, "0")}`;
-
-        // Calculate cost based on charge type
         let cost = 0;
         if (allocation.chargeType === "fixed") {
-            cost = allocation.chargeOutRate; // Fixed cost per task
+            cost = allocation.chargeOutRate; 
         } else {
-            cost = actualHours * allocation.chargeOutRate; // Hourly rate
+            cost = actualHours * allocation.chargeOutRate;
         }
-
-        // Accumulate monthly costs
         monthlyCosts[monthKey] = (monthlyCosts[monthKey] || 0) + cost;
     }
-
     return monthlyCosts;
 }
+
+public async calculateEstimatedCostPerEmployee(projectId: number): Promise<Array<{ employeeId: number; estimatedCost: number }>> {
+  const project = await Project.findByPk(projectId);
+  if (!project) {
+      throw new HttpException(404, "Project not found");
+  }
+  const allocations = await AllocationModel.findAll({
+      where: { projectId },
+      attributes: ['id', 'employeeId', 'chargeOutRate', 'chargeType']
+  });
+  const allocationMap = new Map<number, AllocationModel>();
+  allocations.forEach(allocation => {
+      allocationMap.set(allocation.employeeId, allocation);
+  });
+  const tasks = await Task.findAll({
+      where: { 
+          projectId,
+          status: "completed"
+      }
+  });
+  const employeeCosts = new Map<number, number>();
+  for (const task of tasks) {
+      if (!task.employeeId) continue;
+
+      const allocation = allocationMap.get(task.employeeId);
+      if (!allocation?.chargeOutRate) continue;
+      const actualHours = task.actualHours || 0;
+      if (actualHours <= 0) continue;
+      let cost = 0;
+      if (allocation.chargeType === "fixed") {
+          cost = allocation.chargeOutRate; 
+      } else {
+          cost = actualHours * allocation.chargeOutRate; 
+      }
+      const currentTotal = employeeCosts.get(task.employeeId) || 0;
+      employeeCosts.set(task.employeeId, currentTotal + cost);
+  }
+  return Array.from(employeeCosts, ([employeeId, estimatedCost]) => ({
+      employeeId,
+      estimatedCost
+  }));
+}
+
+
 }

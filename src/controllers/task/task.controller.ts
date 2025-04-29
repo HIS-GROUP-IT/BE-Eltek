@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { Container } from "typedi";
 import { CustomResponse } from "@/types/response.interface";
-import { EmployeeTimesheet, IProjectsHours, ITask, TimeTrackingReport } from "@/types/task.type";
+import { EmployeeTimesheet, IProjectsHours, ITask, PhaseTimeline, TimeTrackingReport } from "@/types/task.type";
 import { TASK_SERVICE_TOKEN } from "@/interfaces/task/ITaskService.interface";
 import { RequestWithUser } from "@/types/auth.types";
 import { HttpException } from "@/exceptions/HttpException";
@@ -277,6 +277,22 @@ export class TaskController {
             next(error);
         }
     };
+
+    public getPhaseTimeline = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const data  = req.body;
+            const analytics = await this.taskService.getPhaseTimeline(data);
+            const response: CustomResponse<PhaseTimeline[]> = {
+                data: analytics,
+                message: "Tasks fetched successfully",
+                error: false,
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
+
 
 
     public getTaskTimeStatistics = async (req: Request, res: Response, next: NextFunction) => {

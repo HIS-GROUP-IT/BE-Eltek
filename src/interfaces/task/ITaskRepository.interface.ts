@@ -1,4 +1,4 @@
-import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks } from "@/types/task.type";
+import { EmployeeTimesheet, IProjectsHours, ITask, ITaskModification, MonthlyTasks, PhaseTimeline, PhaseTimelineFilters } from "@/types/task.type";
 
 export interface ITaskRepository {
 
@@ -8,7 +8,7 @@ export interface ITaskRepository {
     getTasksByProject(projectId: number): Promise<ITask[]>; 
     getAllTasks(): Promise<ITask[]>;
     deleteTask(id: number): Promise<void>;
-
+ getPhaseTimeline(filters: PhaseTimelineFilters): Promise<PhaseTimeline[]>
     getTaskById(id: number): Promise<ITask | null>; 
     getTasksByDateRange(startDate: Date, endDate: Date): Promise<ITask[]>; 
     getTasksByEmployeeAndProject(employeeId: number, projectId: number): Promise<ITask[]>;

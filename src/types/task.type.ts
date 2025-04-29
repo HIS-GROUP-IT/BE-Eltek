@@ -89,3 +89,24 @@ export type IComment = {
   documments : string[];
   comment : string
 }
+
+
+// Add interval type
+export type PhaseTimelineInterval = 'weekly' | 'biweekly' | 'monthly';
+
+export type PhaseTimeline = {
+  phaseId: string;
+  phaseName: string;
+  data: {
+    date: string;
+    completionRate: number;
+  }[];
+};
+
+export type PhaseTimelineFilters = {
+  projectId: number;
+  phaseIds?: string[];
+  startDate?: string;
+  endDate?: string;
+  interval?: PhaseTimelineInterval; // Add interval filter
+};
