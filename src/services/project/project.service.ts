@@ -101,5 +101,33 @@ export class ProjectService implements IProjectService {
         `Error calculating estimated cost per employee: ${error.message}`
       );
     } 
+    
 } 
+
+public async getRemainingDays(id: number): Promise<number | null> {
+  try {
+    const numberOfRemainingDays = this.projectRepository.getRemainingDays(id);
+    return numberOfRemainingDays;
+  } catch (error) {
+    throw new HttpException(500,error.message)
+  }
+}
+public async resumeProject(id: number): Promise<IProject | null> {
+  try {
+    const resumedProject = await this.projectRepository.resumeProject(id);
+    return resumedProject;
+  } catch (error) {
+    throw new HttpException(500,error.message)
+
+  }
+}
+public async pauseProject(id: number): Promise<IProject | null> {
+  try {
+  const pausedProject = await this.projectRepository.pauseProject(id);
+  return pausedProject;    
+  } catch (error) {
+    throw new HttpException(500,error.message)
+
+  }
+}
 }

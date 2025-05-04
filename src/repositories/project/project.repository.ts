@@ -4,7 +4,7 @@ import Project from "@/models/project/project.model";
 import Employee from "@/models/employee/employee.model"; 
 import { HttpException } from "@/exceptions/HttpException";
 import { Op, Transaction } from "sequelize";
-import { IEstimatedCost, IProject, ProjectStatus } from "@/types/project.types";
+import { IEstimatedCost, IProject, IProjectStatus, ProjectStatus } from "@/types/project.types";
 import AllocationModel from "@/models/allocation/allocation.model";
 import Task from "@/models/task/task.model";
 
@@ -208,5 +208,64 @@ public async calculateEstimatedCostPerEmployee(projectId: number): Promise<Array
   }));
 }
 
+async pauseProject(id: number): Promise<IProject | null> {
+  const project = await Project.findByPk(id);
+  if (!project || project.status === 'on hold') return project;
 
+  const updatedPauseHistory = [
+    ...project.pauseHistory,
+    { pausedAt: new Date(), resumedAt: null }
+  ];
+
+  await project.update({
+    status: 'on hold',
+    isPaused: true,
+    lastPausedAt: new Date(),
+    pauseHistory: updatedPauseHistory
+  });
+
+  return project.get({ plain: true });
+}
+
+// Resume a project (status = 'on going')
+async resumeProject(id: number): Promise<IProject | null> {
+  const project = await Project.findByPk(id);
+  if (!project || project.status !== 'on hold') return project;
+
+  const updatedPauseHistory = [...project.pauseHistory];
+  const lastPause = updatedPauseHistory[updatedPauseHistory.length - 1];
+  
+  if (lastPause && !lastPause.resumedAt) {
+    lastPause.resumedAt = new Date();
+  }
+
+  await project.update({
+    status: 'on going',
+    isPaused: false,
+    pauseHistory: updatedPauseHistory
+  });
+
+  return project.get({ plain: true });
+}
+
+// Calculate remaining days (accounts for paused time)
+async getRemainingDays(id: number): Promise<number | null> {
+  const project = await Project.findByPk(id);
+  if (!project || !project.endDate) return null;
+
+  const now = new Date();
+  let totalPausedMs = 0;
+
+  for (const pause of project.pauseHistory) {
+    const pausedAt = new Date(pause.pausedAt);
+    const resumedAt = pause.resumedAt ? new Date(pause.resumedAt) : now;
+    totalPausedMs += resumedAt.getTime() - pausedAt.getTime();
+  }
+
+  const adjustedNow = new Date(now.getTime() - totalPausedMs);
+  const endDate = new Date(project.endDate);
+  
+  const diffMs = endDate.getTime() - adjustedNow.getTime();
+  return Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
+}
 }

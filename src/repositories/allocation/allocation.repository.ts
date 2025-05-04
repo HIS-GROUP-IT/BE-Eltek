@@ -30,6 +30,23 @@ export class AllocationRepository implements IAllocationRepository {
             normalizedPhaseIds: normalizedPhases,
         });
         await employee.update({ assigned: true });
+
+        // Update project phases members count
+        const project = await Project.findByPk(allocationData.projectId);
+        if (project) {
+            const phases = [...project.phases];
+            allocationData.phases.forEach(phaseId => {
+                const phaseIndex = phases.findIndex(p => p.id === phaseId);
+                if (phaseIndex !== -1) {
+                    phases[phaseIndex] = {
+                        ...phases[phaseIndex],
+                        members: (phases[phaseIndex].members || 0) + 1
+                    };
+                }
+            });
+            await project.update({ phases });
+        }
+
         return allocation.get({ plain: true });
 
     } catch (error) {
@@ -59,7 +76,17 @@ export class AllocationRepository implements IAllocationRepository {
       if (!allocation) {
         throw new HttpException(404, "Allocation not found");
       }
-  
+
+      // Convert phase IDs to strings for consistent comparison
+      const oldPhases = allocation.phases.map(String);
+      let newPhases: string[] = [];
+
+      if (updates.phases) {
+        // Normalize new phases to strings and sort
+        newPhases = [...new Set(updates.phases.map(String))].sort();
+        updates.phases = newPhases; // Update with normalized phases
+      }
+
       // Validate dates first
       const newStart = updates.start ? new Date(updates.start) : allocation.start;
       const newEnd = updates.end ? new Date(updates.end) : allocation.end;
@@ -124,6 +151,49 @@ export class AllocationRepository implements IAllocationRepository {
         end: finalEnd
       }, { transaction });
   
+      // Update project phases if phases changed
+      if (updates.phases) {
+        const project = await Project.findByPk(allocation.projectId, { transaction });
+        if (project) {
+          const phases = [...project.phases];
+          
+          // Find exactly removed phases (using Set for accurate comparison)
+          const removedPhases = oldPhases.filter(phaseId => !newPhases.includes(phaseId));
+          
+          // Find truly new phases (not just reordered)
+          const addedPhases = newPhases.filter(phaseId => !oldPhases.includes(phaseId));
+
+          // Decrement removed phases
+          removedPhases.forEach(phaseId => {
+            const phaseIndex = phases.findIndex(p => String(p.id) === phaseId);
+            if (phaseIndex !== -1) {
+              phases[phaseIndex] = {
+                ...phases[phaseIndex],
+                members: Math.max(0, (phases[phaseIndex].members || 0) - 1)
+              };
+            }
+          });
+
+          // Increment added phases
+          addedPhases.forEach(phaseId => {
+            const phaseIndex = phases.findIndex(p => String(p.id) === phaseId);
+            if (phaseIndex !== -1) {
+              phases[phaseIndex] = {
+                ...phases[phaseIndex],
+                members: (phases[phaseIndex].members || 0) + 1
+              };
+            }
+          });
+
+          await project.update({ phases }, { transaction });
+          
+          // Update normalizedPhaseIds for duplicate checking
+          await allocation.update({
+            normalizedPhaseIds: JSON.stringify(newPhases)
+          }, { transaction });
+        }
+      }
+
       await transaction.commit();
       return allocation.get({ plain: true });
   
@@ -133,6 +203,7 @@ export class AllocationRepository implements IAllocationRepository {
       throw new HttpException(500, "Failed to update allocation");
     }
   }
+
   public async deleteAllocation(id: number): Promise<void> {
     const transaction = await AllocationModel.sequelize!.transaction();
     
@@ -146,7 +217,36 @@ export class AllocationRepository implements IAllocationRepository {
       if (!allocation) {
         throw new HttpException(404, "Allocation not found");
       }
+  
+      // Decrement project phase members
+      const project = await Project.findByPk(allocation.projectId, { transaction });
+      if (project) {
+        const phases = [...project.phases];
+        allocation.phases.forEach(phaseId => {
+          const phaseIndex = phases.findIndex(p => p.id === phaseId);
+          if (phaseIndex !== -1) {
+            phases[phaseIndex] = {
+              ...phases[phaseIndex],
+              members: Math.max(0, (phases[phaseIndex].members || 0) - 1)
+            };
+          }
+        });
+        await project.update({ phases }, { transaction });
+      }
+  
+      // Update employee assigned status if needed
+      const remainingAllocations = await AllocationModel.count({
+        where: { employeeId: allocation.employeeId },
+        transaction
+      });
       
+      if (remainingAllocations === 1) { // Current allocation is last one
+        await Employee.update(
+          { assigned: false },
+          { where: { id: allocation.employeeId }, transaction }
+        );
+      }
+  
       await allocation.destroy({ transaction });
       await transaction.commit();
     } catch (error) {

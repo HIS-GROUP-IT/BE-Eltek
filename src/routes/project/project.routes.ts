@@ -25,5 +25,8 @@ export class ProjectRoute implements Routes {
         this.router.put(`${this.path}/activeProject`,authorizationMiddleware, this.projectController.activeProject); 
         this.router.get(`${this.path}/getProjectEstimatedCost/:projectId`,authorizationMiddleware, this.projectController.calculateEstimatedCost); 
         this.router.get(`${this.path}/calculateEstimatedCostPerEmployee/:projectId`,authorizationMiddleware, this.projectController.calculateEstimatedCostPerEmployee); 
+        this.router.post(`${this.path}/pauseProject/:projectId`,authorizationMiddleware, this.projectController.pauseProject); 
+        this.router.post(`${this.path}/resumeProject/:projectId`,authorizationMiddleware, this.projectController.resumeProject);
+        this.router.get(`${this.path}/getProjectRemainingDays/:projectId`,authorizationMiddleware, this.projectController.getRemainingDays);  
     }
 }

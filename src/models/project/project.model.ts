@@ -3,7 +3,7 @@ import { DataTypes, Model, Optional } from 'sequelize';
 import { Sequelize } from 'sequelize';
 import User from '../user/user.model';
 import Employee from '../employee/employee.model';
-import { IEstimatedCost, IProject, Phase, ProjectStatus, Role } from '@/types/project.types';
+import { IEstimatedCost, IProject, PauseLog, Phase, ProjectStatus, Role } from '@/types/project.types';
 import Task from '../task/task.model';
 
 type ProjectCreationAttributes = Optional<IProject, 'id' | 'createdAt' | 'updatedAt'>;
@@ -15,18 +15,20 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
   public status!: ProjectStatus;
   public startDate!: Date;
   public endDate!: Date;
-  public estimatedCost?:IEstimatedCost
+  public estimatedCost?: IEstimatedCost;
   public budget!: number;
   public duration!: number;
   public clientName!: string;
   public clientEmail!: string;
   public clientCompany!: string;
-
+  public isPaused!: boolean;
+  public lastPausedAt?: Date | null;
+  public pauseHistory!: PauseLog[];
   public phases!: Phase[];
   public resources!: Role[];
   public createdAt!: Date;
   public updatedAt!: Date;
-  public createdBy!: number; 
+  public createdBy!: number;
 
   public readonly employees?: Employee[];
   public readonly Allocations!: Allocation[];
@@ -127,6 +129,21 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
           type: DataTypes.JSON,
           allowNull: false,
           defaultValue: []
+        },
+    
+        pauseHistory: {
+          type: DataTypes.JSON,
+          allowNull: false,
+          defaultValue: [] // array of { pausedAt: Date, resumedAt: Date | null }
+        },
+        isPaused: {
+          type: DataTypes.BOOLEAN,
+          allowNull: false,
+          defaultValue: false
+        },
+        lastPausedAt: {
+          type: DataTypes.DATE,
+          allowNull: true
         }
       },
       { 

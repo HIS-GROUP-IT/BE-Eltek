@@ -146,4 +146,51 @@ export class ProjectController {
             next(error);
         }
     }
+
+    public getRemainingDays = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId;
+            const remainingDays = await this.projectService.getRemainingDays(projectId);
+            const response: CustomResponse<any> = {
+                data: remainingDays,
+                message: "Project number of returning days fetched successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    public resumeProject = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId;
+            const resumedProject = await this.projectService.resumeProject(projectId);
+            const response: CustomResponse<any> = {
+                data: resumedProject,
+                message: "Project resumed successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    public pauseProject = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId;
+            const pauseProject = await this.projectService.pauseProject(projectId);
+            const response: CustomResponse<any> = {
+                data: pauseProject,
+                message: "Project paused successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+
 }
