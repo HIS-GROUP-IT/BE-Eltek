@@ -117,7 +117,7 @@ export class AuthService implements IAuthService {
     }
 
     public async sendOtp(email: string): Promise<any> {
-        const user = await this.authRepository.findUserByEmail("kwanelendaba69@gmail.com");
+        const user = await this.authRepository.findUserByEmail(email);
         if (!user) {
             throw new HttpException(404, "User Not Found");
         }
