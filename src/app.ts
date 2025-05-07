@@ -32,6 +32,9 @@ import { EmployeeRepository } from "./repositories/employee/employee.repository"
 import { ALLOCATION_SERVICE_TOKEN } from "./interfaces/allocation/IAllocationService.interface";
 import { AllocationService } from "./services/allocation/allocation.service";
 import { AllocationRepository } from "./repositories/allocation/allocation.repository";
+import { REPORT_SERVICE_TOKEN } from "./interfaces/project/reportsService.interface";
+import { ReportService } from "./services/project/report.service";
+import { ReportRepository } from "./repositories/project/reports.repository";
 
 export class App {
   public app: express.Application;
@@ -139,6 +142,11 @@ export class App {
     Container.set(
       NOTIFICATION_SERVICE_TOKEN,
       new NotificationService(Container.get(NotificationRepository))
+    );
+
+    Container.set(
+      REPORT_SERVICE_TOKEN,
+      new ReportService(Container.get(ReportRepository))
     );
 
   }

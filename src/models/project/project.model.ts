@@ -31,7 +31,7 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
   public createdBy!: number;
 
   public readonly employees?: Employee[];
-  public readonly Allocations!: Allocation[];
+  public readonly allocations!: Allocation[];
   public readonly tasks!: Task[];
 
   static initialize(sequelize: Sequelize) {
@@ -134,7 +134,7 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
         pauseHistory: {
           type: DataTypes.JSON,
           allowNull: false,
-          defaultValue: [] // array of { pausedAt: Date, resumedAt: Date | null }
+          defaultValue: [] 
         },
         isPaused: {
           type: DataTypes.BOOLEAN,

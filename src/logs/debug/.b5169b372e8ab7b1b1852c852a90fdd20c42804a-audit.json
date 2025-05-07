@@ -124,6 +124,16 @@
             "date": 1746339462686,
             "name": "C:\\Users\\Administrator\\Desktop\\Projects\\eltek-timer-pay-backend\\src\\logs\\debug\\2025-05-04.log",
             "hash": "d2a6b08194b776047add0393e1a8a346c18410a61708177962097c438b89fcb8"
+        },
+        {
+            "date": 1746457204929,
+            "name": "C:\\Users\\Administrator\\Desktop\\Projects\\eltek-timer-pay-backend\\src\\logs\\debug\\2025-05-05.log",
+            "hash": "08a253f405a20bc251aebe683eedf880778a1d6d42dddd478727fd433d3954da"
+        },
+        {
+            "date": 1746524167291,
+            "name": "C:\\Users\\Administrator\\Desktop\\Projects\\eltek-timer-pay-backend\\src\\logs\\debug\\2025-05-06.log",
+            "hash": "9ea25abe765c7693b738e6ab94bcd675147f479232035c3af799de57d958bb2b"
         }
     ],
     "hashType": "sha256"

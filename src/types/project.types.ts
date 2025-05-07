@@ -1,3 +1,6 @@
+import { Allocation } from "./employee.types";
+import { ITask } from "./task.type";
+
 export type ProjectStatus =
   | "planned"
   | "on going"
@@ -13,6 +16,8 @@ export enum IProjectStatus {
 }
 
 export type IProject = {
+  allocations?: Allocation[];
+  tasks?:ITask[]
   id?: number;
   name: string;
   description: string;
