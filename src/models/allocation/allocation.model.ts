@@ -1,7 +1,7 @@
 import { Model, DataTypes, Optional, Sequelize } from "sequelize";
 import Employee from "@/models/employee/employee.model";
 import Project from "@/models/project/project.model";
-import { Allocation as IAllocation } from "@/types/employee.types";
+import { Allocation as IAllocation, IEmployee } from "@/types/employee.types";
 
 interface AllocationCreationAttributes extends Optional<IAllocation, 
   "id" | "createdAt" | "updatedAt" | "chargeOutRate" | "chargeType" | "status"> {}
@@ -22,6 +22,7 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
   public status!: "confirmed" | "tentative";
   public chargeOutRate?: number;
   public chargeType?: "fixed" | "markup";
+  public readonly employee : IEmployee
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 

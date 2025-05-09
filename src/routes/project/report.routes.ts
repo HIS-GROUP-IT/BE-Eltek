@@ -14,6 +14,6 @@ export class ReportRoute implements Routes {
     private initializeRoutes() {
         this.router.get(`${this.path}/getPhaseCompletionPercentages/:projectId`,authorizationMiddleware, this.projectController.getPhaseCompletionPercentages);  
         this.router.get(`${this.path}/getProjectCostData/:projectId`,authorizationMiddleware, this.projectController.getProjectCostData);  
-
+        this.router.get(`${this.path}/getStructuredAllocations/:projectId`,authorizationMiddleware, this.projectController.getStructuredAllocations);  
     }
 }

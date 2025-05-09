@@ -42,4 +42,18 @@ export class ReportController {
             next(error);
         }
     }
+    public getStructuredAllocations = async (req:Request,res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId
+            const structuredAllocation = await this.reportService.getStructuredAllocations(Number(projectId));
+            const response: CustomResponse<ProjectCostDataResponse[]> = {
+                data: structuredAllocation,
+                message: "structured Allocation Data fetched successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
 }   

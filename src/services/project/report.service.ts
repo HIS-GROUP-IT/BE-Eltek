@@ -24,5 +24,14 @@ export class ReportService implements IReportService {
             throw new HttpException(500,error.message)
         }
     }
+
+    public async getStructuredAllocations(projectId: number): Promise<any[]>{
+        try {
+            const structuredAllocation = await this.reportRepository.getStructuredAllocations(projectId);
+            return structuredAllocation;
+        } catch (error) {
+            throw new HttpException(500, error.message)
+        }
+    }
     
 }

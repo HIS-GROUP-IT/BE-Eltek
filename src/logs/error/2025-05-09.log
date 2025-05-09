@@ -1,0 +1,2 @@
+2025-05-09 07:10:10 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-09 07:10:11 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function

@@ -50,6 +50,7 @@ export type Allocation = {
   status: "confirmed" | "tentative";
   chargeOutRate?: number;
   chargeType?: "fixed" | "markup";
+  employee?:IEmployee
   createdAt?: Date;
   updatedAt?: Date;
   canOverride: boolean

@@ -35,6 +35,9 @@ import { AllocationRepository } from "./repositories/allocation/allocation.repos
 import { REPORT_SERVICE_TOKEN } from "./interfaces/project/reportsService.interface";
 import { ReportService } from "./services/project/report.service";
 import { ReportRepository } from "./repositories/project/reports.repository";
+import { STATISTICS_SERVICE_TOKEN } from "./interfaces/project/StatisticsService.interface";
+import { StatisticsService } from "./services/project/statistics.service";
+import { StatisticsRepository } from "./repositories/project/statistics.repository";
 
 export class App {
   public app: express.Application;
@@ -147,6 +150,11 @@ export class App {
     Container.set(
       REPORT_SERVICE_TOKEN,
       new ReportService(Container.get(ReportRepository))
+    );
+
+    Container.set(
+      STATISTICS_SERVICE_TOKEN,
+      new StatisticsService(Container.get(StatisticsRepository))
     );
 
   }

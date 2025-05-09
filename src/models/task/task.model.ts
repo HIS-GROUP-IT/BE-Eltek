@@ -30,7 +30,8 @@ class Task extends Model {
   public readonly totalHours: number;
   public readonly pendingHours: number;
   public readonly completedHours: number;
-  public readonly rejectedHours: number;
+  public readonly rejectedHours: any;
+  public readonly approvedHours: any;
   public readonly employee?: Employee;
   public readonly user?: User;
 

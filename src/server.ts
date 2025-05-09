@@ -10,6 +10,7 @@ import { LeaveRoute } from "./routes/leave/leave.route";
 import { NotificationRoute } from "./routes/notification/notification.routes";
 import { AllocationRoute } from "./routes/allocation/allocation.routes";
 import { ReportRoute } from "./routes/project/report.routes";
+import { StatisticsRoute } from "./routes/project/statistics.routes";
 
 ValidateEnv();
 
@@ -21,7 +22,8 @@ const app = new App([
   new NotificationRoute(),
   new LeaveRoute(),
   new AllocationRoute(),
-  new ReportRoute()
+  new ReportRoute(),
+  new StatisticsRoute()
 ]);
 
 app.listen();
