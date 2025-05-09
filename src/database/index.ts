@@ -7,6 +7,7 @@ import Project from '@/models/project/project.model';
 import Leave from '@/models/leave/leave.model';
 import Notification from '@/models/notifications/notification.model';
 import AllocationModel from '@/models/allocation/allocation.model';
+import Client from '@/models/client/client.model';
 
 const DB_NAME = "db_aa010d_eltek";
 const DB_HOST = "MYSQL6013.site4now.net";
@@ -34,7 +35,7 @@ const dbConnection = new Sequelize({
   }
 });
 
-// Initialize models
+
 User.initialize(dbConnection);
 RefreshToken.initialize(dbConnection);
 Employee.initialize(dbConnection);
@@ -43,8 +44,10 @@ Project.initialize(dbConnection);
 Leave.initialize(dbConnection);
 Notification.initialize(dbConnection);
 AllocationModel.initialize(dbConnection);
+Client.initialize(dbConnection);
 
-// Define relationships
+
+
 User.hasMany(RefreshToken, { foreignKey: 'userId' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId' });
 
@@ -87,6 +90,11 @@ Employee.hasMany(AllocationModel, {
   foreignKey: 'employeeId',
   as: 'allocations' 
 });
+AllocationModel.hasMany(Task, {
+  foreignKey: 'allocationId',
+  as: 'tasks' 
+});
+
 AllocationModel.belongsTo(Employee, {
   foreignKey: 'employeeId',
   as: 'employee'

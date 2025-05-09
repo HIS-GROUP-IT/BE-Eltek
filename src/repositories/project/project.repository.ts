@@ -1,3 +1,4 @@
+import { Allocation } from '@/types/employee.types';
 import { Service } from "typedi";
 import { IProjectRepository } from "@/interfaces/project/IProjectRepository.interface";
 import Project from "@/models/project/project.model";
@@ -120,6 +121,7 @@ export class ProjectRepository implements IProjectRepository {
         : new HttpException(500, "Error deleting project");
     }
   }
+
 
   public async calculateEstimatedCost(projectId: number): Promise<IEstimatedCost> {
     const project = await Project.findByPk(projectId);
@@ -267,5 +269,206 @@ async getRemainingDays(id: number): Promise<number | null> {
   
   const diffMs = endDate.getTime() - adjustedNow.getTime();
   return Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
+}
+public async getProjectFinancials(projectId: number) {
+  try {
+    const project = await Project.findByPk(projectId, {
+      attributes: ['id', 'budget']
+    });
+
+    if (!project) {
+      throw new HttpException(404, "Project not found");
+    }
+
+    const completedTasks = await Task.findAll({
+      where: {
+        projectId,
+        status: 'completed'
+      },
+      attributes: ['id', 'actualHours', 'employeeId', 'taskDate'],
+      raw: true
+    });
+
+    if (completedTasks.length === 0) {
+      return {
+        projectId,
+        budget: Number(project.budget),
+        totalCost: 0,
+        monthlyEstimatedCost: 0,
+        remainingRevenue: Number(project.budget),
+        message: "No completed tasks found"
+      };
+    }
+
+    const employeeIds = [...new Set(completedTasks.map(t => t.employeeId))];
+    const allocations = await AllocationModel.findAll({
+      where: {
+        projectId, 
+        employeeId: employeeIds
+      },
+      attributes: ['employeeId', 'chargeOutRate', 'hoursWeek', 'start', 'end'],
+      raw: true
+    });
+
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth() + 1; // 1-12
+    const currentYear = currentDate.getFullYear();
+
+    const rateMap = new Map();
+    const monthlyEstimatedCostMap = new Map();
+
+    allocations.forEach(alloc => {
+      const allocStart = new Date(alloc.start);
+      const allocEnd = new Date(alloc.end);
+
+      // Check if allocation overlaps with the current month
+      const allocStartMonth = allocStart.getMonth() + 1;
+      const allocEndMonth = allocEnd.getMonth() + 1;
+      const allocStartYear = allocStart.getFullYear();
+      const allocEndYear = allocEnd.getFullYear();
+
+      if (
+        (allocStartYear < currentYear || (allocStartYear === currentYear && allocStartMonth <= currentMonth)) &&
+        (allocEndYear > currentYear || (allocEndYear === currentYear && allocEndMonth >= currentMonth))
+      ) {
+        const rate = alloc.chargeOutRate || 0;
+        const hoursWeek = alloc.hoursWeek || 0;
+        rateMap.set(alloc.employeeId, rate);
+        monthlyEstimatedCostMap.set(alloc.employeeId, hoursWeek * 4 * rate);
+      }
+    });
+
+    let totalCost = 0;
+    let totalMonthlyEstimatedCost = 0;
+    const costDetails = [];
+
+    completedTasks.forEach(task => {
+      const taskDate = new Date(task.taskDate);
+      const taskMonth = taskDate.getMonth() + 1;
+      const taskYear = taskDate.getFullYear();
+
+      if (taskMonth === currentMonth && taskYear === currentYear) {
+        const rate = rateMap.get(task.employeeId) || 0;
+        const hours = Number(task.actualHours) || 0;
+        const cost = hours * rate;
+        
+        totalCost += cost;
+        costDetails.push({
+          taskId: task.id,
+          employeeId: task.employeeId,
+          hours,
+          rate,
+          cost
+        });
+      }
+    });
+
+    monthlyEstimatedCostMap.forEach((estimatedCost) => {
+      totalMonthlyEstimatedCost += estimatedCost;
+    });
+
+    return {
+      budget: Number(project.budget),
+      totalCost,
+      monthlyEstimatedCost: totalMonthlyEstimatedCost,
+      remainingRevenue: Number(project.budget) - totalCost,
+    };
+
+  } catch (error) {
+    console.error('Error in getProjectFinancials:', error);
+    throw new HttpException(500, "Error calculating project financials");
+  }
+}
+
+public async getProjectFinancialData(projectId: number): Promise<any> {
+  const project = await Project.findByPk(projectId);
+  if (!project) {
+      throw new Error('Project not found');
+  }
+
+  const allocations = await AllocationModel.findAll({
+    where: { projectId },
+    include: [
+      { model: Employee, as: 'employee' },
+      {
+        model: Task,
+        as: 'tasks',
+        where: { status: 'completed' }, 
+        required: false,
+      },
+    ],
+  });
+  
+  const taskMap = new Map<string, number>();
+  for (const allocation of allocations) {
+      for (const task of allocation.tasks) {
+          const taskDate = new Date(task.taskDate);
+          const year = taskDate.getFullYear();
+          const month = taskDate.getMonth() + 1; // 1-12
+          const key = `${allocation.employeeId}-${year}-${month}`;
+          taskMap.set(key, (taskMap.get(key) || 0) + (task.actualHours || 0));
+      }
+  }
+
+  const result = {};
+
+  for (const allocation of allocations) {
+      const employee = allocation.employee;
+      const employeeName = employee.fullName;
+      const chargeOutRate = allocation.chargeOutRate || 0;
+      const hoursWeek = allocation.hoursWeek;
+      const allocationStart = new Date(allocation.start);
+      const allocationEnd = new Date(allocation.end);
+
+      let currentMonth = new Date(allocationStart.getFullYear(), allocationStart.getMonth(), 1);
+      const endMonth = new Date(allocationEnd.getFullYear(), allocationEnd.getMonth(), 1);
+
+      while (currentMonth <= endMonth) {
+          const year = currentMonth.getFullYear();
+          const monthNumber = currentMonth.getMonth() + 1;
+          const monthName = new Date(year, currentMonth.getMonth(), 1).toLocaleString('default', { month: 'long' });
+
+          const firstDayOfMonth = new Date(year, currentMonth.getMonth(), 1);
+          const lastDayOfMonth = new Date(year, currentMonth.getMonth() + 1, 0);
+
+          const overlapStart = allocationStart > firstDayOfMonth ? allocationStart : firstDayOfMonth;
+          const overlapEnd = allocationEnd < lastDayOfMonth ? allocationEnd : lastDayOfMonth;
+
+          if (overlapStart > overlapEnd) {
+              currentMonth.setMonth(currentMonth.getMonth() + 1);
+              continue;
+          }
+
+          const timeDiff = overlapEnd.getTime() - overlapStart.getTime();
+          const days = Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1;
+          const weeks = days / 7;
+          const estimatedCost = hoursWeek * weeks * chargeOutRate;
+
+          const taskKey = `${allocation.employeeId}-${year}-${monthNumber}`;
+          const actualHours = taskMap.get(taskKey) || 0;
+          const actualCost = actualHours * chargeOutRate;
+
+          if (!result[year]) result[year] = {};
+          if (!result[year][monthName]) result[year][monthName] = [];
+
+          const existingEntryIndex = result[year][monthName].findIndex((e: any) => e.name === employeeName);
+          if (existingEntryIndex === -1) {
+              result[year][monthName].push({
+                  name: employeeName,
+                  actualCost,
+                  estimatedCost,
+                  budget: project.budget,
+              });
+          } else {
+              const existing = result[year][monthName][existingEntryIndex];
+              existing.actualCost += actualCost;
+              existing.estimatedCost += estimatedCost;
+          }
+
+          currentMonth.setMonth(currentMonth.getMonth() + 1);
+      }
+  }
+
+  return result;
 }
 }

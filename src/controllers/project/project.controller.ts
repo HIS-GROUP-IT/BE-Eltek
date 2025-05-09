@@ -147,6 +147,21 @@ export class ProjectController {
         }
     }
 
+    public getProjectFinancials = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId;
+            const financialData = await this.projectService.getProjectFinancials(projectId);
+            const response: CustomResponse<any> = {
+                data: financialData,
+                message: "Project financialData fetched successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
     public getRemainingDays = async (req:Request, res:Response, next:NextFunction) => {
         try {
             const projectId = req.params.projectId;
@@ -154,6 +169,21 @@ export class ProjectController {
             const response: CustomResponse<any> = {
                 data: remainingDays,
                 message: "Project number of returning days fetched successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    public getProjectFinancialData = async (req:Request, res:Response, next:NextFunction) => {
+        try {
+            const projectId = req.params.projectId;
+            const remainingDays = await this.projectService.getProjectFinancialData(projectId);
+            const response: CustomResponse<any> = {
+                data: remainingDays,
+                message: "Project finacial data fetched successfully",
                 error: false
             };
             res.status(200).json(response);

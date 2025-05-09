@@ -4,12 +4,14 @@ import Employee from "../employee/employee.model";
 import User from "../user/user.model";
 import { IComment } from "@/types/task.type";
 import Project from "../project/project.model";
+import { Allocation } from "@/types/employee.types";
 
 class Task extends Model {
   public id!: number;
   public employeeName!: string;
   public phaseId!: string;
   public projectId!: number;
+  public allocationId!: number;
   public createdBy!: number;
   public employeeId!: number;
   public position!: string;
@@ -30,6 +32,7 @@ class Task extends Model {
   public readonly totalHours: number;
   public readonly pendingHours: number;
   public readonly completedHours: number;
+  public readonly allocation : Allocation
   public readonly rejectedHours: any;
   public readonly approvedHours: any;
   public readonly employee?: Employee;
@@ -61,6 +64,14 @@ class Task extends Model {
           allowNull: false,
           references: {
             model: "projects",
+            key: "id",
+          },
+        },      
+        allocationId: {
+          type: DataTypes.INTEGER,
+          allowNull: true,
+          references: {
+            model: "allocations",
             key: "id",
           },
         },      

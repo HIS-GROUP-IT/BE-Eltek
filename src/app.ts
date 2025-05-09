@@ -38,6 +38,9 @@ import { ReportRepository } from "./repositories/project/reports.repository";
 import { STATISTICS_SERVICE_TOKEN } from "./interfaces/project/StatisticsService.interface";
 import { StatisticsService } from "./services/project/statistics.service";
 import { StatisticsRepository } from "./repositories/project/statistics.repository";
+import { CLIENT_SERVICE_TOKEN } from "./interfaces/client/IClientService.interface";
+import { ClientService } from "./services/client/client.service";
+import { ClientRepository } from "./repositories/client/client.repository";
 
 export class App {
   public app: express.Application;
@@ -155,6 +158,11 @@ export class App {
     Container.set(
       STATISTICS_SERVICE_TOKEN,
       new StatisticsService(Container.get(StatisticsRepository))
+    );
+
+    Container.set(
+      CLIENT_SERVICE_TOKEN,
+      new ClientService(Container.get(ClientRepository))
     );
 
   }

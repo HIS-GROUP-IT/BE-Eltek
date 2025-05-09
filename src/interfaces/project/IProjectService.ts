@@ -16,6 +16,8 @@ export interface IProjectService {
   getRemainingDays(id: number): Promise<number | null>;
   pauseProject(id: number): Promise<IProject | null>;
   resumeProject(id: number): Promise<IProject | null>;
+  getProjectFinancials(projectId: number):Promise<any>;
+  getProjectFinancialData(projectId: number): Promise<any> 
 }
 
 export const PROJECT_SERVICE_TOKEN = new Token<IProjectService>(

@@ -137,27 +137,6 @@ public assignEmployeesToProject = async (req: Request, res: Response, next: Next
     }
 };
 
-// public getEmployeesByProjectId = async (req: Request, res: Response, next: NextFunction) => {
-//     try {
-//       const  projectId  = req.params.projectId;  
-//       const parsedProjectId = Number(projectId);
-//       if (isNaN(parsedProjectId)) {
-//         return res.status(400).json({
-//           message: "Invalid project ID format",
-//           error: true
-//         });
-//       }  
-//       const employees = await this.employeeService.getEmployeesByProjectId(parsedProjectId);  
-//       const response : CustomResponse<IProject> = {
-//         data: employees,
-//         message: "Employees retrieved successfully",
-//         error: false
-//       }
-//       res.status(201).json(response);
-//     } catch (error) {
-//       next(error);
-//     }
-//   };
 
   public removeEmployeeFromProject = async (req: Request, res: Response, next: NextFunction) => {
     try {

@@ -104,6 +104,15 @@ export class ProjectService implements IProjectService {
     
 } 
 
+public async getProjectFinancials(projectId: number): Promise<any> {
+  try {
+    const fetchedFinancialData = await this.projectRepository.getProjectFinancials(projectId);
+    return fetchedFinancialData;
+  } catch (error) {
+    throw new HttpException(500, error.message)
+  }
+}
+
 public async getRemainingDays(id: number): Promise<number | null> {
   try {
     const numberOfRemainingDays = this.projectRepository.getRemainingDays(id);
@@ -128,6 +137,15 @@ public async pauseProject(id: number): Promise<IProject | null> {
   } catch (error) {
     throw new HttpException(500,error.message)
 
+  }
+}
+
+public async getProjectFinancialData(projectId: number): Promise<any> {
+  try {
+    const projectFinancialData = await this.projectRepository.getProjectFinancialData(projectId);
+    return projectFinancialData;
+  } catch (error) {
+    throw new HttpException(500,error.message)
   }
 }
 }
