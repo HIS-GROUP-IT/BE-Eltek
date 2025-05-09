@@ -23,6 +23,19 @@ export class StatisticsController {
             next(error);
         }
     }
-
+    public getGeneralStatistics = async (req:Request,res:Response, next:NextFunction) => {
+        try {
+            const generalStatistics = await this.statisticsService.getGeneralStatistics();
+            const response: CustomResponse<any> = {
+                data: generalStatistics,
+                message: "Statistics fetched successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+    
 
 }   

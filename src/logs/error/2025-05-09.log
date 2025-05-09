@@ -1,2 +1,402 @@
 2025-05-09 07:10:10 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
 2025-05-09 07:10:11 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-09 07:49:05 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/statistics.service.ts[0m:[93m24[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m24[0m     }
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/statistics.service.ts[0m:[93m24[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m24[0m     }
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-09 07:49:19 error: uncaughtException: Missing initializer in const declaration
+C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\services\project\statistics.service.ts:26
+            const statis;
+                  ^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-05-09 07:49:28 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/statistics.service.ts[0m:[93m25[0m:[93m9[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m25[0m         } catch (error) {
+[7m  [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/project/statistics.service.ts[0m:[93m25[0m:[93m9[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m25[0m         } catch (error) {
+[7m  [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-09 07:49:37 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\services\project\statistics.service.ts:26
+            const statistics = await this.statisticsRepository.getGeneralStatistics();
+                               ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-05-09 07:51:16 error: [GET] /api/statistics/getGeneralStatistics >> StatusCode:: 500, Message:: Error retrieving general statistics: Allocation is associated to Employee using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+2025-05-09 07:56:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m420[0m:[93m65[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m420[0m   public async getGeneralStatistics() : Promise< activeEmployees: number;
+[7m   [0m [91m                                                                ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m427[0m:[93m24[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m427[0m   pendingTasks: number;> {
+[7m   [0m [91m                       ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m428[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m428[0m     const currentDate = new Date();
+[7m   [0m [91m          ~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m428[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m428[0m     const currentDate = new Date();
+[7m   [0m [91m                                  ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m429[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m429[0m     const currentMonthStart = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m429[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m429[0m     const currentMonthStart = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m430[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m430[0m     const currentMonthEnd = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+[7m   [0m [91m          ~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m430[0m:[93m95[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m430[0m     const currentMonthEnd = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+[7m   [0m [91m                                                                                              ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m432[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m432[0m     try {
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m434[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m434[0m       const activeEmployeesCount = await Employee.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m439[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m439[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m442[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m442[0m       const activeProjectsCount = await Project.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m446[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m446[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m449[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m449[0m       const hoursThisMonth = await Task.sum('actualHours', {
+[7m   [0m [91m            ~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m455[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m455[0m       }) || 0;
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m458[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m458[0m       const commitmentsCount = await Leave.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m466[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m466[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m469[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m       const totalRevenue = await Project.sum('budget');
+[7m   [0m [91m            ~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m469[0m:[93m55[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m       const totalRevenue = await Project.sum('budget');
+[7m   [0m [91m                                                      ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m472[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m472[0m       const activeEmployees = await Employee.findAll({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m483[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m483[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m485[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m485[0m       let totalUtilization = 0;
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m485[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m485[0m       let totalUtilization = 0;
+[7m   [0m [91m                              ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m486[0m:[93m22[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m486[0m       activeEmployees.forEach(employee => {
+[7m   [0m [91m                     ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m490[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m490[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m491[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m491[0m       const averageUtilization = activeEmployees.length > 0
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m493[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m493[0m         : 0;
+[7m   [0m [91m           ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m496[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m496[0m       const completedTasks = await Task.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m500[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m500[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m503[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m503[0m       const pendingTasks = await Task.count({
+[7m   [0m [91m            ~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m507[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m507[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m509[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m509[0m       return {
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m518[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m518[0m       };
+[7m   [0m [91m       ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m519[0m:[93m7[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m519[0m     } catch (error) {
+[7m   [0m [91m      ~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m523[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m523[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m420[0m:[93m65[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m420[0m   public async getGeneralStatistics() : Promise< activeEmployees: number;
+[7m   [0m [91m                                                                ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m427[0m:[93m24[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m427[0m   pendingTasks: number;> {
+[7m   [0m [91m                       ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m428[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m428[0m     const currentDate = new Date();
+[7m   [0m [91m          ~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m428[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m428[0m     const currentDate = new Date();
+[7m   [0m [91m                                  ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m429[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m429[0m     const currentMonthStart = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m429[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m429[0m     const currentMonthStart = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m430[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m430[0m     const currentMonthEnd = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+[7m   [0m [91m          ~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m430[0m:[93m95[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m430[0m     const currentMonthEnd = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+[7m   [0m [91m                                                                                              ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m432[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m432[0m     try {
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m434[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m434[0m       const activeEmployeesCount = await Employee.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m439[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m439[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m442[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m442[0m       const activeProjectsCount = await Project.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m446[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m446[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m449[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m449[0m       const hoursThisMonth = await Task.sum('actualHours', {
+[7m   [0m [91m            ~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m455[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m455[0m       }) || 0;
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m458[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m458[0m       const commitmentsCount = await Leave.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m466[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m466[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m469[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m       const totalRevenue = await Project.sum('budget');
+[7m   [0m [91m            ~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m469[0m:[93m55[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m       const totalRevenue = await Project.sum('budget');
+[7m   [0m [91m                                                      ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m472[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m472[0m       const activeEmployees = await Employee.findAll({
+[7m   [0m [91m            ~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m483[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m483[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m485[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m485[0m       let totalUtilization = 0;
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m485[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m485[0m       let totalUtilization = 0;
+[7m   [0m [91m                              ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m486[0m:[93m22[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m486[0m       activeEmployees.forEach(employee => {
+[7m   [0m [91m                     ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m490[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m490[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m491[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m491[0m       const averageUtilization = activeEmployees.length > 0
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m493[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m493[0m         : 0;
+[7m   [0m [91m           ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m496[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m496[0m       const completedTasks = await Task.count({
+[7m   [0m [91m            ~~~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m500[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m500[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m503[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m503[0m       const pendingTasks = await Task.count({
+[7m   [0m [91m            ~~~~~~~~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m507[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m507[0m       });
+[7m   [0m [91m        ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m509[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m509[0m       return {
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m518[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m518[0m       };
+[7m   [0m [91m       ~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m519[0m:[93m7[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m519[0m     } catch (error) {
+[7m   [0m [91m      ~~~~~[0m
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m523[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m523[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-09 08:03:01 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-09 08:03:02 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-09 08:06:27 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-09 08:06:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-09 08:11:18 error: [GET] /api/statistics/getGeneralStatistics >> StatusCode:: 500, Message:: Error retrieving general statistics: Allocation is associated to Employee using an alias. You've included an alias (allAllocation), but it does not match the alias(es) defined in your association (allocations).
+2025-05-09 08:22:32 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m499[0m:[93m55[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m499[0m       console.log("Active Employees", activeEmployees.)
+[7m   [0m [91m                                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/statistics.repository.ts[0m:[93m499[0m:[93m55[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m499[0m       console.log("Active Employees", activeEmployees.)
+[7m   [0m [91m                                                      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-09 08:26:59 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-09 08:27:01 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours

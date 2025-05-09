@@ -14,6 +14,7 @@ export class StatisticsRoute implements Routes {
     private initializeRoutes() {
         this.router.get(`${this.path}/getStatisticsDashboard`,authorizationMiddleware, this.statisticsController.getStatisticsDashboard);  
        
-
+        this.router.get(`${this.path}/getGeneralStatistics`,authorizationMiddleware, this.statisticsController.getGeneralStatistics);  
+       
     }
 }

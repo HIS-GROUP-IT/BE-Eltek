@@ -19,4 +19,12 @@ export class StatisticsService implements IStatisticsService {
             throw new HttpException(500, error.message)
         }
     }
+    public async getGeneralStatistics(): Promise<{ activeEmployees: number; activeProjects: number; hoursThisMonth: number; commitments: number; totalRevenue: number; averageUtilization: number; completedTasks: number; pendingTasks: number; }> {
+        try {
+            const statistics = await this.statisticsRepository.getGeneralStatistics();
+            return statistics;
+        } catch (error) {
+            throw new HttpException(500, error.message)
+        }
+    }
 }

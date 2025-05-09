@@ -29,7 +29,17 @@ export interface IStatisticsService {
             cost: number;
           }>;
         }>;
-      }> 
+      }> ;
+      getGeneralStatistics(): Promise<{
+        activeEmployees: number;
+        activeProjects: number;
+        hoursThisMonth: number;
+        commitments: number;
+        totalRevenue: number;
+        averageUtilization: number;
+        completedTasks: number;
+        pendingTasks: number;
+      }>;
 }
 
 export const STATISTICS_SERVICE_TOKEN = new Token<IStatisticsService>(

@@ -8,6 +8,7 @@ import { Phase } from "@/types/project.types";
 import Task from "@/models/task/task.model";
 import AllocationModel from "@/models/allocation/allocation.model";
 import Employee from "@/models/employee/employee.model";
+import Leave from "@/models/leave/leave.model";
 
 @Service()
 export class StatisticsRepository implements IStatisticsRepository {
@@ -125,7 +126,7 @@ export class StatisticsRepository implements IStatisticsRepository {
         name: string;
         estimatedCost: number;
         actualCost: number;
-        budget: number; // Added budget
+        budget: number; 
       }>;
       totalEstimated: number;
       totalActual: number;
@@ -150,18 +151,15 @@ export class StatisticsRepository implements IStatisticsRepository {
       ]
     });
 
-    // Map<year, Map<month, { projects, totals }>>
     const report = new Map<number, Map<number, {
-      projects: Map<string, { estimated: number; actual: number; budget: number }>; // Added budget
+      projects: Map<string, { estimated: number; actual: number; budget: number }>; 
       totalEstimated: number;
       totalActual: number;
     }>>();
 
-    // Process each project
     projects.forEach(project => {
-      const projectBudget = Number(project.budget) || 0; // Extract project budget
+      const projectBudget = Number(project.budget) || 0; 
 
-      // Create employee rate map
       const employeeRateMap = new Map<number, number>(
         project.allocations.map(alloc => [
           alloc.employeeId,
@@ -169,13 +167,11 @@ export class StatisticsRepository implements IStatisticsRepository {
         ])
       );
 
-      // Process allocations for monthly estimated costs
       project.allocations.forEach(alloc => {
         const start = new Date(alloc.start);
         const end = new Date(alloc.end);
         const monthlyCost = (Number(alloc.hoursWeek) * 4 * (Number(alloc.chargeOutRate) || 0));
 
-        // Get all months this allocation covers
         const current = new Date(start.getFullYear(), start.getMonth());
         const endMonth = new Date(end.getFullYear(), end.getMonth());
 
@@ -199,12 +195,11 @@ export class StatisticsRepository implements IStatisticsRepository {
           const monthData = yearData.get(month)!;
           const projectKey = project.name;
 
-          // Update estimated cost and set budget if new entry
           if (!monthData.projects.has(projectKey)) {
             monthData.projects.set(projectKey, { 
               estimated: 0, 
               actual: 0,
-              budget: projectBudget // Set budget here
+              budget: projectBudget 
             });
           }
           monthData.projects.get(projectKey)!.estimated += monthlyCost;
@@ -214,7 +209,6 @@ export class StatisticsRepository implements IStatisticsRepository {
         }
       });
 
-      // Process tasks for monthly actual costs
       project.tasks.forEach(task => {
         const taskDate = new Date(task.taskDate);
         const year = taskDate.getFullYear();
@@ -239,12 +233,11 @@ export class StatisticsRepository implements IStatisticsRepository {
         const monthData = yearData.get(month)!;
         const projectKey = project.name;
 
-        // Update actual cost and set budget if new entry
         if (!monthData.projects.has(projectKey)) {
           monthData.projects.set(projectKey, { 
             estimated: 0, 
             actual: 0,
-            budget: projectBudget // Set budget here
+            budget: projectBudget 
           });
         }
         monthData.projects.get(projectKey)!.actual += cost;
@@ -252,7 +245,6 @@ export class StatisticsRepository implements IStatisticsRepository {
       });
     });
 
-    // Convert to final output format
     return Array.from(report.entries())
       .sort(([yearA], [yearB]) => yearA - yearB)
       .map(([year, months]) => {
@@ -264,7 +256,7 @@ export class StatisticsRepository implements IStatisticsRepository {
               name,
               estimatedCost: costs.estimated,
               actualCost: costs.actual,
-              budget: costs.budget // Include budget in output
+              budget: costs.budget 
             })),
             totalEstimated: data.totalEstimated,
             totalActual: data.totalActual
@@ -309,10 +301,8 @@ public async getRemainingRevenueReport(): Promise<
 
     const totalBudget = projects.reduce((sum, project) => sum + Number(project.budget), 0);
 
-    // Map<year, Map<month, cost>>
     const monthlyCosts = new Map<number, Map<number, number>>();
 
-    // Process tasks
     projects.forEach(project => {
       const employeeRateMap = new Map<number, number>();
       project.allocations.forEach(alloc => {
@@ -322,7 +312,7 @@ public async getRemainingRevenueReport(): Promise<
       project.tasks.forEach(task => {
         const taskDate = new Date(task.taskDate);
         const year = taskDate.getFullYear();
-        const month = taskDate.getMonth(); // 0 = January
+        const month = taskDate.getMonth(); 
         const rate = employeeRateMap.get(task.employeeId) || 0;
         const cost = (Number(task.actualHours) || 0) * rate;
 
@@ -415,4 +405,127 @@ public async getStatisticsDashboard(): Promise<{
     }
   }
 
+
+  public async getGeneralStatistics() : Promise<{ activeEmployees: number;
+    activeProjects: number;
+    hoursThisMonth: number;
+    commitments: number;
+    totalRevenue: number;
+    averageUtilization: number;
+    completedTasks: number;
+    pendingTasks: number;}> {
+    const currentDate = new Date();
+    const currentMonthStart = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+    const currentMonthEnd = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+
+    try {
+      const activeEmployeesCount = await Employee.count({
+        where: {
+          status: 'active',
+          assigned: true
+        }
+      });
+
+      const activeProjectsCount = await Project.count({
+        where: {
+          status: 'on going'
+        }
+      });
+
+      const hoursThisMonth = await Task.sum('actualHours', {
+        where: {
+          taskDate: {
+            [Op.between]: [currentMonthStart, currentMonthEnd]
+          }
+        }
+      }) || 0;
+
+      const commitmentsCount = await Leave.count({
+        where: {
+          status: 'approved',
+          startDate: { [Op.lte]: currentDate },
+          endDate: { [Op.gte]: currentDate }
+        },
+        distinct: true,
+        col: 'employeeId'
+      });
+
+      const totalRevenue = await Project.sum('budget');
+
+      const activeEmployees = await Employee.findAll({
+        where: { status: 'active', assigned: true },
+        include: [
+          {
+            model: AllocationModel,
+            as: 'allocations',
+            where: {
+              start: { [Op.lte]: currentDate },
+              end: { [Op.gte]: currentDate },
+              status: 'confirmed' 
+            },
+            required: false
+          },
+          {
+            model: Task,
+            as:"tasks",
+            where: {
+              taskDate: {
+                [Op.between]: [currentMonthStart, currentMonthEnd]
+              },
+              status: 'completed'
+            },
+            required: false
+          }
+        ]
+      });
+
+   
+      let totalUtilization = 0;
+      let employeesWithAllocations = 0;
+    
+      activeEmployees.forEach(employee => {
+        const allocatedHours = employee.allocations?.reduce((sum, alloc) => {
+         
+          const weeksInMonth = 4; 
+          return sum + (alloc.hoursWeek * weeksInMonth);
+        }, 0) || 0;
+            const actualHours = employee.tasks?.reduce((sum, task) => 
+          sum + (task.actualHours || 0), 0) || 0;
+            if (allocatedHours > 0) {
+          const utilization = Math.min((actualHours / allocatedHours) * 100, 100);
+          totalUtilization += utilization;
+          employeesWithAllocations++;
+        }
+      });
+    
+      const averageUtilization = employeesWithAllocations > 0 
+        ? Number((totalUtilization / employeesWithAllocations).toFixed(2))
+        : 0;
+
+      const completedTasks = await Task.count({
+        where: {
+          status: 'completed'
+        }
+      });
+
+      const pendingTasks = await Task.count({
+        where: {
+          status: ['pending', 'in-progress']
+        }
+      });
+
+      return {
+        activeEmployees: activeEmployeesCount,
+        activeProjects: activeProjectsCount,
+        hoursThisMonth,
+        commitments: commitmentsCount,
+        totalRevenue,
+        averageUtilization,
+        completedTasks,
+        pendingTasks
+      };
+    } catch (error) {
+      throw new HttpException(500, "Error retrieving general statistics: " + error.message);
+    }
+  }
 }

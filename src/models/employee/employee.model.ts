@@ -2,6 +2,7 @@ import { DataTypes, Model } from 'sequelize';
 import { Sequelize } from 'sequelize';
 import Project from '../project/project.model';
 import { Allocation, Commitment, IEmployee, IUtilization } from '@/types/employee.types';
+import { ITask } from '@/types/task.type';
 
 class Employee extends Model<IEmployee> implements IEmployee {
   public id!: number;
@@ -22,7 +23,8 @@ class Employee extends Model<IEmployee> implements IEmployee {
   public experience! : number;
   public ctc?: number;
   public createdBy!: number;
-  public allAllocation?: Allocation[];
+  public allocations?: Allocation[];
+  public tasks?:ITask[]
   public commitments?: Commitment[];
 
   static initialize(sequelize: Sequelize) {
