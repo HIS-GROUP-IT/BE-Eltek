@@ -9,6 +9,8 @@ export interface IAuthService {
   sendOtp(email: string): Promise<string>;
   verifyOtp(email: string, otp: string): Promise<string>;
   updateUser(userData: Partial<IUser>): Promise<TokenData>;
+  findAllAdmins(): Promise<IUser[]>;
+  deleteUserById(userId: number): Promise<any>
 }
 
 export const AUTH_SERVICE_TOKEN = new Token<IAuthService>("IAuthService");

@@ -1,0 +1,957 @@
+2025-05-10 11:33:26 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 11:33:26 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 11:33:26 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 11:33:28 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 11:44:41 error: [GET] /api/projects/getAllProjects >> StatusCode:: 500, Message:: Error retrieving projects: Error: Unknown column 'Project.clientId' in 'field list'
+2025-05-10 11:48:42 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-10 11:49:02 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-10 11:49:14 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-10 12:17:39 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                   ~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                       ~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m45[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                            ~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                              ~~~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m54[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                                     ~~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m68[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                                                   ~~~~~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m77[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                                                            ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                   ~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                       ~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m45[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                            ~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                              ~~~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m54[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                                     ~~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m68[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                                                   ~~~~~~~~[0m
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m125[0m:[93m77[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m125[0m         role: 'employee'/ Assuming you have a 'role' field in your Employee model
+[7m   [0m [91m                                                                            ~~~~~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 12:25:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m48[0m:[93m20[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m48[0m       if (employee.) { // Assuming you have userId in Employee model
+[7m  [0m [91m                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/employee/employee.repository.ts[0m:[93m48[0m:[93m20[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m48[0m       if (employee.) { // Assuming you have userId in Employee model
+[7m  [0m [91m                   ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 12:31:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 12:31:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 12:31:55 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 12:31:55 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 12:36:05 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 12:36:05 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 12:50:29 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 12:50:29 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 12:50:29 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 12:50:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:30:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:30:48 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:30:48 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:30:48 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:33:56 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:33:56 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:34:10 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:34:10 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:34:13 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:34:13 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:35:57 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:35:57 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:43:08 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:43:08 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:45:14 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:45:15 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:47:59 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:48:00 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:48:01 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:48:01 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:48:08 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:48:08 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:48:31 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:48:31 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:48:34 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:48:34 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:49:23 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:49:24 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:49:25 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:49:25 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:49:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:49:41 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:49:43 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:49:43 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:50:04 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:50:04 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:50:07 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:50:07 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:50:28 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:50:28 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:50:30 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:50:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:50:40 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:50:40 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:51:36 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:51:37 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:51:38 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:51:38 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:51:47 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:51:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:53:44 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:53:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:53:45 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:53:45 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:54:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:54:56 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:54:57 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:54:57 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:55:05 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:55:05 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:55:26 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:55:27 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:55:29 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:55:29 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:55:34 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:55:34 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:55:52 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:55:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:55:54 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:55:54 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:22 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:22 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:24 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:24 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:30 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:31 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:31 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:36 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:37 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:37 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:37 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:42 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:43 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:43 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:50 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:56:51 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:56:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:57:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:57:47 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:57:49 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:57:49 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:57:55 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:57:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:58:19 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:58:19 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:58:21 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:58:22 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:59:02 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:59:03 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:59:06 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:59:06 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:59:15 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:59:15 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 13:59:50 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 13:59:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:02:46 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:02:47 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:02:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:02:47 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:09:16 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:09:17 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:11:08 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:11:08 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:13:01 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:13:03 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:15:28 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:15:28 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:15:57 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:15:57 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:16:00 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:16:00 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:17:40 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:17:40 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:17:42 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:17:43 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:17:50 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:17:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:19:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:19:57 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:23:16 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:23:16 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:23:17 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:23:17 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:23:29 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:23:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:25:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:25:44 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:25:46 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:25:46 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:25:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:25:53 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:26:29 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:26:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:26:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:26:32 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:26:39 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:26:39 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:26:41 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:26:41 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:26:45 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:26:45 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:28:02 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:28:02 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:36:47 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:36:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:36:48 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:36:48 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:36:59 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:37:00 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:39:13 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:39:13 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:39:22 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:39:22 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:39:31 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:39:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:40:49 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:40:49 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:40:50 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:40:51 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:42:32 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:42:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:44:10 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:44:10 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:45:20 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:45:20 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:46:45 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:46:45 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:46:46 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:46:46 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:46:56 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:46:56 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:47:44 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:47:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:47:45 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:47:45 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:49:10 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:49:10 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:49:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:49:53 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:51:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:51:53 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:53:11 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:53:11 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:54:45 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 14:54:47 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:58:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 14:58:44 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 15:05:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m26[0m:[93m21[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m26[0m         return User.({
+[7m  [0m [91m                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m26[0m:[93m21[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m26[0m         return User.({
+[7m  [0m [91m                    ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:07:54 error: uncaughtException: path must be a string, array of strings, or regular expression
+TypeError: path must be a string, array of strings, or regular expression
+    at pathToRegexp (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\path-to-regexp\index.js:69:11)
+    at new Layer (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\layer.js:45:17)
+    at Function.route (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:505:15)
+    at Function.proto.<computed> [as get] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\express\lib\router\index.js:520:22)
+    at AuthRoute.initializeRoutes (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\auth\auth.route.ts:26:21)
+    at new AuthRoute (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\routes\auth\auth.route.ts:14:14)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\src\server.ts:19:3)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1689:10
+2025-05-10 15:10:28 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 15:17:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m85[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m85[0m             idNumber: ,
+[7m  [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m85[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m85[0m             idNumber: ,
+[7m  [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:17:59 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m85[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m85[0m             idNumber: ,
+[7m  [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m85[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m85[0m             idNumber: ,
+[7m  [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:20:26 error: [POST] /api/auth/signup >> StatusCode:: 409, Message:: This email admin113@gmail.com already exists
+2025-05-10 15:20:38 error: [POST] /api/auth/signup >> StatusCode:: 409, Message:: This email admin113@gmail.com already exists
+2025-05-10 15:20:51 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 15:24:21 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m79[0m:[93m23[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m79[0m           if(userData.)
+[7m  [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m79[0m:[93m23[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m79[0m           if(userData.)
+[7m  [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:26:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m75[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m75[0m         public async createUser(userData: IUser): Promise<IUser> {
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m82[0m:[93m9[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m82[0m         function generateRandomNineDigits(): number {
+[7m  [0m [91m        ~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m113[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m113[0m       }
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                        ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m75[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                                          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m82[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                                                 ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m96[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m116[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m116[0m         await RefreshToken.create({ token, userId, expiresAt });
+[7m   [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m116[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m116[0m         await RefreshToken.create({ token, userId, expiresAt });
+[7m   [0m [91m                                                               ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m5[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m                                       ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m                                                ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m120[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m120[0m         return RefreshToken.findOne({ where: { token }, raw: true });
+[7m   [0m [91m               ~~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m120[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m120[0m         return RefreshToken.findOne({ where: { token }, raw: true });
+[7m   [0m [91m                                                                    ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m                                         ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m                                                  ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m65[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m                                                                ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m124[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m124[0m         await RefreshToken.destroy({ where: { token } });
+[7m   [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m124[0m:[93m57[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m124[0m         await RefreshToken.destroy({ where: { token } });
+[7m   [0m [91m                                                        ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m5[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m                                    ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m54[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m                                                     ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m128[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m128[0m         const user = await User.findOne({
+[7m   [0m [91m              ~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m131[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m131[0m         });
+[7m   [0m [91m          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m133[0m:[93m13[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m133[0m         if (!user) {
+[7m   [0m [91m            ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m137[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m137[0m         await user.update(userData);
+[7m   [0m [91m        ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m137[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m137[0m         await user.update(userData);
+[7m   [0m [91m              ~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m137[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m137[0m         await user.update(userData);
+[7m   [0m [91m                                   ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m139[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m139[0m         const updatedUser = await User.findOne({
+[7m   [0m [91m              ~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m143[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m143[0m         });
+[7m   [0m [91m          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m145[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m145[0m         return updatedUser;
+[7m   [0m [91m               ~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m145[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m145[0m         return updatedUser;
+[7m   [0m [91m                          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m147[0m:[93m7[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m147[0m       public async resetPasswordWithOtp(
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m147[0m:[93m14[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m147[0m       public async resetPasswordWithOtp(
+[7m   [0m [91m             ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m148[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m148[0m         email: string,
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m149[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m149[0m         otp: string,
+[7m   [0m [91m           ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m150[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m150[0m         newPassword: string
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m151[0m:[93m6[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m151[0m     ): Promise<IUser> {
+[7m   [0m [91m     ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m153[0m:[93m13[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m153[0m         if (!email || !otp || !newPassword) {
+[7m   [0m [91m            ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m153[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m153[0m         if (!email || !otp || !newPassword) {
+[7m   [0m [91m                   ~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m153[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m153[0m         if (!email || !otp || !newPassword) {
+[7m   [0m [91m                                          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m183[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m183[0m     }
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m184[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m184[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m75[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m75[0m         public async createUser(userData: IUser): Promise<IUser> {
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m82[0m:[93m9[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m82[0m         function generateRandomNineDigits(): number {
+[7m  [0m [91m        ~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m113[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m113[0m       }
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                        ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m75[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                                          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m82[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                                                 ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m115[0m:[93m96[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m115[0m     public async saveRefreshToken(userId: number, token: string, expiresAt: Date): Promise<void> {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m116[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m116[0m         await RefreshToken.create({ token, userId, expiresAt });
+[7m   [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m116[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m116[0m         await RefreshToken.create({ token, userId, expiresAt });
+[7m   [0m [91m                                                               ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m5[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m                                       ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m119[0m     public async findRefreshToken(token: string): Promise<RefreshToken | null> {
+[7m   [0m [91m                                                ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m120[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m120[0m         return RefreshToken.findOne({ where: { token }, raw: true });
+[7m   [0m [91m               ~~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m120[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m120[0m         return RefreshToken.findOne({ where: { token }, raw: true });
+[7m   [0m [91m                                                                    ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m                                         ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m                                                  ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m123[0m:[93m65[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m     public async deleteRefreshToken(token: string): Promise<void> {
+[7m   [0m [91m                                                                ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m124[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m124[0m         await RefreshToken.destroy({ where: { token } });
+[7m   [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m124[0m:[93m57[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m124[0m         await RefreshToken.destroy({ where: { token } });
+[7m   [0m [91m                                                        ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m5[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m    ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m12[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m                                    ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m127[0m:[93m54[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m127[0m     public async updateUser(userData: Partial<IUser>): Promise<IUser> {
+[7m   [0m [91m                                                     ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m128[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m128[0m         const user = await User.findOne({
+[7m   [0m [91m              ~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m131[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m131[0m         });
+[7m   [0m [91m          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m133[0m:[93m13[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m133[0m         if (!user) {
+[7m   [0m [91m            ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m137[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m137[0m         await user.update(userData);
+[7m   [0m [91m        ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m137[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m137[0m         await user.update(userData);
+[7m   [0m [91m              ~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m137[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m137[0m         await user.update(userData);
+[7m   [0m [91m                                   ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m139[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m139[0m         const updatedUser = await User.findOne({
+[7m   [0m [91m              ~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m143[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m143[0m         });
+[7m   [0m [91m          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m145[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m145[0m         return updatedUser;
+[7m   [0m [91m               ~~~~~~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m145[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m145[0m         return updatedUser;
+[7m   [0m [91m                          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m147[0m:[93m7[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m147[0m       public async resetPasswordWithOtp(
+[7m   [0m [91m      ~~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m147[0m:[93m14[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m147[0m       public async resetPasswordWithOtp(
+[7m   [0m [91m             ~~~~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m148[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m148[0m         email: string,
+[7m   [0m [91m             ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m149[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m149[0m         otp: string,
+[7m   [0m [91m           ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m150[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m150[0m         newPassword: string
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m151[0m:[93m6[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m151[0m     ): Promise<IUser> {
+[7m   [0m [91m     ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m153[0m:[93m13[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m153[0m         if (!email || !otp || !newPassword) {
+[7m   [0m [91m            ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m153[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m153[0m         if (!email || !otp || !newPassword) {
+[7m   [0m [91m                   ~~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m153[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m153[0m         if (!email || !otp || !newPassword) {
+[7m   [0m [91m                                          ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m183[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m183[0m     }
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m184[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m184[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:26:35 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m75[0m:[93m25[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m75[0m             if(userData.)
+[7m  [0m [91m                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m75[0m:[93m25[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m75[0m             if(userData.)
+[7m  [0m [91m                        ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:36:23 error: [POST] /api/auth/signup >> StatusCode:: 500, Message:: notNull Violation: Employee.gender cannot be null
+2025-05-10 15:37:11 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m125[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m125[0m       );
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m125[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m125[0m       );
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:37:39 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m28[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m119[0m             role: userData.,
+[7m   [0m [91m                           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/auth/auth.repository.ts[0m:[93m119[0m:[93m28[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m119[0m             role: userData.,
+[7m   [0m [91m                           ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-10 15:38:47 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 15:54:59 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 15:59:21 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 15:59:47 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 16:00:38 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 16:00:38 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 16:00:39 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 16:00:40 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 16:32:07 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 400, Message:: password must be longer than or equal to 8 characters,password should not be empty
+2025-05-10 16:32:11 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 400, Message:: password must be longer than or equal to 8 characters,password should not be empty
+2025-05-10 16:32:18 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 400, Message:: password must be longer than or equal to 8 characters,password should not be empty
+2025-05-10 16:34:06 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 400, Message:: password must be longer than or equal to 8 characters,password should not be empty
+2025-05-10 16:34:16 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 400, Message:: password must be longer than or equal to 8 characters,password should not be empty
+2025-05-10 16:35:35 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 16:35:51 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 16:36:02 error: [GET] /api/auth/getAllAdmins >> StatusCode:: 403, Message:: Super admin rights required!
+2025-05-10 16:38:18 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 16:38:18 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 16:38:19 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 16:38:19 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 16:39:03 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 409, Message:: This email venicaletang6q9@gmail.com already exists
+2025-05-10 16:39:17 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 500, Message:: Validation error
+2025-05-10 16:45:12 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 409, Message:: This email kwanelendaba69@gmail.com already exists
+2025-05-10 16:50:05 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 500, Message:: Validation error
+2025-05-10 16:50:56 error: [POST] /api/auth/signUpAdmin >> StatusCode:: 500, Message:: Validation error
+2025-05-10 16:57:51 error: [DELETE] /api/auth/deleteUser/13 >> StatusCode:: 500, Message:: Cannot delete or update a parent row: a foreign key constraint fails (`db_aa010d_eltek`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`))
+2025-05-10 16:58:14 error: [DELETE] /api/auth/deleteUser/13 >> StatusCode:: 500, Message:: Cannot delete or update a parent row: a foreign key constraint fails (`db_aa010d_eltek`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`employeeId`) REFERENCES `employees` (`id`))
+2025-05-10 17:00:58 error: [DELETE] /api/auth/deleteUser/13 >> StatusCode:: 500, Message:: User not found
+2025-05-10 17:05:42 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:05:43 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:05:43 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:05:44 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:07:55 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:07:56 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:07:59 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:07:59 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:08:38 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:08:38 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:08:39 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:08:39 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:10:52 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:10:53 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:11:52 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:11:52 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:11:52 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:11:52 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:12:09 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:12:09 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:12:10 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:12:10 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:12:31 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:12:31 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:12:32 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:12:32 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:14:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:14:30 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:15:29 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:15:29 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:22:18 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:22:20 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-10 17:22:20 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-10 17:22:20 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours

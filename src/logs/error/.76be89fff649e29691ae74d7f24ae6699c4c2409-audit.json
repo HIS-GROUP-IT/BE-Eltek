@@ -144,6 +144,11 @@
             "date": 1746767410963,
             "name": "C:\\Users\\Administrator\\Desktop\\Projects\\eltek-timer-pay-backend\\src\\logs\\error\\2025-05-09.log",
             "hash": "20cb034787d57c0b3318e39363593cde54008c1cf32467239e7475a2ba97480b"
+        },
+        {
+            "date": 1746869336848,
+            "name": "C:\\Users\\Administrator\\Desktop\\Projects\\eltek-timer-pay-backend\\src\\logs\\error\\2025-05-10.log",
+            "hash": "74c7fcbd9ec389c7da4dfb0e761253f79762ba383aa416968d58783692dc7965"
         }
     ],
     "hashType": "sha256"

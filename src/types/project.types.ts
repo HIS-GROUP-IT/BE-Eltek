@@ -31,6 +31,7 @@ export type IProject = {
   estimatedCost?: IEstimatedCost;
   createdBy: number;
   isPaused: boolean;
+  clientId: number;
   lastPausedAt?: Date | null;
   pauseHistory: PauseLog[];
   clientCompany: string;

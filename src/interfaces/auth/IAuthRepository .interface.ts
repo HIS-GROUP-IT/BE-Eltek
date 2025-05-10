@@ -12,7 +12,9 @@ export interface IAuthRepository {
     validateOtp(email: string, otp: string): Promise<IUser>
     forgotPassword(email: string, otp: string, newPassword: string) : Promise<IUser>;
     updateUser(userData: Partial<IUser>): Promise<IUser>;
-    findById(userId: number): Promise<IUser>
+    findById(userId: number): Promise<IUser>;
+    findAllAdmins(): Promise<IUser[]>;
+    deleteUserById(userId: number): Promise<any>
   
    
 }

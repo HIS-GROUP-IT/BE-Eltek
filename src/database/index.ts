@@ -37,6 +37,7 @@ const dbConnection = new Sequelize({
 
 
 User.initialize(dbConnection);
+Client.initialize(dbConnection);
 RefreshToken.initialize(dbConnection);
 Employee.initialize(dbConnection);
 Task.initialize(dbConnection);
@@ -44,9 +45,9 @@ Project.initialize(dbConnection);
 Leave.initialize(dbConnection);
 Notification.initialize(dbConnection);
 AllocationModel.initialize(dbConnection);
-Client.initialize(dbConnection);
 
-
+Employee.belongsTo(User, { foreignKey: 'employeeId' });
+User.hasOne(Employee, { foreignKey: 'employeeId' });
 
 User.hasMany(RefreshToken, { foreignKey: 'userId' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId' });
@@ -74,6 +75,16 @@ Task.belongsTo(Project, {
   foreignKey: 'projectId',
   as: 'project'
 });
+
+Client.hasMany(Project, {
+  foreignKey: 'clientId',
+  as: 'projects'
+});
+Project.belongsTo(Client, {
+  foreignKey: 'clientId',
+  as: 'client',
+});
+
 
 // Project-Allocation relationship (consistent with Project model)
 Project.hasMany(AllocationModel, {

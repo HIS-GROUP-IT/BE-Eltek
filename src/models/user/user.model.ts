@@ -1,5 +1,6 @@
 import { DataTypes, Model } from 'sequelize';
 import { Sequelize } from 'sequelize';
+import Employee from '../employee/employee.model';
 
 class User extends Model {
   public id!: number;
@@ -19,13 +20,22 @@ class User extends Model {
         email: { type: DataTypes.STRING, allowNull: false, unique: true },
         fullName: { type: DataTypes.STRING, allowNull: false },
         password: { type: DataTypes.STRING, allowNull: false },
-        employeeId: { type: DataTypes.INTEGER, allowNull: true },
+        employeeId: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          references: {
+            model: "employees",
+            key: "id",
+          },
+        },
         position: { type: DataTypes.STRING, allowNull: true },
         phoneNumber: { type: DataTypes.STRING, allowNull: true },
         role: { type: DataTypes.STRING, allowNull: false },
         otp: { type: DataTypes.STRING }
       },
-      { sequelize, modelName: 'User' }
+      {
+        timestamps: true,
+        sequelize, modelName: 'User' }
     );
   }
 }

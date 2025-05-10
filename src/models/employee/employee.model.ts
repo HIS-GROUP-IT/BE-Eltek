@@ -12,7 +12,7 @@ class Employee extends Model<IEmployee> implements IEmployee {
   public idNumber!: string;
   public position!: string;
   public department!: string;
-  public role!: 'employee';
+  public role!: string;
   public gender!: 'male' | 'female' | 'other';
   public race?: string;
   public status!: 'active' | 'inactive';
@@ -71,7 +71,7 @@ class Employee extends Model<IEmployee> implements IEmployee {
           defaultValue: false 
         },
         skills: { type: DataTypes.JSON, allowNull: true,defaultValue:[] },
-        createdBy: { type: DataTypes.INTEGER, allowNull: false }
+        createdBy: { type: DataTypes.INTEGER, allowNull: true }
         
       },
       { 

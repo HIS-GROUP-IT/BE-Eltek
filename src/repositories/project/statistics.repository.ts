@@ -450,7 +450,13 @@ public async getStatisticsDashboard(): Promise<{
         col: 'employeeId'
       });
 
-      const totalRevenue = await Project.sum('budget');
+      const totalRevenue = await Project.sum('budget', {
+        where: {
+          status: {
+            [Op.ne]: 'cancelled' 
+          }
+        }
+      });
 
       const activeEmployees = await Employee.findAll({
         where: { status: 'active', assigned: true },

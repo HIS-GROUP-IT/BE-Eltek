@@ -31,15 +31,35 @@ export class EmployeeRepository implements IEmployeeRepository {
     return employee;
   }
 
-  public async updateEmployee(
-    employeeData: Partial<IEmployee>
-  ): Promise<IEmployee> {
-    const employee = await Employee.findByPk(employeeData.id);
-    if (!employee) throw new Error("Employee not found");
-    await employee.update(employeeData);
-    return employee.get({ plain: true });
+  public async updateEmployee(employeeData: Partial<IEmployee>): Promise<IEmployee> {
+    const transaction = await Employee.sequelize.transaction();    
+    try {
+      const employee = await Employee.findByPk(employeeData.id, { transaction });
+      if (!employee) {
+        await transaction.rollback();
+        throw new Error("Employee not found");
+      }  
+      await employee.update(employeeData, { transaction });
+        const fieldsToSync = ['fullName', 'email', 'phoneNumber', 'position'];
+      const updateData = {};
+            fieldsToSync.forEach(field => {
+        if (employeeData[field] !== undefined) {
+          updateData[field] = employeeData[field];
+        }
+      });
+        if (Object.keys(updateData).length > 0) {
+        await User.update(updateData, {
+          where: { employeeId: employeeData.id },
+          transaction
+        });
+      }
+      await transaction.commit();
+      return employee.get({ plain: true });
+    } catch (error) {
+      await transaction.rollback();
+      throw error;
+    }
   }
-
   public async deleteEmployee(employeeId: number): Promise<void> {
     const transaction = await Employee.sequelize!.transaction();
 
@@ -121,9 +141,13 @@ export class EmployeeRepository implements IEmployeeRepository {
 
   public async getAllEmployees(): Promise<IEmployee[]> {
     const employees = await Employee.findAll({
+      where: {
+        role: 'employee'
+            },
       include: [{
         association: 'allocations',
-        attributes: ['id',
+        attributes: [
+          'id',
           'projectName',
           'employeeId',
           'projectId',
@@ -133,7 +157,8 @@ export class EmployeeRepository implements IEmployeeRepository {
           'hoursWeek',
           'status',
           'chargeOutRate',
-          'chargeType'] 
+          'chargeType'
+        ] 
       }],
       order: [["createdAt", "DESC"]],
       raw: false 
@@ -141,6 +166,8 @@ export class EmployeeRepository implements IEmployeeRepository {
   
     return employees.map(emp => emp.get({ plain: true }));
   }
+
+
   public async getEmployeeById(employeeId: number): Promise<IEmployee | null> {
     const employee = await Employee.findByPk(employeeId, {
       include: [{

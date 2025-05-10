@@ -6,7 +6,7 @@ export type IEmployee = {
   idNumber: string;
   position: string;
   department: string;
-  role: "employee";
+  role: string;
   gender: "male" | "female" | "other";
   race?: string;
   status: "active" | "inactive";

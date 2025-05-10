@@ -5,7 +5,7 @@ import { DataStoreInToken, IUser, IUserLogin, TokenData } from "@/types/auth.typ
 import { CustomResponse } from "@/types/response.interface";
 import jwt from 'jsonwebtoken';
 import crypto from "crypto";
-import { otpEmailTemplate, sendMail } from "@/utils/email";
+import { otpEmailTemplate, sendMail, welcomeEmployeeTemplate } from "@/utils/email";
 import { HttpException } from "@/exceptions/HttpException";
 
 export class AuthController {
@@ -99,8 +99,16 @@ export class AuthController {
         try {
             const userData: IUser = req.body;
             const adminData = { ...userData, role: "admin" };
-            const signUpUserData = await this.auth.signup(adminData);
-            this.setAuthCookies(res, signUpUserData, adminData);
+            const signUpUserData = await this.auth.signup(adminData);   
+            await sendMail(userData.email,
+                "Your Eltek account has been successfully created",
+                `Good Day ${userData.fullName}`,
+                welcomeEmployeeTemplate(userData.fullName,
+                    "Eltek",
+                    "https://eltek-frontend.vercel.app/",
+                    
+                )
+            )                     
             const response: CustomResponse<TokenData> = { data: signUpUserData, message: "Admin registered successfully", error: false };
             res.status(201).json(response);
         } catch (error) {
@@ -146,6 +154,8 @@ export class AuthController {
             next(error);
         }
     }
+
+    
 
     public logout = async (req: Request, res: Response, next: NextFunction) => {
         try {
@@ -219,6 +229,27 @@ export class AuthController {
             const userData: Partial<IUser> = req.body;
             const updatedUser = await this.auth.updateUser(userData);
             const response: CustomResponse<IUser> = { data: updatedUser, message: "User updated successfully", error: false };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    public findAllAdmins = async (req: Request, res: Response, next: NextFunction) => {
+        try {          
+            const admins = await this.auth.findAllAdmins();
+            const response: CustomResponse<IUser> = { data: admins, message: "admins fetched successfully", error: false };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    public deleteUserById = async (req: Request, res: Response, next: NextFunction) => {
+        try {          
+            const userId = req.params.id
+            const admins = await this.auth.deleteUserById(userId);
+            const response: CustomResponse<any> = { data: admins, message: "user deleted successfully", error: false };
             res.status(200).json(response);
         } catch (error) {
             next(error);

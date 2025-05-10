@@ -56,7 +56,7 @@ export class AuthService implements IAuthService {
         return { expiresAt, accessToken, refreshToken };
     }
 
-    public async signup(userData: IUser): Promise<TokenData> {
+    public async signup(userData: IUser): Promise<any> {
         const findUser = await this.authRepository.findUserByEmail(userData.email);
         if (findUser) {
             throw new HttpException(409, `This email ${userData.email} already exists`);
@@ -66,7 +66,7 @@ export class AuthService implements IAuthService {
             ...userData,
             password: hashedPassword
         });
-        return await this.createToken(createdUser);
+    
     }
 
     public async login(userData: IUserLogin): Promise<IUser> {
@@ -199,4 +199,19 @@ export class AuthService implements IAuthService {
         }
     }
 
+    public async findAllAdmins(): Promise<IUser[]> {
+        try {
+            return await this.authRepository.findAllAdmins();
+        } catch (error) {
+            throw new HttpException(500, error.message)
+        }
+    }
+
+    public async deleteUserById(userId: number): Promise<any> {
+        try {
+            await this.authRepository.deleteUserById(userId);
+        } catch (error) {
+            throw new HttpException(500, error.message)
+        }
+    }
 }

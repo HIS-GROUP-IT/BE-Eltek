@@ -5,6 +5,7 @@ import User from '../user/user.model';
 import Employee from '../employee/employee.model';
 import { IEstimatedCost, IProject, PauseLog, Phase, ProjectStatus, Role } from '@/types/project.types';
 import Task from '../task/task.model';
+import Client from '../client/client.model';
 
 type ProjectCreationAttributes = Optional<IProject, 'id' | 'createdAt' | 'updatedAt'>;
 
@@ -20,6 +21,7 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
   public duration!: number;
   public clientName!: string;
   public clientEmail!: string;
+  public clientId!:number;
   public clientCompany!: string;
   public isPaused!: boolean;
   public lastPausedAt?: Date | null;
@@ -96,6 +98,14 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
           type: DataTypes.JSON, 
           allowNull: true,
           defaultValue: {}, 
+        },
+        clientId: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          references: {
+            model:"clients",
+            key: "id",
+          },
         },
         clientName: {
           type: DataTypes.STRING,
