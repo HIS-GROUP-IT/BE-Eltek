@@ -35,6 +35,7 @@ class Task extends Model {
   public readonly allocation : Allocation
   public readonly rejectedHours: any;
   public readonly approvedHours: any;
+  public readonly totalTasks : number
   public readonly employee?: Employee;
   public readonly user?: User;
 

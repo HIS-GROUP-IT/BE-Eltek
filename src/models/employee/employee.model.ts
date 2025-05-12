@@ -24,7 +24,7 @@ class Employee extends Model<IEmployee> implements IEmployee {
   public ctc?: number;
   public createdBy!: number;
   public allocations?: Allocation[];
-  public tasks?:ITask[]
+  public tasks?:ITask[];
   public commitments?: Commitment[];
 
   static initialize(sequelize: Sequelize) {

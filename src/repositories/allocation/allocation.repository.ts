@@ -264,7 +264,6 @@ public async getEmployeeAllocations(employeeId: number): Promise<Allocation[]> {
                 status: {
                     [Op.or]: ['completed', 'on going']
                 },
-                isActive: true  // Optional: only include active projects
             },
             required: true
         }],

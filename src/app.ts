@@ -1,3 +1,4 @@
+import { TIMESHEET_SERVICE_TOKEN } from './interfaces/timesheet/ITimesheetService.interface';
 import "reflect-metadata";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -41,6 +42,8 @@ import { StatisticsRepository } from "./repositories/project/statistics.reposito
 import { CLIENT_SERVICE_TOKEN } from "./interfaces/client/IClientService.interface";
 import { ClientService } from "./services/client/client.service";
 import { ClientRepository } from "./repositories/client/client.repository";
+import { TimesheetService } from './services/timesheet/timesheet.service';
+import { TimesheetRepository } from './repositories/timesheet/timesheet.repository';
 
 export class App {
   public app: express.Application;
@@ -163,6 +166,11 @@ export class App {
     Container.set(
       CLIENT_SERVICE_TOKEN,
       new ClientService(Container.get(ClientRepository))
+    );
+
+    Container.set(
+      TIMESHEET_SERVICE_TOKEN,
+      new TimesheetService(Container.get(TimesheetRepository))
     );
 
   }

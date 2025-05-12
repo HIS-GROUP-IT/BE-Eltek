@@ -12,6 +12,7 @@ import { AllocationRoute } from "./routes/allocation/allocation.routes";
 import { ReportRoute } from "./routes/project/report.routes";
 import { StatisticsRoute } from "./routes/project/statistics.routes";
 import { ClientRoute } from "./routes/client/client.route";
+import { TimesheetRoute } from "./routes/timesheet/timesheet.routes";
 
 ValidateEnv();
 
@@ -25,7 +26,8 @@ const app = new App([
   new AllocationRoute(),
   new ReportRoute(),
   new StatisticsRoute(),
-  new ClientRoute()
+  new ClientRoute(),
+  new TimesheetRoute()
 ]);
 
 app.listen();

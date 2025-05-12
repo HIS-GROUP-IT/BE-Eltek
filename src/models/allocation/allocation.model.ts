@@ -1,7 +1,7 @@
 import { Model, DataTypes, Optional, Sequelize } from "sequelize";
 import Employee from "@/models/employee/employee.model";
 import Project from "@/models/project/project.model";
-import { Allocation as IAllocation, IEmployee } from "@/types/employee.types";
+import { Allocation, Allocation as IAllocation, IEmployee } from "@/types/employee.types";
 import { ITask } from "@/types/task.type";
 
 interface AllocationCreationAttributes extends Optional<IAllocation, 
@@ -28,6 +28,7 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
   public readonly employee : IEmployee
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
+  public readonly allocations : Allocation
 
   static initialize(sequelize: Sequelize) {
     AllocationModel.init(
