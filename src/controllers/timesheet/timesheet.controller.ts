@@ -29,4 +29,19 @@ export class TimesheetController {
             next(error);
         }
     };
+
+    
+    public getEmployeeWorkChartsData = async (req: Request, res: Response, next: NextFunction) => {
+        try {  
+            const EmployeeWorkChartsData = await this.timesheetService.getEmployeeWorkChartsData();
+            const response: CustomResponse<ILeave> = {
+                data: EmployeeWorkChartsData,
+                message: "Employee Work Charts Data  retrieved successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    };
 }

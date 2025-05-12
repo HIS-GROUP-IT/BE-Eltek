@@ -26,6 +26,8 @@ class Employee extends Model<IEmployee> implements IEmployee {
   public allocations?: Allocation[];
   public tasks?:ITask[];
   public commitments?: Commitment[];
+  public readonly totalHours : number;
+  public readonly totalTasks : number;
 
   static initialize(sequelize: Sequelize) {
     Employee.init(

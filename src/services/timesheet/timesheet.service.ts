@@ -21,4 +21,14 @@ export class TimesheetService implements ITimesheetService {
         }
     }
 
+    public async getEmployeeWorkChartsData(): Promise<{
+        hoursData: { employees: string[]; hours: number[] };
+        tasksData: { employees: string[]; tasks: number[] };
+      }> {
+        try {
+            return await this.timesheetRepository.getEmployeeWorkChartsData();
+        } catch (error) {
+            throw new HttpException(500, error.message)
+        }
+    }
 }

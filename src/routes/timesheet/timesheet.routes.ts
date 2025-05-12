@@ -22,5 +22,11 @@ export class TimesheetRoute implements Routes {
             authorizationMiddleware,
             this.leaveController.getActiveEmployeesWorkMetrics
         );
+
+        this.router.get(
+            `${this.path}/getEmployeeWorkChartsData`,
+            authorizationMiddleware,
+            this.leaveController.getEmployeeWorkChartsData
+        );
     }
 }

@@ -73,11 +73,58 @@ export class TimesheetRepository implements ITimesheetRepository {
       
         } catch (error) {
           console.error('Error fetching employee metrics:', error);
-          throw new HttpException(500, 'Failed to retrieve employee work metrics');
+          throw new HttpException(500, error.message);
         }
       }
 
-
+      public async getEmployeeWorkChartsData(): Promise<{
+        hoursData: { employees: string[]; hours: number[] };
+        tasksData: { employees: string[]; tasks: number[] };
+      }> {
+        try {
+          // 1. Fetch the raw per‐employee aggregates
+          const employees = await Employee.findAll({
+            where: { status: 'active' },
+            include: [{
+              model: Task,
+              as: 'tasks',
+              attributes: [],
+              required: false
+            }],
+            attributes: [
+              'fullName',
+              [Sequelize.fn('COUNT', Sequelize.col('tasks.id')), 'totalTasks'],
+              [Sequelize.fn('SUM', Sequelize.literal(
+                `CASE WHEN tasks.status = 'completed' THEN tasks.actualHours ELSE 0 END`
+              )), 'totalHours']
+            ],
+            group: ['Employee.id'],
+            raw: true
+          });
+      
+          // 2. Pull out parallel arrays of names, hours and tasks
+          const employeesList = employees.map(e => e.fullName);
+          const hoursList     = employees.map(e => Number(e.totalHours)  || 0);
+          const tasksList     = employees.map(e => Number(e.totalTasks) || 0);
+      
+          // 3. Return in the desired nested-object shape
+          return {
+            hoursData: {
+              employees: employeesList,
+              hours: hoursList
+            },
+            tasksData: {
+              employees: employeesList,
+              tasks: tasksList
+            }
+          };
+      
+        } catch (error) {
+          console.error('Error fetching chart data:', error);
+          throw new HttpException(500, error.message);
+        }
+      }
+      
      }
 
 

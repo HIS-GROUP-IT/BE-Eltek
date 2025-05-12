@@ -1525,3 +1525,87 @@ ReferenceError: T is not defined
     at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
 2025-05-12 11:24:58 error: [GET] /api/allocations/getEmployeeAllocations/2 >> StatusCode:: 500, Message:: Unknown column 'project.isActive' in 'on clause'
+2025-05-12 11:42:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m103[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m103[0m             group: ['Employee.id'],
+[7m   [0m [91m                 ~[0m
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m104[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m104[0m             raw: true
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m105[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m105[0m           });
+[7m   [0m [91m          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m103[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m103[0m             group: ['Employee.id'],
+[7m   [0m [91m                 ~[0m
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m104[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m104[0m             raw: true
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m105[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m105[0m           });
+[7m   [0m [91m          ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-12 11:49:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/timesheet/timesheet.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m26[0m     }
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/timesheet/timesheet.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m26[0m     }
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-12 11:52:28 error: [GET] /api/timesheets/getEmployeeWorkChartsData >> StatusCode:: 500, Message:: Failed to retrieve employee work data
+2025-05-12 11:53:12 error: [GET] /api/timesheets/getEmployeeWorkChartsData >> StatusCode:: 500, Message:: Task is associated to Employee using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+2025-05-12 11:53:28 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m91[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m91[0m               attributes: [],
+[7m  [0m [91m              ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/timesheet/timesheet.repository.ts[0m:[93m91[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m91[0m               attributes: [],
+[7m  [0m [91m              ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
