@@ -87,7 +87,7 @@ export class AuthController {
         try {
             const userData = req.body;
             const signUpUserData = await this.auth.signup(userData);
-            this.setAuthCookies(res, signUpUserData, userData);
+            // this.setAuthCookies(res, signUpUserData, userData);
             const response: CustomResponse<TokenData> = { data: signUpUserData, message: "User registered successfully", error: false };
             res.status(201).json(response);
         } catch (error) {

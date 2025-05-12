@@ -30,8 +30,6 @@ export class AllocationRepository implements IAllocationRepository {
             normalizedPhaseIds: normalizedPhases,
         });
         await employee.update({ assigned: true });
-
-        // Update project phases members count
         const project = await Project.findByPk(allocationData.projectId);
         if (project) {
             const phases = [...project.phases];
@@ -54,7 +52,7 @@ export class AllocationRepository implements IAllocationRepository {
         if (error instanceof HttpException) {
             throw error;
         }
-        throw new HttpException(500, "Error creating allocation");
+        throw new HttpException(500, error.message);
     }
 }
   
@@ -68,6 +66,7 @@ export class AllocationRepository implements IAllocationRepository {
       raw: true
     });
   }
+
   public async updateAllocation(id: number, updates: Partial<Allocation>): Promise<Allocation> {
     const transaction = await AllocationModel.sequelize!.transaction();
     
@@ -76,94 +75,67 @@ export class AllocationRepository implements IAllocationRepository {
       if (!allocation) {
         throw new HttpException(404, "Allocation not found");
       }
-
-      // Convert phase IDs to strings for consistent comparison
       const oldPhases = allocation.phases.map(String);
       let newPhases: string[] = [];
 
       if (updates.phases) {
-        // Normalize new phases to strings and sort
         newPhases = [...new Set(updates.phases.map(String))].sort();
-        updates.phases = newPhases; // Update with normalized phases
+        updates.phases = newPhases; 
       }
-
-      // Validate dates first
       const newStart = updates.start ? new Date(updates.start) : allocation.start;
       const newEnd = updates.end ? new Date(updates.end) : allocation.end;
       
       if (newEnd <= newStart) {
         throw new HttpException(400, "End date must be after start date");
-      }
-  
+      }  
       const employeeId = allocation.employeeId;
-  
-      // Check for conflicts (including current allocation)
-      const allConflicts = await this.checkForOverlaps(
+        const allConflicts = await this.checkForOverlaps(
         employeeId,
         newStart,
         newEnd,
         transaction
       );
-  
-      // Filter out current allocation
-      const externalConflicts = allConflicts.filter(c => c.id !== id);
+        const externalConflicts = allConflicts.filter(c => c.id !== id);
   
       if (externalConflicts.length > 0) {
-        // Check override possibility with proper exclusion
         const overrideCheck = await this.checkOverridePossibility(
           employeeId,
           newStart,
           newEnd,
-          id // Exclude current allocation
+          id 
         );
-  
-        // Verify override capability for remaining conflicts
-        const nonOverridableConflicts = externalConflicts.filter(c => !c.canOverride);
+          const nonOverridableConflicts = externalConflicts.filter(c => !c.canOverride);
         if (nonOverridableConflicts.length > 0) {
           const conflictIds = nonOverridableConflicts.map(c => c.id);
           throw new HttpException(409,
             `Cannot update due to non-overridable conflicts: ${conflictIds.join(', ')}`
           );
         }
-  
-        // Perform override with transaction and exclusion
-        await this.overrideConflictingAllocations(
+          await this.overrideConflictingAllocations(
           employeeId,
           newStart,
           newEnd,
-          id, // Current allocation ID to exclude
+          id, 
           transaction
         );
       }
-  
-      // Validate final dates after potential overrides
-      const finalStart = updates.start ? new Date(updates.start) : allocation.start;
+        const finalStart = updates.start ? new Date(updates.start) : allocation.start;
       const finalEnd = updates.end ? new Date(updates.end) : allocation.end;
       
       if (finalEnd <= finalStart) {
         throw new HttpException(400, "End date must be after start date after conflict resolution");
       }
-  
-      // Perform the update with validated dates
-      await allocation.update({
+        await allocation.update({
         ...updates,
         start: finalStart,
         end: finalEnd
       }, { transaction });
-  
-      // Update project phases if phases changed
-      if (updates.phases) {
+        if (updates.phases) {
         const project = await Project.findByPk(allocation.projectId, { transaction });
         if (project) {
           const phases = [...project.phases];
-          
-          // Find exactly removed phases (using Set for accurate comparison)
-          const removedPhases = oldPhases.filter(phaseId => !newPhases.includes(phaseId));
-          
-          // Find truly new phases (not just reordered)
-          const addedPhases = newPhases.filter(phaseId => !oldPhases.includes(phaseId));
-
-          // Decrement removed phases
+                    const removedPhases = oldPhases.filter(phaseId => !newPhases.includes(phaseId));
+                    const addedPhases = newPhases.filter(phaseId => !oldPhases.includes(phaseId));
           removedPhases.forEach(phaseId => {
             const phaseIndex = phases.findIndex(p => String(p.id) === phaseId);
             if (phaseIndex !== -1) {
@@ -173,8 +145,6 @@ export class AllocationRepository implements IAllocationRepository {
               };
             }
           });
-
-          // Increment added phases
           addedPhases.forEach(phaseId => {
             const phaseIndex = phases.findIndex(p => String(p.id) === phaseId);
             if (phaseIndex !== -1) {
@@ -186,9 +156,7 @@ export class AllocationRepository implements IAllocationRepository {
           });
 
           await project.update({ phases }, { transaction });
-          
-          // Update normalizedPhaseIds for duplicate checking
-          await allocation.update({
+                    await allocation.update({
             normalizedPhaseIds: JSON.stringify(newPhases)
           }, { transaction });
         }
@@ -204,158 +172,192 @@ export class AllocationRepository implements IAllocationRepository {
     }
   }
 
-  public async deleteAllocation(id: number): Promise<void> {
+  public async deleteAllocationsByEmployeeAndProject(employeeId: number, projectId: number): Promise<void> {
     const transaction = await AllocationModel.sequelize!.transaction();
     
     try {
-      await Task.destroy({
-        where: { allocationId: id },
-        transaction
-      });
-      
-      const allocation = await AllocationModel.findByPk(id, { transaction });
-      if (!allocation) {
-        throw new HttpException(404, "Allocation not found");
-      }
-  
-      // Decrement project phase members
-      const project = await Project.findByPk(allocation.projectId, { transaction });
-      if (project) {
-        const phases = [...project.phases];
-        allocation.phases.forEach(phaseId => {
-          const phaseIndex = phases.findIndex(p => p.id === phaseId);
-          if (phaseIndex !== -1) {
-            phases[phaseIndex] = {
-              ...phases[phaseIndex],
-              members: Math.max(0, (phases[phaseIndex].members || 0) - 1)
-            };
-          }
+        const allocations = await AllocationModel.findAll({
+            where: { 
+                employeeId,
+                projectId
+            },
+            transaction
         });
-        await project.update({ phases }, { transaction });
-      }
-  
-      // Update employee assigned status if needed
-      const remainingAllocations = await AllocationModel.count({
+
+        if (!allocations || allocations.length === 0) {
+            throw new HttpException(404, "No allocations found for this employee and project");
+        }
+        const hasTasks = await Task.count({
+            where: { 
+                employeeId,
+                projectId
+            },
+            transaction
+        }) > 0;
+
+        if (hasTasks) {
+            await AllocationModel.update(
+                { isActive: false,
+                  canOverride:true
+                 }, 
+                { 
+                    where: { 
+                        employeeId,
+                        projectId 
+                    },
+                    transaction 
+                }
+            );
+        } else {
+            for (const allocation of allocations) {
+                await this.performAllocationDeletion(allocation, transaction);
+            }
+        }
+
+        await transaction.commit();
+    } catch (error) {
+        await transaction.rollback();
+        throw error instanceof HttpException
+            ? error
+            : new HttpException(500, "Error processing allocations deletion");
+    }
+}
+
+private async performAllocationDeletion(allocation: AllocationModel, transaction: Transaction) {
+    const project = await Project.findByPk(allocation.projectId, { transaction });
+    if (project) {
+        const updatedPhases = project.phases.map(phase => {
+            if (allocation.phases.includes(phase.id)) {
+                return {
+                    ...phase,
+                    members: Math.max(0, (phase.members || 0) - 1)
+                };
+            }
+            return phase;
+        });
+        await project.update({ phases: updatedPhases }, { transaction });
+    }
+    const remainingAllocations = await AllocationModel.count({
         where: { employeeId: allocation.employeeId },
         transaction
-      });
-      
-      if (remainingAllocations === 1) { // Current allocation is last one
+    });
+
+    if (remainingAllocations === 1) {
         await Employee.update(
-          { assigned: false },
-          { where: { id: allocation.employeeId }, transaction }
+            { assigned: false },
+            { where: { id: allocation.employeeId }, transaction }
         );
-      }
-  
-      await allocation.destroy({ transaction });
-      await transaction.commit();
-    } catch (error) {
-      await transaction.rollback();
-      throw error instanceof HttpException
-        ? error
-        : new HttpException(500, "Error deleting allocation");
     }
-  }
+    await allocation.destroy({ transaction });
+}
 
-
-  public async getEmployeeAllocations(employeeId: number): Promise<Allocation[]> {
+public async getEmployeeAllocations(employeeId: number): Promise<Allocation[]> {
     return await AllocationModel.findAll({
-        where: { employeeId },  
+        where: { 
+            employeeId,
+            isActive: true
+        },  
         include: [{
             model: Project,
             as: 'project',
             where: {
                 status: {
                     [Op.or]: ['completed', 'on going']
-                }
+                },
+                isActive: true  // Optional: only include active projects
             },
             required: true
         }],
-        
     });
 }
 
-  public async getProjectAllocations(projectId: number): Promise<Allocation[]> {
-    return await AllocationModel.findAll({
-      where: { projectId },
+public async getProjectAllocations(projectId: number): Promise<Allocation[]> {
+  return await AllocationModel.findAll({
+    where: { 
+      projectId,
+      isActive: true // Only active allocations
+    },
+    include: [{
+      model: Employee,
+      as: 'employee',
+      attributes: { exclude: ['password'] }, 
       include: [{
-        model: Employee,
-        as: 'employee',
-        attributes: { exclude: ['password'] }, 
-        include: [{
-          model: AllocationModel,
-          as: 'allocations',
-          attributes: [
-            'id',
-            'projectName',
-            'employeeId',
-            'projectId',
-            'phases',
-            'start',
-            'end',
-            'hoursWeek',
-            'status',
-            'chargeOutRate',
-            'chargeType',
-            'createdAt',
-            'updatedAt'
-          ]
-        }]
-      }]   
-    });
-  }
-
-  public async getPhaseAllocations(phaseId: string): Promise<Allocation[]> {
-    return await AllocationModel.findAll({
-      where: {
-        [Op.and]: [
-          // Use model name as table alias
-          AllocationModel.sequelize.literal(`JSON_CONTAINS(Allocation.phases, JSON_ARRAY('${phaseId}'))`),
+        model: AllocationModel,
+        as: 'allocations',
+        where: { isActive: true }, // Only active allocations for employee
+        attributes: [
+          'id',
+          'projectName',
+          'employeeId',
+          'projectId',
+          'phases',
+          'start',
+          'end',
+          'hoursWeek',
+          'status',
+          'chargeOutRate',
+          'chargeType',
+          'createdAt',
+          'updatedAt'
         ]
-      },
-      include: [{
-        model: Employee,
-        as: 'employee',
-        attributes: { exclude: ['password'] },
-        include: [{
-          model: AllocationModel,
-          as: 'allocations',
-          attributes: [
-            'id',
-            'projectName',
-            'employeeId', 
-            'projectId',
-            'phases',
-            'start',
-            'end',
-            'hoursWeek',
-            'status',
-            'chargeOutRate',
-            'chargeType',
-            'createdAt',
-            'updatedAt'
-          ]
-        }]
       }]
-    });
-  }
+    }]   
+  });
+}
 
-  public async findExistingAllocations(
-    employeeId: number,
-    projectId: number,
-    phaseIds: string[] 
-  ): Promise<Allocation | null> {
-    const normalizedPhaseIds = JSON.stringify([...phaseIds].sort());
-    
-    return await AllocationModel.findOne({
-      where: {
-        employeeId,
-        projectId,
-        normalizedPhaseIds 
-      },
-      raw: true
-    });
-  }
+public async getPhaseAllocations(phaseId: string): Promise<Allocation[]> {
+  return await AllocationModel.findAll({
+    where: {
+      [Op.and]: [
+        AllocationModel.sequelize.literal(`JSON_CONTAINS(Allocation.phases, JSON_ARRAY('${phaseId}'))`),
+        { isActive: true } // Only active allocations
+      ]
+    },
+    include: [{
+      model: Employee,
+      as: 'employee',
+      attributes: { exclude: ['password'] },
+      include: [{
+        model: AllocationModel,
+        as: 'allocations',
+        where: { isActive: true }, // Only active allocations for employee
+        attributes: [
+          'id',
+          'projectName',
+          'employeeId', 
+          'projectId',
+          'phases',
+          'start',
+          'end',
+          'hoursWeek',
+          'status',
+          'chargeOutRate',
+          'chargeType',
+          'createdAt',
+          'updatedAt'
+        ]
+      }]
+    }]
+  });
+}
+
+public async findExistingAllocations(
+  employeeId: number,
+  projectId: number,
+  phaseIds: string[] 
+): Promise<Allocation | null> {
+  const normalizedPhaseIds = JSON.stringify([...phaseIds].sort());
+  
+  return await AllocationModel.findOne({
+    where: {
+      employeeId,
+      projectId,
+      normalizedPhaseIds,
+      isActive: true // Only active allocations
+    },
+    raw: true
+  });
+}
   
   
   public async checkForOverlaps(

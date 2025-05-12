@@ -50,6 +50,7 @@ export type Allocation = {
   status: "confirmed" | "tentative";
   chargeOutRate?: number;
   chargeType?: "fixed" | "markup";
+  isActive?:boolean;
   employee?:IEmployee
   createdAt?: Date;
   updatedAt?: Date;

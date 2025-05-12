@@ -12,7 +12,14 @@ class RefreshToken extends Model {
     RefreshToken.init(
       {
         token: { type: DataTypes.STRING, primaryKey: true },
-        userId: { type: DataTypes.INTEGER },
+        userId: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          references: {
+            model: User,
+            key: "id",
+          },
+        },
         expiresAt: { type: DataTypes.DATE }
       },
       { sequelize, modelName: 'RefreshToken' }

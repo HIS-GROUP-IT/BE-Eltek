@@ -36,18 +36,22 @@ const dbConnection = new Sequelize({
 });
 
 
-User.initialize(dbConnection);
-Client.initialize(dbConnection);
-RefreshToken.initialize(dbConnection);
 Employee.initialize(dbConnection);
-Task.initialize(dbConnection);
+User.initialize(dbConnection);
+RefreshToken.initialize(dbConnection);
+
+
+
+Client.initialize(dbConnection);
 Project.initialize(dbConnection);
+AllocationModel.initialize(dbConnection);
+Task.initialize(dbConnection);
 Leave.initialize(dbConnection);
 Notification.initialize(dbConnection);
-AllocationModel.initialize(dbConnection);
 
-Employee.belongsTo(User, { foreignKey: 'employeeId' });
-User.hasOne(Employee, { foreignKey: 'employeeId' });
+User.belongsTo(Employee, { foreignKey: 'employeeId' });
+Employee.hasOne(User, { foreignKey: 'employeeId' });
+
 
 User.hasMany(RefreshToken, { foreignKey: 'userId' });
 RefreshToken.belongsTo(User, { foreignKey: 'userId' });
@@ -133,7 +137,8 @@ Notification.belongsTo(Project, {
 
 
 dbConnection.sync({ alter: true })
-  .then(() => console.log('Database synced successfully'))
+  .then(() => {
+    console.log('Database synced successfully')})
   .catch(error => console.error('Error syncing database:', error));
 
 export default dbConnection;

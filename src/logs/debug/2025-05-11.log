@@ -1,0 +1,68 @@
+2025-05-11 22:14:10 info: =================================
+2025-05-11 22:14:10 info: ======= ENV: development =======
+2025-05-11 22:14:10 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:14:10 info: =================================
+2025-05-11 22:14:13 info: Database connection established successfully.
+2025-05-11 22:14:16 info: Database tables synced successfully.
+2025-05-11 22:14:54 info: [0mGET /api/projects/getProjectRemainingDays/1 [36m304[0m 368.648 ms - -[0m
+2025-05-11 22:14:55 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 724.491 ms - -[0m
+2025-05-11 22:14:55 info: [0mGET /api/projects/getProjectFinancialData/1 [36m304[0m 1017.541 ms - -[0m
+2025-05-11 22:14:55 info: [0mGET /api/employees/getAllEmployees [36m304[0m 546.410 ms - -[0m
+2025-05-11 22:14:55 info: [0mGET /api/projects/getProjectFinancials/1 [36m304[0m 1355.240 ms - -[0m
+2025-05-11 22:15:25 info: [0mGET /api/projects/getProjectRemainingDays/1 [36m304[0m 1316.722 ms - -[0m
+2025-05-11 22:15:25 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 1318.703 ms - -[0m
+2025-05-11 22:15:25 info: [0mGET /api/projects/getProjectFinancialData/1 [36m304[0m 1515.826 ms - -[0m
+2025-05-11 22:15:25 info: [0mGET /api/employees/getAllEmployees [36m304[0m 190.594 ms - -[0m
+2025-05-11 22:15:25 info: [0mGET /api/projects/getProjectFinancials/1 [36m304[0m 1691.647 ms - -[0m
+2025-05-11 22:20:33 info: =================================
+2025-05-11 22:20:33 info: ======= ENV: development =======
+2025-05-11 22:20:33 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:20:33 info: =================================
+2025-05-11 22:20:36 info: Database connection established successfully.
+2025-05-11 22:20:43 info: =================================
+2025-05-11 22:20:43 info: ======= ENV: development =======
+2025-05-11 22:20:43 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:20:43 info: =================================
+2025-05-11 22:20:54 info: =================================
+2025-05-11 22:20:54 info: ======= ENV: development =======
+2025-05-11 22:20:54 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:20:54 info: =================================
+2025-05-11 22:20:57 info: Database connection established successfully.
+2025-05-11 22:21:00 info: Database tables synced successfully.
+2025-05-11 22:21:05 info: [0mGET /api/projects/getProjectRemainingDays/1 [36m304[0m 210.129 ms - -[0m
+2025-05-11 22:21:06 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 368.670 ms - -[0m
+2025-05-11 22:21:06 info: [0mGET /api/projects/getProjectFinancialData/1 [36m304[0m 524.246 ms - -[0m
+2025-05-11 22:21:06 info: [0mGET /api/employees/getAllEmployees [36m304[0m 192.953 ms - -[0m
+2025-05-11 22:21:06 info: [0mGET /api/projects/getProjectFinancials/1 [32m200[0m 603.070 ms - 235[0m
+2025-05-11 22:21:49 info: [0mGET /api/projects/getProjectRemainingDays/1 [36m304[0m 1371.486 ms - -[0m
+2025-05-11 22:21:49 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 1548.538 ms - -[0m
+2025-05-11 22:21:49 info: [0mGET /api/projects/getProjectFinancialData/1 [36m304[0m 1838.843 ms - -[0m
+2025-05-11 22:21:49 info: [0mGET /api/projects/getProjectFinancials/1 [36m304[0m 2038.049 ms - -[0m
+2025-05-11 22:21:49 info: [0mGET /api/employees/getAllEmployees [36m304[0m 184.584 ms - -[0m
+2025-05-11 22:22:31 info: =================================
+2025-05-11 22:22:31 info: ======= ENV: development =======
+2025-05-11 22:22:31 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:22:31 info: =================================
+2025-05-11 22:22:42 info: =================================
+2025-05-11 22:22:42 info: ======= ENV: development =======
+2025-05-11 22:22:42 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:22:42 info: =================================
+2025-05-11 22:22:45 info: Database connection established successfully.
+2025-05-11 22:22:49 info: Database tables synced successfully.
+2025-05-11 22:24:15 info: =================================
+2025-05-11 22:24:15 info: ======= ENV: development =======
+2025-05-11 22:24:15 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:24:15 info: =================================
+2025-05-11 22:24:18 info: Database connection established successfully.
+2025-05-11 22:24:21 info: Database tables synced successfully.
+2025-05-11 22:24:23 info: [0mGET /api/projects/getProjectRemainingDays/1 [36m304[0m 213.705 ms - -[0m
+2025-05-11 22:24:23 info: [0mGET /api/allocations/getProjectAllocations/1 [36m304[0m 364.743 ms - -[0m
+2025-05-11 22:24:23 info: [0mGET /api/projects/getProjectFinancialData/1 [32m200[0m 404.456 ms - 80[0m
+2025-05-11 22:24:23 info: [0mGET /api/employees/getAllEmployees [36m304[0m 185.046 ms - -[0m
+2025-05-11 22:24:23 info: [0mGET /api/projects/getProjectFinancials/1 [32m200[0m 582.631 ms - 162[0m
+2025-05-11 22:25:02 info: =================================
+2025-05-11 22:25:02 info: ======= ENV: development =======
+2025-05-11 22:25:02 info: 🚀 Identity Service listening on port 5000
+2025-05-11 22:25:02 info: =================================
+2025-05-11 22:25:05 info: Database connection established successfully.
+2025-05-11 22:25:08 info: Database tables synced successfully.

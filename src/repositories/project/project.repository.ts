@@ -229,7 +229,6 @@ async pauseProject(id: number): Promise<IProject | null> {
   return project.get({ plain: true });
 }
 
-// Resume a project (status = 'on going')
 async resumeProject(id: number): Promise<IProject | null> {
   const project = await Project.findByPk(id);
   if (!project || project.status !== 'on hold') return project;
@@ -250,7 +249,6 @@ async resumeProject(id: number): Promise<IProject | null> {
   return project.get({ plain: true });
 }
 
-// Calculate remaining days (accounts for paused time)
 async getRemainingDays(id: number): Promise<number | null> {
   const project = await Project.findByPk(id);
   if (!project || !project.endDate) return null;
@@ -271,6 +269,24 @@ async getRemainingDays(id: number): Promise<number | null> {
   return Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
 }
 public async getProjectFinancials(projectId: number) {
+
+  function getMonthsBetween(startDate: Date, endDate: Date): { year: number; month: number }[] {
+    const months = [];
+    const current = new Date(startDate);
+    current.setDate(1); // Start from the first day of the month
+  
+    while (current <= endDate) {
+      months.push({
+        year: current.getFullYear(),
+        month: current.getMonth() + 1,
+      });
+      current.setMonth(current.getMonth() + 1);
+    }
+  
+    return months;
+  }
+
+
   try {
     const project = await Project.findByPk(projectId, {
       attributes: ['id', 'budget']
@@ -280,6 +296,7 @@ public async getProjectFinancials(projectId: number) {
       throw new HttpException(404, "Project not found");
     }
 
+    // Fetch all completed tasks regardless of date
     const completedTasks = await Task.findAll({
       where: {
         projectId,
@@ -310,62 +327,44 @@ public async getProjectFinancials(projectId: number) {
       raw: true
     });
 
-    const currentDate = new Date();
-    const currentMonth = currentDate.getMonth() + 1; // 1-12
-    const currentYear = currentDate.getFullYear();
-
+    // Create a map for chargeOutRate (latest allocation rate per employee)
     const rateMap = new Map();
+    // Calculate estimated cost based on all allocations, not just current month
     const monthlyEstimatedCostMap = new Map();
 
     allocations.forEach(alloc => {
+      const rate = alloc.chargeOutRate || 0;
+      const hoursWeek = alloc.hoursWeek || 0;
+      
+      // Update rateMap with the latest allocation rate
+      rateMap.set(alloc.employeeId, rate);
+      
+      // Calculate monthly estimated cost for each allocation's duration
       const allocStart = new Date(alloc.start);
       const allocEnd = new Date(alloc.end);
-
-      // Check if allocation overlaps with the current month
-      const allocStartMonth = allocStart.getMonth() + 1;
-      const allocEndMonth = allocEnd.getMonth() + 1;
-      const allocStartYear = allocStart.getFullYear();
-      const allocEndYear = allocEnd.getFullYear();
-
-      if (
-        (allocStartYear < currentYear || (allocStartYear === currentYear && allocStartMonth <= currentMonth)) &&
-        (allocEndYear > currentYear || (allocEndYear === currentYear && allocEndMonth >= currentMonth))
-      ) {
-        const rate = alloc.chargeOutRate || 0;
-        const hoursWeek = alloc.hoursWeek || 0;
-        rateMap.set(alloc.employeeId, rate);
-        monthlyEstimatedCostMap.set(alloc.employeeId, hoursWeek * 4 * rate);
-      }
+      const months = getMonthsBetween(allocStart, allocEnd);
+      
+      months.forEach(month => {
+        const key = `${month.year}-${month.month}`;
+        const monthlyCost = hoursWeek * 4 * rate; // 4 weeks per month
+        monthlyEstimatedCostMap.set(key, (monthlyEstimatedCostMap.get(key) || 0) + monthlyCost);
+      });
     });
 
+    // Calculate totalCost from all completed tasks using the latest rate
     let totalCost = 0;
-    let totalMonthlyEstimatedCost = 0;
-    const costDetails = [];
-
     completedTasks.forEach(task => {
-      const taskDate = new Date(task.taskDate);
-      const taskMonth = taskDate.getMonth() + 1;
-      const taskYear = taskDate.getFullYear();
-
-      if (taskMonth === currentMonth && taskYear === currentYear) {
-        const rate = rateMap.get(task.employeeId) || 0;
-        const hours = Number(task.actualHours) || 0;
-        const cost = hours * rate;
-        
-        totalCost += cost;
-        costDetails.push({
-          taskId: task.id,
-          employeeId: task.employeeId,
-          hours,
-          rate,
-          cost
-        });
-      }
+      const rate = rateMap.get(task.employeeId) || 0;
+      const hours = Number(task.actualHours) || 0;
+      totalCost += hours * rate;
     });
 
-    monthlyEstimatedCostMap.forEach((estimatedCost) => {
-      totalMonthlyEstimatedCost += estimatedCost;
-    });
+    // Sum all estimated costs (if intended for the entire project timeline)
+    let totalMonthlyEstimatedCost = Array.from(monthlyEstimatedCostMap.values()).reduce((sum, val) => sum + val, 0);
+
+    // If monthly estimated cost is intended for current month:
+    // const currentKey = `${currentYear}-${currentMonth}`;
+    // totalMonthlyEstimatedCost = monthlyEstimatedCostMap.get(currentKey) || 0;
 
     return {
       budget: Number(project.budget),
@@ -379,6 +378,8 @@ public async getProjectFinancials(projectId: number) {
     throw new HttpException(500, "Error calculating project financials");
   }
 }
+
+
 
 public async getProjectFinancialData(projectId: number): Promise<any> {
   const project = await Project.findByPk(projectId);

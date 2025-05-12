@@ -19,6 +19,7 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
   public start!: Date;
   public end!: Date;
   public canOverride!: boolean;
+  public isActive?: boolean;
   public hoursWeek!: number;
   public status!: "confirmed" | "tentative";
   public chargeOutRate?: number;
@@ -66,6 +67,11 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
           allowNull: true,
         },
         canOverride: {
+          type: DataTypes.BOOLEAN,
+          allowNull: true,
+          defaultValue: true,
+        },
+        isActive: {
           type: DataTypes.BOOLEAN,
           allowNull: true,
           defaultValue: true,

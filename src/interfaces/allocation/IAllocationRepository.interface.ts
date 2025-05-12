@@ -4,7 +4,7 @@ export interface IAllocationRepository {
   createAllocation(allocationData: Partial<Allocation>): Promise<Allocation>;
   getAllocationById(id: number): Promise<Allocation | null>;
   updateAllocation(id: number, updates: Partial<Allocation>): Promise<Allocation>;
-  deleteAllocation(id: number): Promise<void>;
+  deleteAllocationsByEmployeeAndProject(employeeId: number, projectId: number): Promise<void>
   getEmployeeAllocations(employeeId: number): Promise<Allocation[]>;
   getProjectAllocations(projectId: number): Promise<Allocation[]>;
   findExistingAllocations(employeeId: number, projectId: number, phaseIds: string[]): Promise<Allocation | null>;

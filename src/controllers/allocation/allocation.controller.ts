@@ -49,10 +49,10 @@ export class AllocationController {
     }
   };
 
-  public deleteAllocation = async (req: Request, res: Response, next: NextFunction) => {
+  public deleteAllocationsByEmployeeAndProject = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const id = parseInt(req.params.id);
-      await this.allocationService.deleteAllocation(id);
+      const {employeeId,projectId} =req.params
+      await this.allocationService.deleteAllocationsByEmployeeAndProject(employeeId,projectId);
       
       const response: CustomResponse<null> = {
         data: null,

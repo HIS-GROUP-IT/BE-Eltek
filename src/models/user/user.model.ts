@@ -24,9 +24,9 @@ class User extends Model {
           type: DataTypes.INTEGER,
           allowNull: false,
           references: {
-            model: "employees",
+            model: Employee,
             key: "id",
-          },
+          }
         },
         position: { type: DataTypes.STRING, allowNull: true },
         phoneNumber: { type: DataTypes.STRING, allowNull: true },

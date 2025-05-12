@@ -44,7 +44,7 @@ class Task extends Model {
         id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
         employeeName: { type: DataTypes.STRING, allowNull: false },
         employeeId: { type: DataTypes.INTEGER, allowNull: false, references: {
-          model: "employees",
+          model: Employee,
           key: "id",
         }, },
         phaseId: {

@@ -26,9 +26,9 @@ export class AllocationRoute implements Routes {
     );
 
     this.router.delete(
-      `${this.path}/deleteAllocation/:id`,
+      `${this.path}/deleteAllocation/:employeeId/:projectId`,
       authorizationMiddleware,
-      this.allocationController.deleteAllocation
+      this.allocationController.deleteAllocationsByEmployeeAndProject
     );
 
     this.router.get(

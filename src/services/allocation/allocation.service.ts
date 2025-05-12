@@ -36,8 +36,8 @@ export class AllocationService implements IAllocationService {
     return this.allocationRepository.updateAllocation(id, updates);
   }
 
-  public async deleteAllocation(id: number): Promise<void> {
-    return this.allocationRepository.deleteAllocation(id);
+  public async deleteAllocationsByEmployeeAndProject(employeeId: number, projectId: number): Promise<void>{
+    return this.allocationRepository.deleteAllocationsByEmployeeAndProject(employeeId, projectId);
   }
 
   public async getEmployeeAllocations(

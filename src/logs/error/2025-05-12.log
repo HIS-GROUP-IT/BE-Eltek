@@ -1,0 +1,1342 @@
+2025-05-12 07:26:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m1[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m365[0m function getMonthsBetween(startDate: Date, endDate: Date): { year: number; month: number }[] {
+[7m   [0m [91m~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m382[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m382[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m383[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m383[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m387[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m387[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m387[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m387[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m398[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m398[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m400[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m411[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m411[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m411[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m411[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m411[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m411[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m470[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m470[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m470[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m470[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m470[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m470[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m472[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m472[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m1[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m365[0m function getMonthsBetween(startDate: Date, endDate: Date): { year: number; month: number }[] {
+[7m   [0m [91m~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m381[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m382[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m382[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m383[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m383[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m387[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m387[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m387[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m387[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m398[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m398[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m400[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m401[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m401[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m411[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m411[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m411[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m411[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m411[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m411[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m413[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m470[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m470[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m470[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m470[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m470[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m470[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m472[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m472[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-12 07:27:26 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m364[0m:[93m1[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m364[0m function getMonthsBetween(startDate: Date, endDate: Date): { year: number; month: number }[] {
+[7m   [0m [91m~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m364[0m:[93m1[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m364[0m function getMonthsBetween(startDate: Date, endDate: Date): { year: number; month: number }[] {
+[7m   [0m [91m~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-12 07:28:05 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m3[0m - [91merror[0m[90m TS1131: [0mProperty or signature expected.
+
+[7m365[0m   const months = [];
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m  ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m10[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m19[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m                  ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                 ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m378[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m378[0m }
+[7m   [0m [91m~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m3[0m - [91merror[0m[90m TS1131: [0mProperty or signature expected.
+
+[7m365[0m   const months = [];
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m  ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m10[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m19[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m                  ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                 ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m378[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m378[0m }
+[7m   [0m [91m~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-12 07:28:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m3[0m - [91merror[0m[90m TS1131: [0mProperty or signature expected.
+
+[7m365[0m   const months = [];
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m  ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m10[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m19[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m                  ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                 ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m378[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m378[0m }
+[7m   [0m [91m~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m3[0m - [91merror[0m[90m TS1131: [0mProperty or signature expected.
+
+[7m365[0m   const months = [];
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m  ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m10[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m19[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m                  ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                 ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m378[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m378[0m }
+[7m   [0m [91m~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-12 07:28:48 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m3[0m - [91merror[0m[90m TS1131: [0mProperty or signature expected.
+
+[7m365[0m   const months = [];
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m  ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m10[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m19[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m                  ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                 ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m378[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m378[0m }
+[7m   [0m [91m~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/repositories/project/project.repository.ts[0m:[93m365[0m:[93m3[0m - [91merror[0m[90m TS1131: [0mProperty or signature expected.
+
+[7m365[0m   const months = [];
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m  ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m10[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m         ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m367[0m:[93m19[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m367[0m   current.setDate(1); // Start from the first day of the month
+[7m   [0m [91m                  ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                 ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m369[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m369[0m   while (current <= endDate) {
+[7m   [0m [91m                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m378[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m378[0m }
+[7m   [0m [91m~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m8[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                              ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m380[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m380[0m public async getProjectFinancialData(projectId: number): Promise<any> {
+[7m   [0m [91m                                                       ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m381[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m381[0m   const project = await Project.findByPk(projectId);
+[7m   [0m [91m                                                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m382[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m382[0m   if (!project) {
+[7m   [0m [91m      ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m386[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m386[0m   const allocations = await AllocationModel.findAll({
+[7m   [0m [91m        ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m397[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m397[0m   });
+[7m   [0m [91m    ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m399[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m399[0m   const taskMap = new Map<string, number>();
+[7m   [0m [91m                                           ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m400[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m400[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m410[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m410[0m   const result = {};
+[7m   [0m [91m                   ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m8[0m - [91merror[0m[90m TS1359: [0mIdentifier expected. 'const' is a reserved word that cannot be used here.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m       ~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m             ~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                        ~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m412[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m412[0m   for (const allocation of allocations) {
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m         ~~~~~~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m469[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m469[0m   return result;
+[7m   [0m [91m               ~[0m
+[96msrc/repositories/project/project.repository.ts[0m:[93m471[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m471[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Administrator\Desktop\Projects\eltek-timer-pay-backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+2025-05-12 07:38:04 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-12 07:38:04 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-12 07:38:04 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-12 07:38:04 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-12 07:41:00 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-12 07:41:00 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-12 07:41:00 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-12 07:41:01 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
