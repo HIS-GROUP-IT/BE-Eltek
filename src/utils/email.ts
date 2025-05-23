@@ -1,6 +1,6 @@
 import { SEND_GRID_API_KEY } from "@/config";
 import sgMail from "@sendgrid/mail";
-const apiKey =SEND_GRID_API_KEY ?? "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"
+const apiKey =SEND_GRID_API_KEY 
 sgMail.setApiKey(apiKey);
 
 export async function sendMail(
