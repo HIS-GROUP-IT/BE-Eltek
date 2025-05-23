@@ -91,21 +91,24 @@ export class App {
     }
   }
 
-  private corsOptions = {
-    origin: [
+private corsOptions: cors.CorsOptions = {
+  origin: function (origin, callback) {
+    const allowedOrigins = [
       'https://eltek-timer-pay-fe.vercel.app',
-      'http://localhost:3000' 
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Accept",
-      "X-Requested-With"
-    ],
-    credentials: true,
-    optionsSuccessStatus: 200 
-  };
+      'http://localhost:3000'
+    ];
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With'],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
   
   private initializeMiddlewares() {
     this.app.use(morgan(LOG_FORMAT, { stream }));
