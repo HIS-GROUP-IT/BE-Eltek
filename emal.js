@@ -1,17 +1,17 @@
-// const sgMail = require('@sendgrid/mail')
-// sgMail.setApiKey("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")
-// const msg = {
-//   to: 'test@example.com', // Change to your recipient
-//   from: 'test@example.com', // Change to your verified sender
-//   subject: 'Sending with SendGrid is Fun',
-//   text: 'and easy to do anywhere, even with Node.js',
-//   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-// }
-// sgMail
-//   .send(msg)
-//   .then(() => {
-//     console.log('Email sent')
-//   })
-//   .catch((error) => {
-//     console.error(error)
-//   })
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey("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")
+const msg = {
+  to: 'kwanelendaba69@gmail.com', // Change to your recipient
+  from: 'kwanele.ndaba@hisgroup-it.co.za', // Change to your verified sender
+  subject: 'Sending with SendGrid is Fun',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+}
+sgMail
+  .send(msg)
+  .then(() => {
+    console.log('Email sent')
+  })
+  .catch((error) => {
+    console.error(error)
+  })
