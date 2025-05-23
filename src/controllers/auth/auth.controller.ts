@@ -17,7 +17,7 @@ export class AuthController {
 
     private setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
         const isProduction = true;
-        const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
+        const domain = isProduction ? 'https://eltek-timer-pay-fe.vercel.app' : 'localhost';
     
         res.cookie('access_token', tokenData.accessToken, {
             httpOnly: true,
@@ -48,7 +48,7 @@ export class AuthController {
     
     private clearAuthCookies(res: Response) {
         const isProduction =true;
-        const domain = isProduction ? 'eltek-frontend.vercel.app' : 'localhost';
+        const domain = isProduction ? 'https://eltek-timer-pay-fe.vercel.app' : 'localhost';
 
         res.clearCookie('access_token', {
 
@@ -105,7 +105,7 @@ export class AuthController {
                 `Good Day ${userData.fullName}`,
                 welcomeEmployeeTemplate(userData.fullName,
                     "Eltek",
-                    "https://eltek-frontend.vercel.app/",
+                    "https://eltek-timer-pay-fe.vercel.app/",
                     
                 )
             )                     
