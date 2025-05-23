@@ -1,0 +1,130 @@
+2025-05-23 17:22:20 info: =================================
+2025-05-23 17:22:20 info: ======= ENV: development =======
+2025-05-23 17:22:20 info: 🚀 Identity Service listening on port 5000
+2025-05-23 17:22:20 info: =================================
+2025-05-23 17:22:23 info: Database connection established successfully.
+2025-05-23 17:22:26 info: Database tables synced successfully.
+2025-05-23 17:22:54 info: =================================
+2025-05-23 17:22:54 info: ======= ENV: development =======
+2025-05-23 17:22:54 info: 🚀 Identity Service listening on port 5000
+2025-05-23 17:22:54 info: =================================
+2025-05-23 17:22:57 info: Database connection established successfully.
+2025-05-23 17:31:07 info: =================================
+2025-05-23 17:31:07 info: ======= ENV: development =======
+2025-05-23 17:31:07 info: 🚀 Identity Service listening on port 5000
+2025-05-23 17:31:07 info: =================================
+2025-05-23 17:31:10 info: Database connection established successfully.
+2025-05-23 17:31:16 error: Unable to connect to the database: Duplicate key name 'leaves_employee_id'
+2025-05-23 17:32:26 info: =================================
+2025-05-23 17:32:26 info: ======= ENV: development =======
+2025-05-23 17:32:26 info: 🚀 Identity Service listening on port 5000
+2025-05-23 17:32:26 info: =================================
+2025-05-23 17:32:30 info: Database connection established successfully.
+2025-05-23 17:32:36 info: Database tables synced successfully.
+2025-05-23 17:35:18 info: [0mPOST /api/auth/signup [32m201[0m 2599.049 ms - 56[0m
+2025-05-23 17:38:09 info: [0mOPTIONS /api/auth/login [32m200[0m 0.675 ms - 0[0m
+2025-05-23 17:38:11 info: [0mPOST /api/auth/login [32m200[0m 2340.017 ms - 523[0m
+2025-05-23 17:40:43 info: [0mOPTIONS /api/auth/login [32m200[0m 0.263 ms - 0[0m
+2025-05-23 17:40:44 info: [0mPOST /api/auth/login [32m200[0m 1389.158 ms - 523[0m
+2025-05-23 17:40:45 info: [0mGET /api/clients/getAllClients [32m200[0m 198.337 ms - 68[0m
+2025-05-23 17:40:46 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [32m200[0m 907.124 ms - 240[0m
+2025-05-23 17:40:46 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [32m200[0m 1087.196 ms - 260[0m
+2025-05-23 17:40:47 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-23 17:40:47 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 6.944 ms - 81[0m
+2025-05-23 17:40:47 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 1279.370 ms - 223[0m
+2025-05-23 17:40:47 info: [0mGET /api/statistics/getStatisticsDashboard [32m200[0m 323.803 ms - 151[0m
+2025-05-23 17:40:47 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-23 17:40:47 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 440.325 ms - 46[0m
+2025-05-23 17:40:47 info: [0mGET /api/projects/getAllProjects [32m200[0m 440.288 ms - 69[0m
+2025-05-23 17:40:47 info: [0mGET /api/clients/getAllClients [36m304[0m 444.474 ms - -[0m
+2025-05-23 17:40:47 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 566.580 ms - -[0m
+2025-05-23 17:40:47 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 445.932 ms - -[0m
+2025-05-23 17:40:47 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 388.808 ms - -[0m
+2025-05-23 17:40:48 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-23 17:40:48 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 1.307 ms - 81[0m
+2025-05-23 17:40:48 info: [0mGET /api/statistics/getStatisticsDashboard [36m304[0m 188.153 ms - -[0m
+2025-05-23 17:40:48 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-23 17:40:48 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 227.969 ms - 46[0m
+2025-05-23 17:40:48 info: [0mGET /api/projects/getAllProjects [36m304[0m 356.178 ms - -[0m
+2025-05-23 17:40:48 info: [0mGET /api/statistics/getGeneralStatistics [32m200[0m 1904.950 ms - 221[0m
+2025-05-23 17:40:50 info: [0mGET /api/statistics/getGeneralStatistics [36m304[0m 1448.852 ms - -[0m
+2025-05-23 17:40:58 info: [0mGET /api/employees/getAllEmployees [32m200[0m 188.161 ms - 514[0m
+2025-05-23 17:40:58 info: [0mGET /api/employees/getAllEmployees [36m304[0m 180.926 ms - -[0m
+2025-05-23 17:41:42 info: [0mOPTIONS /api/employees/createEmployee [32m200[0m 0.265 ms - 0[0m
+2025-05-23 17:41:45 info: [0mPOST /api/employees/createEmployee [32m201[0m 3085.022 ms - 538[0m
+2025-05-23 17:41:45 info: [0mOPTIONS /api/auth/signup [32m200[0m 0.182 ms - 0[0m
+2025-05-23 17:41:45 info: [0mPOST /api/auth/signup [32m201[0m 260.117 ms - 56[0m
+2025-05-23 17:41:48 info: [0mGET /api/employees/getAllEmployees [32m200[0m 221.140 ms - 1024[0m
+2025-05-23 17:48:04 info: =================================
+2025-05-23 17:48:04 info: ======= ENV: development =======
+2025-05-23 17:48:04 info: 🚀 Identity Service listening on port 5000
+2025-05-23 17:48:04 info: =================================
+2025-05-23 17:48:07 info: Database connection established successfully.
+2025-05-23 17:48:10 info: Database tables synced successfully.
+2025-05-23 17:48:43 info: [0mOPTIONS /api/auth/send-otp [32m200[0m 2.044 ms - 0[0m
+2025-05-23 17:48:45 info: [0mPOST /api/auth/send-otp [32m200[0m 1663.023 ms - 61[0m
+2025-05-23 17:49:31 info: [0mOPTIONS /api/auth/send-otp [32m200[0m 0.470 ms - 0[0m
+2025-05-23 17:49:34 info: [0mPOST /api/auth/send-otp [32m200[0m 2679.568 ms - 61[0m
+2025-05-23 17:49:59 info: =================================
+2025-05-23 17:49:59 info: ======= ENV: development =======
+2025-05-23 17:49:59 info: 🚀 Identity Service listening on port 5000
+2025-05-23 17:49:59 info: =================================
+2025-05-23 17:50:02 info: Database connection established successfully.
+2025-05-23 17:50:05 info: Database tables synced successfully.
+2025-05-23 17:50:20 info: =================================
+2025-05-23 17:50:20 info: ======= ENV: development =======
+2025-05-23 17:50:20 info: 🚀 Identity Service listening on port 5000
+2025-05-23 17:50:20 info: =================================
+2025-05-23 17:50:22 info: Database connection established successfully.
+2025-05-23 17:50:26 info: Database tables synced successfully.
+2025-05-23 18:27:50 info: =================================
+2025-05-23 18:27:50 info: ======= ENV: development =======
+2025-05-23 18:27:50 info: 🚀 Identity Service listening on port 5000
+2025-05-23 18:27:50 info: =================================
+2025-05-23 18:27:53 info: Database connection established successfully.
+2025-05-23 18:28:06 info: Database tables synced successfully.
+2025-05-23 18:29:37 info: [0mPOST /api/auth/signup [32m201[0m 3171.551 ms - 56[0m
+2025-05-23 19:09:16 info: [0mOPTIONS /api/auth/login [32m200[0m 17.043 ms - 0[0m
+2025-05-23 19:09:18 info: [0mPOST /api/auth/login [32m200[0m 2036.367 ms - 523[0m
+2025-05-23 19:09:27 info: [0mGET /api/clients/getAllClients [36m304[0m 226.580 ms - -[0m
+2025-05-23 19:09:29 info: [0mGET /api/statistics/getStatisticsDashboard [36m304[0m 1394.199 ms - -[0m
+2025-05-23 19:09:29 info: [0mGET /api/projects/getAllProjects [36m304[0m 1271.894 ms - -[0m
+2025-05-23 19:09:29 info: [0mGET /api/tasks/getChartTaskTimeStatistics [32m200[0m 1469.853 ms - 223[0m
+2025-05-23 19:09:29 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-23 19:09:29 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 16.583 ms - 81[0m
+2025-05-23 19:09:29 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 1507.601 ms - -[0m
+2025-05-23 19:09:29 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 1699.699 ms - -[0m
+2025-05-23 19:09:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-23 19:09:30 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 1238.070 ms - 46[0m
+2025-05-23 19:09:30 info: [0mGET /api/clients/getAllClients [36m304[0m 1217.112 ms - -[0m
+2025-05-23 19:09:30 error: [GET] /api/employees/getNumberOfAssignedEmployees >> StatusCode:: 500, Message:: this.employeeService.getNumberOfAssignedEmployees is not a function
+2025-05-23 19:09:30 info: [0mGET /api/employees/getNumberOfAssignedEmployees [31m500[0m 5.234 ms - 81[0m
+2025-05-23 19:09:30 info: [0mGET /api/statistics/getStatisticsDashboard [36m304[0m 1387.702 ms - -[0m
+2025-05-23 19:09:30 info: [0mGET /api/projects/getAllProjects [36m304[0m 1354.753 ms - -[0m
+2025-05-23 19:09:30 info: [0mGET /api/tasks/getChartTaskTimeStatistics [36m304[0m 1338.805 ms - -[0m
+2025-05-23 19:09:30 error: [GET] /api/tasks/getProjectHoursSummary >> StatusCode:: 400, Message:: Error getting all projects hours
+2025-05-23 19:09:30 info: [0mGET /api/tasks/getProjectHoursSummary [33m400[0m 195.748 ms - 46[0m
+2025-05-23 19:09:30 info: [0mGET /api/tasks/getChartYearlyTaskTimeStatistics [36m304[0m 392.712 ms - -[0m
+2025-05-23 19:09:31 info: [0mGET /api/tasks/getChartWeeklyTaskTimeStatistics [36m304[0m 467.653 ms - -[0m
+2025-05-23 19:09:31 info: [0mGET /api/statistics/getGeneralStatistics [32m200[0m 3890.053 ms - 221[0m
+2025-05-23 19:09:33 info: [0mGET /api/statistics/getGeneralStatistics [36m304[0m 1715.580 ms - -[0m
+2025-05-23 19:09:42 info: [0mGET /api/clients/getAllClients [36m304[0m 187.308 ms - -[0m
+2025-05-23 19:09:42 info: [0mGET /api/clients/getAllClients [36m304[0m 185.919 ms - -[0m
+2025-05-23 19:10:04 info: [0mGET /api/clients/getAllClients [36m304[0m 1733.949 ms - -[0m
+2025-05-23 19:11:05 info: =================================
+2025-05-23 19:11:05 info: ======= ENV: development =======
+2025-05-23 19:11:05 info: 🚀 Identity Service listening on port 5000
+2025-05-23 19:11:05 info: =================================
+2025-05-23 19:11:11 info: Database connection established successfully.
+2025-05-23 19:11:16 info: =================================
+2025-05-23 19:11:16 info: ======= ENV: development =======
+2025-05-23 19:11:16 info: 🚀 Identity Service listening on port 5000
+2025-05-23 19:11:16 info: =================================
+2025-05-23 19:11:17 error: Unable to connect to the database: Access denied for user 'aa010d_eltekpr'@'165.73.49.85' (using password: YES)
+2025-05-23 19:11:25 info: =================================
+2025-05-23 19:11:25 info: ======= ENV: development =======
+2025-05-23 19:11:25 info: 🚀 Identity Service listening on port 5000
+2025-05-23 19:11:25 info: =================================
+2025-05-23 19:11:29 info: Database connection established successfully.
+2025-05-23 19:11:36 info: Database tables synced successfully.
+2025-05-23 19:12:51 info: [0mPOST /api/auth/signup [32m201[0m 2972.200 ms - 56[0m

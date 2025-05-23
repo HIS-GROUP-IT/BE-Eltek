@@ -9,10 +9,10 @@ import Notification from '@/models/notifications/notification.model';
 import AllocationModel from '@/models/allocation/allocation.model';
 import Client from '@/models/client/client.model';
 
-const DB_NAME = "db_aa010d_eltek";
+const DB_NAME = "db_aa010d_eltekpr";
 const DB_HOST = "MYSQL6013.site4now.net";
-const DB_USER = "aa010d_kultwano";
-const DB_PASSWORD = "Bp4N3FDfKL7ZTY@";
+const DB_USER = "aa010d_eltekpr";
+const DB_PASSWORD = "iGWndR9rC0EqVjE";
 
 const dbConnection = new Sequelize({
   dialect: "mysql",

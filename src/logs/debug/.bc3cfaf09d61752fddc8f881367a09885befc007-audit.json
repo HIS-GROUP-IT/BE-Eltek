@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\ccmm\\Desktop\\projects\\eltek-backend\\src\\logs\\debug\\.bc3cfaf09d61752fddc8f881367a09885befc007-audit.json",
+    "files": [
+        {
+            "date": 1748013697099,
+            "name": "C:\\Users\\ccmm\\Desktop\\projects\\eltek-backend\\src\\logs\\debug\\2025-05-23.log",
+            "hash": "e55419f99c6c72007ffc5ca673735e01a5382b9c88268ca022cde77855ec7e92"
+        }
+    ],
+    "hashType": "sha256"
+}
