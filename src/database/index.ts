@@ -8,11 +8,9 @@ import Leave from '@/models/leave/leave.model';
 import Notification from '@/models/notifications/notification.model';
 import AllocationModel from '@/models/allocation/allocation.model';
 import Client from '@/models/client/client.model';
+import { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER } from '@/config';
 
-const DB_NAME = "db_aa010d_eltekpr";
-const DB_HOST = "MYSQL6013.site4now.net";
-const DB_USER = "aa010d_eltekpr";
-const DB_PASSWORD = "iGWndR9rC0EqVjE";
+
 
 const dbConnection = new Sequelize({
   dialect: "mysql",

@@ -67,7 +67,7 @@ export class App {
     this.app.listen(this.port, () => {
       logger.info(`=================================`);
       logger.info(`======= ENV: ${this.env} =======`);
-      logger.info(`🚀 Identity Service listening on port ${this.port}`);
+      logger.info(`🚀 Eltek listening on port ${this.port}`);
       logger.info(`=================================`);
     });
   }
