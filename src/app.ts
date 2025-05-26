@@ -94,7 +94,7 @@ export class App {
 private corsOptions: cors.CorsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      'https://eltek-timer-pay-fe.vercel.app',
+      'https://eltek-timer-pay-fe-aicu.vercel.app',
       'http://localhost:3000'
     ];
 

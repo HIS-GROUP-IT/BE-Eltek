@@ -37,9 +37,6 @@ const dbConnection = new Sequelize({
 Employee.initialize(dbConnection);
 User.initialize(dbConnection);
 RefreshToken.initialize(dbConnection);
-
-
-
 Client.initialize(dbConnection);
 Project.initialize(dbConnection);
 AllocationModel.initialize(dbConnection);
