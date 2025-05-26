@@ -6,7 +6,7 @@ import express from "express";
 import helmet from "helmet";
 import hpp from "hpp";
 import morgan from "morgan";
-import { NODE_ENV, PORT, LOG_FORMAT } from "@config";
+import { NODE_ENV, PORT, LOG_FORMAT, FRONTEND_URL } from "@config";
 import dbConnection from "./database"; 
 import { ErrorMiddleware } from "./middlewares/ErrorMiddleware";
 import { logger, stream } from "./utils/logger";
@@ -94,7 +94,7 @@ export class App {
 private corsOptions: cors.CorsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      'https://eltek-timer-pay-fe-flax.vercel.app',
+      FRONTEND_URL,
       'http://localhost:3000'
     ];
 

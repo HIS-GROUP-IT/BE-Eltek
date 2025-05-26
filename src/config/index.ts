@@ -10,6 +10,7 @@ export const {
   LOG_DIR,
   ORIGIN,
   JWT_EXPIRES_IN,
+  FRONTEND_URL
 } = process.env;
 export const {
   FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
