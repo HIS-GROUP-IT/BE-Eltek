@@ -6,7 +6,7 @@ import express from "express";
 import helmet from "helmet";
 import hpp from "hpp";
 import morgan from "morgan";
-import { NODE_ENV, PORT, LOG_FORMAT } from "@config";
+import { NODE_ENV, PORT, LOG_FORMAT, SECRET_KEY } from "@config";
 import dbConnection from "./database"; 
 import { ErrorMiddleware } from "./middlewares/ErrorMiddleware";
 import { logger, stream } from "./utils/logger";
@@ -94,7 +94,7 @@ export class App {
 private corsOptions: cors.CorsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      'https://eltek-timer-pay-fe-aicu.vercel.app',
+      'https://eltek-timer-pay-fe-flax.vercel.app',
       'http://localhost:3000'
     ];
 
@@ -117,7 +117,7 @@ private corsOptions: cors.CorsOptions = {
     this.app.use(cors(this.corsOptions));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
-    this.app.use(cookieParser("X2nL0%@1kF9gB8yV7!pA&j5zZ0HgRpR4H"));
+    this.app.use(cookieParser(SECRET_KEY));
     this.app.set("trust proxy", 1); 
   }
 
