@@ -1,0 +1,11 @@
+2025-05-26 20:59:31 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 20:59:45 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:00:43 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:01:16 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:01:34 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:01:46 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:02:32 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:02:43 error: Unable to connect to the database: Table 'db_aa010d_eltekte.users' doesn't exist
+2025-05-26 21:03:00 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:03:17 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:03:33 error: Unable to connect to the database: Cannot add foreign key constraint

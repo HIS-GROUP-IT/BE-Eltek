@@ -1,0 +1,115 @@
+2025-05-26 20:58:45 info: =================================
+2025-05-26 20:58:45 info: ======= ENV: development =======
+2025-05-26 20:58:45 info: 🚀 Eltek listening on port 5000
+2025-05-26 20:58:45 info: =================================
+2025-05-26 20:58:48 info: Database connection established successfully.
+2025-05-26 20:58:52 info: Database tables synced successfully.
+2025-05-26 20:59:26 info: =================================
+2025-05-26 20:59:26 info: ======= ENV: development =======
+2025-05-26 20:59:26 info: 🚀 Eltek listening on port 5000
+2025-05-26 20:59:26 info: =================================
+2025-05-26 20:59:29 info: Database connection established successfully.
+2025-05-26 20:59:31 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 20:59:40 info: =================================
+2025-05-26 20:59:40 info: ======= ENV: development =======
+2025-05-26 20:59:40 info: 🚀 Eltek listening on port 5000
+2025-05-26 20:59:40 info: =================================
+2025-05-26 20:59:43 info: Database connection established successfully.
+2025-05-26 20:59:45 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:00:16 info: =================================
+2025-05-26 21:00:16 info: ======= ENV: development =======
+2025-05-26 21:00:16 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:00:16 info: =================================
+2025-05-26 21:00:18 info: Database connection established successfully.
+2025-05-26 21:00:31 info: =================================
+2025-05-26 21:00:31 info: ======= ENV: development =======
+2025-05-26 21:00:31 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:00:31 info: =================================
+2025-05-26 21:00:34 info: Database connection established successfully.
+2025-05-26 21:00:39 info: =================================
+2025-05-26 21:00:39 info: ======= ENV: development =======
+2025-05-26 21:00:39 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:00:39 info: =================================
+2025-05-26 21:00:42 info: Database connection established successfully.
+2025-05-26 21:00:43 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:01:12 info: =================================
+2025-05-26 21:01:12 info: ======= ENV: development =======
+2025-05-26 21:01:12 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:01:12 info: =================================
+2025-05-26 21:01:15 info: Database connection established successfully.
+2025-05-26 21:01:16 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:01:23 info: =================================
+2025-05-26 21:01:23 info: ======= ENV: development =======
+2025-05-26 21:01:23 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:01:23 info: =================================
+2025-05-26 21:01:26 info: Database connection established successfully.
+2025-05-26 21:01:30 info: =================================
+2025-05-26 21:01:30 info: ======= ENV: development =======
+2025-05-26 21:01:30 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:01:30 info: =================================
+2025-05-26 21:01:33 info: Database connection established successfully.
+2025-05-26 21:01:34 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:01:41 info: =================================
+2025-05-26 21:01:41 info: ======= ENV: development =======
+2025-05-26 21:01:41 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:01:41 info: =================================
+2025-05-26 21:01:44 info: Database connection established successfully.
+2025-05-26 21:01:46 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:02:27 info: =================================
+2025-05-26 21:02:27 info: ======= ENV: development =======
+2025-05-26 21:02:27 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:02:27 info: =================================
+2025-05-26 21:02:30 info: Database connection established successfully.
+2025-05-26 21:02:32 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:02:39 info: =================================
+2025-05-26 21:02:39 info: ======= ENV: development =======
+2025-05-26 21:02:39 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:02:39 info: =================================
+2025-05-26 21:02:42 info: Database connection established successfully.
+2025-05-26 21:02:43 error: Unable to connect to the database: Table 'db_aa010d_eltekte.users' doesn't exist
+2025-05-26 21:02:56 info: =================================
+2025-05-26 21:02:56 info: ======= ENV: development =======
+2025-05-26 21:02:56 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:02:56 info: =================================
+2025-05-26 21:02:59 info: Database connection established successfully.
+2025-05-26 21:03:00 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:03:13 info: =================================
+2025-05-26 21:03:13 info: ======= ENV: development =======
+2025-05-26 21:03:13 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:03:13 info: =================================
+2025-05-26 21:03:15 info: Database connection established successfully.
+2025-05-26 21:03:17 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:03:25 info: =================================
+2025-05-26 21:03:25 info: ======= ENV: development =======
+2025-05-26 21:03:25 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:03:25 info: =================================
+2025-05-26 21:03:29 info: =================================
+2025-05-26 21:03:29 info: ======= ENV: development =======
+2025-05-26 21:03:29 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:03:29 info: =================================
+2025-05-26 21:03:32 info: Database connection established successfully.
+2025-05-26 21:03:33 error: Unable to connect to the database: Cannot add foreign key constraint
+2025-05-26 21:03:39 info: =================================
+2025-05-26 21:03:39 info: ======= ENV: development =======
+2025-05-26 21:03:39 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:03:39 info: =================================
+2025-05-26 21:03:42 info: Database connection established successfully.
+2025-05-26 21:03:48 info: Database tables synced successfully.
+2025-05-26 21:06:55 info: =================================
+2025-05-26 21:06:55 info: ======= ENV: development =======
+2025-05-26 21:06:55 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:06:55 info: =================================
+2025-05-26 21:06:58 info: Database connection established successfully.
+2025-05-26 21:07:01 info: Database tables synced successfully.
+2025-05-26 21:39:38 info: =================================
+2025-05-26 21:39:38 info: ======= ENV: development =======
+2025-05-26 21:39:38 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:39:38 info: =================================
+2025-05-26 21:39:41 info: Database connection established successfully.
+2025-05-26 21:39:44 info: Database tables synced successfully.
+2025-05-26 21:41:52 info: =================================
+2025-05-26 21:41:52 info: ======= ENV: development =======
+2025-05-26 21:41:52 info: 🚀 Eltek listening on port 5000
+2025-05-26 21:41:52 info: =================================
+2025-05-26 21:41:55 info: Database connection established successfully.
+2025-05-26 21:41:58 info: Database tables synced successfully.
