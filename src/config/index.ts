@@ -32,3 +32,10 @@ export const {
   AWS_S3_BUCKET_NAME,
   AWS_SECRET_ACCESS_KEY,
 } = process.env;
+
+export const {
+FRONT_END_URL,
+  SEND_GRID_API_KEY_1,
+  SEND_GRID_API_KEY_2,
+   SEND_GRID_API_KEY_3,
+} = process.env;

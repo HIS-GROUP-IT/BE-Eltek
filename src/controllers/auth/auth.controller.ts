@@ -7,6 +7,7 @@ import jwt from 'jsonwebtoken';
 import crypto from "crypto";
 import { otpEmailTemplate, sendMail, welcomeEmployeeTemplate } from "@/utils/email";
 import { HttpException } from "@/exceptions/HttpException";
+import { FRONT_END_URL } from "@/config";
 
 export class AuthController {
     private auth;
@@ -17,7 +18,7 @@ export class AuthController {
 
     private setAuthCookies(res: Response, tokenData: TokenData, userData: IUser) {
         const isProduction = true;
-        const domain = isProduction ? 'https://eltek-timer-pay-fe.vercel.app' : 'localhost';
+        const domain = isProduction ? FRONT_END_URL : 'localhost';
     
         res.cookie('access_token', tokenData.accessToken, {
             httpOnly: true,
@@ -48,7 +49,7 @@ export class AuthController {
     
     private clearAuthCookies(res: Response) {
         const isProduction =true;
-        const domain = isProduction ? 'https://eltek-timer-pay-fe.vercel.app' : 'localhost';
+        const domain = isProduction ? FRONT_END_URL : 'localhost';
 
         res.clearCookie('access_token', {
 
@@ -105,7 +106,7 @@ export class AuthController {
                 `Good Day ${userData.fullName}`,
                 welcomeEmployeeTemplate(userData.fullName,
                     "Eltek",
-                    "https://eltek-timer-pay-fe.vercel.app/",
+                   FRONT_END_URL,
                     
                 )
             )                     
