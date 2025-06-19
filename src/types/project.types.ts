@@ -48,8 +48,11 @@ export type Phase = {
   startDate: string;
   endDate: string;
   members: number;
-  completionRate: number;
-  numberOfTasks: number;
+  plannedHours: number;
+  actualHours: number;
+  plannedCost: number;
+  actualCost : number;
+  variance : number
 };
 
 export type Role = {

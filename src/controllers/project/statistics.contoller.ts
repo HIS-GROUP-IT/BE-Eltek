@@ -36,6 +36,19 @@ export class StatisticsController {
             next(error);
         }
     }
+        public getGraphData = async (req:Request,res:Response, next:NextFunction) => {
+        try {
+            const {projectId} = req.params;
+            const graphData = await this.statisticsService.getGraphData(projectId);
+            const response: CustomResponse<any> = {
+                data: graphData,
+                message: "Statistics fetched successfully",
+                error: false
+            };
+            res.status(200).json(response);
+        } catch (error) {
+            next(error);
+        }
+    }
     
-
 }   

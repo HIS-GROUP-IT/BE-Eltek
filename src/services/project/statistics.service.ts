@@ -27,4 +27,13 @@ export class StatisticsService implements IStatisticsService {
             throw new HttpException(500, error.message)
         }
     }
+    
+
+     public async getGraphData(projectId: number): Promise<{ budgetAnalysis: Array<{ phase: string; plannedCost: number; actualCost: number; }>; hoursTracking: Array<{ phase: string; plannedHours: number; actualHours: number; variance: number; }>; }> {
+        try {
+            return await this.statisticsRepository.getGraphData(projectId);
+        } catch (error) {
+            throw new HttpException(500, error.message)
+        }
+    }
 }

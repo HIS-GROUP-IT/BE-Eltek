@@ -11,6 +11,19 @@ export interface IStatisticsRepository {
     completedTasks: number;
     pendingTasks: number;
   }>;
+  getGraphData(projectId: number): Promise<{
+  budgetAnalysis: Array<{
+    phase: string;
+    plannedCost: number;
+    actualCost: number;
+  }>;
+  hoursTracking: Array<{
+    phase: string;
+    plannedHours: number;
+    actualHours: number;
+    variance: number;
+  }>;
+}>
   getProjectsCompletionRates(): Promise<Array<{ name: string; rate: number }>>;
   getProjectsApprovalHoursDetailed(): Promise<
     Array<{

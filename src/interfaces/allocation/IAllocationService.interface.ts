@@ -7,6 +7,7 @@ export interface IAllocationService {
     deleteAllocationsByEmployeeAndProject(employeeId: number, projectId: number): Promise<void>
     getEmployeeAllocations(employeeId: number): Promise<Allocation[]>;
     getProjectAllocations(projectId: number): Promise<Allocation[]>;
+     deleteAllocationsByEmployeeAndPhase(employeeId: number, phaseId: string): Promise<void> 
     getAllocationById(id: number): Promise<Allocation>;
     getPhaseAllocations(phaseId: string): Promise<Allocation[]> 
     checkForOverlaps(

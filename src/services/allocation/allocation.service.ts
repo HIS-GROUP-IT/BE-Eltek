@@ -19,7 +19,7 @@ export class AllocationService implements IAllocationService {
     const existing = await this.allocationRepository.findExistingAllocations(
       allocationData.employeeId!,
       allocationData.projectId,
-      allocationData.phases
+      allocationData.phaseId
     );
 
     if (existing) {
@@ -34,6 +34,14 @@ export class AllocationService implements IAllocationService {
     updates: Partial<Allocation>
   ): Promise<Allocation> {
     return this.allocationRepository.updateAllocation(id, updates);
+  }
+
+  public async deleteAllocationsByEmployeeAndPhase(employeeId: number, phaseId: string): Promise<void> {
+    try {
+      await this.allocationRepository.deleteAllocationsByEmployeeAndPhase(employeeId, phaseId);
+    } catch (error) {
+   throw new HttpException(400, error.message);
+    }
   }
 
   public async deleteAllocationsByEmployeeAndProject(employeeId: number, projectId: number): Promise<void>{

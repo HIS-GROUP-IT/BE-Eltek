@@ -18,7 +18,7 @@ export class ProjectRepository implements IProjectRepository {
       const project = await Project.create(projectData);
       return project.get({ plain: true }) as IProject;
     } catch (error) {
-      throw new HttpException(500, "Error creating project");
+      throw new HttpException(500, error.message);
     }
   }
 
@@ -268,6 +268,7 @@ async getRemainingDays(id: number): Promise<number | null> {
   const diffMs = endDate.getTime() - adjustedNow.getTime();
   return Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
 }
+
 public async getProjectFinancials(projectId: number) {
   try {
     const project = await Project.findByPk(projectId, {
@@ -306,7 +307,6 @@ public async getProjectFinancials(projectId: number) {
         start: { [Op.lte]: lastDayOfMonth },
         end: { [Op.gte]: firstDayOfMonth }
       },
-      attributes: ['employeeId', 'chargeOutRate', 'hoursWeek'],
       raw: true
     });
 
@@ -324,7 +324,7 @@ public async getProjectFinancials(projectId: number) {
 
     // Calculate Monthly Estimated Cost (current month allocations)
     let monthlyEstimatedCost = allocations.reduce((sum, alloc) => {
-      return sum + ((alloc.hoursWeek || 0) * 4 * (alloc.chargeOutRate || 0));
+      return sum + ((alloc.dailyHours[0].hours || 0) * 4 * (alloc.chargeOutRate || 0));
     }, 0);
 
     return {
@@ -377,7 +377,7 @@ public async getProjectFinancialData(projectId: number): Promise<any> {
       const employee = allocation.employee;
       const employeeName = employee.fullName;
       const chargeOutRate = allocation.chargeOutRate || 0;
-      const hoursWeek = allocation.hoursWeek;
+      const hoursWeek = allocation.dailyHours[0].hours;
       const allocationStart = new Date(allocation.start);
       const allocationEnd = new Date(allocation.end);
 

@@ -102,10 +102,10 @@ class Project extends Model<IProject, ProjectCreationAttributes> implements IPro
         clientId: {
           type: DataTypes.INTEGER,
           allowNull: false,
-          references: {
-            model:"clients",
-            key: "id",
-          },
+          // references: {
+          //   model:Client,
+          //   key: "id",
+          // },
         },
         clientName: {
           type: DataTypes.STRING,

@@ -28,7 +28,7 @@ export class ProjectService implements IProjectService {
     try {
       return await this.projectRepository.createProject(projectData);
     } catch (error) {
-      throw new HttpException(500, `Error creating project: ${error}`);
+      throw new HttpException(500,error.message);
     }
   }
 
@@ -148,4 +148,5 @@ public async getProjectFinancialData(projectId: number): Promise<any> {
     throw new HttpException(500,error.message)
   }
 }
+
 }

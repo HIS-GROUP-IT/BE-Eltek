@@ -1,7 +1,7 @@
 import { Model, DataTypes, Optional, Sequelize } from "sequelize";
 import Employee from "@/models/employee/employee.model";
 import Project from "@/models/project/project.model";
-import { Allocation, Allocation as IAllocation, IEmployee } from "@/types/employee.types";
+import { Allocation, DailyHours, Allocation as IAllocation, IEmployee } from "@/types/employee.types";
 import { ITask } from "@/types/task.type";
 
 interface AllocationCreationAttributes extends Optional<IAllocation, 
@@ -14,13 +14,13 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
   public projectName!: string;
   public employeeId!: number;
   public projectId!: number;
-  public phases!: string[];
+  public phaseId!: string;
   public normalizedPhaseIds!: string;
   public start!: Date;
   public end!: Date;
   public canOverride!: boolean;
   public isActive?: boolean;
-  public hoursWeek!: number;
+  public dailyHours!: DailyHours[];
   public status!: "confirmed" | "tentative";
   public chargeOutRate?: number;
   public chargeType?: "fixed" | "markup";
@@ -58,10 +58,10 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
             key: "id",
           },
         },
-        phases: {
-          type: DataTypes.JSON,
-          allowNull: true,
-          defaultValue: [],
+        phaseId: {
+          type: DataTypes.STRING,
+          allowNull: false,
+    
         },
         normalizedPhaseIds: {
           type: DataTypes.STRING,
@@ -92,13 +92,10 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
             },
           },
         },
-        hoursWeek: {
-          type: DataTypes.DECIMAL(5, 2),
+         dailyHours: {
+          type: DataTypes.JSON,
           allowNull: false,
-          validate: {
-            min: 0,
-            max: 168,
-          },
+          defaultValue: []
         },
         status: {
           type: DataTypes.ENUM("confirmed", "tentative"),

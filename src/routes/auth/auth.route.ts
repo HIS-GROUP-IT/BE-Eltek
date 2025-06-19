@@ -22,7 +22,7 @@ export class AuthRoute implements Routes {
         this.router.post(`${this.path}/verify-otp`, this.auth.verifyOtp); 
         this.router.post(`${this.path}/update-password`, this.auth.updatePasswordWithOtp); 
         this.router.delete(`${this.path}/deleteUser/:id`, this.auth.deleteUserById); 
-        this.router.post(`${this.path}/signUpAdmin`,SuperAdminAuthorizationMiddleware, ValidationMiddleware(CreateUserDto), this.auth.signupAdmin); 
+        this.router.post(`${this.path}/signUpAdmin`, ValidationMiddleware(CreateUserDto), this.auth.signupAdmin); 
         this.router.put(`${this.path}/updateUser`, this.auth.updateUser);
         this.router.get(`${this.path}/getAllAdmins`, SuperAdminAuthorizationMiddleware,this.auth.findAllAdmins);
     }

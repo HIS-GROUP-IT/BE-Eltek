@@ -34,11 +34,8 @@ export class StatisticsRepository implements IStatisticsRepository {
           };
         }
 
-        const totalRate = phases.reduce(
-          (sum, phase) => sum + (phase.completionRate || 0),
-          0
-        );
-        const averageRate = totalRate / phases.length;
+    
+        const averageRate = 0 / phases.length;
 
         return {
           name: project.name,
@@ -117,6 +114,154 @@ export class StatisticsRepository implements IStatisticsRepository {
     }
   }
 
+public async getGraphData(projectId: number): Promise<{
+  budgetAnalysis: Array<{
+    phase: string;
+    plannedCost: number;
+    actualCost: number;
+  }>;
+  hoursTracking: Array<{
+    phase: string;
+    plannedHours: number;
+    actualHours: number;
+    variance: number;
+  }>;
+}> {
+  try {
+    const project = await Project.findOne({
+      attributes: ["id", "name", "phases"],
+      include: [
+        {
+          model: AllocationModel,
+          as: 'allocations',
+          attributes: ['employeeId', 'phaseId', 'chargeOutRate', 'start', 'end', 'dailyHours']
+        },
+        {
+          model: Task,
+          as: 'tasks',
+          attributes: ['employeeId', 'phaseId', 'taskDate', 'actualHours', 'status']
+        }
+      ],
+      where: {
+        id: projectId,
+        status: {
+          [Op.notIn]: ["cancelled"],
+        },
+      },
+    });
+
+    if (!project) {
+      throw new HttpException(404, `Project with ID ${projectId} not found`);
+    }
+
+    const budgetAnalysisMap = new Map<string, { plannedCost: number; actualCost: number }>();
+    const hoursTrackingMap = new Map<string, { plannedHours: number; actualHours: number; variance: number }>();
+
+    const phases = project.phases as Phase[];
+    
+    if (!phases || phases.length === 0) {
+      return {
+        budgetAnalysis: [],
+        hoursTracking: []
+      };
+    }
+
+    // Create employee rate mapping for this project
+    const employeeRateMap = new Map<number, number>();
+    project.allocations?.forEach(allocation => {
+      if (allocation.chargeOutRate) {
+        employeeRateMap.set(allocation.employeeId, Number(allocation.chargeOutRate));
+      }
+    });
+
+    phases.forEach(phase => {
+      const phaseName = phase.name;
+      const phaseId = phase.id;
+
+      // Initialize phase data
+      budgetAnalysisMap.set(phaseName, { 
+        plannedCost: phase.plannedCost || 0, 
+        actualCost: 0 
+      });
+      hoursTrackingMap.set(phaseName, { 
+        plannedHours: phase.plannedHours || 0, 
+        actualHours: 0, 
+        variance: 0 
+      });
+
+      const budgetData = budgetAnalysisMap.get(phaseName)!;
+      const hoursData = hoursTrackingMap.get(phaseName)!;
+
+      // Calculate actual costs from tasks for this specific phase
+      const phaseTasks = project.tasks?.filter(task => 
+        task.phaseId === phaseId && 
+        (task.status === 'completed' || task.status === 'in-progress')
+      ) || [];
+
+      let phaseActualHours = 0;
+      let phaseActualCost = 0;
+
+      phaseTasks.forEach(task => {
+        const taskHours = Number(task.actualHours) || 0;
+        const employeeRate = employeeRateMap.get(task.employeeId) || 0;
+        const taskCost = taskHours * employeeRate;
+
+        phaseActualHours += taskHours;
+        phaseActualCost += taskCost;
+      });
+
+      // Set actual values for this phase
+      budgetData.actualCost = phaseActualCost;
+      hoursData.actualHours = phaseActualHours;
+
+      // Calculate variance (actual - planned)
+      hoursData.variance = hoursData.actualHours - hoursData.plannedHours;
+    });
+
+    // Convert maps to arrays for chart consumption
+    const budgetAnalysis = Array.from(budgetAnalysisMap.entries()).map(([phase, data]) => ({
+      phase,
+      plannedCost: Math.round(data.plannedCost * 100) / 100,
+      actualCost: Math.round(data.actualCost * 100) / 100,
+    }));
+
+    const hoursTracking = Array.from(hoursTrackingMap.entries()).map(([phase, data]) => ({
+      phase,
+      plannedHours: Math.round(data.plannedHours * 100) / 100,
+      actualHours: Math.round(data.actualHours * 100) / 100,
+      variance: Math.round(data.variance * 100) / 100,
+    }));
+
+    return {
+      budgetAnalysis,
+      hoursTracking
+    };
+
+  } catch (error) {
+    throw new HttpException(500, "Error generating graph data: " + error.message);
+  }
+}
+
+// Alternative method if you want separate methods for each chart
+public async getBudgetAnalysisGraphData(projectId: number): Promise<Array<{
+  phase: string;
+  plannedCost: number;
+  actualCost: number;
+}>> {
+  const data = await this.getGraphData(projectId);
+  return data.budgetAnalysis;
+}
+
+public async getHoursTrackingGraphData(projectId: number): Promise<Array<{
+  phase: string;
+  plannedHours: number;
+  actualHours: number;
+  variance: number;
+}>> {
+  const data = await this.getGraphData(projectId);
+  return data.hoursTracking;
+}
+
   public async getFinancialReport(): Promise<
   Array<{
     year: number;
@@ -167,47 +312,7 @@ export class StatisticsRepository implements IStatisticsRepository {
         ])
       );
 
-      project.allocations.forEach(alloc => {
-        const start = new Date(alloc.start);
-        const end = new Date(alloc.end);
-        const monthlyCost = (Number(alloc.hoursWeek) * 4 * (Number(alloc.chargeOutRate) || 0));
-
-        const current = new Date(start.getFullYear(), start.getMonth());
-        const endMonth = new Date(end.getFullYear(), end.getMonth());
-
-        while (current <= endMonth) {
-          const year = current.getFullYear();
-          const month = current.getMonth();
-
-          if (!report.has(year)) {
-            report.set(year, new Map());
-          }
-          const yearData = report.get(year)!;
-
-          if (!yearData.has(month)) {
-            yearData.set(month, {
-              projects: new Map(),
-              totalEstimated: 0,
-              totalActual: 0
-            });
-          }
-
-          const monthData = yearData.get(month)!;
-          const projectKey = project.name;
-
-          if (!monthData.projects.has(projectKey)) {
-            monthData.projects.set(projectKey, { 
-              estimated: 0, 
-              actual: 0,
-              budget: projectBudget 
-            });
-          }
-          monthData.projects.get(projectKey)!.estimated += monthlyCost;
-          monthData.totalEstimated += monthlyCost;
-
-          current.setMonth(current.getMonth() + 1);
-        }
-      });
+  
 
       project.tasks.forEach(task => {
         const taskDate = new Date(task.taskDate);
@@ -493,7 +598,7 @@ public async getStatisticsDashboard(): Promise<{
         const allocatedHours = employee.allocations?.reduce((sum, alloc) => {
          
           const weeksInMonth = 4; 
-          return sum + (alloc.hoursWeek * weeksInMonth);
+          return sum + (0 * weeksInMonth);
         }, 0) || 0;
             const actualHours = employee.tasks?.reduce((sum, task) => 
           sum + (task.actualHours || 0), 0) || 0;

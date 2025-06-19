@@ -64,7 +64,21 @@ export class AllocationController {
       next(error);
     }
   };
-
+  public deleteAllocationsByEmployeeAndPhase = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const {employeeId,phaseId} =req.params
+      await this.allocationService.deleteAllocationsByEmployeeAndPhase(employeeId,phaseId);
+      
+      const response: CustomResponse<null> = {
+        data: null,
+        message: "Allocation deleted successfully",
+        error: false
+      };
+      res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
   public getEmployeeAllocations = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const employeeId = parseInt(req.params.employeeId);

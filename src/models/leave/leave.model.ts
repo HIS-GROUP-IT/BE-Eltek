@@ -82,10 +82,7 @@ class Leave extends Model<ILeave, LeaveCreationAttributes> implements ILeave {
         sequelize,
         modelName: 'Leave',
         tableName: 'leaves',
-        indexes: [
-          { fields: ['employeeId'] },
-          { fields: ['status'] }
-        ]
+    
       }
     );
   }

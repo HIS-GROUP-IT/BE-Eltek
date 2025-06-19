@@ -42,11 +42,11 @@ export type Allocation = {
   projectName: string;
   employeeId: number;
   projectId: number;
-  phases: string[];
+  phaseId: string;
   normalizedPhaseIds:string;
   start: Date;
   end: Date;
-  hoursWeek: number;
+  dailyHours: DailyHours[];
   status: "confirmed" | "tentative";
   chargeOutRate?: number;
   chargeType?: "fixed" | "markup";
@@ -56,6 +56,12 @@ export type Allocation = {
   updatedAt?: Date;
   canOverride: boolean
 };
+
+export type DailyHours = {
+    date: string;
+    hours: number | null;
+}
+
 
 export type Commitment = {
   type: "training" | "leave" | "other";

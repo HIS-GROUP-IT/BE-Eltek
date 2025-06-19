@@ -31,6 +31,12 @@ export class AllocationRoute implements Routes {
       this.allocationController.deleteAllocationsByEmployeeAndProject
     );
 
+      this.router.delete(
+      `${this.path}/deleteAllocationByPhase/:employeeId/:phaseId`,
+      authorizationMiddleware,
+      this.allocationController.deleteAllocationsByEmployeeAndPhase
+    );
+
     this.router.get(
       `${this.path}/getEmployeeAllocations/:employeeId`,
       authorizationMiddleware,

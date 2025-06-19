@@ -43,7 +43,6 @@ class Task extends Model {
     Task.init(
       {
         id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
-        employeeName: { type: DataTypes.STRING, allowNull: false },
         employeeId: { type: DataTypes.INTEGER, allowNull: false, references: {
           model: Employee,
           key: "id",
@@ -52,14 +51,7 @@ class Task extends Model {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        createdBy: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          references: {
-            model: User,
-            key: "id",
-          },
-        },
+
         projectId: {
           type: DataTypes.INTEGER,
           allowNull: false,
@@ -89,7 +81,6 @@ class Task extends Model {
           allowNull: true,
           defaultValue: 0,
         },
-        comment: { type: DataTypes.JSON, allowNull: true, defaultValue: {} },
         phase: { type: DataTypes.STRING, allowNull: false },
         taskDate: {
           type: DataTypes.DATE,
@@ -102,7 +93,6 @@ class Task extends Model {
           defaultValue: "pending",
         },
         reasonForRejection: { type: DataTypes.STRING, allowNull: true },
-        modifiedBy: { type: DataTypes.INTEGER, allowNull: false },
       },
       { sequelize, modelName: "Task" }
     );

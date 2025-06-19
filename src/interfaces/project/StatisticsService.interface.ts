@@ -3,6 +3,19 @@ import { Token } from "typedi";
 
 
 export interface IStatisticsService {
+  getGraphData(projectId: number): Promise<{
+  budgetAnalysis: Array<{
+    phase: string;
+    plannedCost: number;
+    actualCost: number;
+  }>;
+  hoursTracking: Array<{
+    phase: string;
+    plannedHours: number;
+    actualHours: number;
+    variance: number;
+  }>;
+}>
     getStatisticsDashboard(): Promise<{
         completionRates: Array<{ name: string; rate: number }>;
         approvalHours: Array<{ name: string; approved: number; rejected: number }>;

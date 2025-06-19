@@ -34,10 +34,10 @@ const dbConnection = new Sequelize({
 });
 
 
+Client.initialize(dbConnection);
 Employee.initialize(dbConnection);
 User.initialize(dbConnection);
 RefreshToken.initialize(dbConnection);
-Client.initialize(dbConnection);
 Project.initialize(dbConnection);
 AllocationModel.initialize(dbConnection);
 Task.initialize(dbConnection);
