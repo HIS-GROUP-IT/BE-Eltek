@@ -1,4 +1,5 @@
 import { Allocation } from '@/types/employee.types';
+import { IResourceWorkLog } from '@/types/project.types';
 
 export interface IAllocationRepository {
   createAllocation(allocationData: Partial<Allocation>): Promise<Allocation>;
@@ -9,7 +10,8 @@ export interface IAllocationRepository {
   getProjectAllocations(projectId: number): Promise<Allocation[]>;
   findExistingAllocations(employeeId: number, projectId: number, phaseIds: string): Promise<Allocation | null>;
    deleteAllocationsByEmployeeAndPhase(employeeId: number, phaseId: string): Promise<void> 
-  getPhaseAllocations(phaseId: string): Promise<Allocation[]> 
+  getPhaseAllocations(phaseId: string): Promise<Allocation[]> ;
+  getResourceWorkLogByPhase(phaseId: string): Promise<IResourceWorkLog[]>
   checkForOverlaps(
     employeeId: number, 
     startDate: Date, 

@@ -110,7 +110,21 @@ export class AllocationController {
       next(error);
     }
   };
-
+  public getResourceWorkLogByPhase = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const phaseId = req.params.phaseId
+      const phaseData = await this.allocationService.getResourceWorkLogByPhase(phaseId);
+      
+      const response: CustomResponse<Allocation[]> = {
+        data: phaseData,
+        message: "phase data retrieved successfully",
+        error: false
+      };
+      res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
   public getAllocationById = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const id = parseInt(req.params.id);

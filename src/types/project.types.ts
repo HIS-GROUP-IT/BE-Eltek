@@ -1,4 +1,4 @@
-import { Allocation } from "./employee.types";
+import { Allocation, IEmployee } from "./employee.types";
 import { ITask } from "./task.type";
 
 export type ProjectStatus =
@@ -69,4 +69,27 @@ export type IEstimatedCost = {
 export interface PauseLog {
   pausedAt: Date;
   resumedAt?: Date | null;
+}
+
+
+
+  // Add these interfaces to your types file
+export type IMonthlyDateEntry = {
+  date: number; // day of the month (e.g., 1 - 31)
+  plannedHours: number;
+  workedHours: number;
+}
+
+export type IMonthlyWorkLog = {
+  [month: number]: {
+    [date: number]: IMonthlyDateEntry;
+  };
+}
+
+export type IResourceWorkLog = {
+  resource: IEmployee;
+  monthlyData: IMonthlyWorkLog;
+  totalPlanned: number;
+  totalWorked: number;
+  variance: number;
 }

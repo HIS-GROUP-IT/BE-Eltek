@@ -3,6 +3,7 @@ import Employee from "@/models/employee/employee.model";
 import Project from "@/models/project/project.model";
 import { Allocation, DailyHours, Allocation as IAllocation, IEmployee } from "@/types/employee.types";
 import { ITask } from "@/types/task.type";
+import { IProject } from "@/types/project.types";
 
 interface AllocationCreationAttributes extends Optional<IAllocation, 
   "id" | "createdAt" | "updatedAt" | "chargeOutRate" | "chargeType" | "status"> {}
@@ -29,6 +30,7 @@ class AllocationModel extends Model<IAllocation, AllocationCreationAttributes>
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
   public readonly allocations : Allocation
+  public readonly project : IProject
 
   static initialize(sequelize: Sequelize) {
     AllocationModel.init(

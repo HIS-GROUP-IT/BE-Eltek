@@ -8,6 +8,7 @@ import {
 import { Allocation } from "@/types/employee.types";
 import Employee from "@/models/employee/employee.model";
 import Project from "@/models/project/project.model";
+import { IResourceWorkLog } from "@/types/project.types";
 
 @Service({ id: ALLOCATION_SERVICE_TOKEN, type: AllocationService })
 export class AllocationService implements IAllocationService {
@@ -57,7 +58,6 @@ export class AllocationService implements IAllocationService {
   public async getProjectAllocations(projectId: number): Promise<Allocation[]> {
     return this.allocationRepository.getProjectAllocations(projectId);
   }
-
   
 
   public async getAllocationById(id: number): Promise<Allocation> {
@@ -127,6 +127,14 @@ export class AllocationService implements IAllocationService {
       return await this.allocationRepository.getPhaseAllocations(phaseId);
     } catch (error) {
       throw new HttpException(500, `Error fetching phase allocations: ${error.message}`);
+    }
+  }
+
+  public async getResourceWorkLogByPhase(phaseId: string): Promise<IResourceWorkLog[]> {
+    try {
+      return await this.allocationRepository.getResourceWorkLogByPhase(phaseId);
+    } catch (error) {
+      throw new HttpException(500, error.message)
     }
   }
 }

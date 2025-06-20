@@ -42,7 +42,11 @@ export class AllocationRoute implements Routes {
       authorizationMiddleware,
       this.allocationController.getEmployeeAllocations
     );
-
+    this.router.get(
+      `${this.path}/getResourceWorkLogByPhase/:phaseId`,
+      authorizationMiddleware,
+      this.allocationController.getResourceWorkLogByPhase
+    );
     this.router.get(
       `${this.path}/getProjectAllocations/:projectId`,
       authorizationMiddleware,

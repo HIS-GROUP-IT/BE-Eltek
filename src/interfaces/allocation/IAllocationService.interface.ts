@@ -1,4 +1,5 @@
 import { Allocation } from '@/types/employee.types';
+import { IResourceWorkLog } from '@/types/project.types';
 import { Token } from 'typedi';
 
 export interface IAllocationService {
@@ -10,6 +11,7 @@ export interface IAllocationService {
      deleteAllocationsByEmployeeAndPhase(employeeId: number, phaseId: string): Promise<void> 
     getAllocationById(id: number): Promise<Allocation>;
     getPhaseAllocations(phaseId: string): Promise<Allocation[]> 
+    getResourceWorkLogByPhase(phaseId: string): Promise<IResourceWorkLog[]>
     checkForOverlaps(
         employeeId: number, 
         startDate: Date, 

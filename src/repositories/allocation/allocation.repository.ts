@@ -7,6 +7,7 @@ import Project from "@/models/project/project.model";
 import { Allocation } from "@/types/employee.types";
 import { IAllocationRepository } from "@/interfaces/allocation/IAllocationRepository.interface";
 import Task from "@/models/task/task.model";
+import { IMonthlyWorkLog, IResourceWorkLog } from "@/types/project.types";
 
 @Service()
 export class AllocationRepository implements IAllocationRepository {
@@ -961,5 +962,256 @@ export class AllocationRepository implements IAllocationRepository {
       ]
     });
   }
+
+
+
+
+// Add this method to your AllocationRepository class
+public async getResourceWorkLogByPhase(phaseId: string): Promise<IResourceWorkLog[]> {
+  try {
+    // Get the project and phase information first
+    const allocations = await AllocationModel.findAll({
+      where: {
+        phaseId,
+        isActive: true
+      },
+      include: [
+        {
+          model: Employee,
+          as: 'employee',
+          attributes: { exclude: ['password'] }
+        },
+        {
+          model: Project,
+          as: 'project'
+        }
+      ]
+    });
+
+    if (!allocations || allocations.length === 0) {
+      return [];
+    }
+
+    // Get the project to determine phase date range
+    const project = allocations[0].project;
+    if (!project || !project.phases || !Array.isArray(project.phases)) {
+      throw new HttpException(404, "Project or phase information not found");
+    }
+
+    // Find the specific phase
+    const phase = project.phases.find(p => p.id === phaseId);
+    if (!phase) {
+      throw new HttpException(404, "Phase not found in project");
+    }
+
+    const phaseStartDate = new Date(phase.startDate);
+    const phaseEndDate = new Date(phase.endDate);
+
+    // Get all tasks for this phase within the date range
+    const tasks = await Task.findAll({
+      where: {
+        phaseId,
+        taskDate: {
+          [Op.between]: [phaseStartDate, phaseEndDate]
+        }
+      },
+      include: [
+        {
+          model: Employee,
+          as: 'employee',
+          attributes: { exclude: ['password'] }
+        }
+      ]
+    });
+
+    // Group allocations by employee
+    const employeeAllocationsMap = new Map<number, {
+      employee: any;
+      allocations: any[];
+    }>();
+
+    allocations.forEach(allocation => {
+      const employeeId = allocation.employeeId;
+      if (!employeeAllocationsMap.has(employeeId)) {
+        employeeAllocationsMap.set(employeeId, {
+          employee: allocation.employee,
+          allocations: []
+        });
+      }
+      employeeAllocationsMap.get(employeeId)!.allocations.push(allocation);
+    });
+
+    // Group tasks by employee
+    const employeeTasksMap = new Map<number, any[]>();
+    tasks.forEach(task => {
+      const employeeId = task.employeeId;
+      if (!employeeTasksMap.has(employeeId)) {
+        employeeTasksMap.set(employeeId, []);
+      }
+      employeeTasksMap.get(employeeId)!.push(task);
+    });
+
+    const resourceWorkLogs: IResourceWorkLog[] = [];
+
+    // Process each employee
+    for (const [employeeId, { employee, allocations: empAllocations }] of employeeAllocationsMap) {
+      const monthlyData: IMonthlyWorkLog = {};
+      let totalPlanned = 0;
+      let totalWorked = 0;
+
+      // Initialize monthly data structure for the phase date range
+      const currentDate = new Date(phaseStartDate);
+      while (currentDate <= phaseEndDate) {
+        const month = currentDate.getMonth() + 1; // 1-based month
+        const date = currentDate.getDate();
+
+        if (!monthlyData[month]) {
+          monthlyData[month] = {};
+        }
+
+        if (!monthlyData[month][date]) {
+          monthlyData[month][date] = {
+            date,
+            plannedHours: 0,
+            workedHours: 0
+          };
+        }
+
+        currentDate.setDate(currentDate.getDate() + 1);
+      }
+
+      // Process planned hours from allocations
+      empAllocations.forEach(allocation => {
+        if (allocation.dailyHours && Array.isArray(allocation.dailyHours)) {
+          allocation.dailyHours.forEach((dailyHour: any) => {
+            const dailyDate = new Date(dailyHour.date);
+            
+            // Only include dates within phase range
+            if (dailyDate >= phaseStartDate && dailyDate <= phaseEndDate) {
+              const month = dailyDate.getMonth() + 1;
+              const date = dailyDate.getDate();
+              const hours = dailyHour.hours || 0;
+
+              if (monthlyData[month] && monthlyData[month][date]) {
+                monthlyData[month][date].plannedHours += hours;
+                totalPlanned += hours;
+              }
+            }
+          });
+        }
+      });
+
+      // Process worked hours from tasks
+      const empTasks = employeeTasksMap.get(employeeId) || [];
+      empTasks.forEach(task => {
+        const taskDate = new Date(task.taskDate);
+        
+        // Only include dates within phase range
+        if (taskDate >= phaseStartDate && taskDate <= phaseEndDate) {
+          const month = taskDate.getMonth() + 1;
+          const date = taskDate.getDate();
+          const workedHours = task.actualHours || 0;
+
+          if (monthlyData[month] && monthlyData[month][date]) {
+            monthlyData[month][date].workedHours += workedHours;
+            totalWorked += workedHours;
+          }
+        }
+      });
+
+      // Calculate variance (planned - worked)
+      const variance = totalPlanned - totalWorked;
+
+      resourceWorkLogs.push({
+        resource: employee,
+        monthlyData,
+        totalPlanned,
+        totalWorked,
+        variance
+      });
+    }
+
+    // Sort by employee name for consistent output
+resourceWorkLogs.sort((a, b) => {
+  const nameA = a.resource.fullName.toLowerCase();
+  const nameB = b.resource.fullName.toLowerCase();
+  return nameA.localeCompare(nameB);
+});
+
+
+    return resourceWorkLogs;
+
+  } catch (error) {
+    console.error("Get resource work log error:", error);
+    if (error instanceof HttpException) {
+      throw error;
+    }
+    throw new HttpException(500, "Failed to retrieve resource work log data");
+  }
+}
+
+// Optional: Helper method to get work log for a specific date range instead of phase dates
+public async getResourceWorkLogByPhaseAndDateRange(
+  phaseId: string, 
+  startDate: Date, 
+  endDate: Date
+): Promise<IResourceWorkLog[]> {
+  try {
+    // Similar logic but use provided date range instead of phase dates
+    const allocations = await AllocationModel.findAll({
+      where: {
+        phaseId,
+        isActive: true,
+        [Op.or]: [
+          {
+            start: { [Op.between]: [startDate, endDate] }
+          },
+          {
+            end: { [Op.between]: [startDate, endDate] }
+          },
+          {
+            [Op.and]: [
+              { start: { [Op.lte]: startDate } },
+              { end: { [Op.gte]: endDate } }
+            ]
+          }
+        ]
+      },
+      include: [
+        {
+          model: Employee,
+          as: 'employee',
+          attributes: { exclude: ['password'] }
+        }
+      ]
+    });
+
+    if (!allocations || allocations.length === 0) {
+      return [];
+    }
+
+    // Get tasks within the specified date range
+    const tasks = await Task.findAll({
+      where: {
+        phaseId,
+        taskDate: {
+          [Op.between]: [startDate, endDate]
+        }
+      }
+    });
+
+    // Rest of the logic is similar to the main method
+    // ... (implement similar processing logic)
+    
+    return []; // Placeholder - implement full logic similar to above
+    
+  } catch (error) {
+    console.error("Get resource work log by date range error:", error);
+    if (error instanceof HttpException) {
+      throw error;
+    }
+    throw new HttpException(500, "Failed to retrieve resource work log data for date range");
+  }
+}
 
 }
