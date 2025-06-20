@@ -95,6 +95,7 @@ private corsOptions: cors.CorsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
       FRONT_END_URL,
+      "https://eltek-timer-pay-fe-flax.vercel.app",
       'http://localhost:3000'
     ];
 
